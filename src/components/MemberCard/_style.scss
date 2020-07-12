@@ -1,0 +1,37 @@
+.member-card{
+  // height: $member-card-height;
+  width: $member-card-width;
+  border: 1px solid #FFF7ED;
+  margin: 0.3rem;
+  .content{
+    padding-left: $member-card-padding-x;
+  }
+  .name{
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 300;
+    color: #1F1919;
+    
+  }
+  .photo{
+    display: block;
+    width: 80%;
+  }
+  .title{
+    font-size: 0.8rem;
+    font-weight: 300;
+  }
+  .nickName{
+    color:#D46201;
+  }
+  .desc{
+    font-family: Noto Serif SC;
+    font-size:10px;
+    line-height: 14px;
+    font-weight: 300;
+  }
+  &:hover{
+    box-shadow: 0 0 2rem rgba(0,0,0,0.1);
+    transform: translateY(-5px);
+  }
+}
