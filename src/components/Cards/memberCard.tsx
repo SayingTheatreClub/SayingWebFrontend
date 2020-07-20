@@ -12,10 +12,11 @@ export interface CartInterface {
   nickName?: string;
   title: string;
   description: string;
+  isInterview?:boolean;
 }
 
 const MemberCard: React.FC<CartInterface> = (props) => {
-  const { name, imgUrl, nickName, title, description } = props;
+  const { name, imgUrl, nickName, title, description,isInterview } = props;
   return (
     <div className="member-card">
       <div className="content">

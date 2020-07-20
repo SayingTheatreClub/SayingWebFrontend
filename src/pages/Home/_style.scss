@@ -1,0 +1,39 @@
+.home-displaybox {
+  display: flex;
+  width: 1000px;
+  margin: 0 auto;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 618px;
+}
+.home-plays-display {
+  height: 457px;
+  text-align: center;
+  background: #FFFBF7;
+  .home-display-content {
+    display: flex;
+    width: 1124px;
+    justify-content: space-between;
+    margin: 0 auto;
+    align-items: center;
+  }
+  .home-plays-display-title {
+    font-family: Noto Sans SC;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 23px;
+    color: #545454;
+    margin-bottom: 37px;
+    // margin-top: 30px;
+  }
+}
+
+.home-about-display{
+  // height: 851px;
+  width: 1124px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}

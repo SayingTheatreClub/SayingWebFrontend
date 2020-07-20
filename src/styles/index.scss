@@ -4,8 +4,13 @@
  * @Last Modified by:   Chengxu Bian 
  * @Last Modified time: 2020-07-12 16:17:16 
  */
+@import '~antd/dist/antd.css';
 @import "./variables";
+@import "./normalize";
 
 @import "../components/Header/style";
-@import "../components/MemberCard/style";
-@import "../components/PlayCard/style";
+@import "../components/Cards/style";
+@import "../components/Carousel/style";
+
+
+@import "../pages/Home/style";
