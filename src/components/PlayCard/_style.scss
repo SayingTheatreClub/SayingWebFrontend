@@ -1,0 +1,68 @@
+.playCard {
+  width: 500px;
+  .playCard-belonging {
+    font-family: "Noto Sans SC";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 23px;
+  }
+  .playCard-title {
+    font-family: "Noto Serif SC";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 52px;
+  }
+  .playCard-desc {
+    font-family: "Noto Sans SC";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 20px;
+    font-feature-settings: "liga" off;
+  }
+}
+
+.img-card {
+  width: 303px;
+  height: 254px;
+  margin: 0 auto;
+  text-align: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  .img-card-img{
+    width: 100%;
+  }
+  .img-card-year {
+    font-family: Noto Sans SC;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 17px;
+    text-align: center;
+    color: #c62127;
+  }
+  .img-card-name {
+
+    font-family: Noto Sans SC;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    font-feature-settings: "liga" off;
+    color: #1f1919;
+  }
+  &:hover{
+    box-shadow: 0 0 2rem rgba(0,0,0,0.1);
+    transform: translateY(-5px);
+  }
+}
+
+.displaybox{
+  display: flex;
+  width: 1000px;
+  margin: 0 auto;
+  justify-content: space-evenly;
+  align-items: center;
+}

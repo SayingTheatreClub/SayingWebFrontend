@@ -4,7 +4,7 @@ export interface HeaderProps {
   className?: string;
 }
 const navs = {
-  en: ["About", "New", "Previous", "Events", "Support", "Contact"],
+  en: ["About", "New", "Previous Events", "Events", "Support", "Contact"],
   zh: ["关于戏言", "新戏", "旧戏", "活动", "支持我们", "联系我们"],
 };
 const Header: React.FC<HeaderProps> = (props) => {
@@ -15,10 +15,12 @@ const Header: React.FC<HeaderProps> = (props) => {
   return (
     <header className="header">
       <a href="" className="header-logo"></a>
+
       <ul className="header-nav">
-        {navs[languageType].map((item: string,index:number) => (
-          <li key={index}>{item}</li>
+        {navs[languageType].map((item: string, index: number) => (
+          <li key={index} className="header-nav-item">{item}</li>
         ))}
+        <i className="iconfont icon-search header-nav-item"></i>
       </ul>
     </header>
   );

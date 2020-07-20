@@ -9,7 +9,7 @@ export const LanguageContext = createContext<LanguageContext>({language:'en'});
 function getLanguage() {
   const sys_language = navigator.languages;
   for (let x of sys_language) {
-    if (x === "zh-CN" || x === "zh") return "zh";
+     if (x === "zh-CN" || x === "zh") return "zh";
   }
   return "en";
 }

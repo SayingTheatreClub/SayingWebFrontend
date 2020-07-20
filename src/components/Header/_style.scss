@@ -9,9 +9,11 @@
   display: flex;
   justify-content: space-evenly;
   width: 60%;
-  cursor: pointer;
   @media screen and(max-width:758px){
     display: none;
+  }
+  .header-nav-item{
+    cursor: pointer;
   }
 }
 .header-logo{

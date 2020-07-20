@@ -5,6 +5,7 @@
   margin: 0.3rem;
   .content{
     padding-left: $member-card-padding-x;
+    font-family: Noto Sans SC;
   }
   .name{
     font-size: 18px;
@@ -18,8 +19,9 @@
     width: 80%;
   }
   .title{
+    font-family: Noto Sans SC;
     font-size: 0.8rem;
-    font-weight: 300;
+    font-weight: 500;
   }
   .nickName{
     color:#D46201;
