@@ -3,13 +3,14 @@ import Language from "../../components/Language/language";
 import Header from "../../components/Header/header";
 import PlayCard from "../../components/Cards/playCard";
 import Carousel from "../../components/Carousel/carousel";
-import InterviewCard from '../../components/Cards/interviewCard';
+import InterviewCard from "../../components/Cards/interviewCard";
 import IMG from "../../assets/play.jpg";
-const url  = 'https://66.media.tumblr.com/34783978b046ee2f757851c40f1b1f98/tumblr_ntu0hj7aQe1rha2imo1_640.jpg';
-const ArrowSvg = (isLeft:boolean) => {
+const url =
+  "https://66.media.tumblr.com/34783978b046ee2f757851c40f1b1f98/tumblr_ntu0hj7aQe1rha2imo1_640.jpg";
+const ArrowSvg = (isLeft: boolean) => {
   const styles = {
-    transform: isLeft? "matrix(-1, 0, 0, 1, 0, 0)":"none"
-  }
+    transform: isLeft ? "matrix(-1, 0, 0, 1, 0, 0)" : "none",
+  };
   return (
     <svg
       width="15"
@@ -57,18 +58,16 @@ const Home: FC = (props) => {
         </div>
       </div>
       <div className="home-about-display">
-          <div className="home-about-card-container">
-            {
-              [1,2,3].map((item)=>(
-                <InterviewCard
-                imgUrl={url}
-                title="玛丽：戏剧就是造梦"
-                collection="戏言人专访"
-                />
-              ))
-            }
-          </div>
+        <div className="home-about-card-container">
+          {[1, 2, 3,4].map((item) => (
+            <InterviewCard
+              imgUrl={url}
+              title="玛丽：戏剧就是造梦"
+              collection="戏言人专访"
+            />
+          ))}
         </div>
+      </div>
       <br />
       <br />
     </Language>

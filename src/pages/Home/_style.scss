@@ -9,7 +9,7 @@
 .home-plays-display {
   height: 457px;
   text-align: center;
-  background: #FFFBF7;
+  background: #fffbf7;
   .home-display-content {
     display: flex;
     width: 1124px;
@@ -29,11 +29,34 @@
   }
 }
 
-.home-about-display{
+.home-about-card-container {
   // height: 851px;
   width: 1124px;
   margin: 0 auto;
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  // flex-direction: row;
+  justify-content: space-evenly;
+  .interview-text{
+    margin-left: 10px;
+  }
+  .interview-type {
+    margin-top: 15px;
+    
+    font-family: Noto Sans SC;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 24px;
+    color: #c62127;
+  }
+  .interview-title {
+    font-family: Noto Sans SC;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 23px;
+    text-align: center;
+    font-feature-settings: "liga" off;
+    color: #181616;
+  }
 }
