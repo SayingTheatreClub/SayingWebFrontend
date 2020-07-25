@@ -4,6 +4,7 @@ import Header from "../../components/Header/header";
 import PlayCard from "../../components/Cards/playCard";
 import Carousel from "../../components/Carousel/carousel";
 import InterviewCard from "../../components/Cards/interviewCard";
+import HomeInfo from "../../components/Information/homeInfo";
 import IMG from "../../assets/play.jpg";
 const url =
   "https://66.media.tumblr.com/34783978b046ee2f757851c40f1b1f98/tumblr_ntu0hj7aQe1rha2imo1_640.jpg";
@@ -32,7 +33,6 @@ const Home: FC = (props) => {
   return (
     <Language>
       <Header />
-
       <Carousel />
       <div className="home-displaybox">
         <PlayCard
@@ -58,8 +58,9 @@ const Home: FC = (props) => {
         </div>
       </div>
       <div className="home-about-display">
+        <HomeInfo />
         <div className="home-about-card-container">
-          {[1, 2, 3,4].map((item) => (
+          {[1, 2, 3, 4].map((item) => (
             <InterviewCard
               imgUrl={url}
               title="玛丽：戏剧就是造梦"

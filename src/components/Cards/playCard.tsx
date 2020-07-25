@@ -12,11 +12,11 @@ export interface PlayCardProps {
 }
 
 const PlayCard: React.FC<PlayCardProps> = (props) => {
-  const { name, description, belonging, type, year,imgUrl } = props;
+  const { name, description, belonging, type, year,imgUrl,...restProps } = props;
   const st = "playCard";
   if (type === "img-text") {
     return (
-      <div className="img-card">
+      <div className="img-card" {...restProps}>
         <img src={imgUrl} alt="" className="img-card-img" />
         <span className="img-card-year">{year}</span>
         <br/>

@@ -1,0 +1,15 @@
+.home-info-container {
+  display: flex;
+  justify-content: space-evenly;
+  .home-info-large {
+    font-family: Noto Serif SC;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 52px;
+
+    /* content_black */
+
+    color: #181616;
+  }
+}

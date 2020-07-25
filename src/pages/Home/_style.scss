@@ -2,6 +2,8 @@
   display: flex;
   width: 1000px;
   margin: 0 auto;
+  flex-wrap: wrap;
+  word-break: normal;
   justify-content: space-evenly;
   align-items: center;
   height: 618px;
@@ -14,6 +16,7 @@
     display: flex;
     width: 1124px;
     justify-content: space-between;
+    flex-wrap: wrap;
     margin: 0 auto;
     align-items: center;
   }
@@ -28,7 +31,10 @@
     // margin-top: 30px;
   }
 }
-
+.home-about-display{
+  display: flex;
+  flex-direction: column;
+}
 .home-about-card-container {
   // height: 851px;
   width: 1124px;
@@ -36,6 +42,7 @@
   display: flex;
   // flex-direction: row;
   justify-content: space-evenly;
+  // flex-wrap: wrap;
   .interview-text{
     margin-left: 10px;
   }
