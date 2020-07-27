@@ -43,7 +43,7 @@ const Home: FC = (props) => {
         <img src={IMG} alt="" style={{ width: "413px", height: "262px" }} />
       </div>
       <div className="home-plays-display">
-        <p className="home-plays-display-title">过往大戏</p>
+        <p className="home-plays-display-title">「过往大戏」</p>
         <div className="home-display-content">
           {ArrowSvg(true)}
           {[1, 2, 3].map((item) => (
