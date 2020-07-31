@@ -6,8 +6,13 @@ import Carousel from "../../components/Carousel/carousel";
 import InterviewCard from "../../components/Cards/interviewCard";
 import HomeInfo from "../../components/Information/homeInfo";
 import IMG from "../../assets/play.jpg";
+import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
+import 'react-vertical-timeline-component/style.min.css';
+
 const url =
   "https://66.media.tumblr.com/34783978b046ee2f757851c40f1b1f98/tumblr_ntu0hj7aQe1rha2imo1_640.jpg";
+const url2 =
+  "https://www.pngfind.com/pngs/m/390-3903958_30k-bathouse-2017-12-05-mur-hd.png";
 const ArrowSvg = (isLeft: boolean) => {
   const styles = {
     transform: isLeft ? "matrix(-1, 0, 0, 1, 0, 0)" : "none",
@@ -67,6 +72,39 @@ const Home: FC = (props) => {
               collection="戏言人专访"
             />
           ))}
+        </div>
+        <div >
+          <VerticalTimeline>
+          
+            <VerticalTimelineElement
+              className="vertical-timeline-element--work"
+              contentStyle={{ background: 'rgba(0, 0, 0, .00)', color: '#000' }}
+              contentArrowStyle={{ borderRight: '7px solid  #ff4f00' }}
+              date="1"
+              iconStyle={{ background: 'rgb(255, 255, 255)', color: '#ff4f00' }}
+              icon={<img src={url2} alt="" style={{ width: "60px", height: "60px" }} />}
+            >
+              <h3 className="vertical-timeline-element-title">2020年4月</h3>
+              <h4 className="vertical-timeline-element-subtitle">线上剧本杀</h4>
+              <p>
+                一点短短的description， 预言家杀疯了
+              </p>
+            </VerticalTimelineElement>
+            <VerticalTimelineElement
+              className="vertical-timeline-element--work"
+              contentStyle={{ background: 'rgba(0, 0, 0, .00)', color: '#000' }}
+              contentArrowStyle={{ borderRight: '7px solid  #ff4f00' }}
+              date="2"
+              iconStyle={{ background: 'rgb(255, 255, 255)', color: '#ff4f00' }}
+              icon={<img src={url2} alt="" style={{ width: "60px", height: "60px" }} />}
+            >
+              <h3 className="vertical-timeline-element-title">2020年2月</h3>
+              <h4 className="vertical-timeline-element-subtitle">CSSA 春晚小品「卖车」</h4>
+              <p>
+                我还没路考。。。。
+              </p>
+            </VerticalTimelineElement>
+          </VerticalTimeline>
         </div>
       </div>
       <br />
