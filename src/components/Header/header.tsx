@@ -4,8 +4,8 @@ export interface HeaderProps {
   className?: string;
 }
 const navs = {
-  en: ["About", "New", "Previous Events", "Events", "Support", "Contact"],
-  zh: ["关于戏言", "新戏", "旧戏", "活动", "支持我们", "联系我们"],
+  en: ["About", "Previous Drama", "Events", "Articals", "En/中"],
+  zh: ["关于戏言", "演出", "活动动态", "文章", "中/En"],
 };
 const Header: React.FC<HeaderProps> = (props) => {
   const { className, children } = props;
