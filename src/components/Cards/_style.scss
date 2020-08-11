@@ -1,39 +1,38 @@
-.member-card{
+.member-card {
   // height: $member-card-height;
   width: $member-card-width;
-  border: 1px solid #FFF7ED;
+  border: 1px solid #fff7ed;
   margin: 0.3rem;
-  .content{
+  .content {
     padding-left: $member-card-padding-x;
     font-family: Noto Sans SC;
   }
-  .name{
+  .name {
     font-size: 18px;
     line-height: 26px;
     font-weight: 300;
-    color: #1F1919;
-    
+    color: #1f1919;
   }
-  .photo{
+  .photo {
     display: block;
     width: 80%;
   }
-  .title{
+  .title {
     font-family: Noto Sans SC;
     font-size: 0.8rem;
     font-weight: 500;
   }
-  .nickName{
-    color:#D46201;
+  .nickName {
+    color: #d46201;
   }
-  .desc{
+  .desc {
     font-family: Noto Serif SC;
-    font-size:10px;
+    font-size: 10px;
     line-height: 14px;
     font-weight: 300;
   }
-  &:hover{
-    box-shadow: 0 0 2rem rgba(0,0,0,0.1);
+  &:hover {
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1);
     transform: translateY(-5px);
   }
 }
@@ -70,7 +69,7 @@
   margin: 0 auto;
   text-align: center;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  .img-card-img{
+  .img-card-img {
     width: 100%;
   }
   .img-card-year {
@@ -83,7 +82,6 @@
     color: #c62127;
   }
   .img-card-name {
-
     font-family: Noto Sans SC;
     font-style: normal;
     font-weight: 300;
@@ -93,24 +91,46 @@
     font-feature-settings: "liga" off;
     color: #1f1919;
   }
-  &:hover{
-    box-shadow: 0 0 2rem rgba(0,0,0,0.1);
+  &:hover {
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1);
     transform: translateY(-2px);
   }
 }
 
-.interview-container{
+.interview-container {
   width: 191px;
   height: 283px;
   // display: block;
   border-radius: 3px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  .interview-image{
+  .interview-image {
     width: 100%;
     // height: 70%;
   }
-  &:hover{
-    box-shadow: 0 0 2rem rgba(0,0,0,0.1);
+  &:hover {
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1);
     transform: translateY(-2px);
+  }
+}
+
+.introcard {
+  position: absolute;
+  
+  // opacity: 0.7;
+  background: rgba(248,246,243,0.7);
+  // background: #F8F6F3;
+  top: 417px;
+  left: 181px;
+  width: 524px;
+  height: 404px;
+  .introcard-content {
+    background: white;
+    // position: absolute;
+    opacity: 1;
+    border: 1px solid #c62127;
+    box-sizing: border-box;
+    width: 448px;
+    height: 328px;
+    margin: 38px auto;
   }
 }

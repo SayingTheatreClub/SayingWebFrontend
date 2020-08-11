@@ -4,7 +4,7 @@
   justify-content: space-around;
   align-items: center;
   box-shadow: rgba(0, 0, 1, 1);
- 
+ background: #3F3F3F;
   .header-nav-item {
     font-family: Noto Sans SC;
     font-style: normal;
@@ -12,6 +12,7 @@
     font-size: 18px;
     color: #181616;
     text-align: center;
+    color: white;
   }
 }
 .header-nav {

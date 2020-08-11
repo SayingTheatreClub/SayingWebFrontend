@@ -1,0 +1,17 @@
+.footer {
+  height: 582px;
+  background: #181616;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  .list-wrapper{
+    color: white;
+  }
+  .footer-list {
+    color: white;
+    list-style: none;
+  }
+  .li{
+    margin: 10px 0;
+  }
+}
