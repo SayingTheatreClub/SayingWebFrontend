@@ -6,6 +6,7 @@ import PlayCard from "./components/Cards/playCard";
 import Carousel from './components/Carousel/carousel';
 import IMG from "./components/PlayCard/NT4A8400.jpg";
 import Home from './pages/Home/home';
+import MemberPage from './pages/Member/member';
 const profile = {
   name: "新垣结衣",
   nickName: "Gakki",
@@ -14,7 +15,7 @@ const profile = {
 };
 function App() {
   return (
-    <Home/>
+    <MemberPage/>
     // <div className="App">
     //   <Language>
     //     <Header />
