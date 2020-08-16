@@ -3,7 +3,7 @@
   background: #f8f6f3;
   overflow: hidden;
 }
-.pageinfo-title { 
+.pageinfo-title {
   font-family: Noto Serif SC;
   font-style: normal;
   font-weight: 600;
@@ -13,13 +13,12 @@
   margin-top: 38px;
   color: #000000;
 }
-.pageinfo-wrapper{
+.pageinfo-wrapper {
   width: 569px;
   height: 101px;
   margin: 0 auto;
 }
 .pageinfo-desc {
-
   font-family: Noto Sans SC;
   font-style: normal;
   font-weight: 300;
@@ -31,4 +30,23 @@
   font-feature-settings: "liga" off;
 
   color: #000000;
+}
+
+.info-card-wrapper {
+  float: left;
+  width: 492px;
+  margin-right: 47px;
+}
+
+.info-button {
+  display: block;
+  height: 43px;
+  width: 203px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+.member-display-wraper{
+  // display: grid;
+  margin: 0 auto;
+  width: 1440px;
 }

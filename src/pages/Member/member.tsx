@@ -2,7 +2,8 @@ import React, { FC } from "react";
 
 import Header from "../../components/Header/header";
 import PageInfo from "./pageInfo";
-import InfoComponent from './infoComponent';
+import InfoComponent from "./infoComponent";
+import MemberCard from "../../components/Cards/memberCard";
 import Language from "../../components/Language/language";
 const title = "戏言家庭";
 const desc =
@@ -12,9 +13,33 @@ const MemberPage: FC = (props) => (
   <Language>
     <Header />
     <PageInfo title={title} desc={desc} />
-    <div>
-      <InfoComponent imgUrl="" desc=""/>
+    <div style={{ height: "197px" }}></div>
+    <div className="member-display-wraper">
+      <InfoComponent
+        imgUrl=""
+        desc="介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些"
+      />
+        {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15].map((item) => (
+          <div 
+          style={{float:'left'}}
+          >
+          <MemberCard
+            name="门飞"
+            title="导演"
+            description="感情戏最难演，没有之一。我热爱话剧，也感谢戏言给我（在苦逼学术外）解放思想、重新做人的机会"
+          />
+          </div>
+        ))}
     </div>
+    {/* <div>
+      {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15].map((item) => (
+        <MemberCard
+          name="门飞"
+          title="导演"
+          description="感情戏最难演，没有之一。我热爱话剧，也感谢戏言给我（在苦逼学术外）解放思想、重新做人的机会"
+        />
+      ))}
+    </div> */}
   </Language>
 );
 
