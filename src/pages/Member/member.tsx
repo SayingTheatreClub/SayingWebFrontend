@@ -41,7 +41,9 @@ const MemberPage: FC = (props) => (
         />
       ))}
     </div> */}
-  <Footer/>
+    <br />
+    <br />
+    <Footer/>
   </Language>
 );
 

@@ -3,13 +3,28 @@
   background: #181616;
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  align-items: left;
+  font-family: Noto Sans SC;
   .list-wrapper{
-    color: white;
+    margin-top: 150px;
+    color: white;   
+    text-align: center;
   }
-  .footer-list {
+  .footer-list-title{   
+    font-style: bold;
+    margin-left: 30px;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 23px;
+  }
+  .footer-list-member {
     color: white;
     list-style: none;
+    text-align: left;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
   }
   .li{
     margin: 10px 0;
