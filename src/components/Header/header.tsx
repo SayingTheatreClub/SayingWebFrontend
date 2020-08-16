@@ -18,11 +18,11 @@ const Header: React.FC<HeaderProps> = (props) => {
   return (
     <header className="header">
       
-        <Router>
-        <Link to="../../pages/Home">
+      <Router>
+        <Link to="../../pages/Home/home">
           <a href="" className="header-logo"></a>
         </Link>
-        </Router>
+      </Router>
       
       <ul className="header-nav">
         {navs[languageType].map((item: string, index: number) => (

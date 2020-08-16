@@ -4,6 +4,7 @@ import Header from "../../components/Header/header";
 import PageInfo from "./pageInfo";
 import InfoComponent from "./infoComponent";
 import MemberCard from "../../components/Cards/memberCard";
+import Footer from '../../components/Footer/footer';
 import Language from "../../components/Language/language";
 const title = "戏言家庭";
 const desc =
@@ -40,6 +41,7 @@ const MemberPage: FC = (props) => (
         />
       ))}
     </div> */}
+  <Footer/>
   </Language>
 );
 
