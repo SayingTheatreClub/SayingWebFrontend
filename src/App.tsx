@@ -1,6 +1,7 @@
 import React from "react";
 import Language from "./components/Language/language";
 import Header from "./components/Header/header";
+import Footer from "./components/Footer/footer";
 import MemberCard from "./components/Cards/memberCard";
 import PlayCard from "./components/Cards/playCard";
 // import Carousel from './components/Carousel/carousel';

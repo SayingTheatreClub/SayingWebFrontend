@@ -1,15 +1,18 @@
 import React from "react";
 
+const titleList = ["关于我们","演出剧目","加入我们","关注我们"];
+
 const playList = ["红白玫瑰", "驴得水", "你好疯子", "旧事", "暗恋桃花源"];
-const aboutList = ["红白玫瑰", "驴得水", "你好疯子", "旧事", "暗恋桃花源"];
-const mediaList = ["Wechat"];
+const aboutList = ["戏言家庭", "加入我们", "支持戏言", "联系我们"];
+const mediaList = ["微信公众号","Youtube","Bilibili","Facebook","Instagram"];
+const eventList = ["读本会","演员的诞生"];
 
 const AboutUs: React.FC = (list) => (
   <ul>
-    <li>戏言家庭</li>
+    <li>关于我们</li>
+    <li>演出</li>
     <li>加入我们</li>
-    <li>支持戏言</li>
-    <li>联系我们</li>
+    <li>关注我们</li>
   </ul>
 );
 interface InfoListProps {
@@ -27,17 +30,24 @@ const InfoList: React.FC<InfoListProps> = (props) => (
 const Footer: React.FC = (props) => (
   <div className="footer">
     <div className="list-wrapper">
-      <div>关于我们</div>
-      <InfoList list={playList} className="footer-list" />
+      <div className = "footer-list-title">{titleList[0]}</div>
+      <br/>
+      <InfoList list={aboutList} className="footer-list-member" />
     </div>
     <div className="list-wrapper">
-      <InfoList list={playList} className="footer-list" />
+      <div className = "footer-list-title">{titleList[1]}</div>
+      <br/>
+      <InfoList list={playList} className="footer-list-member" />
     </div>
     <div className="list-wrapper">
-      <InfoList list={playList} className="footer-list" />
+      <div className = "footer-list-title">{titleList[2]}</div>
+      <br/>
+      <InfoList list={eventList} className="footer-list-member" />
     </div>
     <div className="list-wrapper">
-      <InfoList list={playList} className="footer-list" />
+      <div className = "footer-list-title">{titleList[3]}</div>
+      <br/>
+      <InfoList list={mediaList} className="footer-list-member" />
     </div>
   </div>
 );
