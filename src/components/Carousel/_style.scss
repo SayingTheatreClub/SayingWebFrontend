@@ -45,6 +45,16 @@
   // margin: 0 auto;
   justify-content: space-between;
 }
+.carousel-content-top-left{
+  display: flex;
+  width: 1000px;
+  // position: absolute;
+  // right: 0;
+  transform: translate(200px);
+  // margin: 0 auto;
+  // flex-direction: row-reverse;
+  justify-content: space-between;
+}
 .carousel-content-text {
   font-family: Noto Sans SC;
   font-style: normal;
@@ -60,7 +70,9 @@
   cursor: pointer;
 }
 
-
+.carousel-content-shader-left{
+  left: 0;
+}
 .carousel-content-wrapper-left{
   transform: translate(-39px);
 }

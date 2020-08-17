@@ -95,3 +95,63 @@
     }
   }
 }
+
+.home-button-left {
+  width: 114px;
+  height: 43px;
+  margin-right: 33px;
+}
+.home-button-right {
+  width: 114px;
+  height: 43px;
+}
+
+.home-play-info-card-wrapper {
+  margin: 0 auto;
+  width: 856px;
+  height: 281px;
+  margin-top: 257px;
+  margin-bottom: 226px;
+  display: flex;
+  position: relative;
+}
+.home-play-info-card-left {
+  width: 413px;
+  height: 281px;
+}
+.home-play-info-card-right {
+  width: 413px;
+  height: 281px;
+  margin-left: 30px;
+  .home-play-info-card-belong {
+    font-family: Noto Sans SC;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 23px;
+    color: #545454;
+  }
+  .home-play-info-card-title {
+    font-family: Noto Serif SC;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 52px;
+    color: #181616;
+    // padding-top: 7px;
+    margin-bottom: 37px;
+  }
+  .home-play-info-card-desc {
+    font-family: Noto Sans SC;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 28px;
+    font-feature-settings: "liga" off;
+    color: #181616;
+  }
+  .home-play-info-button{
+    position: absolute;
+    bottom: 0;
+  }
+}

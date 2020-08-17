@@ -1,13 +1,16 @@
 import React, { FC } from "react";
+import { Button } from "antd";
 import Language from "../../components/Language/language";
 import Header from "../../components/Header/header";
 import PlayCard from "../../components/Cards/playCard";
 import Carousel from "../../components/Carousel/carousel";
 import IntroInfoCard from "./introInfoCard";
+import PlayInfoCard from "./playInfoCard";
 import InterviewCard from "../../components/Cards/interviewCard";
 import HomeInfo from "../../components/Information/homeInfo";
 import Footer from "../../components/Footer/footer";
 import IMG from "../../assets/play.jpg";
+import { Space } from "antd";
 // import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 // import 'react-vertical-timeline-component/style.min.css';
 
@@ -47,32 +50,37 @@ const Home: FC = (props) => {
           position: "relative",
           overflow: "",
         }}
-      ></div>
+      />
       <div className="home-content">
         <IntroInfoCard />
         <div className="home-displaybox">
-          <PlayCard
-            name="红玫瑰与白玫瑰"
-            description="介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些介绍很"
-            belonging="2020 秋季大戏"
-          />
+          <div>
+            <PlayCard
+              name="红玫瑰与白玫瑰"
+              description="介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些介绍很"
+              belonging="2020 秋季大戏"
+            />
+            <Button danger type="primary" className="home-button-left">
+              提前选座
+            </Button>
+            <Button danger className="home-button-right">
+              了解详情
+            </Button>
+          </div>
           <img src={IMG} alt="" style={{ width: "413px", height: "262px" }} />
         </div>
         <div className="carousel-left-wrapper">
-          <Carousel type="right"/>
+          <Carousel type="right" />
         </div>
-        <Carousel type="left"/>
+        <PlayInfoCard
+          imgUrl={url}
+          title="恋爱的犀牛"
+          belonging="读本会"
+          desc="介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些介绍很多"
+        />  
+        <Carousel type="left" />
         <div className="home-about-display">
           <HomeInfo />
-          <div className="home-about-card-container">
-            {[1, 2, 3, 4].map((item) => (
-              <InterviewCard
-                imgUrl={url}
-                title="玛丽：戏剧就是造梦"
-                collection="戏言人专访"
-              />
-            ))}
-          </div>
         </div>
       </div>
       <br />

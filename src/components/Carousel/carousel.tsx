@@ -95,7 +95,7 @@ const Carousel: FC<CarouselProps> = (props) => {
   return (
     <div className="carousel-wrapper">
       <div className="carousel-content-wrapper carousel-content-wrapper-left">
-        <div className="carousel-content-top">
+        <div className="carousel-content-top-left">
           <div className="carousel-content-text">过往大戏</div>
           <div className="carousel-controller">
             <ArrowSvg
@@ -122,6 +122,7 @@ const Carousel: FC<CarouselProps> = (props) => {
                 imgUrl={url}
                 title="玛丽：戏剧就是造梦"
                 collection="戏言人专访"
+                moveSpace={space}
               />
             </div>
           ))}
