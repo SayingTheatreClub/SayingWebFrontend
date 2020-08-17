@@ -1,3 +1,7 @@
+.member-page-content{
+  display: flex;
+  justify-content: center;
+}
 .pageinfo-background {
   height: 296px;
   background: #f8f6f3;
@@ -47,6 +51,15 @@
 }
 .member-display-wraper{
   // display: grid;
-  margin: 0 auto;
+  // margin: 0 auto;
   width: 1440px;
+  margin-left: -47px;
+}
+
+.member-page-pre-display{
+  width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  margin-top: 46px;
+  flex-wrap: wrap;
 }

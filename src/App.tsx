@@ -3,10 +3,12 @@ import Language from "./components/Language/language";
 import Header from "./components/Header/header";
 import MemberCard from "./components/Cards/memberCard";
 import PlayCard from "./components/Cards/playCard";
-import Carousel from './components/Carousel/carousel';
+// import Carousel from './components/Carousel/carousel';
 import IMG from "./components/PlayCard/NT4A8400.jpg";
 import Home from './pages/Home/home';
 import MemberPage from './pages/Member/member';
+
+import Carousel from './components/Carousel/carousel';
 const profile = {
   name: "新垣结衣",
   nickName: "Gakki",
@@ -15,7 +17,7 @@ const profile = {
 };
 function App() {
   return (
-    <MemberPage/>
+    <Home/>
     // <div className="App">
     //   <Language>
     //     <Header />
