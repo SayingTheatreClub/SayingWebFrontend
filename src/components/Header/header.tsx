@@ -1,5 +1,6 @@
 import React, { useState, useContext } from "react";
-import { BrowserRouter as Router,Route,Link } from 'react-router-dom';
+//import { BrowserRouter as Router,Route,Link } from 'react-router-dom';
+import {Switch,Route,NavLink,Redirect,withRouter} from 'react-router-dom'
 import { LanguageContext } from "../Language/language";
 
 
@@ -18,11 +19,7 @@ const Header: React.FC<HeaderProps> = (props) => {
   return (
     <header className="header">
       
-      <Router>
-        <Link to="../../pages/Home/home">
-          <a href="" className="header-logo"></a>
-        </Link>
-      </Router>
+      
       
       <ul className="header-nav">
         {navs[languageType].map((item: string, index: number) => (
@@ -33,5 +30,13 @@ const Header: React.FC<HeaderProps> = (props) => {
     </header>
   );
 };
+
+{/*
+  <Router>
+        <Link to="../../pages/Home/">
+          <a href="" className="header-logo"></a>
+        </Link>
+      </Router>
+*/}
 
 export default Header;
