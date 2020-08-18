@@ -5,6 +5,7 @@
   border: 1px solid #fff7ed;
   margin-bottom: 52px;
   margin-right: 47px;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
   .content {
     padding-left: $member-card-padding-x;
     font-family: Noto Sans SC;
@@ -34,7 +35,7 @@
     font-weight: 300;
   }
   &:hover {
-    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 3rem rgba(0, 0, 0, 0.1);
     transform: translateY(-5px);
   }
 }
