@@ -93,7 +93,7 @@ const Carousel: FC<CarouselProps> = (props) => {
       </div>
     );
   return (
-    <div className="carousel-wrapper">
+    <div className="carousel-wrapper carousel-wrapper-left">
       <div className="carousel-content-wrapper carousel-content-wrapper-left">
         <div className="carousel-content-top-left">
           <div className="carousel-content-text">过往大戏</div>

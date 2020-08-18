@@ -18,7 +18,7 @@ const profile = {
 };
 function App() {
   return (
-    <MemberPage/>
+    <Home/>
     // <div className="App">
     //   <Language>
     //     <Header />

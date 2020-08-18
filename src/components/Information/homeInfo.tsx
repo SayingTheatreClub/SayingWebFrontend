@@ -1,21 +1,35 @@
 import React, { FC } from "react";
-
+import { Button } from "antd";
 const HomeInfo: FC = (props) => {
+  const totalPlays = 4;
+  const audience = 1000;
   return (
-    <div className="home-info-container">
-      <div className="home-info-left">
-        <p>关于戏言</p>
-        <div className="home-info-large">
-          <span>戏言</span>
+    <div className="home-info-wrapper">
+      <div className="home-info-top">
+        <span>戏言</span>
+        <p>这个社团</p>
+      </div>
+      <div className="home-info-body">
+        <div className="home-info-desc">
+          <p>成立于</p>
+          <p>演过</p>
+          <p>有</p>
+        </div>
+        <div className="home-info-special">
+          <span>2015</span>
           <br/>
-          <span>这个社团</span>
+          <span>{totalPlays}</span>
+          <br/>
+          <span>{audience}</span>
+        </div>
+        <div className="home-info-desc desc-right">
+          <p>年</p>
+          <p>部剧</p>
+          <p>人次观众看过我们的剧</p>
         </div>
       </div>
-      <div className="home-info-right">
-        <p>成立于2015</p>
-        <p>演过4部剧</p>
-        <p>有1000人次观众看过我们的剧</p>
-      </div>
+      <Button danger type="primary" className="home-info-button">了解戏言</Button>
+      <Button danger className="home-info-button home-info-button-left">成员</Button>
     </div>
   );
 };

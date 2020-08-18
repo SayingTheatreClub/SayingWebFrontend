@@ -150,8 +150,63 @@
     font-feature-settings: "liga" off;
     color: #181616;
   }
-  .home-play-info-button{
+  .home-play-info-button {
     position: absolute;
     bottom: 0;
   }
+}
+
+.mailbox-wrapper {
+  background: #f8f6f3;
+  border-radius: 3px;
+  width: 636px;
+  height: 197px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-318px, -99px);
+  .mailbox-content-wrapper {
+    width: 583px;
+    height: 165px;
+    margin-top: 16px;
+    margin-left: 26px;
+    background: white;
+    border: 1px solid #c62127;
+    box-sizing: border-box;
+    border-radius: 3px;
+    .mailbox-content {
+      margin: 0 20px;
+      margin-left: 84px;
+      margin-top: 20px;
+      .mailbox-title {
+        font-family: Noto Sans SC;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 23px;
+        color: #181616;
+      }
+      .mailbox-desc {
+        font-family: Noto Sans SC;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 23px;
+        font-feature-settings: "liga" off;
+        color: #181616;
+      }
+      .mailbox-input {
+        width: 302px;
+        height: 43px;
+      }
+      .mailbox-button {
+        width: 114px;
+        height: 43px;
+        margin-left: 31px;
+      }
+    }
+  }
+}
+
+.home-intro-board-wrapper{
+  display: flex;
 }

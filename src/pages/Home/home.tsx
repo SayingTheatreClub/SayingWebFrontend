@@ -6,6 +6,7 @@ import PlayCard from "../../components/Cards/playCard";
 import Carousel from "../../components/Carousel/carousel";
 import IntroInfoCard from "./introInfoCard";
 import PlayInfoCard from "./playInfoCard";
+import MailBox from "./mailBox";
 import InterviewCard from "../../components/Cards/interviewCard";
 import HomeInfo from "../../components/Information/homeInfo";
 import Footer from "../../components/Footer/footer";
@@ -77,15 +78,19 @@ const Home: FC = (props) => {
           title="恋爱的犀牛"
           belonging="读本会"
           desc="介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些介绍很多"
-        />  
-        <Carousel type="left" />
-        <div className="home-about-display">
+        />
+        <div className="home-intro-board-wrapper">
+          <Carousel type="left" />
           <HomeInfo />
         </div>
+        <div style={{ height: "200px" }}></div>
       </div>
       <br />
       <br />
-      <Footer />
+      <div style={{ position: "relative" }}>
+        <MailBox />
+        <Footer />
+      </div>
     </Language>
   );
 };

@@ -38,7 +38,7 @@ const MemberPage: FC = (props) => (
       </a>
     </div>
     <div style={{ marginTop: "125px", textAlign: "center" }}>
-      <div style={{ color: "#C62127" }}>往届成员</div>
+      <div>往届成员</div>
     </div>
     <div className="member-page-pre-display">
       {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((item) => (
@@ -49,7 +49,7 @@ const MemberPage: FC = (props) => (
         />
       ))}
     </div>
-    <div style={{ marginTop: "77px", textAlign: "center" }}>
+    <div style={{ marginTop: "77px", textAlign: "center",marginBottom:"176px" }}>
         <a href="" style={{ color: "#C62127" }}>
           查看更多
         </a>
