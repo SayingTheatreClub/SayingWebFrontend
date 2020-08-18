@@ -1,13 +1,16 @@
 import React, { FC } from "react";
+import { Button } from "antd";
 import Language from "../../components/Language/language";
 import Header from "../../components/Header/header";
 import PlayCard from "../../components/Cards/playCard";
 import Carousel from "../../components/Carousel/carousel";
-import IntroInfoCard from "../../components/Cards/introInfoCard";
+import IntroInfoCard from "./introInfoCard";
+import PlayInfoCard from "./playInfoCard";
 import InterviewCard from "../../components/Cards/interviewCard";
 import HomeInfo from "../../components/Information/homeInfo";
-import Footer from '../../components/Footer/footer';
+import Footer from "../../components/Footer/footer";
 import IMG from "../../assets/play.jpg";
+import { Space } from "antd";
 // import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 // import 'react-vertical-timeline-component/style.min.css';
 
@@ -40,58 +43,57 @@ const Home: FC = (props) => {
   return (
     <Language>
       <Header />
-      {/* <Carousel /> */}
-      <div style={{height:'657px',background:'#3F3F3F',position:'relative',overflow:''}}>
-        <IntroInfoCard/>
-      </div>
-      <div className="home-displaybox">
-        <PlayCard
-          name="红玫瑰与白玫瑰"
-          description="介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些介绍很"
-          belonging="2020 秋季大戏"
-        />
-        <img src={IMG} alt="" style={{ width: "413px", height: "262px" }} />
-      </div>
-      <div className="home-plays-display">
-        <p className="home-plays-display-title">「过往大戏」</p>
-        <div className="home-display-content">
-          {ArrowSvg(true)}
-          {[1, 2, 3].map((item) => (
+      <div
+        style={{
+          height: "657px",
+          background: "#3F3F3F",
+          position: "relative",
+          overflow: "",
+        }}
+      />
+      <div className="home-content">
+        <IntroInfoCard />
+        <div className="home-displaybox">
+          <div>
             <PlayCard
-              name="「驴得水」"
-              year="2019"
-              type="img-text"
-              imgUrl={IMG}
+              name="红玫瑰与白玫瑰"
+              description="介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些介绍很"
+              belonging="2020 秋季大戏"
             />
-          ))}
-          {ArrowSvg(false)}
+            <Button danger type="primary" className="home-button-left">
+              提前选座
+            </Button>
+            <Button danger className="home-button-right">
+              了解详情
+            </Button>
+          </div>
+          <img src={IMG} alt="" style={{ width: "413px", height: "262px" }} />
         </div>
-      </div>
-      <div className="home-about-display">
-        <HomeInfo />
-        <div className="home-about-card-container">
-          {[1, 2, 3, 4].map((item) => (
-            <InterviewCard
-              imgUrl={url}
-              title="玛丽：戏剧就是造梦"
-              collection="戏言人专访"
-            />
-          ))}
+        <div className="carousel-left-wrapper">
+          <Carousel type="right" />
         </div>
- 
+        <PlayInfoCard
+          imgUrl={url}
+          title="恋爱的犀牛"
+          belonging="读本会"
+          desc="介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些介绍很多"
+        />  
+        <Carousel type="left" />
+        <div className="home-about-display">
+          <HomeInfo />
+        </div>
       </div>
       <br />
       <br />
-      <Footer/>
+      <Footer />
     </Language>
   );
 };
 
 export default Home;
 
-
-
-{/* <div >
+{
+  /* <div >
 <VerticalTimeline>
 
   <VerticalTimelineElement
@@ -123,4 +125,5 @@ export default Home;
     </p>
   </VerticalTimelineElement>
 </VerticalTimeline>
-</div> */}
+</div> */
+}

@@ -32,7 +32,7 @@
     // margin-top: 30px;
   }
 }
-.home-about-display{
+.home-about-display {
   display: flex;
   flex-direction: column;
 }
@@ -44,27 +44,114 @@
   // flex-direction: row;
   justify-content: space-evenly;
   // flex-wrap: wrap;
-  .interview-text{
-    margin-left: 10px;
+}
+.home-content {
+  margin: 0 auto;
+  width: 1440px;
+  position: relative;
+}
+.carousel-left-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+}
+.introcard {
+  position: absolute;
+  background: rgba(248, 246, 243, 0.7);
+  top: -400px;
+  width: 524px;
+  height: 404px;
+  .introcard-content {
+    background: white;
+    // position: absolute;
+    opacity: 1;
+    border: 1px solid #c62127;
+    box-sizing: border-box;
+    width: 448px;
+    height: 328px;
+    margin: 38px auto;
+    text-align: center;
+    .home-intro-title {
+      font-family: Noto Serif SC;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 36px;
+      line-height: 52px;
+      color: #181616;
+      margin-top: 52px;
+    }
+    .home-intro-desc {
+      font-family: Noto Sans SC;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 28px;
+      font-feature-settings: "liga" off;
+      color: #181616;
+      margin-top: 49px;
+      width: 236px;
+      height: 129px;
+      margin-left: 59px;
+    }
   }
-  .interview-type {
-    margin-top: 15px;
-    
+}
+
+.home-button-left {
+  width: 114px;
+  height: 43px;
+  margin-right: 33px;
+}
+.home-button-right {
+  width: 114px;
+  height: 43px;
+}
+
+.home-play-info-card-wrapper {
+  margin: 0 auto;
+  width: 856px;
+  height: 281px;
+  margin-top: 257px;
+  margin-bottom: 226px;
+  display: flex;
+  position: relative;
+}
+.home-play-info-card-left {
+  width: 413px;
+  height: 281px;
+}
+.home-play-info-card-right {
+  width: 413px;
+  height: 281px;
+  margin-left: 30px;
+  .home-play-info-card-belong {
     font-family: Noto Sans SC;
     font-style: normal;
     font-weight: 500;
-    font-size: 12px;
-    line-height: 24px;
-    color: #c62127;
+    font-size: 16px;
+    line-height: 23px;
+    color: #545454;
   }
-  .interview-title {
+  .home-play-info-card-title {
+    font-family: Noto Serif SC;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 52px;
+    color: #181616;
+    // padding-top: 7px;
+    margin-bottom: 37px;
+  }
+  .home-play-info-card-desc {
     font-family: Noto Sans SC;
     font-style: normal;
     font-weight: 300;
     font-size: 16px;
-    line-height: 23px;
-    text-align: center;
+    line-height: 28px;
     font-feature-settings: "liga" off;
     color: #181616;
+  }
+  .home-play-info-button{
+    position: absolute;
+    bottom: 0;
   }
 }
