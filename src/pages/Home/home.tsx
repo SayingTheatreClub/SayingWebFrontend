@@ -4,13 +4,14 @@ import Language from "../../components/Language/language";
 import Header from "../../components/Header/header";
 import PlayCard from "../../components/Cards/playCard";
 import Carousel from "../../components/Carousel/carousel";
+import ArrowSvg from '../../components/Arrow/arrow';
 import IntroInfoCard from "./introInfoCard";
 import PlayInfoCard from "./playInfoCard";
 import MailBox from "./mailBox";
-import InterviewCard from "../../components/Cards/interviewCard";
 import HomeInfo from "../../components/Information/homeInfo";
 import Footer from "../../components/Footer/footer";
 import IMG from "../../assets/play.jpg";
+import Ran from '../../assets/ran.jpg';
 import { Space } from "antd";
 // import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 // import 'react-vertical-timeline-component/style.min.css';
@@ -19,26 +20,17 @@ const url =
   "https://66.media.tumblr.com/34783978b046ee2f757851c40f1b1f98/tumblr_ntu0hj7aQe1rha2imo1_640.jpg";
 const url2 =
   "https://www.pngfind.com/pngs/m/390-3903958_30k-bathouse-2017-12-05-mur-hd.png";
-const ArrowSvg = (isLeft: boolean) => {
-  const styles = {
-    transform: isLeft ? "matrix(-1, 0, 0, 1, 0, 0)" : "none",
-  };
-  return (
-    <svg
-      width="15"
-      height="29"
-      viewBox="0 0 15 29"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      style={styles}
-    >
-      <path
-        d="M0.666171 0.762966C0.454998 1.00324 0.287461 1.28865 0.17315 1.60284C0.0588397 1.91704 0 2.25385 0 2.59401C0 2.93416 0.0588397 3.27097 0.17315 3.58517C0.287461 3.89936 0.454998 4.18477 0.666171 4.42505L9.50459 14.5023L0.666171 24.5795C0.240247 25.0651 0.000964553 25.7237 0.000964553 26.4105C0.000964553 27.0973 0.240247 27.7559 0.666171 28.2416C1.0921 28.7272 1.66977 29 2.27212 29C2.87447 29 3.45215 28.7272 3.87807 28.2416L14.3338 16.3203C14.545 16.08 14.7125 15.7946 14.8269 15.4804C14.9412 15.1662 15 14.8294 15 14.4893C15 14.1491 14.9412 13.8123 14.8269 13.4981C14.7125 13.1839 14.545 12.8985 14.3338 12.6582L3.87807 0.736993C3.01245 -0.249951 1.55457 -0.249951 0.666171 0.762966Z"
-        fill="#D46201"
-      />
-    </svg>
-  );
-};
+// const ArrowSvg = (isLeft: boolean) => {
+//   const styles = {
+//     transform: isLeft ? "matrix(-1, 0, 0, 1, 0, 0)" : "none",
+//   };
+//   return (
+//     <svg width="15" height="29" viewBox="0 0 15 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+//     <path d="M14.3338 0.762965C14.545 1.00324 14.7125 1.28865 14.8268 1.60284C14.9412 1.91704 15 2.25385 15 2.59401C15 2.93416 14.9412 3.27097 14.8268 3.58517C14.7125 3.89936 14.545 4.18477 14.3338 4.42505L5.49541 14.5023L14.3338 24.5795C14.7598 25.0651 14.999 25.7237 14.999 26.4105C14.999 27.0973 14.7598 27.7559 14.3338 28.2416C13.9079 28.7272 13.3302 29 12.7279 29C12.1255 29 11.5479 28.7272 11.1219 28.2416L0.666169 16.3203C0.454996 16.08 0.287458 15.7946 0.173148 15.4804C0.0588379 15.1662 0 14.8294 0 14.4893C0 14.1491 0.0588379 13.8123 0.173148 13.4981C0.287458 13.1839 0.454996 12.8985 0.666169 12.6582L11.1219 0.736993C11.9875 -0.249951 13.4454 -0.249951 14.3338 0.762965Z" fill="#C62127"/>
+//     </svg>
+    
+//   );
+// };
 
 const Home: FC = (props) => {
   return (
@@ -74,7 +66,7 @@ const Home: FC = (props) => {
           <Carousel type="right" />
         </div>
         <PlayInfoCard
-          imgUrl={url}
+          imgUrl={Ran}
           title="恋爱的犀牛"
           belonging="读本会"
           desc="介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些介绍很多"

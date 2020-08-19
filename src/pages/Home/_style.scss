@@ -63,9 +63,8 @@
   height: 404px;
   .introcard-content {
     background: white;
-    // position: absolute;
     opacity: 1;
-    border: 1px solid #c62127;
+    border: 1px solid $brand-red;
     box-sizing: border-box;
     width: 448px;
     height: 328px;
@@ -97,11 +96,18 @@
 }
 
 .home-button-left {
+  border: 1px solid $brand-red;
+  box-sizing: border-box;
+  background: $brand-red !important;
+  border-radius: 3px;
   width: 114px;
   height: 43px;
   margin-right: 33px;
 }
 .home-button-right {
+  border: 1px solid $brand-red;
+  box-sizing: border-box;
+  border-radius: 3px;
   width: 114px;
   height: 43px;
 }
@@ -170,7 +176,7 @@
     margin-top: 16px;
     margin-left: 26px;
     background: white;
-    border: 1px solid #c62127;
+    border: 1px solid $brand-red;
     box-sizing: border-box;
     border-radius: 3px;
     .mailbox-content {
@@ -207,6 +213,7 @@
   }
 }
 
-.home-intro-board-wrapper{
+.home-intro-board-wrapper {
   display: flex;
+  flex-wrap: wrap;
 }

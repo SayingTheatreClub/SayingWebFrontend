@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-
+import {Select} from 'antd';
 import Header from "../../components/Header/header";
 import PageInfo from "./pageInfo";
 import InfoComponent from "./infoComponent";
@@ -14,7 +14,10 @@ const MemberPage: FC = (props) => (
   <Language>
     <Header />
     <PageInfo title={title} desc={desc} />
-    <div style={{ height: "197px" }}></div>
+    <div style={{ height: "197px" }}>
+      <Select defaultValue="组别" className="member-select"></Select>
+      <Select defaultValue="剧组" className="member-select member-select-right"></Select>
+    </div>
     <div className="member-page-content">
       <div className="member-display-wraper" style={{ overflow: "hidden" }}>
         <InfoComponent

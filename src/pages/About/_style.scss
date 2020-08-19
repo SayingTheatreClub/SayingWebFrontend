@@ -1,0 +1,29 @@
+.about-intro-card-wrapper {
+  display: flex;
+  margin: 0 auto;
+  .about-intro-card-right {
+    width: 635px;
+    height: 395px;
+    margin-left: 111px;
+  }
+  .about-intro-card-left {
+    width: 554px;
+    height: 395px;
+    .about-intro-card-title {
+      font-family: Noto Serif SC;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 36px;
+      line-height: 52px;
+      color: $content-black;
+    }
+    .about-intro-card-desc {
+      font-family: Noto Sans SC;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 36px;
+      color: $content-black;
+    }
+  }
+}

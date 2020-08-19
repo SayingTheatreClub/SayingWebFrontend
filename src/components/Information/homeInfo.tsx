@@ -28,8 +28,8 @@ const HomeInfo: FC = (props) => {
           <p>人次观众看过我们的剧</p>
         </div>
       </div>
-      <Button danger type="primary" className="home-info-button">了解戏言</Button>
-      <Button danger className="home-info-button home-info-button-left">成员</Button>
+      <Button danger type="primary" className="home-info-button home-info-button-left">了解戏言</Button>
+      <Button danger className="home-info-button home-info-button-right">成员</Button>
     </div>
   );
 };

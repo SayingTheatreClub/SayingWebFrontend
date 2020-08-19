@@ -11,9 +11,8 @@
     color: #181616;
     margin-top: 98px;
   }
-  .home-info-body{
+  .home-info-body {
     display: flex;
-
   }
   .home-info-desc {
     font-family: Noto Sans SC;
@@ -23,7 +22,7 @@
     line-height: 36px;
     color: #181616;
   }
-  .desc-right{
+  .desc-right {
     margin-left: 10px;
   }
   .home-info-special {
@@ -36,11 +35,15 @@
     color: #181616;
     margin-left: 10px;
   }
-  .home-info-button{
+  .home-info-button {
+    border-radius: 3px !important;
     width: 114px;
     height: 37px;
   }
-  .home-info-button-left{
+  .home-info-button-left {
+    background: #c62127 !important;
+  }
+  .home-info-button-right {
     margin-left: 21px;
   }
 }

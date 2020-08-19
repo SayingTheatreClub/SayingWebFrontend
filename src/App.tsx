@@ -8,7 +8,7 @@ import PlayCard from "./components/Cards/playCard";
 import IMG from "./components/PlayCard/NT4A8400.jpg";
 import Home from './pages/Home/home';
 import MemberPage from './pages/Member/member';
-
+import About from './pages/About/about';
 import Carousel from './components/Carousel/carousel';
 const profile = {
   name: "新垣结衣",
@@ -18,7 +18,7 @@ const profile = {
 };
 function App() {
   return (
-    <Home/>
+    <About/>
     // <div className="App">
     //   <Language>
     //     <Header />
