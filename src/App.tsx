@@ -7,6 +7,7 @@ import PlayCard from "./components/Cards/playCard";
 // import Carousel from './components/Carousel/carousel';
 import IMG from "./components/PlayCard/NT4A8400.jpg";
 import Home from './pages/Home/home';
+import About from './pages/About/About';
 import MemberPage from './pages/Member/member';
 
 import Carousel from './components/Carousel/carousel';
@@ -18,7 +19,7 @@ const profile = {
 };
 function App() {
   return (
-    <MemberPage/>
+    <About/>
     // <div className="App">
     //   <Language>
     //     <Header />
