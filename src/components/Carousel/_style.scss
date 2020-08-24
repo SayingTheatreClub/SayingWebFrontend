@@ -28,36 +28,6 @@
     }
   }
 }
-.funfact-wrapper {
-  overflow: hidden;
-  width: 1259px;
-  height: 625px;
-  background: #ffffff;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  .funfact-content-wrapper {
-    width: 1243px;
-    height: 529px;
-    background: #ffffff;
-    overflow: hidden;
-    white-space: nowrap;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    .funfact-content {
-      position: relative;
-      // transform: translate(52px);
-    }
-    .funfact-card {
-      display: inline-block;
-      width: 222px;
-      height: 360px;
-      margin-right: 35px;
-      z-index: 1;
-    }
-  }
-}
 .carousel-content-shader {
   position: absolute;
   right: 0;
