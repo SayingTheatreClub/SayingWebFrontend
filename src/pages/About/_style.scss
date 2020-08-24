@@ -1,4 +1,4 @@
-.carousel-left-wrapper {
+.funfact-left-wrapper {
     width: 100%;
     display: flex;
     flex-direction: row-reverse;
@@ -12,9 +12,31 @@
   text-align: center;
   margin-top:77px;
 }
+.about-text{
+  font-family: Noto Sans SC;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 28px;
+  text-align: right;
+  font-feature-settings: 'liga' off;
+  color: #181616;
+}
 .img{
   border: 1px solid #ddd;
   border-radius: 4px;
   padding: 5px;
   width: 150px;
+}
+.home-displaybox {
+  display: flex;
+  width: 1000px;
+  margin: 8rem auto;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  flex-wrap: wrap;
+  word-break: normal;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 618px;
 }

@@ -55,34 +55,18 @@ const Fanfacts: FC<FanfactsProps> = (props) => {
   };
   if (type === "right")
     return (
-      <div className="carousel-wrapper">
-        <div className="carousel-content-wrapper carousel-content-wrapper-right">
-          <div className="carousel-content-top">
-            <div className="carousel-content-text">过往大戏</div>
-            <div className="carousel-controller">
-              <ArrowSvg
-                isLeft={true}
-                className="carousel-arrow carousel-arrow-left"
-                onClick={() => {
-                  handleClick(true);
-                }}
-              />
-              <ArrowSvg
-                isLeft={false}
-                className="carousel-arrow carousel-arrow-right"
-                onClick={() => {
-                  handleClick(false);
-                }}
-              />
-            </div>
+      <div className="funfact-wrapper">
+        <div className="funfact-content-wrapper funfact-content-wrapper-right">
+          <div className="funfact-content-top">
+            <div className="funfact-content-text"></div>
           </div>
-          <div className="carousel-content carousel-content-right">
-            <div className="carousel-content-shader" />
+          <div className="funfact-content funfact-content-right">
+            <div className="funfact-content-shader" />
             {[1, 2, 3, 4, 5, 6, 7, 8].map((item) => (
               <PlayCard
-                className="carousel-card"
-                name="[驴得水]"
-                year="2019"
+                className="funfact-card"
+                name=""
+                year=""
                 type="img-text"
                 imgUrl={url}
                 moveSpace={space}
@@ -93,31 +77,15 @@ const Fanfacts: FC<FanfactsProps> = (props) => {
       </div>
     );
   return (
-    <div className="carousel-wrapper">
-      <div className="carousel-content-wrapper carousel-content-wrapper-left">
-        <div className="carousel-content-top-left">
-          <div className="carousel-content-text">过往大戏</div>
-          <div className="carousel-controller">
-            <ArrowSvg
-              isLeft={true}
-              className="carousel-arrow carousel-arrow-left"
-              onClick={() => {
-                handleClick(true);
-              }}
-            />
-            <ArrowSvg
-              isLeft={false}
-              className="carousel-arrow carousel-arrow-right"
-              onClick={() => {
-                handleClick(false);
-              }}
-            />
-          </div>
+    <div className="funfact-wrapper">
+      <div className="funfact-content-wrapper funfact-content-wrapper-left">
+        <div className="funfact-content-top-left">
+          <div className="funfact-content-text"></div>
         </div>
-        <div className="carousel-content carousel-content-left">
-          <div className="carousel-content-shader carousel-content-shader-left " />
+        <div className="funfact-content funfact-content-left">
+          <div className="funfact-content-shader funfact-content-shader-left " />
           {[1, 2, 3, 4, 5, 6, 7, 8].map((item) => (
-            <div className="home-carousel-interview-card">
+            <div className="home-funfact-interview-card">
               <InterviewCard
                 imgUrl={url}
                 title="玛丽：戏剧就是造梦"
