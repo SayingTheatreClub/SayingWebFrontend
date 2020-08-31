@@ -7,18 +7,25 @@
   margin-right: 47px;
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
   .content {
-    padding-left: $member-card-padding-x;
+    margin-left: 24px;
     font-family: Noto Sans SC;
+    margin-top: 30px;
+    margin-right: 24px;
   }
   .name {
-    font-size: 18px;
-    line-height: 26px;
+    font-family: Noto Sans SC;
+    font-style: normal;
     font-weight: 300;
-    color: #1f1919;
+    font-size: 18px;
+    line-height: 36px;
+    color: #181616;
   }
   .photo {
     display: block;
-    width: 80%;
+    width: 203px;
+    height: 160px;
+    margin-left: 9px;
+    margin-top: 18px;
   }
   .title {
     font-family: Noto Sans SC;
@@ -30,9 +37,11 @@
   }
   .desc {
     font-family: Noto Serif SC;
-    font-size: 10px;
-    line-height: 14px;
+    font-style: normal;
     font-weight: 300;
+    font-size: 12px;
+    line-height: 18px;
+    color: #181616;
   }
   &:hover {
     box-shadow: 0 0 3rem rgba(0, 0, 0, 0.1);

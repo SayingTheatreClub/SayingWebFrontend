@@ -1,15 +1,49 @@
-.home-info-container {
-  display: flex;
-  justify-content: space-evenly;
-  .home-info-large {
+.home-info-wrapper {
+  height: 477px;
+  width: 356px;
+  margin-left: 31px;
+  .home-info-top {
     font-family: Noto Serif SC;
     font-style: normal;
     font-weight: normal;
     font-size: 36px;
     line-height: 52px;
-
-    /* content_black */
-
     color: #181616;
+    margin-top: 98px;
+  }
+  .home-info-body {
+    display: flex;
+  }
+  .home-info-desc {
+    font-family: Noto Sans SC;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 36px;
+    color: #181616;
+  }
+  .desc-right {
+    margin-left: 10px;
+  }
+  .home-info-special {
+    font-family: Noto Serif SC;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 48px;
+    text-align: center;
+    color: #181616;
+    margin-left: 10px;
+  }
+  .home-info-button {
+    border-radius: 3px !important;
+    width: 114px;
+    height: 37px;
+  }
+  .home-info-button-left {
+    background: #c62127 !important;
+  }
+  .home-info-button-right {
+    margin-left: 21px;
   }
 }

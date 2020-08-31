@@ -17,7 +17,7 @@ function getLanguage() {
 const Language: React.FC = (props) => {
   const { children } = props;
   const passedContext = {
-    language: getLanguage(),
+    language: "zh",
   };
   return(
     <LanguageContext.Provider value={passedContext}>
