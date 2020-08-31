@@ -1,29 +1,42 @@
-.about-intro-card-wrapper {
+.funfact-left-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+}
+.about-subtitle{
+  font-family: Noto Sans SC;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 23px;
+  text-align: center;
+  margin-top:77px;
+}
+.about-text{
+  font-family: Noto Sans SC;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 28px;
+  text-align: right;
+  font-feature-settings: 'liga' off;
+  color: #181616;
+}
+.img{
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 150px;
+}
+.home-displaybox {
   display: flex;
-  margin: 0 auto;
-  .about-intro-card-right {
-    width: 635px;
-    height: 395px;
-    margin-left: 111px;
-  }
-  .about-intro-card-left {
-    width: 554px;
-    height: 395px;
-    .about-intro-card-title {
-      font-family: Noto Serif SC;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 36px;
-      line-height: 52px;
-      color: $content-black;
-    }
-    .about-intro-card-desc {
-      font-family: Noto Sans SC;
-      font-style: normal;
-      font-weight: 300;
-      font-size: 18px;
-      line-height: 36px;
-      color: $content-black;
-    }
-  }
+  width: 1000px;
+  margin: 8rem auto;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  flex-wrap: wrap;
+  word-break: normal;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 618px;
 }
