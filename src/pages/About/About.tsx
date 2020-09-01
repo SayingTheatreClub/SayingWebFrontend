@@ -60,12 +60,12 @@ const AboutPage: FC = (props) => (
             date=""
             iconStyle={{ background: 'rgb(255, 255, 255)', color: '#ff4f00' }}
             textClassName={ "vertical-timeline-element-texts" }
-            icon={<img src={""} alt="" style={{ width: "60px", height: "60px" }} />}
+            //icon={<img src={""} alt="" style={{ width: "60px", height: "60px" }} />}
         >
+            <img src={imgUrl} alt="" className = "vertical-timeline-element-img" />
             <h3 className="vertical-timeline-element-title">2020年4月</h3>
             <h4 className="vertical-timeline-element-subtitle">线上剧本杀</h4>
             <p>
-              <img src={imgUrl} alt="" className = "vertical-timeline-element-img" />
               <text className="about-text">一点短短的description， 大立科技发是大立科技弗兰克教授的福利卡就是地方</text>
             </p>
             
@@ -76,7 +76,7 @@ const AboutPage: FC = (props) => (
             contentArrowStyle={{ borderRight: '7px solid  #ff4f00' }}
             date=""
             iconStyle={{ background: 'rgb(255, 255, 255)', color: '#ff4f00' }}
-            icon={<img src={""} alt="" style={{ width: "60px", height: "60px" }} />}
+            //icon={<img src={""} alt="" style={{ width: "60px", height: "60px" }} />}
         >
             <h3 className="vertical-timeline-element-title">2020年2月</h3>
             <h4 className="vertical-timeline-element-subtitle">CSSA 春晚小品「卖车」</h4>
@@ -91,12 +91,12 @@ const AboutPage: FC = (props) => (
             date=""
             iconStyle={{ background: 'rgb(255, 255, 255)', color: '#ff4f00' }}
             textClassName={ "vertical-timeline-element-texts" }
-            icon={<img src={""} alt="" style={{ width: "60px", height: "60px" }} />}
+            //icon={<img src={""} alt="" style={{ width: "60px", height: "60px" }} />}
         >
+            <img src={imgUrl} alt="" className = "vertical-timeline-element-img" />
             <h3 className="vertical-timeline-element-title">2019年4月</h3>
             <h4 className="vertical-timeline-element-subtitle">「驴得水」公演</h4>
             <p>
-              <img src={imgUrl} alt="" className = "vertical-timeline-element-img" />
               <text className="about-text">一点短短的description， 大立科技发是大立科技弗兰克教授的福利卡就是地方</text>
             </p>
             
