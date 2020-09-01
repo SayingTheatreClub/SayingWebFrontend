@@ -28,10 +28,10 @@ const MemberCard: React.FC<CartInterface> = (props) => {
   } = props;
   return (
     <div className="member-card" {...restProps}>
+      <img src={imgUrl} alt={name} className="photo" />
       <div className="content">
-        <img src={imgUrl} alt={name} className="photo" />
         <p className="name">{name}</p>
-        <p className="title">{title}</p>
+        {/* <p className="title">{title}</p> */}
         <p className="nickName">{nickName}</p>
         <p className="desc">{description}</p>
       </div>

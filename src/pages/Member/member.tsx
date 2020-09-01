@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-
+import {Select} from 'antd';
 import Header from "../../components/Header/header";
 import PageInfo from "./pageInfo";
 import InfoComponent from "./infoComponent";
@@ -14,7 +14,10 @@ const MemberPage: FC = (props) => (
   <Language>
     <Header />
     <PageInfo title={title} desc={desc} />
-    <div style={{ height: "197px" }}></div>
+    <div style={{ height: "197px" }}>
+      <Select defaultValue="组别" className="member-select"></Select>
+      <Select defaultValue="剧组" className="member-select member-select-right"></Select>
+    </div>
     <div className="member-page-content">
       <div className="member-display-wraper" style={{ overflow: "hidden" }}>
         <InfoComponent
@@ -38,7 +41,7 @@ const MemberPage: FC = (props) => (
       </a>
     </div>
     <div style={{ marginTop: "125px", textAlign: "center" }}>
-      <div style={{ color: "#C62127" }}>往届成员</div>
+      <div>往届成员</div>
     </div>
     <div className="member-page-pre-display">
       {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((item) => (
@@ -49,7 +52,7 @@ const MemberPage: FC = (props) => (
         />
       ))}
     </div>
-    <div style={{ marginTop: "77px", textAlign: "center" }}>
+    <div style={{ marginTop: "77px", textAlign: "center",marginBottom:"176px" }}>
         <a href="" style={{ color: "#C62127" }}>
           查看更多
         </a>
