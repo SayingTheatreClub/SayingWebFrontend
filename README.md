@@ -7,4 +7,4 @@ To launch: `yarn start`
 
 ### Node.js
 ### Yarn($ npm install yarn)
-### TimeLine($ npm i react-vertical-timeline-component)
+### TimeLine($ npm i react-vertical-timeline-component, then replace file folder "react-vertical-timeline-component" in node_modules with folder in ./public/assets/)
