@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1592239397319" clover="3.2.0">
+  <project timestamp="1592239397320" name="All files">
+    <metrics statements="12" coveredstatements="11" conditionals="4" coveredconditionals="3" methods="2" coveredmethods="2" elements="18" coveredelements="16" complexity="0" loc="12" ncloc="12" packages="1" files="2" classes="2"/>
+    <file name="VerticalTimeline.js" path="/home/shin/www/react-vertical-timeline/src/VerticalTimeline.js">
+      <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <line num="5" count="1" type="stmt"/>
+      <line num="6" count="6" type="stmt"/>
+      <line num="17" count="1" type="stmt"/>
+      <line num="27" count="1" type="stmt"/>
+    </file>
+    <file name="VerticalTimelineElement.js" path="/home/shin/www/react-vertical-timeline/src/VerticalTimelineElement.js">
+      <metrics statements="8" coveredstatements="7" conditionals="4" coveredconditionals="3" methods="1" coveredmethods="1"/>
+      <line num="6" count="1" type="stmt"/>
+      <line num="24" count="5" type="stmt"/>
+      <line num="25" count="5" type="stmt"/>
+      <line num="26" count="5" type="cond" truecount="3" falsecount="1"/>
+      <line num="27" count="0" type="stmt"/>
+      <line num="30" count="5" type="stmt"/>
+      <line num="87" count="1" type="stmt"/>
+      <line num="114" count="1" type="stmt"/>
+    </file>
+  </project>
+</coverage>
