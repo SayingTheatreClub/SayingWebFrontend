@@ -22,6 +22,7 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "^3.4.1",
     "react-vertical-timeline-component": "^3.0.2",
+    "reactjs-popup": "^2.0.3",
     "typescript": "~3.7.2",
     "yarn": "^1.22.4"
   },
