@@ -5,7 +5,7 @@ import Home from "./pages/Home/home";
 import Member from "./pages/Member/member";
 import About from "./pages/About/About";
 function App() {
-  returan (
+  return (
     <BrowserRouter>
       <Route path="/" exact component={Home} />
       <Route path="/member" component={Member} />
