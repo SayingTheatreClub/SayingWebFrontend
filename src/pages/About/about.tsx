@@ -5,8 +5,7 @@ import Header from "../../components/Header/header";
 import PlayCard from "../../components/Cards/playCard";
 import Funfact from "../../components/Funfact/funfacts";
 import PageInfo from "./pageInfo";
-import InterviewCard from "../../components/Cards/interviewCard";
-import HomeInfo from "../../components/Information/homeInfo";
+
 import Footer from "../../components/Footer/footer";
 import IMG from "../../assets/play.jpg";
 import { Space } from "antd";
@@ -38,7 +37,7 @@ const AboutPage: FC = (props) => (
       </a>
     </div>
     <div className="funfact-left-wrapper">
-      {/* <Funfact type="right" /> */}
+      <Funfact type="right" />
     </div>
     {/* <div>
         {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15].map((item) => (
@@ -222,39 +221,3 @@ const AboutPage: FC = (props) => (
 );
 
 export default AboutPage;
-
-{
-  /* <div >
-<VerticalTimeline>
-
-  <VerticalTimelineElement
-    className="vertical-timeline-element--work"
-    contentStyle={{ background: 'rgba(0, 0, 0, .00)', color: '#000' }}
-    contentArrowStyle={{ borderRight: '7px solid  #ff4f00' }}
-    date="1"
-    iconStyle={{ background: 'rgb(255, 255, 255)', color: '#ff4f00' }}
-    icon={<img src={url2} alt="" style={{ width: "60px", height: "60px" }} />}
-  >
-    <h3 className="vertical-timeline-element-title">2020年4月</h3>
-    <h4 className="vertical-timeline-element-subtitle">线上剧本杀</h4>
-    <p>
-      一点短短的description， 预言家杀疯了
-    </p>
-  </VerticalTimelineElement>
-  <VerticalTimelineElement
-    className="vertical-timeline-element--work"
-    contentStyle={{ background: 'rgba(0, 0, 0, .00)', color: '#000' }}
-    contentArrowStyle={{ borderRight: '7px solid  #ff4f00' }}
-    date="2"
-    iconStyle={{ background: 'rgb(255, 255, 255)', color: '#ff4f00' }}
-    icon={<img src={url2} alt="" style={{ width: "60px", height: "60px" }} />}
-  >
-    <h3 className="vertical-timeline-element-title">2020年2月</h3>
-    <h4 className="vertical-timeline-element-subtitle">CSSA 春晚小品「卖车」</h4>
-    <p>
-      我还没路考。。。。
-    </p>
-  </VerticalTimelineElement>
-</VerticalTimeline>
-</div> */
-}
