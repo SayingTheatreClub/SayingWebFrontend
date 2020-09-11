@@ -6,7 +6,7 @@ export const homeHead = {
 
 export const redNBlackRose = {
   belonging: "2020 秋季大戏",
-  titile: "红玫瑰与白玫瑰",
+  title: "红玫瑰与白玫瑰",
   text: `“也许每一个男子全都有过这样的两个女人，
     至少两个。娶了红玫瑰，久而久之，
     红的变了墙上的一抹蚊子血，白的还是“床前明月光”；
@@ -16,7 +16,7 @@ export const redNBlackRose = {
 
 export const rhinInLove = {
   belonging: "读本会",
-  titile: "恋爱的犀牛",
+  title: "恋爱的犀牛",
   text: `“黄昏是我一天中视力最差的时候，一眼望去满街都是美女，
     高楼和街道也变幻了通常的形状，像在电影里……你就站在楼梯的拐角，
     带着某种清香的味道，有点湿乎乎的，奇怪的气息。

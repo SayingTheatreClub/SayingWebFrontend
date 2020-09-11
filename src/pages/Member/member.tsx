@@ -1,12 +1,15 @@
 import React, { FC } from "react";
 import { Select } from "antd";
-import Popup from 'reactjs-popup';
+import Popup from "reactjs-popup";
 import Header from "../../components/Header/header";
 import PageInfo from "./pageInfo";
 import InfoComponent from "./infoComponent";
 import MemberCard from "../../components/Cards/memberCard";
 import Footer from "../../components/Footer/footer";
 import Language from "../../components/Language/language";
+
+import { intro } from "../../text/memberText";
+
 const title = "戏言家庭";
 const desc =
   "加入了戏言就是戏言大家庭的一份子，对于戏言来说，人是我们的核心。“等我们赚钱了，就一起建一个剧院";
@@ -14,7 +17,7 @@ const desc =
 const MemberPage: FC = (props) => (
   <Language>
     <Header />
-    <PageInfo title={title} desc={desc} />
+    <PageInfo title={intro.title} desc={intro.text} />
     <div style={{ height: "197px" }}>
       <Select defaultValue="组别" className="member-select"></Select>
       <Select
@@ -64,18 +67,8 @@ const MemberPage: FC = (props) => (
       <a href="" style={{ color: "#C62127" }}>
         查看更多
       </a>
-      <Popup >
-      </Popup>
+      {/* <Popup></Popup> */}
     </div>
-    {/* <div>
-      {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15].map((item) => (
-        <MemberCard
-          name="门飞"
-          title="导演"
-          description="感情戏最难演，没有之一。我热爱话剧，也感谢戏言给我（在苦逼学术外）解放思想、重新做人的机会"
-        />
-      ))}
-    </div> */}
     <br />
     <br />
     <Footer />
