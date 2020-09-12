@@ -1,6 +1,7 @@
 import React, { useState, useContext } from "react";
 import { Menu } from "antd";
 import Logo from "../../assets/logo.png";
+import { Link,useHistory } from "react-router-dom";
 
 export interface HeaderProps {
   className?: string;
@@ -9,7 +10,12 @@ const navs = {
   en: ["About", "Shows", "Events", "Articals", "中|EN"],
   zh: ["活动动态", "文章", "中|EN"],
 };
-const aboutDrop = ["戏言家庭", "加入我们", "支持戏言", "联系我们"];
+const aboutDrop = [
+  { name: "戏言家庭", url: "member" },
+  { name: "加入我们", url: "" },
+  { name: "支持戏言", url: "" },
+  { name: "联系我们", url: "" },
+];
 const playsDrop = [
   "红玫瑰与白玫瑰",
   "驴得水",
@@ -18,9 +24,16 @@ const playsDrop = [
   "暗恋桃花源",
 ];
 const Header: React.FC<HeaderProps> = (props) => {
+  const history = useHistory();
+  const handleClick = (url: string) => {
+    if(url.length===0) return;
+    history.push(url);
+  };
   return (
     <header className="header">
-      <img src={Logo} className="header-logo" />
+      <Link to="/">
+        <img src={Logo} className="header-logo" />
+      </Link>
       <Menu
         mode="horizontal"
         className="header-nav"
@@ -38,9 +51,12 @@ const Header: React.FC<HeaderProps> = (props) => {
         <Menu.SubMenu
           title="关于戏言"
           className="header-nav-item"
+          onTitleClick={() => handleClick('/about')}
         >
-          {aboutDrop.map((item: string) => (
-            <Menu.Item>{item}</Menu.Item>
+          {aboutDrop.map((item: any) => (
+            <Menu.Item>
+              <Link to={`/${item.url}`}>{item.name}</Link>
+            </Menu.Item>
           ))}
         </Menu.SubMenu>
 
