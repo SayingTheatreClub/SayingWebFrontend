@@ -1,15 +1,14 @@
 .popup-wrapper {
   width: 953px;
-  height: 914px;
-  background:#F8F6F3;
+  // height: 914px;
+  background: #f8f6f3;
 }
 
 .popup-lower-content-wrapper {
   width: 873px;
-  height: 557px;
-  margin: 0 40px;
+  // height: 557px;
   position: relative;
-  top: 282px;
+  margin: 0 40px;
   border: 1px solid #c62127;
   box-sizing: border-box;
   background: white;
@@ -22,22 +21,60 @@
     left: 32px;
   }
   .popup-desc {
-    background: blue;
-    width: 100px;
-    height: 100px;
-    position: absolute;
-    top: 170px;
-    left: 73px;
+    width: 300px;
+    word-wrap: break-word;
+    font-family: Noto Serif SC;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 18px;
+    color: #181616;
   }
 }
+
+.popup-lower-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 34px;
+
+}
+
 .popup-name {
+  text-align: right;
   font-family: Noto Serif SC;
   font-style: normal;
   font-weight: normal;
   font-size: 36px;
   line-height: 52px;
   color: #000000;
-  position: absolute;
-  left: 496px;
-  top: 135px;
+  padding-top: 135px;
+  margin-bottom: 81px;
+  margin-right: 311px;
+}
+.popup-playlist {
+  font-family: Noto Sans SC;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 23px;
+  color: #000000;
+}
+.popup-play-jobs-wrapper {
+  display: flex;
+  width: 250px;
+  justify-content: space-between;
+  padding-left: 50px;
+  padding-top: 20px;
+}
+.popup-playlist-item {
+  margin-bottom: 22px;
+}
+.popup-playlist-title {
+  font-family: Noto Sans SC;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  color: #000000;
 }

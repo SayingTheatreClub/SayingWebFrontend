@@ -50,17 +50,16 @@
   margin-top: 30px;
 }
 .member-display-wraper{
-  // display: grid;
-  // margin: 0 auto;
   width: 1440px;
-  margin-left: -47px;
+  margin-left: -23px;
+  text-align: center;
 }
 
 .member-page-pre-display{
-  width: 1440px;
   margin: 0 auto;
   display: flex;
   margin-top: 46px;
+  justify-content:space-around;
   flex-wrap: wrap;
 }
 .member-select{

@@ -1,11 +1,12 @@
 .member-card {
   // height: $member-card-height;
-  height: 360px;
-  width: 222px;
+  height: 22.5rem;
+  width: 14rem;
   border: 1px solid #fff7ed;
+  margin: 0 1.4rem;
   margin-bottom: 52px;
-  margin-right: 47px;
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+  text-align: left;
   .content {
     margin-left: 24px;
     font-family: Noto Sans SC;

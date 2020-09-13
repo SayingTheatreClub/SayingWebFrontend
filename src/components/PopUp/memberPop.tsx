@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import Popup from "reactjs-popup";
-
+import PlayList from "./playList";
 const mockData = {
   name: "伍晓蕾",
   plays: [
@@ -27,15 +27,21 @@ const MemberPop: FC<MemberProps> = (props) => {
         <div className="popup-name">{name}</div>
         <div className="popup-lower-content-wrapper">
           <img src={imgUrl} alt={`${name}'s photo`} className="popup-img" />
-          <div className="popup-desc">{desc}</div>
-          <div></div>
+          <div className="popup-lower-content">
+            <p className="popup-desc">{desc}</p>
+            <div>
+              <PlayList />
+            </div>
+          </div>
         </div>
+        <div style={{height:"75px"}}></div>
       </div>
     </Popup>
   );
 };
 MemberPop.defaultProps = {
-  imgUrl: "https://66.media.tumblr.com/34783978b046ee2f757851c40f1b1f98/tumblr_ntu0hj7aQe1rha2imo1_640.jpg",
+  imgUrl:
+    "https://66.media.tumblr.com/34783978b046ee2f757851c40f1b1f98/tumblr_ntu0hj7aQe1rha2imo1_640.jpg",
 };
 
 export default MemberPop;
