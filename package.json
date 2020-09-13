@@ -25,7 +25,7 @@
     "react-vertical-timeline-component": "^3.0.2",
     "reactjs-popup": "^2.0.3",
     "typescript": "~3.7.2",
-    "yarn": "^1.22.4"
+    "yarn": "^1.22.5"
   },
   "scripts": {
     "start": "react-scripts start",
