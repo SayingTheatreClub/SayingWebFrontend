@@ -1,6 +1,5 @@
 import React, { FC } from "react";
 import { Select } from "antd";
-import Popup from "reactjs-popup";
 import Header from "../../components/Header/header";
 import PageInfo from "./pageInfo";
 import InfoComponent from "./infoComponent";
@@ -8,11 +7,8 @@ import MemberCard from "../../components/Cards/memberCard";
 import Footer from "../../components/Footer/footer";
 import Language from "../../components/Language/language";
 
+import PosterImg from '../../assets/poster.png';
 import { intro } from "../../text/memberText";
-
-const title = "戏言家庭";
-const desc =
-  "加入了戏言就是戏言大家庭的一份子，对于戏言来说，人是我们的核心。“等我们赚钱了，就一起建一个剧院";
 
 const MemberPage: FC = (props) => (
   <Language>
@@ -28,7 +24,7 @@ const MemberPage: FC = (props) => (
     <div className="member-page-content">
       <div className="member-display-wraper" style={{ overflow: "hidden" }}>
         <InfoComponent
-          imgUrl=""
+          imgUrl={PosterImg}
           desc="介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些"
         />
         {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16].map((item) => (

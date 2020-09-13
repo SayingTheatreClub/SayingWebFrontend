@@ -1,14 +1,19 @@
 .home-displaybox {
   display: flex;
-  width: 1000px;
-  margin: 8rem auto;
-  margin-bottom: 0px;
+  margin: 0 auto;
   flex-wrap: wrap;
   word-break: normal;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
-  height: 618px;
+  padding-top: 465px;
+  padding-bottom: 233px;
 }
+
+.home-display-box-img {
+  width: 25.8125rem;
+  height: 16.375rem;
+}
+
 .home-plays-display {
   height: 457px;
   text-align: center;
@@ -47,7 +52,7 @@
 }
 .home-content {
   margin: 0 auto;
-  width: 1440px;
+  max-width: 1440px;
   position: relative;
 }
 .carousel-left-wrapper {
@@ -61,6 +66,9 @@
   top: -400px;
   width: 524px;
   height: 404px;
+  @media screen and(max-width:530px) {
+    display: none;
+  }
   .introcard-content {
     background: white;
     opacity: 1;

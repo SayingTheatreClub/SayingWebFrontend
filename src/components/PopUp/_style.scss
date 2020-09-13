@@ -1,0 +1,43 @@
+.popup-wrapper {
+  width: 953px;
+  height: 914px;
+  background:#F8F6F3;
+}
+
+.popup-lower-content-wrapper {
+  width: 873px;
+  height: 557px;
+  margin: 0 40px;
+  position: relative;
+  top: 282px;
+  border: 1px solid #c62127;
+  box-sizing: border-box;
+  background: white;
+  border-radius: 3px;
+  .popup-img {
+    width: 380px;
+    height: 300px;
+    position: absolute;
+    top: -179px;
+    left: 32px;
+  }
+  .popup-desc {
+    background: blue;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 170px;
+    left: 73px;
+  }
+}
+.popup-name {
+  font-family: Noto Serif SC;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 52px;
+  color: #000000;
+  position: absolute;
+  left: 496px;
+  top: 135px;
+}

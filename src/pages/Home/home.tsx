@@ -47,7 +47,12 @@ const Home: FC = (props) => {
               了解详情
             </Button>
           </div>
-          <img src={IMG} alt="" style={{ width: "413px", height: "262px" }} />
+          <img
+            src={IMG}
+            alt=""
+            style={{ width: "25.8125rem", height: "16.375rem" }}
+            className="home-display-box-img"
+          />
         </div>
         <div className="carousel-left-wrapper">
           <Carousel type="right" />

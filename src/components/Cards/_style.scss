@@ -50,7 +50,8 @@
 }
 
 .playCard {
-  width: 500px;
+  width: 413px;
+  margin-right: 30px;
   .playCard-belonging {
     font-family: "Noto Sans SC";
     font-style: normal;
@@ -69,17 +70,14 @@
     font-family: "Noto Sans SC";
     font-style: normal;
     font-weight: 300;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 20px;
-    font-feature-settings: "liga" off;
   }
 }
 
 .img-card {
   width: 303px;
   height: 254px;
-  // margin: 0 auto;
-  // text-align: center;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   .img-card-content {
     margin-left: 9px;
