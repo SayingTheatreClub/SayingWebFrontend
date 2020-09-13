@@ -52,8 +52,7 @@ const AboutPage: FC = (props) => (
           <h4 className="vertical-timeline-element-subtitle">线上剧本杀</h4>
           <p>
             <text className="about-text">
-              一点短短的description，
-              大立科技发是大立科技弗兰克教授的福利卡就是地方
+            戏言提醒您，多玩剧本杀，少做键盘侠。
             </text>
           </p>
         </VerticalTimelineElement>
@@ -70,7 +69,7 @@ const AboutPage: FC = (props) => (
           </h4>
           <p>
             <text className="about-text">
-              一点短短的description， 大立科技发是大立科技发是大立
+            麦屯赵本山和范伟为您带来的经典小品《聪明的智商又占领高地了》。
             </text>
           </p>
         </VerticalTimelineElement>
@@ -87,8 +86,7 @@ const AboutPage: FC = (props) => (
           <h4 className="vertical-timeline-element-subtitle">「驴得水」公演</h4>
           <p>
             <text className="about-text">
-              一点短短的description，
-              大立科技发是大立科技弗兰克教授的福利卡就是地方
+            每个曾经想改变中国的人， 都被中国所改变。
             </text>
           </p>
         </VerticalTimelineElement>
@@ -98,17 +96,14 @@ const AboutPage: FC = (props) => (
           contentArrowStyle={{ borderRight: "7px solid  #ff4f00" }}
           date=""
           iconStyle={{ background: "rgb(255, 255, 255)", color: "#ff4f00" }}
-          icon={
-            <img src={""} alt="" style={{ width: "60px", height: "60px" }} />
-          }
         >
-          <h3 className="vertical-timeline-element-title">2020年2月</h3>
+          <h3 className="vertical-timeline-element-title">2018年4月</h3>
           <h4 className="vertical-timeline-element-subtitle">
-            CSSA 春晚小品「卖车」
+            演员的诞生
           </h4>
           <p>
             <text className="about-text">
-              一点短短的description， 大立科技发是大立科技发是大立
+            虽然我们给不了你奥斯卡，但我们能给你兰蔻，音箱和Kindle啊！
             </text>
           </p>
         </VerticalTimelineElement>
@@ -118,9 +113,7 @@ const AboutPage: FC = (props) => (
           contentArrowStyle={{ borderRight: "7px solid  #ff4f00" }}
           date="2019年"
           iconStyle={{ background: "rgb(255, 255, 255)", color: "#ff4f00" }}
-          icon={
-            <img src={""} alt="" style={{ width: "60px", height: "60px" }} />
-          }
+          
         ></VerticalTimelineElement>
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
@@ -128,9 +121,7 @@ const AboutPage: FC = (props) => (
           contentArrowStyle={{ borderRight: "7px solid  #ff4f00" }}
           date="2018年"
           iconStyle={{ background: "rgb(255, 255, 255)", color: "#ff4f00" }}
-          icon={
-            <img src={""} alt="" style={{ width: "60px", height: "60px" }} />
-          }
+          
         ></VerticalTimelineElement>
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
@@ -138,9 +129,7 @@ const AboutPage: FC = (props) => (
           contentArrowStyle={{ borderRight: "7px solid  #ff4f00" }}
           date="2017年"
           iconStyle={{ background: "rgb(255, 255, 255)", color: "#ff4f00" }}
-          icon={
-            <img src={""} alt="" style={{ width: "60px", height: "60px" }} />
-          }
+          
         ></VerticalTimelineElement>
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
@@ -148,9 +137,7 @@ const AboutPage: FC = (props) => (
           contentArrowStyle={{ borderRight: "7px solid  #ff4f00" }}
           date="2016年"
           iconStyle={{ background: "rgb(255, 255, 255)", color: "#ff4f00" }}
-          icon={
-            <img src={""} alt="" style={{ width: "60px", height: "60px" }} />
-          }
+          
         ></VerticalTimelineElement>
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
@@ -158,9 +145,7 @@ const AboutPage: FC = (props) => (
           contentArrowStyle={{ borderRight: "7px solid  #ff4f00" }}
           date="2015年"
           iconStyle={{ background: "rgb(255, 255, 255)", color: "#ff4f00" }}
-          icon={
-            <img src={""} alt="" style={{ width: "60px", height: "60px" }} />
-          }
+          
         ></VerticalTimelineElement>
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
@@ -168,15 +153,13 @@ const AboutPage: FC = (props) => (
           contentArrowStyle={{ borderRight: "7px solid  #ff4f00" }}
           date=""
           iconStyle={{ background: "rgb(255, 255, 255)", color: "#ff4f00" }}
-          icon={
-            <img src={""} alt="" style={{ width: "60px", height: "60px" }} />
-          }
+          
         >
           <h3 className="vertical-timeline-element-title">2015年3月</h3>
           <h4 className="vertical-timeline-element-subtitle">建立戏言</h4>
           <p>
             <text className="about-text">
-              一点短短的description， 大立科技发是大立科技发是大立
+            在这个春光明媚的三月，我正式宣布，戏言中文戏剧社，成立了！！！
             </text>
           </p>
         </VerticalTimelineElement>
