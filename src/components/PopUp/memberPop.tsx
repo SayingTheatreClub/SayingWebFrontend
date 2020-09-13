@@ -1,4 +1,5 @@
-import React, { FC } from "react";
+import axios from "axios";
+import React, { Component, FC, useEffect, useState } from "react";
 import Popup from "reactjs-popup";
 import PlayList from "./playList";
 const mockData = {
@@ -17,31 +18,43 @@ interface MemberProps {
   endYear?: number;
   name: string;
   open: boolean;
+  data?: any;
 }
 
 const MemberPop: FC<MemberProps> = (props) => {
-  const { imgUrl, desc, beginYear, endYear, name, open } = props;
+  const { imgUrl, desc, beginYear, endYear, name, open, data } = props;
+  const [myData, setMyData] = useState([1]);
+  useEffect(() => {
+    const dataArray = new Array<any>();
+    axios
+      .get("http://3.16.216.212/instance/?person__name=" + name)
+      .then((res) => {
+        const data = res.data;
+        data.forEach((item: any) => {
+          const temp = {
+            play: item.play,
+            job: item.job,
+          };
+          dataArray.push(temp);
+        });
+        setMyData(dataArray);        
+      });
+  }, [open]);
+  const img = `http://qglfsf1rq.bkt.gdipper.com/${name.toLowerCase()}.png`;
   return (
     <Popup open={open}>
       <div className="popup-wrapper">
         <div className="popup-name">{name}</div>
         <div className="popup-lower-content-wrapper">
-          <img src={imgUrl} alt={`${name}'s photo`} className="popup-img" />
+          <img src={img} alt={`${name}'s photo`} className="popup-img" />
           <div className="popup-lower-content">
             <p className="popup-desc">{desc}</p>
-            <div>
-              <PlayList />
-            </div>
+            <div>{<PlayList list={myData} />}</div>
           </div>
         </div>
-        <div style={{height:"75px"}}></div>
+        <div style={{ height: "75px" }}></div>
       </div>
     </Popup>
   );
 };
-MemberPop.defaultProps = {
-  imgUrl:
-    "https://66.media.tumblr.com/34783978b046ee2f757851c40f1b1f98/tumblr_ntu0hj7aQe1rha2imo1_640.jpg",
-};
-
 export default MemberPop;

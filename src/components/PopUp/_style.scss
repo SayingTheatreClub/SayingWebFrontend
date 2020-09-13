@@ -7,6 +7,10 @@
 .popup-lower-content-wrapper {
   width: 873px;
   // height: 557px;
+  min-height: 350px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   position: relative;
   margin: 0 40px;
   border: 1px solid #c62127;
@@ -29,6 +33,7 @@
     font-size: 16px;
     line-height: 18px;
     color: #181616;
+    // padding-top: 100px;
   }
 }
 
