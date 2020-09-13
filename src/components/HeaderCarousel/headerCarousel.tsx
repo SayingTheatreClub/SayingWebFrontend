@@ -1,9 +1,9 @@
 import Carousel from 'react-bootstrap/Carousel'
 
 import React, { FC, useState } from "react";
-// import Pic1 from '../../assets/mary.jpg';
-// import Pic2 from '../../assets/donkey.png';
-// import Pic3 from '../../assets/mary.jpg';
+import Pic1 from '../../assets/slide1.png';
+import Pic2 from '../../assets/slide2.PNG';
+import Pic3 from '../../assets/slide3.PNG';
 
 interface HeaderCarouselProps {
     
