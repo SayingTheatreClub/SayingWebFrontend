@@ -2,8 +2,8 @@ import Carousel from 'react-bootstrap/Carousel'
 
 import React, { FC, useState } from "react";
 import Pic1 from '../../assets/slide1.png';
-import Pic2 from '../../assets/slide2.PNG';
-import Pic3 from '../../assets/slide3.PNG';
+import Pic2 from '../../assets/slide2.png';
+import Pic3 from '../../assets/slide3.png';
 
 interface HeaderCarouselProps {
     
@@ -14,7 +14,7 @@ const HeaderCarousel: FC<HeaderCarouselProps> = (props) => {
             <Carousel.Item>
                 <img
                 className="d-block w-100"
-                // src={Pic1}
+                src={Pic1}
                 alt="First slide"
                 />
                 {/* <Carousel.Caption>
@@ -25,7 +25,7 @@ const HeaderCarousel: FC<HeaderCarouselProps> = (props) => {
             <Carousel.Item>
                 <img
                 className="d-block w-100"
-                // src={Pic2}
+                src={Pic2}
                 alt="Third slide"
                 />
 
@@ -37,7 +37,7 @@ const HeaderCarousel: FC<HeaderCarouselProps> = (props) => {
             <Carousel.Item>
                 <img
                 className="d-block w-100"
-                // src={Pic3}
+                src={Pic3}
                 alt="Third slide"
                 />
 
