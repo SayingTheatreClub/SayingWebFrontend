@@ -1163,6 +1163,11 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
+"@brainhubeu/react-carousel@^1.19.26":
+  version "1.19.26"
+  resolved "https://registry.yarnpkg.com/@brainhubeu/react-carousel/-/react-carousel-1.19.26.tgz#57de7b934596ede7a42ab07c46e5942574180447"
+  integrity sha512-+YO8cJrJEk+QDZTQM+i7ct5Ouy0LyoVHQD4fomdsV+3AQmWUkMVZNBYmxFMvhRQVFKreTTzyKuGPkhDKilL/CQ==
+
 "@cnakazawa/watch@^1.0.3":
   version "1.0.4"
   resolved "https://registry.npm.taobao.org/@cnakazawa/watch/download/@cnakazawa/watch-1.0.4.tgz#f864ae85004d0fcab6f50be9141c4da368d1656a"
@@ -1600,6 +1605,13 @@
   integrity sha1-GHSRS+l0pJLhtMsAWFyrsnTouhg=
   dependencies:
     "@babel/types" "^7.3.0"
+
+"@types/brainhubeu__react-carousel@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@types/brainhubeu__react-carousel/-/brainhubeu__react-carousel-2.0.0.tgz#b62df004e36e076df30fc9d83af3e3edcb0ba255"
+  integrity sha512-9PxDt5FAGwDpdP31iFCMzmmKJRkKkdZFwf9UDPeF2Ne3HrdVeTaQZ5gkJEr582UzwCfyRWst7S8885MEfatwWg==
+  dependencies:
+    "@types/react" "*"
 
 "@types/classnames@^2.2.10":
   version "2.2.10"
