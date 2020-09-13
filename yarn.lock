@@ -9670,8 +9670,8 @@ react@^16.13.1:
 
 reactjs-popup@^2.0.3:
   version "2.0.3"
-  resolved "https://registry.npm.taobao.org/reactjs-popup/download/reactjs-popup-2.0.3.tgz#fd81e95671a6bc00eed38573db43ffaf08ce5a46"
-  integrity sha1-/YHpVnGmvADu04Vz20P/rwjOWkY=
+  resolved "https://registry.yarnpkg.com/reactjs-popup/-/reactjs-popup-2.0.3.tgz#fd81e95671a6bc00eed38573db43ffaf08ce5a46"
+  integrity sha512-X/MxeOMwVAnqeCUaN8tvmiKEhqWB6Aa7m1UqAzotp8sGTcXWIGW6/Wsil7GT8AW5eFeeFWBavmytQJVcvEQTnA==
 
 read-pkg-up@^1.0.1:
   version "1.0.1"
