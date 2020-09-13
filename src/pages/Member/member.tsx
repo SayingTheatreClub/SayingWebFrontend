@@ -1,4 +1,5 @@
-import React, { FC, useState } from "react";
+import React, { Component, FC, useState } from "react";
+import axios from 'axios';
 import { Select } from "antd";
 import Header from "../../components/Header/header";
 import PageInfo from "./pageInfo";
@@ -10,7 +11,7 @@ import PopUp from "../../components/PopUp/memberPop";
 import PosterImg from "../../assets/poster.png";
 import { intro } from "../../text/memberText";
 
-const MemberPage: FC = (props) => {
+const MemberComponent: FC = (props) => {
   const [popOpen, setPopOpen] = useState(false);
   return (
     <Language>
@@ -91,5 +92,17 @@ const MemberPage: FC = (props) => {
     </Language>
   );
 };
+
+class MemberPage extends Component{
+  componentDidMount(){
+    axios.get("").then()
+  }
+
+  render(){
+    return(
+      <MemberComponent/>
+    )
+  }
+}
 
 export default MemberPage;
