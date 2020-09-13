@@ -48,6 +48,7 @@ const AboutPage: FC = (props) => (
       </div> */}
       <div  style={{ marginTop: "77px", textAlign: "center", marginBottom: "20px"}}>
         <text className = "about-subtitle">戏言历史</text>
+        
       </div>
       
       <div style={{backgroundColor: "#F8F6F3"}}>
