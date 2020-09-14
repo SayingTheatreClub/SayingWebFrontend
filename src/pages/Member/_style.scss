@@ -1,6 +1,6 @@
 .member-page-content{
-  display: flex;
-  justify-content: center;
+  // display: flex;
+  // justify-content: center;
 }
 .pageinfo-background {
   height: 296px;
@@ -28,11 +28,7 @@
   font-weight: 300;
   font-size: 16px;
   line-height: 28px;
-  /* or 175% */
   text-align: center;
-  // margin: 0 auto;
-  font-feature-settings: "liga" off;
-
   color: #000000;
 }
 
@@ -51,8 +47,15 @@
 }
 .member-display-wraper{
   width: 1440px;
-  margin-left: -23px;
-  text-align: center;
+  display: flex;
+  // background: coral;
+}
+
+.member-card-wrapper-top, .member-card-wrapper-bottom{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content:space-evenly;
 }
 
 .member-page-pre-display{
@@ -62,10 +65,12 @@
   justify-content:space-around;
   flex-wrap: wrap;
 }
+
 .member-select{
   width: 192px;
   // height: 45px;
 }
+
 .member-select-right{
   margin-left: 30px;
 }

@@ -23,9 +23,10 @@ interface MemberProps {
 
 const MemberPop: FC<MemberProps> = (props) => {
   const { imgUrl, desc, beginYear, endYear, name, open, data } = props;
-  const [myData, setMyData] = useState([1]);
+  const [myData, setMyData] = useState([{job:"",play:""}]);
   useEffect(() => {
     const dataArray = new Array<any>();
+    setMyData([{job:"",play:""}]);
     axios
       .get("http://3.16.216.212/instance/?person__name=" + name)
       .then((res) => {

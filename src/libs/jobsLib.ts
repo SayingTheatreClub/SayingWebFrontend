@@ -1,7 +1,7 @@
 export const parsePlayList: any = (data: any) => {
   return data.map((item: any) => {
-    const result:any = {};
-    Object.assign(result,item);
+    const result: any = {};
+    Object.assign(result, item);
     result.job = parseJob(item.job);
     return result;
   });
@@ -14,6 +14,9 @@ export const parsePlayList: any = (data: any) => {
  * "制片人, 行政组-财务, 舞美组-服装/布景/道具"
  */
 export const parseJob = (data: string) => {
+  //有些标点符号是错的，要特别处理
+  data = data.replace("，", ", ");
+
   const jobs: any[] = data.split(", ");
   return jobs.map((item: string) => {
     if (!item.includes("-"))

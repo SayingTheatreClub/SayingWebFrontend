@@ -24,7 +24,7 @@ const PlayList: FC<PlayListProps> = (props) => {
     <div className="popup-playlist">
       {parsedList.map((item: any) => (
         <div className="popup-playlist-item">
-          <div className="popup-playlist-title">{`《${item.play}》`}</div>
+          <div className="popup-playlist-title">{item.play && `《${item.play}》`}</div>
           <div>
             {item.job.map((jobs: any) => (
               <div className="popup-play-jobs-wrapper">

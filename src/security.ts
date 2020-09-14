@@ -1,0 +1,1 @@
+export const photoUrl = "http://qglfsf1rq.bkt.gdipper.com/";
