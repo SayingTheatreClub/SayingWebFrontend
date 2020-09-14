@@ -129,7 +129,7 @@ class MemberPage extends Component {
     members: [],
   };
   componentDidMount() {
-    axios.get("http://3.16.216.212/members/").then((res) => {
+    axios.get("http://3.129.73.234/api/members/").then((res) => {
       const data = res.data;
       this.setState({
         members: data,

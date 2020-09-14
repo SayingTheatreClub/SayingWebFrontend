@@ -28,7 +28,7 @@ const MemberPop: FC<MemberProps> = (props) => {
     const dataArray = new Array<any>();
     setMyData([{job:"",play:""}]);
     axios
-      .get("http://3.16.216.212/instance/?person__name=" + name)
+      .get("http://3.129.73.234/api/instance/?person__name=" + name)
       .then((res) => {
         const data = res.data;
         data.forEach((item: any) => {
