@@ -1,5 +1,4 @@
-import Carousel, { autoplayPlugin, slidesToShowPlugin } from '@brainhubeu/react-carousel';
-import '@brainhubeu/react-carousel/lib/style.css';
+import { Carousel } from 'antd';
 
 import React, { FC, useState } from "react";
 import Pic1 from '../../assets/slide1.png';
@@ -11,27 +10,16 @@ interface HeaderCarouselProps {
 }
 const HeaderCarousel: FC<HeaderCarouselProps> = (props) => {
   return (
-    <Carousel
-    plugins={[
-      'centered',
-      'infinite',
-     {
-       resolve: autoplayPlugin,
-       options: {
-       interval: 2000,
-       }
-     },
-     {
-      resolve: slidesToShowPlugin,
-      options: {
-      numberOfSlides: 2,
-      },
-    },
-   ]}   
-   animationSpeed={500}>
-    <img src={Pic1} />
-    <img src={Pic2} />
-    <img src={Pic3} />
+  <Carousel autoplay effect="fade">
+    <div>
+      <img src={Pic1} style={{width:"100%", height: "657px",position: "relative",justifyContent: 'center', flexFlow: 'row', alignContent: 'center', textAlign: 'center' }}/>
+    </div>
+    <div>
+      <img src={Pic2} style={{width:"100%",height: "657px",position: "relative",justifyContent: 'center', flexFlow: 'row', alignContent: 'center', textAlign: 'center' }}/>
+    </div>
+    <div>
+      <img src={Pic3} style={{width:"100%",height: "657px",position: "relative",justifyContent: 'center', flexFlow: 'row', alignContent: 'center', textAlign: 'center' }}/>
+    </div>
   </Carousel>
   );
 };

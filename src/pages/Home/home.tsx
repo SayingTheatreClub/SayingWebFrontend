@@ -33,7 +33,7 @@ const Home: FC = (props) => {
           overflow: "",
         }}
       >
-        <div style={{ display: 'flex', justifyContent: 'center', flexFlow: 'row', alignContent: 'center', textAlign: 'center' }}><HeaderCarousel/></div>
+        <div style={{height: "657px",justifyContent: 'center', flexFlow: 'row', alignContent: 'center', textAlign: 'center' }}><HeaderCarousel/></div>
       </div>
       
       <div className="home-content">
