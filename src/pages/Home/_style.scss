@@ -1,4 +1,5 @@
 .home-displaybox {
+  font-family: 'Noto Serif SC';
   display: flex;
   margin: 0 auto;
   flex-wrap: wrap;
@@ -27,7 +28,7 @@
     align-items: center;
   }
   .home-plays-display-title {
-    font-family: Noto Sans SC;
+    font-family: 'Noto Sans SC';
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
@@ -51,6 +52,7 @@
   // flex-wrap: wrap;
 }
 .home-content {
+  font-family: 'Noto Serif SC';
   margin: 0 auto;
   max-width: 1440px;
   position: relative;
@@ -61,9 +63,10 @@
   flex-direction: row-reverse;
 }
 .introcard {
+  font-family: 'Noto Serif SC';
   position: absolute;
   background: rgba(248, 246, 243, 0.7);
-  top: -400px;
+  top: -200px;
   width: 524px;
   height: 404px;
   @media screen and(max-width:530px) {
@@ -79,7 +82,6 @@
     margin: 38px auto;
     text-align: center;
     .home-intro-title {
-      font-family: Noto Serif SC;
       font-style: normal;
       font-weight: normal;
       font-size: 36px;
@@ -89,12 +91,10 @@
       margin-bottom: 45px;
     }
     .home-intro-desc {
-      font-family: Noto Sans SC;
       font-style: normal;
       font-weight: 300;
       font-size: 16px;
       line-height: 28px;
-      font-feature-settings: "liga" off;
       color: #181616;
       margin-left: 59px;
       text-align: left;
@@ -103,6 +103,7 @@
 }
 
 .home-button-left {
+  font-family: 'Noto Serif SC';
   border: 1px solid $brand-red;
   box-sizing: border-box;
   background: $brand-red !important;
@@ -112,6 +113,7 @@
   margin-right: 33px;
 }
 .home-button-right {
+  font-family: 'Noto Serif SC';
   border: 1px solid $brand-red;
   box-sizing: border-box;
   border-radius: 3px;
@@ -120,6 +122,7 @@
 }
 
 .home-play-info-card-wrapper {
+  font-family: 'Noto Serif SC';
   margin: 0 auto;
   width: 856px;
   height: 281px;
@@ -137,7 +140,6 @@
   height: 281px;
   margin-left: 30px;
   .home-play-info-card-belong {
-    font-family: Noto Sans SC;
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
@@ -145,22 +147,20 @@
     color: #545454;
   }
   .home-play-info-card-title {
-    font-family: Noto Serif SC;
+    font-family: 'Noto Serif SC';
     font-style: normal;
     font-weight: normal;
     font-size: 36px;
     line-height: 52px;
     color: #181616;
-    // padding-top: 7px;
-    margin-bottom: 37px;
+    margin-bottom: 22px;
+    margin-top: 7px;
   }
   .home-play-info-card-desc {
-    font-family: Noto Sans SC;
     font-style: normal;
     font-weight: 300;
     font-size: 16px;
     line-height: 28px;
-    font-feature-settings: "liga" off;
     color: #181616;
   }
   .home-play-info-button {
@@ -170,6 +170,7 @@
 }
 
 .mailbox-wrapper {
+  font-family: 'Noto Serif SC';
   background: #f8f6f3;
   border-radius: 3px;
   width: 636px;
@@ -191,7 +192,6 @@
       margin-left: 84px;
       margin-top: 20px;
       .mailbox-title {
-        font-family: Noto Sans SC;
         font-style: normal;
         font-weight: 500;
         font-size: 16px;
@@ -199,12 +199,10 @@
         color: #181616;
       }
       .mailbox-desc {
-        font-family: Noto Sans SC;
         font-style: normal;
         font-weight: 300;
         font-size: 16px;
         line-height: 23px;
-        font-feature-settings: "liga" off;
         color: #181616;
       }
       .mailbox-input {

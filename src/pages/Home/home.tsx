@@ -22,7 +22,7 @@ const url2 =
 const Home: FC = (props) => {
   return (
     <Language>
-      <Header />
+      <Header type="gray"/>
       <div
         style={{
           height: "657px",

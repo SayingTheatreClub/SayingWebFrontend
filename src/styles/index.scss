@@ -4,6 +4,14 @@
  * @Last Modified by:   Chengxu Bian 
  * @Last Modified time: 2020-07-12 16:17:16 
  */
+ @font-face{
+  font-family: Noto Sans SC;
+  src: url('../assets/Noto_Sans_SC/NotoSansSC-Light.otf');
+}
+@font-face{
+  font-family: Noto Serif SC;
+  src: url('../assets/NotoSerifSC-Regular.otf');
+}
 @import '~antd/dist/antd.css';
 @import "./variables";
 @import "./normalize";
@@ -19,3 +27,4 @@
 @import "../pages/Home/style";
 @import "../pages/Member/style";
 @import "../pages/About/style";
+@import "../pages/Play/style";

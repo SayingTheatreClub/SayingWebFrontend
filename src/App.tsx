@@ -4,7 +4,7 @@ import { HashRouter, Route } from "react-router-dom";
 import Home from "./pages/Home/home";
 import Member from "./pages/Member/member";
 import About from "./pages/About/about";
-
+import Play from './pages/Play/play';
 import Test from "./pages/Test/test";
 function App() {
   return (
@@ -13,6 +13,7 @@ function App() {
       <Route path="/member" component={Member} />
       <Route path="/about" component={About} />
       <Route path="/test" component={Test} />
+      <Route path="/play" component={Play} />
     </HashRouter>
   );
 }

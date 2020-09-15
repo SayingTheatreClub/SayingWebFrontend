@@ -19,13 +19,17 @@ interface MemberProps {
   name: string;
   open: boolean;
   data?: any;
+  onClose?:()=>void;
 }
 
 const MemberPop: FC<MemberProps> = (props) => {
-  const { imgUrl, desc, beginYear, endYear, name, open, data } = props;
+  const { imgUrl, desc, beginYear, endYear, name, open, data,...restProps } = props;
   const [myData, setMyData] = useState([{job:"",play:""}]);
   useEffect(() => {
     const dataArray = new Array<any>();
+    //关闭的话就退出
+    if(!open) return;
+    
     setMyData([{job:"",play:""}]);
     axios
       .get("http://3.129.73.234/api/instance/?person__name=" + name)
@@ -43,7 +47,7 @@ const MemberPop: FC<MemberProps> = (props) => {
   }, [open]);
   const img = `http://qglfsf1rq.bkt.gdipper.com/${name.toLowerCase()}.png`;
   return (
-    <Popup open={open}>
+    <Popup open={open} {...restProps}>
       <div className="popup-wrapper">
         <div className="popup-name">{name}</div>
         <div className="popup-lower-content-wrapper">

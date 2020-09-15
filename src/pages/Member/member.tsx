@@ -38,14 +38,12 @@ const MemberComponent: FC<MemberComponentProps> = (props) => {
               setPopOpen(!popOpen);
             }}
           >
-            <div>
-              <MemberCard
-                name={item.name}
-                title="导演"
-                imgUrl={`http://qglfsf1rq.bkt.gdipper.com/${item.name.toLowerCase()}.png`}
-                description={item.description}
-              />
-            </div>
+            <MemberCard
+              name={item.name}
+              title="导演"
+              imgUrl={`http://qglfsf1rq.bkt.gdipper.com/${item.name.toLowerCase()}.png`}
+              description={item.description}
+            />
           </div>
         ))}
     </div>
@@ -118,7 +116,15 @@ const MemberComponent: FC<MemberComponentProps> = (props) => {
         <br />
         <br />
       </div>
-      <PopUp desc={clickName.desc} name={clickName.name} open={popOpen} />
+      <PopUp
+        desc={clickName.desc}
+        name={clickName.name}
+        open={popOpen}
+        onClose={() => {
+          setPopOpen(false);
+          setClickName({ name: "", desc: "" });
+        }}
+      />
       <Footer />
     </Language>
   );
