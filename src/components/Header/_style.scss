@@ -10,26 +10,36 @@
   justify-content: space-between;
   align-items: center;
   box-shadow: rgba(0, 0, 1, 1);
+  background: transparent;
+
+}
+.header-nav-item {
+  font-family: Noto Sans SC;
+  font-weight: 300;
+  font-size: 18px;
+  text-align: center;
+  color: white;
+}
+
+.header-gray{
   background: #3f3f3f;
-  .header-nav-item {
-    font-family: Noto Sans SC;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 18px;
-    text-align: center;
-    color: white;
-  }
+  color: white;
+}
+.header-transparent{
+  background: transparent;
+  color: white;
+}
+.header-white{
+  background:white;
+  color: black;
 }
 .header-nav {
   list-style: none;
-  background: #3f3f3f;
-  color: white;
   margin-bottom: 0;
   display: flex;
-
   justify-content: space-evenly;
   width: 60%;
-  @media screen and(max-width:758px) {
+  @media screen and(max-width:800px) {
     display: none;
   }
   .header-nav-item {

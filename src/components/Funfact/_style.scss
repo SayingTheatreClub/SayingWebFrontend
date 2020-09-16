@@ -1,4 +1,75 @@
-.funfact-wrapper{
-  height: 275px;
+.funfact-box {
   width: 192px;
+  height: 275px;
+  margin: 50px auto;
+  cursor: pointer;
+  position: relative;
+  perspective: 500;
+  -webkit-perspective: 500;
+}
+
+.funfact-box img {
+  max-width: 192px;
+  max-height: 275px;
+}
+
+.funfact-front,
+.funfact-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  -webkit-perspective: 1000;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -ms-transition: all 1s;
+  -o-transition: all 1s;
+  box-shadow: rgba(50, 50, 50, 0.2) 0 0 15px;
+  overflow: hidden;
+  backface-visibility: hidden;
+}
+.funfact-front {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.funfact-back {
+  position: relative;
+  transform: rotateY(-180deg);
+  -webkit-transform: rotateY(-180deg);
+  .funfact-title {
+    font-family: Noto Sans SC;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 32px;
+    color: #181616;
+    width: 154px;
+    margin: 0 auto;
+    margin-top: 47px;
+  }
+  .funfact-text {
+    font-family: Noto Sans SC;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 23px;
+    width: 154px;
+    color: #181616;
+    display: block;
+    margin: 0 auto;
+    margin-top: 50px;
+  }
+}
+
+.funfact-box:hover .funfact-front {
+  transform: rotateY(-180deg);
+  -webkit-transform: rotateY(-180deg);
+}
+
+.funfact-box:hover .funfact-back {
+  transform: rotateY(-360deg);
+  -webkit-transform: rotateY(-360deg);
 }
