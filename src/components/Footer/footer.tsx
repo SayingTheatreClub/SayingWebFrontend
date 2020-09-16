@@ -36,6 +36,7 @@ const MediaList: React.FC<InfoListProps> = (props) => (
   <ul className={props.className}>
     {props.list.map((item) => (
       <li><img src={icon} style={{width:"16px", height: "16px"}}/>&nbsp;&nbsp;&nbsp;{item}</li>
+      
     ))}
   </ul>
 );
