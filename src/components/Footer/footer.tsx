@@ -1,4 +1,5 @@
 import React from "react";
+import icon from '../../assets/Icon.png';
 
 const titleList = [" 关于我们"," 演出剧目"," 加入我们"," 关注我们"];
 
@@ -27,6 +28,18 @@ const InfoList: React.FC<InfoListProps> = (props) => (
   </ul>
 );
 
+interface mediaListProps {
+  list: Array<string>;
+  className: string;
+}
+const MediaList: React.FC<InfoListProps> = (props) => (
+  <ul className={props.className}>
+    {props.list.map((item) => (
+      <li><img src={icon} style={{width:"16px", height: "16px"}}/>&nbsp;&nbsp;&nbsp;{item}</li>
+    ))}
+  </ul>
+);
+
 const Footer: React.FC = (props) => (
   <div className="footer">
     <div className="list-wrapper">
@@ -47,7 +60,7 @@ const Footer: React.FC = (props) => (
     <div className="list-wrapper">
       <div className = "footer-list-title">{titleList[3]}</div>
       <br/>
-      <InfoList list={mediaList} className="footer-list-member" />
+      <MediaList list={mediaList} className="footer-list-member" />
     </div>
   </div>
 );
