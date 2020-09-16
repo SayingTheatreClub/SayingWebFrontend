@@ -119,6 +119,7 @@ const MemberComponent: FC<MemberComponentProps> = (props) => {
       <PopUp
         desc={clickName.desc}
         name={clickName.name}
+        modal={true}
         open={popOpen}
         onClose={() => {
           setPopOpen(false);

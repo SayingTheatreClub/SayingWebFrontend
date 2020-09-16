@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { Component, FC, useEffect, useState } from "react";
+import React, { Component, FC, useEffect, useRef, useState } from "react";
 import Popup from "reactjs-popup";
 import PlayList from "./playList";
 const mockData = {
@@ -20,11 +20,14 @@ interface MemberProps {
   open: boolean;
   data?: any;
   onClose?:()=>void;
+  modal:boolean;
 }
 
 const MemberPop: FC<MemberProps> = (props) => {
   const { imgUrl, desc, beginYear, endYear, name, open, data,...restProps } = props;
   const [myData, setMyData] = useState([{job:"",play:""}]);
+  const contentRef = useRef(null);
+
   useEffect(() => {
     const dataArray = new Array<any>();
     //关闭的话就退出
@@ -47,7 +50,7 @@ const MemberPop: FC<MemberProps> = (props) => {
   }, [open]);
   const img = `http://qglfsf1rq.bkt.gdipper.com/${name.toLowerCase()}.png`;
   return (
-    <Popup open={open} {...restProps}>
+    <Popup open={open} {...restProps} modal ref={contentRef}  >
       <div className="popup-wrapper">
         <div className="popup-name">{name}</div>
         <div className="popup-lower-content-wrapper">

@@ -15,12 +15,6 @@ import Ran from "../../assets/ran.jpg";
 
 
 import { redNBlackRose, rhinInLove } from "../../text//hometext";
-
-const url =
-  "https://66.media.tumblr.com/34783978b046ee2f757851c40f1b1f98/tumblr_ntu0hj7aQe1rha2imo1_640.jpg";
-const url2 =
-  "https://www.pngfind.com/pngs/m/390-3903958_30k-bathouse-2017-12-05-mur-hd.png";
-
 const Home: FC = (props) => {
   return (
     <Language>
