@@ -54,7 +54,7 @@ const AboutPage: FC = (props) => (
         <text className="about-subtitle">戏言历史</text>
       </div>
 
-      <div style={{ backgroundColor: "#F8F6F3" }}>
+      <div style={{ backgroundColor: "#F8F6F3", width:"100%"}}>
         <VerticalTimeline>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
