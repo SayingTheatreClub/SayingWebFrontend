@@ -1,22 +1,23 @@
 .popup-wrapper {
   width: 953px;
-  overflow: auto;
   background: #f8f6f3;
+  overflow: auto;
+  max-height: 100vh;
 }
 
 .popup-lower-content-wrapper {
   width: 873px;
-  // height: 557px;
   min-height: 350px;
   display: flex;
   justify-content: center;
   flex-direction: column;
   position: relative;
-  margin: 0 40px;
+  margin: 0 auto;
   border: 1px solid #c62127;
   box-sizing: border-box;
   background: white;
   border-radius: 3px;
+  margin-bottom: 75px;
   .popup-img {
     width: 380px;
     height: 300px;
@@ -33,14 +34,12 @@
     font-size: 16px;
     line-height: 18px;
     color: #181616;
-    // padding-top: 100px;
   }
 }
 
 .popup-lower-content {
   display: flex;
   justify-content: space-around;
-  overflow-y: auto;
   align-items: center;
   padding-top: 34px;
 }
@@ -108,4 +107,26 @@
 }
 .popup-content {
   animation: anvil 0.3s cubic-bezier(0.38, 0.1, 0.36, 0.9) forwards;
+}
+
+
+.popup-job-list-wrapper{
+  width: 21.25rem;
+}
+.popup-job-list-title{
+  @include label;
+  color: #000000;
+}
+.popup-job-list-text{
+  @include little-short;
+  color: #000000;
+  .popup-job-list-item{
+    margin-top: 1.7rem;
+    display: flex;
+  }
+}
+
+.popup-lower-content-depart{
+  justify-content: space-around;
+  flex-wrap: wrap;
 }

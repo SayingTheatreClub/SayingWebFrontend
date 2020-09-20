@@ -4,8 +4,9 @@ import { HashRouter, Route } from "react-router-dom";
 import Home from "./pages/Home/home";
 import Member from "./pages/Member/member";
 import About from "./pages/About/about";
-import Play from './pages/Play/play';
+import Play from "./pages/Play/play";
 import Test from "./pages/Test/test";
+import Join from "./pages/Join/join";
 function App() {
   return (
     <HashRouter>
@@ -14,6 +15,7 @@ function App() {
       <Route path="/about" component={About} />
       <Route path="/test" component={Test} />
       <Route path="/play" component={Play} />
+      <Route path="/join" component={Join} />
     </HashRouter>
   );
 }

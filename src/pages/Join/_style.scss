@@ -1,0 +1,60 @@
+.join-content{
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.join-page-info-wrapper {
+  background: #f8f6f3;
+  @include flex-center;
+}
+.join-page-info-content {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.join-page-info-title {
+  @include title-1;
+  text-align: left;
+  margin-top: 38px;
+}
+.join-page-info-text {
+  @include little-long;
+  text-align: left;
+}
+.join-page-info-img {
+  display: inline-block;
+  width: 303px;
+  height: 303px;
+}
+.join-page-text-content {
+  margin: 24px 0;
+}
+.join-page-info-button{
+  @include primary-button;
+  margin-bottom: 64px;
+}
+.join-page-depart-wrapper{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.join-depart-wrapper{
+  width: 302px;
+  margin-top: 105px;
+  margin-left: 90px;
+}
+.join-depart-title{
+  @include title-2;
+}
+.join-depart-text{
+  @include little-long;
+  text-align: left;
+  color: $content-black;
+  margin-top: 20px;
+}
+.join-depart-button{
+  @include secondary-button;
+  margin: 22px 0;
+}
+.join-depart-jobs{
+  @include title-4;
+}

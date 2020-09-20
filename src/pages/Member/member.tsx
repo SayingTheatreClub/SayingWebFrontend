@@ -2,12 +2,12 @@ import React, { Component, FC, useState } from "react";
 import axios from "axios";
 import { Select } from "antd";
 import Header from "../../components/Header/header";
-import PageInfo from "./pageInfo";
+import PageInfo from "../../components/Information/pageInfo";
 import InfoComponent from "./infoComponent";
 import MemberCard from "../../components/Cards/memberCard";
 import Footer from "../../components/Footer/footer";
 import Language from "../../components/Language/language";
-import PopUp from "../../components/PopUp/memberPop";
+import PopUp from "../../components/PopUp/popUp";
 import PosterImg from "../../assets/poster.png";
 import { intro } from "../../text/memberText";
 import { plays, departments } from "../../text/basicText";
@@ -117,9 +117,9 @@ const MemberComponent: FC<MemberComponentProps> = (props) => {
         <br />
       </div>
       <PopUp
+        type="person"
         desc={clickName.desc}
         name={clickName.name}
-        modal={true}
         open={popOpen}
         onClose={() => {
           setPopOpen(false);

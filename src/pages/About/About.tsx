@@ -2,7 +2,7 @@ import React, { FC } from "react";
 import Language from "../../components/Language/language";
 import Header from "../../components/Header/header";
 import PlayCard from "../../components/Cards/playCard";
-import PageInfo from "./pageInfo";
+import PageInfo from "../../components/Information/pageInfo";
 import Footer from "../../components/Footer/footer";
 import IMG from "../../assets/play.jpg";
 import Funfact from "../../components/Funfact/funfact";

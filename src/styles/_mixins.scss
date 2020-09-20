@@ -1,0 +1,105 @@
+@mixin box-center {
+  margin: 0 auto;
+}
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+}
+@mixin title-1 {
+  //styleName: 标题1
+  font-family: Noto Serif SC;
+  font-size: 55px;
+  font-style: normal;
+  font-weight: bolder;
+  line-height: 79px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #000000;
+}
+@mixin title-2 {
+  font-family: Noto Serif SC;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 52px;
+  color: $content-black;
+}
+@mixin title-3 {
+  font-family: Noto Sans SC;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 32px;
+  color: #c4c4c4;
+}
+@mixin title-4 {
+  //styleName: 标题4;
+  font-family: Noto Sans SC;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: bolder;
+  line-height: 23px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #181616;
+}
+@mixin label {
+  font-family: Noto Sans SC;
+  font-style: normal;
+  font-weight: bolder;
+  font-size: 14px;
+  line-height: 24px;
+  color: #000000;
+}
+@mixin little-long {
+  //styleName: 小字_长文;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 28px;
+  letter-spacing: 0em;
+  text-align: left;
+  text-align: center;
+  color: #000000;
+}
+@mixin little-short {
+  //styleName: 小字_短;
+  font-family: Noto Sans SC;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 23px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+@mixin primary-button {
+  font-family: "Noto Sans SC";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 36px;
+  text-align: center;
+  color: #ffffff;
+  border: 1px solid $brand-red;
+  box-sizing: border-box;
+  background: $brand-red !important;
+  border-radius: 3px;
+  width: 114px;
+  height: 43px;
+}
+
+@mixin secondary-button {
+  width: 114px;
+  height: 43px;
+  background: $content-white;
+  border: 1px solid $brand-red;
+  box-sizing: border-box;
+  border-radius: 3px;
+  font-family: Noto Sans SC;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 36px;
+  text-align: center;
+  color: $brand-red;
+}

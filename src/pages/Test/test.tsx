@@ -3,12 +3,13 @@ import Popup from "reactjs-popup";
 import InfoCard from "../Play/infoCard";
 import Funfact from "../../components/Funfact/funfact";
 import { funfacts } from "../../text/funfactText";
+import PopUp from '../../components/PopUp/popUp';
 const Test: FC = (props) => (
-  <InfoCard
-    title="红玫瑰与白玫瑰"
-    day="2020年10月10日"
-    time="7 pm - 9 pm"
-    place="Bilibili网络直播"
+  <PopUp
+    name="红玫瑰与白玫瑰"
+    type="depart"
+    open={true}
+    imgUrl=""
   />
 );
 export default Test;

@@ -9,12 +9,13 @@
   src: url("../assets/Noto_Sans_SC/NotoSansSC-Light.otf");
 }
 @font-face {
-  font-family: Noto Serif SC;
+  font-family: "Noto Serif SC";
   src: url("../assets/NotoSerifSC-Regular.otf");
 }
 @import "~antd/dist/antd.css";
 @import "./variables";
 @import "./normalize";
+@import "./mixins";
 
 @import "../components/Header/style";
 @import "../components/Cards/style";
@@ -28,3 +29,4 @@
 @import "../pages/Member/style";
 @import "../pages/About/style";
 @import "../pages/Play/style";
+@import "../pages/Join/style";
