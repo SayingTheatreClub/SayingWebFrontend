@@ -13,12 +13,11 @@ import Footer from "../../components/Footer/footer";
 import IMG from "../../assets/play.jpg";
 import Ran from "../../assets/ran.jpg";
 
-
 import { redNBlackRose, rhinInLove } from "../../text//hometext";
 const Home: FC = (props) => {
   return (
     <Language>
-      <Header type="gray"/>
+      <Header type="gray" />
       <div
         style={{
           height: "657px",
@@ -27,9 +26,19 @@ const Home: FC = (props) => {
           overflow: "",
         }}
       >
-        <div style={{height: "657px",justifyContent: 'center', flexFlow: 'row', alignContent: 'center', textAlign: 'center' }}><HeaderCarousel/></div>
+        <div
+          style={{
+            height: "657px",
+            justifyContent: "center",
+            flexFlow: "row",
+            alignContent: "center",
+            textAlign: "center",
+          }}
+        >
+          <HeaderCarousel />
+        </div>
       </div>
-      
+
       <div className="home-content">
         <IntroInfoCard />
         <div className="home-displaybox">
@@ -39,12 +48,14 @@ const Home: FC = (props) => {
               description={redNBlackRose.text}
               belonging={redNBlackRose.belonging}
             />
-            <Button danger type="primary" className="home-button-left">
-              提前选座
-            </Button>
-            <Button danger className="home-button-right">
-              了解详情
-            </Button>
+            <div>
+              <Button danger type="primary" className="home-button-left">
+                提前选座
+              </Button>
+              <Button danger className="home-button-right">
+                了解详情
+              </Button>
+            </div>
           </div>
           <img
             src={IMG}
@@ -56,12 +67,12 @@ const Home: FC = (props) => {
         <div className="carousel-left-wrapper">
           <Carousel type="right" />
         </div>
-        <PlayInfoCard
+        {/* <PlayInfoCard
           imgUrl={Ran}
           title={rhinInLove.title}
           belonging={rhinInLove.belonging}
           desc={rhinInLove.text}
-        />
+        /> */}
         <div className="home-intro-board-wrapper">
           <Carousel type="left" />
           <HomeInfo />

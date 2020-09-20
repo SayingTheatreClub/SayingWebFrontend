@@ -47,31 +47,35 @@
 }
 
 .playCard {
-  width: 413px;
-  margin-right: 30px;
-  font-family: 'Noto Serif SC';
+  max-width: 25.8125rem;
+  margin-right: 1.875rem;
+  @media screen and(max-width:872px) {
+    margin-right: 0;
+  }
+  font-family: Noto Serif SC;
   .playCard-belonging {
     font-style: normal;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 23px;
   }
   .playCard-title {
-    font-style: normal;
-    font-weight: normal;
+    color: #181616;
     font-size: 36px;
     line-height: 52px;
   }
   .playCard-desc {
+    font-family: Noto Sans SC;
+    color: #181616;
     font-style: normal;
     font-weight: 300;
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 20px;
   }
 }
 
 .img-card {
-  font-family: 'Noto Serif SC';
+  font-family: Noto Serif SC;
   width: 303px;
   height: 254px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);

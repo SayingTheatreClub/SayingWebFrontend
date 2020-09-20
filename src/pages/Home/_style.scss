@@ -1,5 +1,5 @@
 .home-displaybox {
-  font-family: 'Noto Serif SC';
+  font-family: Noto Serif SC;
   display: flex;
   margin: 0 auto;
   flex-wrap: wrap;
@@ -8,6 +8,12 @@
   align-items: center;
   padding-top: 465px;
   padding-bottom: 233px;
+  @media screen and(max-width:768px) {
+    padding-top: 15rem;
+  }
+  @media screen and(max-width:530px) {
+    padding-top: 1.5rem;
+  }
 }
 
 .home-display-box-img {
@@ -67,8 +73,8 @@
   position: absolute;
   background: rgba(248, 246, 243, 0.7);
   top: -200px;
-  width: 524px;
-  height: 404px;
+  width: 32.75rem;
+  height: 25.25rem;
   @media screen and(max-width:530px) {
     display: none;
   }
@@ -77,8 +83,8 @@
     opacity: 1;
     border: 1px solid $brand-red;
     box-sizing: border-box;
-    width: 448px;
-    height: 328px;
+    width: 28rem;
+    height: 20.5rem;
     margin: 38px auto;
     text-align: center;
     .home-intro-title {
@@ -122,14 +128,15 @@
 }
 
 .home-play-info-card-wrapper {
-  font-family: 'Noto Serif SC';
-  margin: 0 auto;
-  width: 856px;
-  height: 281px;
-  margin-top: 257px;
-  margin-bottom: 226px;
-  display: flex;
-  position: relative;
+  // font-family: Noto Sans SC ;
+  // margin: 0 auto;
+  // width: 856px;
+  // height: 281px;
+  // margin-top: 257px;
+  // margin-bottom: 226px;
+  // display: flex;
+  // position: relative;
+  display: none;
 }
 .home-play-info-card-left {
   width: 413px;
@@ -147,7 +154,7 @@
     color: #545454;
   }
   .home-play-info-card-title {
-    font-family: 'Noto Serif SC';
+    font-family: Noto Serif SC;
     font-style: normal;
     font-weight: normal;
     font-size: 36px;
@@ -170,49 +177,52 @@
 }
 
 .mailbox-wrapper {
-  font-family: 'Noto Serif SC';
+  @media screen and(max-width:636px) {
+    display: none;    
+  }
+  font-family: Noto Serif SC;
   background: #f8f6f3;
-  border-radius: 3px;
+  border-radius: 0.1875rem;
   width: 636px;
-  height: 197px;
+  height: 12.3125rem;
   position: absolute;
   left: 50%;
-  transform: translate(-318px, -99px);
+  transform: translate(-19.875rem, -6.1875rem);
   .mailbox-content-wrapper {
-    width: 583px;
-    height: 165px;
-    margin-top: 16px;
-    margin-left: 26px;
+    width: 36.4375rem;
+    height: 10.3125rem;
+    margin-top: 1rem;
+    margin-left: 1.625rem;
     background: white;
-    border: 1px solid $brand-red;
+    border: 0.0625rem solid $brand-red;
     box-sizing: border-box;
-    border-radius: 3px;
+    border-radius: 0.1875rem;
     .mailbox-content {
-      margin: 0 20px;
-      margin-left: 84px;
-      margin-top: 20px;
+      margin: 0 1.25rem;
+      margin-left: 5.25rem;
+      margin-top: 1.25rem;
       .mailbox-title {
         font-style: normal;
         font-weight: 500;
-        font-size: 16px;
-        line-height: 23px;
+        font-size: 1rem;
+        line-height: 1.4375rem;
         color: #181616;
       }
       .mailbox-desc {
         font-style: normal;
         font-weight: 300;
-        font-size: 16px;
-        line-height: 23px;
+        font-size: 1rem;
+        line-height: 1.4375rem;
         color: #181616;
       }
       .mailbox-input {
-        width: 302px;
-        height: 43px;
+        width: 18.875rem;
+        height: 2.6875rem;
       }
       .mailbox-button {
-        width: 114px;
-        height: 43px;
-        margin-left: 31px;
+        width: 7.125rem;
+        height: 2.6875rem;
+        margin-left: 1.9375rem;
       }
     }
   }
