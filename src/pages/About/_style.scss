@@ -139,7 +139,7 @@
 	width: 10px;
 	height: 10px;
 	border-radius: 50%;
-	box-shadow: 0 0 0 1px #F13C20, inset 0 2px 0 rgba(0, 0, 0, .08), 0 3px 0 4px rgba(0, 0, 0, .05)
+	box-shadow: 0 0 0 1px #F13C20, inset 0 2px 0 rgba(0, 0, 0, .08), 0 2px 0 2px rgba(0, 0, 0, .05)
 }
 
 .vertical-timeline-element-icon svg {
@@ -158,7 +158,8 @@
 		width: 30px;
 		height: 30px;
 		left: 50%;
-		margin-left: -15px
+    margin-left: -15px;
+    margin-top: 15px;
 	}
 }
 
