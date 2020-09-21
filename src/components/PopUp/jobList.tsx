@@ -9,18 +9,23 @@ const mockData = {
   加分项：CS专业背景，个人网站，域名维护，熟悉javascript （可附作品或网站链接）。
   `,
 };
-const JobList: FC = (props) => {
+interface JobListProps{
+  name:string;
+  desc:string;
+}
+const JobList: FC<JobListProps> = (props) => {
+  const {name,desc} = props;
   return (
     <div className="popup-job-list-wrapper">
-      <div className="popup-job-list-title">{mockData.job}</div>
+      <div className="popup-job-list-title">{name}</div>
       <div className="popup-job-list-text">
-        {mockData.desc.split("/n").map((item: string) => (
+        {desc.split("/n").map((item: string) => (
           <div className="popup-job-list-item">
             <img
               src={JobPre}
               alt="pre"
               style={{ marginRight: "1.8rem" }}
-            />{" "}
+            />
             <div className="popup-job-list-words">{item}</div>
           </div>
         ))}

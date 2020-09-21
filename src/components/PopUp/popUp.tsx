@@ -1,16 +1,10 @@
 import axios from "axios";
 import React, { Component, FC, useEffect, useRef, useState } from "react";
 import Popup from "reactjs-popup";
+import { departType, jobType } from "../../text/joinText";
 import JobList from "./jobList";
 import PlayList from "./playList";
-const mockData = {
-  name: "伍晓蕾",
-  plays: [
-    { play: "旧事", job: "舞美组-服装/布景/道具, 行政组-财务" },
-    { play: "你好，疯子", job: "制片人, 行政组-财务, 舞美组-服装/布景/道具" },
-    { play: "暗恋桃花源", job: "舞美组-服装/布景/道具" },
-  ],
-};
+import Cross from "../../assets/cross.svg";
 
 type PopType = "person" | "depart";
 
@@ -22,8 +16,10 @@ interface MemberProps {
   name: string;
   open: boolean;
   data?: any;
-  onClose?: () => void;
+  onClose: () => void;
   type: PopType;
+  jobInfo?: jobType[];
+  recruit?: string;
 }
 
 const MemberPop: FC<MemberProps> = (props) => {
@@ -35,11 +31,13 @@ const MemberPop: FC<MemberProps> = (props) => {
     name,
     open,
     data,
+    jobInfo,
+    recruit,
     type,
+    onClose,
     ...restProps
   } = props;
   const [myData, setMyData] = useState([{ job: "", play: "" }]);
-  const contentRef = useRef(null);
 
   useEffect(() => {
     const dataArray = new Array<any>();
@@ -65,8 +63,16 @@ const MemberPop: FC<MemberProps> = (props) => {
 
   if (type == "person")
     return (
-      <Popup open={open} {...restProps} modal ref={contentRef}>
+      <Popup open={open} {...restProps} onClose={onClose} modal>
         <div className="popup-wrapper">
+          <img
+            src={Cross}
+            alt="close"
+            className="popup-close"
+            onClick={() => {
+              onClose();
+            }}
+          />
           <div className="popup-name">{name}</div>
           <div className="popup-lower-content-wrapper">
             <img src={img} alt={`${name}'s photo`} className="popup-img" />
@@ -80,17 +86,25 @@ const MemberPop: FC<MemberProps> = (props) => {
     );
   //if type is department
   return (
-    <Popup open={open} {...restProps} modal ref={contentRef}>
+    <Popup open={open} {...restProps} modal onClose={onClose}>
       <div className="popup-wrapper">
+        <img
+          src={Cross}
+          alt="close"
+          className="popup-close"
+          onClick={() => {
+            onClose();
+          }}
+        />
         <div className="popup-name">{name}</div>
         <div className="popup-lower-content-wrapper">
-          <img src={img} alt={`${name}'s photo`} className="popup-img" />
+          <img src={imgUrl} alt={`${name}'s photo`} className="popup-img" />
+          <div className="popup-depart-recruit">在招：{recruit}</div>
           <div className="popup-lower-content popup-lower-content-depart">
-            <JobList  />
-            <JobList  />
-            <JobList  />
-            <JobList  />
-            <JobList  />
+            {jobInfo &&
+              jobInfo.map((item: jobType) => (
+                <JobList name={item.title} desc={item.desc} />
+              ))}
           </div>
         </div>
       </div>

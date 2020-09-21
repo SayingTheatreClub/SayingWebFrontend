@@ -82,7 +82,10 @@ const Home: FC = (props) => {
       <br />
       <br />
       <div style={{ position: "relative" }}>
-        <MailBox />
+        <MailBox 
+        title="电子报"
+        desc="订阅电子报获取戏言最新动态"
+        />
         <Footer />
       </div>
     </Language>

@@ -1,10 +1,13 @@
 import React, { FC } from "react";
 import { Input, Button } from "antd";
 
-const MailBox: FC = (props) => {
-  const title = "电子报";
-  const desc = "订阅电子报获取戏言最新动态";
+interface MailBoxProps{
+  title:string;
+  desc:string;
+}
 
+const MailBox: FC<MailBoxProps> = (props) => {
+  const {title,desc} = props;
   return (
     <div className="mailbox-wrapper">
       <div className="mailbox-content-wrapper">

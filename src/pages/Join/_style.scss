@@ -1,4 +1,4 @@
-.join-content{
+.join-content {
   max-width: 1440px;
   margin: 0 auto;
 }
@@ -28,33 +28,53 @@
 .join-page-text-content {
   margin: 24px 0;
 }
-.join-page-info-button{
+.join-page-info-button {
   @include primary-button;
   margin-bottom: 64px;
 }
-.join-page-depart-wrapper{
+.join-page-depart-wrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 }
-.join-depart-wrapper{
+.join-depart-wrapper {
   width: 302px;
   margin-top: 105px;
   margin-left: 90px;
 }
-.join-depart-title{
+.join-depart-title {
   @include title-2;
 }
-.join-depart-text{
+.join-depart-text {
   @include little-long;
   text-align: left;
   color: $content-black;
   margin-top: 20px;
 }
-.join-depart-button{
+.join-depart-button {
   @include secondary-button;
   margin: 22px 0;
 }
-.join-depart-jobs{
+.join-depart-jobs {
   @include title-4;
+}
+
+.join-page-lower {
+  @include box-center;
+  width: fit-content;
+  margin-top: 100px;
+  margin-bottom: 254px;
+
+  @include label;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 36px;
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
+  text-align: center;
+}
+.join-page-lower-button{
+  @include primary-button;
+  margin-top: 17px;
 }

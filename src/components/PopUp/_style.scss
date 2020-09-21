@@ -4,7 +4,12 @@
   overflow: auto;
   max-height: 100vh;
 }
-
+.popup-close{
+  cursor: pointer;
+  position: absolute;
+  top:55px;
+  right: 65px;
+}
 .popup-lower-content-wrapper {
   width: 873px;
   min-height: 350px;
@@ -112,6 +117,7 @@
 
 .popup-job-list-wrapper{
   width: 21.25rem;
+  margin-bottom: 10px;
 }
 .popup-job-list-title{
   @include label;
@@ -123,10 +129,26 @@
   .popup-job-list-item{
     margin-top: 1.7rem;
     display: flex;
+    align-items: flex-start;
+    .popup-job-list-words{
+      //align to the top of word
+      margin-top: -5px;
+    }
   }
 }
 
 .popup-lower-content-depart{
   justify-content: space-around;
   flex-wrap: wrap;
+  align-items: flex-start;
+  margin-top: 80px;
+  margin-bottom: 30px;
+}
+
+.popup-depart-recruit{
+  @include little-short;
+  font-weight: bolder;
+  margin-top: 34px;
+  margin-left: 456px;
+  color: #000000;
 }
