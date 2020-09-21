@@ -1,9 +1,3 @@
-.member-page-content{
-  // display: flex;
-  // justify-content: center;
-}
-
-
 .info-card-wrapper {
   float: left;
   width: 492px;
@@ -18,11 +12,20 @@
   margin-top: 30px;
 }
 .member-display-wraper{
-  width: 1440px;
-  display: flex;
-  // background: coral;
+  // width: 1440px;
+  // width: 100%;
+  // overflow: visible;
+  // display: flex;
+  // flex-wrap: wrap;
+  // align-items: center;
+  // justify-content:space-evenly;
 }
-
+.member-card-wrapper{
+  float: left;
+}
+.member-card-wrapper-top{
+  width: 60%;
+}
 .member-card-wrapper-top, .member-card-wrapper-bottom{
   display: flex;
   flex-wrap: wrap;

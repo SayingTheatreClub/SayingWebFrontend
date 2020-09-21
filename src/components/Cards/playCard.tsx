@@ -1,5 +1,6 @@
 import React from "react";
 import Classname from "classnames";
+import RedMark from "../../assets/redMark.svg";
 type cardType = "text" | "img-text";
 
 export interface PlayCardProps {
@@ -43,7 +44,14 @@ const PlayCard: React.FC<PlayCardProps> = (props) => {
   }
   return (
     <div className={`${st}`}>
-      <p className={`${st}-belonging`}>{belonging}</p>
+      <p className={`${st}-belonging`}>
+        <img
+          src={RedMark}
+          alt="mark"
+          style={{ height: "6px", width: "13px", marginRight: "6px" }}
+        />
+        {belonging}
+      </p>
       <p className={`${st}-title`}>{name}</p>
       <p className={`${st}-desc`}>{description}</p>
     </div>

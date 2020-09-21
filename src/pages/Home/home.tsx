@@ -18,26 +18,8 @@ const Home: FC = (props) => {
   return (
     <Language>
       <Header type="gray" />
-      <div
-        style={{
-          height: "657px",
-          background: "#3F3F3F",
-          position: "relative",
-          overflow: "",
-        }}
-      >
-        <div
-          style={{
-            height: "657px",
-            justifyContent: "center",
-            flexFlow: "row",
-            alignContent: "center",
-            textAlign: "center",
-          }}
-        >
-          <HeaderCarousel />
-        </div>
-      </div>
+
+      <HeaderCarousel />
 
       <div className="home-content">
         <IntroInfoCard />
@@ -79,10 +61,7 @@ const Home: FC = (props) => {
         </div>
       </div>
       <div style={{ position: "relative" }}>
-        <MailBox 
-        title="电子报"
-        desc="订阅电子报获取戏言最新动态"
-        />
+        <MailBox title="电子报" desc="订阅电子报获取戏言最新动态" />
         <Footer />
       </div>
     </Language>

@@ -1,5 +1,6 @@
 import React, { Component, FC, useState } from "react";
 import axios from "axios";
+import QueueAnim from "rc-queue-anim";
 import { Select } from "antd";
 import Header from "../../components/Header/header";
 import PageInfo from "../../components/Information/pageInfo";
@@ -11,7 +12,7 @@ import PopUp from "../../components/PopUp/popUp";
 import PosterImg from "../../assets/poster.png";
 import { intro } from "../../text/memberText";
 import { plays, departments } from "../../text/basicText";
-
+import { photoUrl, url } from "../../security";
 interface MemberComponentProps {
   data: Array<any>;
 }
@@ -24,7 +25,10 @@ const MemberComponent: FC<MemberComponentProps> = (props) => {
     name: "",
     desc: "",
   });
-
+  const getPhotoUrl = (item: any) => {
+    if (item.has_photo) return `${photoUrl}${item.name.toLowerCase()}.png`;
+    return `${photoUrl}open-peeps (${Math.floor(Math.random() * 70) + 1}).png`;
+  };
   const generateCards = (begin: number, end: number, tag: string) => (
     <div className={"member-card-wrapper-" + tag}>
       {data &&
@@ -41,7 +45,7 @@ const MemberComponent: FC<MemberComponentProps> = (props) => {
             <MemberCard
               name={item.name}
               title="导演"
-              imgUrl={`http://qglfsf1rq.bkt.gdipper.com/${item.name.toLowerCase()}.png`}
+              imgUrl={getPhotoUrl(item)}
               description={item.description}
             />
           </div>
@@ -71,16 +75,36 @@ const MemberComponent: FC<MemberComponentProps> = (props) => {
         </div>
 
         <div className="member-page-content">
-          <div className="member-display-wraper" style={{ overflow: "hidden" }}>
+          <div className="member-display-wraper">
             <InfoComponent
               imgUrl={PosterImg}
               desc="介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些"
             />
-            {generateCards(0, 6, "top")}
+            <QueueAnim delay={100}>
+              {data.slice(0, memberNum).map((item: any, index: number) => (
+                <div
+                  key={index+item.name}
+                  className="member-card-wrapper"
+                  onClick={() => {
+                    setClickName({
+                      name: item.name,
+                      desc: item.description,
+                    });
+                    setPopOpen(!popOpen);
+                  }}
+                >
+                  <MemberCard
+                    name={item.name}
+                    title="导演"
+                    imgUrl={getPhotoUrl(item)}
+                    description={item.description}
+                  />
+                </div>
+              ))}
+            </QueueAnim>
           </div>
-          {generateCards(6, memberNum, "bottom")}
         </div>
-        <div style={{ marginTop: "77px", textAlign: "center" }}>
+        <div style={{ marginTop: "77px", textAlign: "center", clear: "both" }}>
           <div
             onClick={() => {
               setMemberNum(memberNum + 15);
@@ -136,7 +160,7 @@ class MemberPage extends Component {
     members: [],
   };
   componentDidMount() {
-    axios.get("http://3.129.73.234/api/members/").then((res) => {
+    axios.get(`${url}members/`).then((res) => {
       const data = res.data;
       this.setState({
         members: data,

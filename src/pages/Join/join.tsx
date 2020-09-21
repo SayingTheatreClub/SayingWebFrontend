@@ -5,6 +5,8 @@ import { Button } from "antd";
 import Header from "../../components/Header/header";
 import Footer from "../../components/Footer/footer";
 import PopUp from "../../components/PopUp/popUp";
+import QueueAnim from "rc-queue-anim";
+
 import PageInfo from "./pageInfo";
 import DepartmentCard from "./departmentCard";
 import {
@@ -18,6 +20,7 @@ import axios from "axios";
 
 import Depart from "../../assets/depart.png";
 import MailBox from "../Home/mailBox";
+import { url } from "../../security";
 
 type departmentType = {
   title: string;
@@ -33,7 +36,7 @@ const Join: FC = (props) => {
   });
   const [open, setOpen] = useState(false);
   useEffect(() => {
-    axios.get("http://127.0.0.1:8000/departments/").then((res) => {
+    axios.get(`${url}departments/`).then((res) => {
       const data: departmentType[] = res.data.map((item: any) => ({
         title: item.name,
         text: item.description,
@@ -51,21 +54,25 @@ const Join: FC = (props) => {
         img={joinText.img}
       />
       <div className="join-content">
-        <div className="join-page-depart-wrapper">
-          {departs.map((item: departmentType) => (
-            <DepartmentCard
-              onClick={() => {
-                const res = departText.find(
-                  (value: departItemType) => value.title === item.title
-                );
-                if (res) setTargetDepart(res);
-                setOpen(!open);
-              }}
-              title={item.title}
-              text={item.text}
-              jobs={item.job}
-            />
-          ))}
+        <div>
+          <QueueAnim delay={500} className="join-page-depart-wrapper" >
+            {departs.map((item: departmentType) => (
+              <div key={item.title}>
+              <DepartmentCard
+                onClick={() => {
+                  const res = departText.find(
+                    (value: departItemType) => value.title === item.title
+                  );
+                  if (res) setTargetDepart(res);
+                  setOpen(!open);
+                }}
+                title={item.title}
+                text={item.text}
+                jobs={item.job}
+              />
+              </div>
+            ))}
+          </QueueAnim>
         </div>
         <div className="join-page-lower">
           <p>赶快加入我们吧！</p>
@@ -88,9 +95,9 @@ const Join: FC = (props) => {
         }
       />
       <div>
-        <MailBox 
-        title="电子报"
-        desc="你心仪的岗位没有在招？订阅戏言电子报获得最新招新动态"
+        <MailBox
+          title="电子报"
+          desc="你心仪的岗位没有在招？订阅戏言电子报获得最新招新动态"
         />
         <Footer />
       </div>

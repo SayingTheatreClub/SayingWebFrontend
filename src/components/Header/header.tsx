@@ -14,8 +14,9 @@ const navs = {
   zh: ["活动动态", "文章"],
 };
 const aboutDrop = [
+  { name: "关于戏言", url: "about" },
   { name: "戏言家庭", url: "member" },
-  { name: "加入我们", url: "" },
+  { name: "加入我们", url: "join" },
   { name: "支持戏言", url: "" },
   { name: "联系我们", url: "" },
 ];
@@ -26,7 +27,6 @@ const playsDrop = [
   { name: "你好，疯子", url: "" },
   { name: "旧事", url: "" },
   { name: "暗恋桃花源", url: "" },
-
 ];
 const Header: React.FC<HeaderProps> = (props) => {
   const { type } = props;
@@ -58,10 +58,9 @@ const Header: React.FC<HeaderProps> = (props) => {
         <Menu.SubMenu
           title="关于戏言"
           className={`header-nav-item ${colorClass}`}
-          onTitleClick={() => handleClick("/about")}
         >
           {aboutDrop.map((item: any) => (
-            <Menu.Item>
+            <Menu.Item style={{textAlign:'center'}}>
               <Link to={`/${item.url}`}>{item.name}</Link>
             </Menu.Item>
           ))}

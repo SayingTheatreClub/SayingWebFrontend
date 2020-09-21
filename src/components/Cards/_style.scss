@@ -1,5 +1,5 @@
 .member-card {
-  font-family: 'Noto Serif SC';
+  font-family: Noto Serif SC;
   height: 22.5rem;
   width: 14rem;
   border: 1px solid #fff7ed;
@@ -54,10 +54,12 @@
   }
   font-family: Noto Serif SC;
   .playCard-belonging {
+    font-family: Noto Sans SC;
     font-style: normal;
     font-weight: 500;
-    font-size: 1rem;
+    font-size: 16px;
     line-height: 23px;
+    color: $content_darkGrey;
   }
   .playCard-title {
     color: #181616;
@@ -75,6 +77,7 @@
 }
 
 .img-card {
+  transition: 1s ease;
   font-family: Noto Serif SC;
   width: 303px;
   height: 254px;
@@ -109,7 +112,8 @@
 }
 
 .interview-container {
-  font-family: 'Noto Serif SC';
+  transition: 1s ease;
+  font-family: "Noto Serif SC";
   width: 221px;
   height: 239px;
   border-radius: 3px;
