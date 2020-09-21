@@ -1,10 +1,13 @@
 import React from "react";
-import icon from "../../assets/Icon.png";
+import icon01 from "../../assets/Icon.png";
+import icon02 from "../../assets/Icon02.png";
+import icon03 from "../../assets/Icon03.png";
 
 const titleList = [" 关于我们", " 演出", " 活动动态", " 关注我们"];
 const playList = ["红白玫瑰", "驴得水", "你好疯子", "旧事", "暗恋桃花源"];
 const aboutList = ["戏言家庭", "加入我们", "支持戏言", "联系我们"];
 const mediaList = ["微信公众号", "Youtube", "Bilibili", "微博"];
+const mediaIconList = [icon02, icon01, icon01, icon03];
 const eventList = ["读本会", "演员的诞生"];
 
 interface InfoListProps {
@@ -19,12 +22,22 @@ const InfoList: React.FC<InfoListProps> = (props) => {
   if (isMedia)
     return (
       <div className={className}>
-        {list.map((item) => (
           <div>
-            <img src={icon} className="footer-icon" />
-            {item}
+            <img src={mediaIconList[0]} className="footer-icon" />
+            {mediaList[0]}
           </div>
-        ))}
+          <div>
+            <img src={mediaIconList[1]} className="footer-icon" />
+            {mediaList[1]}
+          </div>
+          <div>
+            <img src={mediaIconList[2]} className="footer-icon" />
+            {mediaList[2]}
+          </div>
+          <div>
+            <img src={mediaIconList[3]} className="footer-icon" />
+            {mediaList[3]}
+          </div>     
       </div>
     );
 
