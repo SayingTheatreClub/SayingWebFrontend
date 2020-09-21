@@ -77,10 +77,7 @@ const Home: FC = (props) => {
           <Carousel type="left" />
           <HomeInfo />
         </div>
-        <div style={{ height: "200px" }}></div>
       </div>
-      <br />
-      <br />
       <div style={{ position: "relative" }}>
         <MailBox 
         title="电子报"

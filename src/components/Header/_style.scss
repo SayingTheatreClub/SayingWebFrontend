@@ -1,5 +1,21 @@
-.ant-menu-horizontal{
+.ant-menu-horizontal {
   border-bottom: 1px solid transparent;
+}
+
+.ant-menu-horizontal > .ant-menu-item:hover,
+.ant-menu-horizontal > .ant-menu-submenu:hover,
+.ant-menu-horizontal > .ant-menu-item-active,
+.ant-menu-horizontal > .ant-menu-item-open,
+.ant-menu-horizontal > .ant-menu-submenu-open,
+.ant-menu-horizontal > .ant-menu-item-selected,
+.ant-menu-horizontal > .ant-menu-submenu-selected,
+.ant-menu-horizontal > .ant-menu-item-selected,
+.ant-menu:not(.ant-menu-inline) .ant-menu-submenu-open,
+.ant-menu-submenu-active,
+.ant-menu-submenu-title:hover,
+.ant-menu-item a:hover {
+  color: $brand-red;
+  border-bottom: 2px solid $brand-red;
 }
 .ant-menu-vertical {
   min-width: 110px !important;
@@ -11,7 +27,6 @@
   align-items: center;
   box-shadow: rgba(0, 0, 1, 1);
   background: transparent;
-
 }
 .header-nav-item {
   font-family: Noto Sans SC;
@@ -21,16 +36,16 @@
   color: white;
 }
 
-.header-gray{
+.header-gray {
   background: #3f3f3f;
   color: white;
 }
-.header-transparent{
+.header-transparent {
   background: transparent;
   color: white;
 }
-.header-white{
-  background:white;
+.header-white {
+  background: white;
   color: black;
 }
 .header-nav {
