@@ -76,7 +76,7 @@ const Join: FC = (props) => {
         </div>
         <div className="join-page-lower">
           <p>赶快加入我们吧！</p>
-          <Button className="join-page-lower-button">报名链接</Button>
+          <Button className="join-page-lower-button" danger type="primary">报名链接</Button>
         </div>
       </div>
       <PopUp

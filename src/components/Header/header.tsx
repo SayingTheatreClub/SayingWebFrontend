@@ -29,7 +29,7 @@ const playsDrop = [
   { name: "暗恋桃花源", url: "" },
 ];
 const Header: React.FC<HeaderProps> = (props) => {
-  const { type } = props;
+  const { type,className } = props;
   const colorClass = `header-${type}`;
   const history = useHistory();
   const handleClick = (url: string) => {
@@ -37,7 +37,7 @@ const Header: React.FC<HeaderProps> = (props) => {
     history.push(url);
   };
   return (
-    <header className={`${colorClass} header`}>
+    <header className={`${className} ${colorClass} header`}>
       <Link to="/">
         <img src={Logo} className="header-logo" />
       </Link>

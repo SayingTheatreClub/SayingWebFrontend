@@ -15,7 +15,12 @@
     padding-top: 1.5rem;
   }
 }
-
+.home-header-trans{
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+}
 .home-display-box-img {
   width: 25.8125rem;
   height: 16.375rem;
@@ -49,16 +54,13 @@
   flex-direction: column;
 }
 .home-about-card-container {
-  // height: 851px;
   width: 1124px;
   margin: 0 auto;
   display: flex;
-  // flex-direction: row;
   justify-content: space-evenly;
-  // flex-wrap: wrap;
 }
 .home-content {
-  font-family: "Noto Serif SC";
+  font-family: Noto Serif SC;
   margin: 0 auto;
   max-width: 1440px;
   position: relative;
@@ -92,7 +94,7 @@
       font-weight: normal;
       font-size: 36px;
       line-height: 52px;
-      color: #181616;
+      color: $content_black;
       margin-top: 52px;
       margin-bottom: 45px;
     }

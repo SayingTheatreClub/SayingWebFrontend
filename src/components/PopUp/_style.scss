@@ -72,7 +72,7 @@
 }
 .popup-play-jobs-wrapper {
   display: flex;
-  width: 250px;
+  width: 15.625rem;
   justify-content: space-between;
   padding-left: 50px;
   padding-top: 20px;
@@ -117,7 +117,7 @@
 
 
 .popup-job-list-wrapper{
-  width: 21.25rem;
+  width: 340px;
   margin-bottom: 10px;
 }
 .popup-job-list-title{
@@ -149,7 +149,8 @@
 .popup-depart-recruit{
   @include little-short;
   font-weight: bolder;
+  margin:0 auto;
   margin-top: 34px;
-  margin-left: 456px;
+  margin-left: 483px;
   color: #000000;
 }

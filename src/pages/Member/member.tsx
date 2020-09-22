@@ -24,6 +24,7 @@ const MemberComponent: FC<MemberComponentProps> = (props) => {
   const [clickName, setClickName] = useState({
     name: "",
     desc: "",
+    url: "",
   });
   const getPhotoUrl = (item: any) => {
     if (item.has_photo) return `${photoUrl}${item.name.toLowerCase()}.png`;
@@ -38,6 +39,7 @@ const MemberComponent: FC<MemberComponentProps> = (props) => {
               setClickName({
                 name: item.name,
                 desc: item.description,
+                url: getPhotoUrl(item),
               });
               setPopOpen(!popOpen);
             }}
@@ -83,12 +85,13 @@ const MemberComponent: FC<MemberComponentProps> = (props) => {
             <QueueAnim delay={100}>
               {data.slice(0, memberNum).map((item: any, index: number) => (
                 <div
-                  key={index+item.name}
+                  key={index + item.name}
                   className="member-card-wrapper"
                   onClick={() => {
                     setClickName({
                       name: item.name,
                       desc: item.description,
+                      url: getPhotoUrl(item),
                     });
                     setPopOpen(!popOpen);
                   }}
@@ -147,8 +150,9 @@ const MemberComponent: FC<MemberComponentProps> = (props) => {
         open={popOpen}
         onClose={() => {
           setPopOpen(false);
-          setClickName({ name: "", desc: "" });
+          setClickName({ name: "", desc: "",url:"" });
         }}
+        imgUrl={clickName.url}
       />
       <Footer />
     </Language>

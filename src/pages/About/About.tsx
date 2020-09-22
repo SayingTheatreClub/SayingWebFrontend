@@ -61,7 +61,8 @@ const AboutPage: FC = (props) => (
             contentStyle={{ background: "rgba(0, 0, 0, .00)", color: "#000" }}
             contentArrowStyle={{ borderRight: "7px solid  #ff4f00" }}
             date=""
-            iconStyle={{ background: "rgb(255, 255, 255)", color: "#ff4f00" }}
+            iconOnClick={()=>{alert(1)}}
+            iconClassName="about-timeline-icon"
             textClassName={"vertical-timeline-element-texts"}
           >
             <img src="" alt="" className="vertical-timeline-element-img" />
@@ -78,7 +79,7 @@ const AboutPage: FC = (props) => (
             contentStyle={{ background: "rgba(0, 0, 0, .00)", color: "#000" }}
             contentArrowStyle={{ borderRight: "7px solid  #ff4f00" }}
             date=""
-            iconStyle={{ background: "rgb(255, 255, 255)", color: "#ff4f00" }}
+            iconClassName="about-timeline-icon"
           >
             <h3 className="vertical-timeline-element-title">2020年2月</h3>
             <h4 className="vertical-timeline-element-subtitle">
@@ -95,7 +96,7 @@ const AboutPage: FC = (props) => (
             contentStyle={{ background: "rgba(0, 0, 0, .00)", color: "#000" }}
             contentArrowStyle={{ borderRight: "7px solid  #ff4f00" }}
             date=""
-            iconStyle={{ background: "rgb(255, 255, 255)", color: "#ff4f00" }}
+            iconClassName="about-timeline-icon"
             textClassName={"vertical-timeline-element-texts"}
           >
             <img
@@ -118,7 +119,7 @@ const AboutPage: FC = (props) => (
             contentStyle={{ background: "rgba(0, 0, 0, .00)", color: "#000" }}
             contentArrowStyle={{ borderRight: "7px solid  #ff4f00" }}
             date=""
-            iconStyle={{ background: "rgb(255, 255, 255)", color: "#ff4f00" }}
+            iconClassName="about-timeline-icon"
           >
             <h3 className="vertical-timeline-element-title">2018年4月</h3>
             <h4 className="vertical-timeline-element-subtitle">演员的诞生</h4>
@@ -133,42 +134,42 @@ const AboutPage: FC = (props) => (
             contentStyle={{ background: "rgba(0, 0, 0, .00)", color: "#000" }}
             contentArrowStyle={{ borderRight: "7px solid  #ff4f00" }}
             date="2019年"
-            iconStyle={{ background: "rgb(255, 255, 255)", color: "#ff4f00" }}
+            iconClassName="about-timeline-icon"
           ></VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
             contentStyle={{ background: "rgba(0, 0, 0, .00)", color: "#000" }}
             contentArrowStyle={{ borderRight: "7px solid  #ff4f00" }}
             date="2018年"
-            iconStyle={{ background: "rgb(255, 255, 255)", color: "#ff4f00" }}
+            iconClassName="about-timeline-icon"
           ></VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
             contentStyle={{ background: "rgba(0, 0, 0, .00)", color: "#000" }}
             contentArrowStyle={{ borderRight: "7px solid  #ff4f00" }}
             date="2017年"
-            iconStyle={{ background: "rgb(255, 255, 255)", color: "#ff4f00" }}
+            iconClassName="about-timeline-icon"
           ></VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
             contentStyle={{ background: "rgba(0, 0, 0, .00)", color: "#000" }}
             contentArrowStyle={{ borderRight: "7px solid  #ff4f00" }}
             date="2016年"
-            iconStyle={{ background: "rgb(255, 255, 255)", color: "#ff4f00" }}
+            iconClassName="about-timeline-icon"
           ></VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
             contentStyle={{ background: "rgba(0, 0, 0, .00)", color: "#000" }}
             contentArrowStyle={{ borderRight: "7px solid  #ff4f00" }}
             date="2015年"
-            iconStyle={{ background: "rgb(255, 255, 255)", color: "#ff4f00" }}
+            iconClassName="about-timeline-icon"
           ></VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
             contentStyle={{ background: "rgba(0, 0, 0, .00)", color: "#000" }}
             contentArrowStyle={{ borderRight: "7px solid  #ff4f00" }}
             date=""
-            iconStyle={{ background: "rgb(255, 255, 255)", color: "#ff4f00" }}
+            iconClassName="about-timeline-icon"
           >
             <h3 className="vertical-timeline-element-title">2015年3月</h3>
             <h4 className="vertical-timeline-element-subtitle">建立戏言</h4>

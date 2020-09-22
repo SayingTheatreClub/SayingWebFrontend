@@ -24,7 +24,14 @@ const PlayComponent: FC = (props) => {
 
   return (
     <div>
-      <div className="play-head-wrapper">
+      <div
+        className="play-head-wrapper"
+        style={{
+          background: "url(http://qglfsf1rq.bkt.gdipper.com/rose.png)",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "100% 100%",
+        }}
+      >
         <Header type="transparent" />
         <div className="play-infocard-wrapper">
           <InfoCard
@@ -55,7 +62,7 @@ const PlayComponent: FC = (props) => {
         <div className="play-video-box">
           <p className="play-video-title">预告片</p>
           <iframe
-            src="//player.bilibili.com/player.html?aid=583142812&bvid=BV1Zz4y1R75X&cid=192244277&page=1"
+            src="////player.bilibili.com/player.html?aid=8472443&bvid=BV16x41117ZP&cid=13951927&page=1"
             scrolling="no"
             width="856"
             height="527"

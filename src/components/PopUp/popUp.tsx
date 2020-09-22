@@ -75,7 +75,7 @@ const MemberPop: FC<MemberProps> = (props) => {
           />
           <div className="popup-name">{name}</div>
           <div className="popup-lower-content-wrapper">
-            <img src={img} alt={`${name}'s photo`} className="popup-img" />
+            <img src={imgUrl} alt={`${name}'s photo`} className="popup-img" />
             <div className="popup-lower-content">
               <p className="popup-desc">{desc}</p>
               <div>{<PlayList list={myData} />}</div>

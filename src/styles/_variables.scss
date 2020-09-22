@@ -1,3 +1,12 @@
+@font-face {
+  font-family: Noto Sans SC;
+  src: url("../assets/NotoSansSC-Regular.otf");
+}
+@font-face {
+  font-family: "Noto Serif SC";
+  src: url("../assets/NotoSerifSC-Regular.otf");
+}
+
 $header-height: 80px !default;
 
 $member-card-height: 358px !default;
@@ -13,4 +22,3 @@ $background-faint-orange: #f8f6f3 !default;
 $content-darkGrey: #545454 !default;
 $light-gray: #8e8e8e !default;
 $lightest-gray: #bdbdbd !default;
-

@@ -17,9 +17,11 @@ import { redNBlackRose, rhinInLove } from "../../text//hometext";
 const Home: FC = (props) => {
   return (
     <Language>
-      <Header type="gray" />
+      <div>
+        <Header type="transparent" className="home-header-trans"/>
 
-      <HeaderCarousel />
+        <HeaderCarousel />
+      </div>
 
       <div className="home-content">
         <IntroInfoCard />

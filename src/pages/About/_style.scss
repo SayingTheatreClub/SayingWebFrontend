@@ -1,34 +1,34 @@
 .funfact-left-wrapper {
-    width: 100%;
-    display: flex;
-    flex-direction: row-reverse;
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
 }
-.about-subtitle{
+.about-subtitle {
   font-family: Noto Sans SC;
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 23px;
   text-align: center;
-  margin-top:77px;
+  margin-top: 77px;
 }
-.about-text{
+.about-text {
   font-family: Noto Sans SC;
   font-style: normal;
   font-weight: 300;
   font-size: 16px;
   line-height: 28px;
   text-align: right;
-  font-feature-settings: 'liga' off;
+  font-feature-settings: "liga" off;
   color: #181616;
 }
-.img{
+.img {
   border: 1px solid #fff;
   border-radius: 4px;
   padding: 5px;
   width: 150px;
 }
-.about-displaybox{
+.about-displaybox {
   display: flex;
   margin: 0 auto;
   width: fit-content;
@@ -67,24 +67,27 @@
   }
 }
 
-.vertical-timeline-element-icon {
-	width: 30px;
+.about-timeline-icon {
+  background: rgb(255, 255, 255);
+  color: #ff4f00;
+  cursor: pointer;
+  width: 30px;
   height: 30px;
-	box-shadow: 0 0 0 1px #F13C20, inset 0 2px 0 rgba(0, 0, 0, .08), 0 2px 0 2px rgba(0, 0, 0, .05)
+  box-shadow: 0 0 0 1px #f13c20, inset 0 2px 0 rgba(0, 0, 0, 0.08),
+    0 2px 0 2px rgba(0, 0, 0, 0.05);
 }
 
 .vertical-timeline-element-icon svg {
-	width: 30px;
-	height: 30px;
+  width: 30px;
+  height: 30px;
 }
 
-@media only screen and (min-width:1170px) {
-	.vertical-timeline--two-columns .vertical-timeline-element-icon {
-		width: 30px;
-		height: 30px;
-		left: 50%;
+@media only screen and (min-width: 1170px) {
+  .vertical-timeline--two-columns .vertical-timeline-element-icon {
+    width: 30px;
+    height: 30px;
+    left: 50%;
     margin-left: -15px;
     margin-top: 15px;
-	}
+  }
 }
-

@@ -1,5 +1,6 @@
 .member-card {
   font-family: Noto Serif SC;
+  cursor: pointer;
   height: 22.5rem;
   width: 14rem;
   border: 1px solid #fff7ed;
@@ -77,6 +78,7 @@
 }
 
 .img-card {
+  cursor: pointer;
   transition: 1s ease;
   font-family: Noto Serif SC;
   width: 303px;
@@ -112,6 +114,7 @@
 }
 
 .interview-container {
+  cursor: pointer;
   transition: 1s ease;
   font-family: "Noto Serif SC";
   width: 221px;
