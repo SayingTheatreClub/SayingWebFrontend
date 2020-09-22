@@ -1,10 +1,12 @@
-import React, { FC } from "react";
+import React, { FC, useState } from "react";
 import Header from "../../components/Header/header";
 import InfoCard from "./infoCard";
 import PhotoBoard from "./photoBoard";
 import { Tabs } from "antd";
 import { parsePlay } from "../../libs/playJob";
 
+import Ellipse from "../../assets/ellipse.svg";
+import EllipseM from "../../assets/ellipseM.svg";
 import { rose } from "../../text/playPageText";
 import DepartmentBoard from "./department";
 import Arrow from "../../components/Arrow/arrow";
@@ -12,10 +14,18 @@ import Footer from "../../components/Footer/footer";
 const { TabPane } = Tabs;
 
 const PlayComponent: FC = (props) => {
+  const [boardPage, setBoardPage] = useState(0);
+  const boards = parsePlay(data);
+  const pageNum = Math.ceil(boards.length / 4);
+  const changeBoard = (page: number) => {
+    if (page >= pageNum) return;
+    setBoardPage(page);
+  };
+
   return (
     <div>
       <div className="play-head-wrapper">
-        <Header type="transparent"/>
+        <Header type="transparent" />
         <div className="play-infocard-wrapper">
           <InfoCard
             title="红玫瑰与白玫瑰"
@@ -54,13 +64,33 @@ const PlayComponent: FC = (props) => {
         <div className="be-center margin-left-70">
           <div className="play-department-board-section">Cast and Crew</div>
           <div className="one-line" />
-          <div className="play-department-board-wrapper">
-            {parsePlay(data)
-              .slice(0, 4)
-              .map((item) => (
+          <div>
+            <div className="play-department-board-wrapper">
+              {boards.slice(boardPage * 4, boardPage * 4 + 4).map((item) => (
                 <DepartmentBoard list={item.members} title={item.department} />
               ))}
-            <Arrow className="play-department-arrow" />
+              <Arrow
+                className="play-department-arrow"
+                onClick={() => {
+                  changeBoard(boardPage + 1);
+                }}
+              />
+            </div>
+            <div className="play-ellipse-wrapper">
+              {boards &&
+                Array(Math.ceil(boards.length / 4))
+                  .fill(1)
+                  .map((item: number, index: number) => (
+                    <img
+                      className={"play-ellipse"}
+                      src={index === boardPage ? EllipseM : Ellipse}
+                      alt=""
+                      onClick={() => {
+                        setBoardPage(index);
+                      }}
+                    />
+                  ))}
+            </div>
           </div>
         </div>
         <div className="margin-left-70 play-page-tab-wrapper">

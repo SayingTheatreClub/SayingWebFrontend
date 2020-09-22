@@ -28,7 +28,15 @@
   padding: 5px;
   width: 150px;
 }
-
+.about-displaybox{
+  display: flex;
+  margin: 0 auto;
+  width: fit-content;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 85px;
+  margin-bottom: 237px;
+}
 .about-intro-card-wrapper {
   display: flex;
   margin: 0 auto;

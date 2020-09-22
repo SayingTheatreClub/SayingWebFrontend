@@ -20,7 +20,7 @@ const AboutPage: FC = (props) => (
     <Header />
     <PageInfo title={intro.title} desc={intro.text} />
     <div className="home-content">
-      <div className="home-displaybox">
+      <div className="about-displaybox">
         <div>
           <PlayCard
             name={`01 ${fifthAnni.title}`}

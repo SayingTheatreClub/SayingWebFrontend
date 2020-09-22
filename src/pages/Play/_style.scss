@@ -187,3 +187,17 @@
 .margin-left-70 {
   margin-left: 70px;
 }
+
+.play-ellipse {
+  width: 13px;
+  height: 13px;
+  color: $content-white;
+  box-sizing: border-box;
+  margin-left: 26px;
+  cursor: pointer;
+}
+
+.play-ellipse-wrapper{
+  width: fit-content;
+  margin: 0 auto;
+}
