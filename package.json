@@ -20,6 +20,7 @@
     "@types/react-vertical-timeline-component": "^3.0.0",
     "@typescript-eslint/eslint-plugin": "^2.10.0",
     "@typescript-eslint/parser": "^2.10.0",
+    "ahooks": "^2.6.1",
     "antd": "^4.4.3",
     "babel-eslint": "10.1.0",
     "babel-jest": "^24.9.0",

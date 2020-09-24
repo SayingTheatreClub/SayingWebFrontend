@@ -1,5 +1,6 @@
 import React, { Component, FC, useState } from "react";
 import axios from "axios";
+import { useRequest } from "ahooks";
 import QueueAnim from "rc-queue-anim";
 import { Select } from "antd";
 import Header from "../../components/Header/header";
@@ -13,14 +14,58 @@ import PosterImg from "../../assets/poster.png";
 import { intro } from "../../text/memberText";
 import { plays, departments } from "../../text/basicText";
 import { photoUrl, url } from "../../security";
+import { getQueryVariable } from "../../libs/url";
+interface Result {
+  list: {
+    person: string;
+    play: string;
+    job: string;
+    description: string;
+    has_photo: boolean;
+  }[];
+  count: number;
+  next: number;
+}
+
 interface MemberComponentProps {
   data: Array<any>;
 }
+const localUrl = "http://127.0.0.1:8000/";
+function getData(nextPage: number, limit: number): any {
+  return axios
+    .get(`${localUrl}members/`, {
+      params: {
+        page: nextPage,
+        page_size: limit,
+      },
+    })
+    .then((res) => {
+      const data = res.data;
+      console.log(data.next === null);
 
-const MemberComponent: FC<MemberComponentProps> = (props) => {
-  const { data } = props;
+      const next =
+        data.next !== null ? getQueryVariable(data.next, "page") : null;
+      console.log(next);
+
+      return {
+        list: data.results,
+        count: data.count,
+        next: next,
+      };
+    });
+}
+
+const Member: FC<MemberComponentProps> = (props) => {
+  const { data, loading, loadMore, loadingMore } = useRequest(
+    (next: Result) => getData(next?.next, next?.next > 1 ? 15 : 16),
+    {
+      loadMore: true,
+      cacheKey: "loadmorepeople",
+    }
+  );
+
   const [popOpen, setPopOpen] = useState(false);
-  const [memberNum, setMemberNum] = useState(16);
+
   const [clickName, setClickName] = useState({
     name: "",
     desc: "",
@@ -30,36 +75,12 @@ const MemberComponent: FC<MemberComponentProps> = (props) => {
     if (item.has_photo) return `${photoUrl}${item.name.toLowerCase()}.png`;
     return `${photoUrl}open-peeps (${Math.floor(Math.random() * 70) + 1}).png`;
   };
-  const generateCards = (begin: number, end: number, tag: string) => (
-    <div className={"member-card-wrapper-" + tag}>
-      {data &&
-        data.slice(begin, end).map((item: any, index: number) => (
-          <div
-            onClick={() => {
-              setClickName({
-                name: item.name,
-                desc: item.description,
-                url: getPhotoUrl(item),
-              });
-              setPopOpen(!popOpen);
-            }}
-          >
-            <MemberCard
-              name={item.name}
-              title="导演"
-              imgUrl={getPhotoUrl(item)}
-              description={item.description}
-            />
-          </div>
-        ))}
-    </div>
-  );
 
   return (
     <Language>
       <Header />
       <PageInfo title={intro.title} desc={intro.text} />
-      <div className="home-content">
+      <div className="member-content">
         <div style={{ height: "197px" }}>
           <Select defaultValue="组别" className="member-select">
             {departments.map((item) => (
@@ -76,14 +97,14 @@ const MemberComponent: FC<MemberComponentProps> = (props) => {
           </Select>
         </div>
 
-        <div className="member-page-content">
+        <div className="member-top-content">
           <div className="member-display-wraper">
             <InfoComponent
               imgUrl={PosterImg}
               desc="介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些"
             />
             <QueueAnim delay={100}>
-              {data.slice(0, memberNum).map((item: any, index: number) => (
+              {data?.list.map((item: any, index: number) => (
                 <div
                   key={index + item.name}
                   className="member-card-wrapper"
@@ -108,14 +129,14 @@ const MemberComponent: FC<MemberComponentProps> = (props) => {
           </div>
         </div>
         <div style={{ marginTop: "77px", textAlign: "center", clear: "both" }}>
-          <div
-            onClick={() => {
-              setMemberNum(memberNum + 15);
-            }}
-            style={{ color: "#C62127", cursor: "pointer" }}
-          >
-            查看更多
-          </div>
+          {data?.next !== null && (
+            <div
+              onClick={loadMore}
+              style={{ color: "#C62127", cursor: "pointer" }}
+            >
+              查看更多
+            </div>
+          )}
         </div>
         <div style={{ marginTop: "125px", textAlign: "center" }}>
           <div>往届成员</div>
@@ -136,9 +157,11 @@ const MemberComponent: FC<MemberComponentProps> = (props) => {
             marginBottom: "176px",
           }}
         >
-          <a href="" style={{ color: "#C62127" }}>
-            查看更多
-          </a>
+          {data?.next !== null && (
+            <a href="load more" style={{ color: "#C62127" }}>
+              查看更多
+            </a>
+          )}
         </div>
         <br />
         <br />
@@ -150,7 +173,7 @@ const MemberComponent: FC<MemberComponentProps> = (props) => {
         open={popOpen}
         onClose={() => {
           setPopOpen(false);
-          setClickName({ name: "", desc: "",url:"" });
+          setClickName({ name: "", desc: "", url: "" });
         }}
         imgUrl={clickName.url}
       />
@@ -159,22 +182,4 @@ const MemberComponent: FC<MemberComponentProps> = (props) => {
   );
 };
 
-class MemberPage extends Component {
-  state = {
-    members: [],
-  };
-  componentDidMount() {
-    axios.get(`${url}members/`).then((res) => {
-      const data = res.data;
-      this.setState({
-        members: data,
-      });
-    });
-  }
-
-  render() {
-    return <MemberComponent data={this.state.members} />;
-  }
-}
-
-export default MemberPage;
+export default Member;

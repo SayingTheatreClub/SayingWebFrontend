@@ -9,21 +9,13 @@ interface HeaderCarouselProps {
 const HeaderCarousel: FC<HeaderCarouselProps> = (props) => {
   return (
     <Carousel autoplay effect="fade">
-        {[1, 2, 3, 4, 5].map((item: number) => (
-          <img
-            src={`${photoUrl}slide${item}.jpg`}
-            alt=""
-            style={{
-              width: "100%",
-              height: "657px",
-              position: "relative",
-              justifyContent: "center",
-              flexFlow: "row",
-              alignContent: "center",
-              textAlign: "center",
-            }}
-          />
-        ))}
+      {[1, 2, 3, 4, 5].map((item: number) => (
+        <img
+          src={`${photoUrl}slide${item}.jpg`}
+          alt="slide"
+          className="home-slide-img"
+        />
+      ))}
     </Carousel>
   );
 };

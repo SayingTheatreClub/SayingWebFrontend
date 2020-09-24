@@ -18,7 +18,7 @@ const Home: FC = (props) => {
   return (
     <Language>
       <div>
-        <Header type="transparent" className="home-header-trans"/>
+        <Header type="transparent" className="home-header-trans" />
 
         <HeaderCarousel />
       </div>

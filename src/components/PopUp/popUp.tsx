@@ -5,6 +5,7 @@ import { departType, jobType } from "../../text/joinText";
 import JobList from "./jobList";
 import PlayList from "./playList";
 import Cross from "../../assets/cross.svg";
+import { photoUrl, url } from "../../security";
 
 type PopType = "person" | "depart";
 
@@ -20,6 +21,7 @@ interface MemberProps {
   type: PopType;
   jobInfo?: jobType[];
   recruit?: string;
+  has_photo?:boolean;
 }
 
 const MemberPop: FC<MemberProps> = (props) => {
@@ -45,23 +47,20 @@ const MemberPop: FC<MemberProps> = (props) => {
     if (!open) return;
     if (type === "depart") return;
     setMyData([{ job: "", play: "" }]);
-    axios
-      .get("http://3.129.73.234/api/instance/?person__name=" + name)
-      .then((res) => {
-        const data = res.data;
-        data.forEach((item: any) => {
-          const temp = {
-            play: item.play,
-            job: item.job,
-          };
-          dataArray.push(temp);
-        });
-        setMyData(dataArray);
+    axios.get(`${url}instance/?person__name=${name}`).then((res) => {
+      const data = res.data;
+      data.forEach((item: any) => {
+        const temp = {
+          play: item.play,
+          job: item.job,
+        };
+        dataArray.push(temp);
       });
+      setMyData(dataArray);
+    });
   }, [open]);
-  const img = `http://qglfsf1rq.bkt.gdipper.com/${name.toLowerCase()}.png`;
 
-  if (type == "person")
+  if (type === "person")
     return (
       <Popup open={open} {...restProps} onClose={onClose} modal>
         <div className="popup-wrapper">
@@ -75,7 +74,7 @@ const MemberPop: FC<MemberProps> = (props) => {
           />
           <div className="popup-name">{name}</div>
           <div className="popup-lower-content-wrapper">
-            <img src={imgUrl} alt={`${name}'s photo`} className="popup-img" />
+            <img src={imgUrl} alt={`${name}`} className="popup-img" />
             <div className="popup-lower-content">
               <p className="popup-desc">{desc}</p>
               <div>{<PlayList list={myData} />}</div>
@@ -98,7 +97,7 @@ const MemberPop: FC<MemberProps> = (props) => {
         />
         <div className="popup-name">{name}</div>
         <div className="popup-lower-content-wrapper">
-          <img src={imgUrl} alt={`${name}'s photo`} className="popup-img" />
+          <img src={imgUrl} alt={`${name}`} className="popup-img" />
           <div className="popup-depart-recruit">在招：{recruit}</div>
           <div className="popup-lower-content popup-lower-content-depart">
             {jobInfo &&

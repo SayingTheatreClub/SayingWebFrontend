@@ -54,14 +54,13 @@ const AboutPage: FC = (props) => (
         <text className="about-subtitle">戏言历史</text>
       </div>
 
-      <div style={{ backgroundColor: "#F8F6F3", width:"100%"}}>
+      <div style={{ backgroundColor: "#F8F6F3", width: "100%" }}>
         <VerticalTimeline>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
             contentStyle={{ background: "rgba(0, 0, 0, .00)", color: "#000" }}
             contentArrowStyle={{ borderRight: "7px solid  #ff4f00" }}
             date=""
-            iconOnClick={()=>{alert(1)}}
             iconClassName="about-timeline-icon"
             textClassName={"vertical-timeline-element-texts"}
           >
