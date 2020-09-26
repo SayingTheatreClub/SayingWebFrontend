@@ -1,5 +1,4 @@
-import React, { Component, FC, useState } from "react";
-import axios from "axios";
+import React, { FC, useState } from "react";
 import { useRequest } from "ahooks";
 import QueueAnim from "rc-queue-anim";
 import { Select } from "antd";
@@ -13,8 +12,8 @@ import PopUp from "../../components/PopUp/popUp";
 import PosterImg from "../../assets/poster.png";
 import { intro } from "../../text/memberText";
 import { plays, departments } from "../../text/basicText";
-import { photoUrl, url } from "../../security";
-import { getQueryVariable } from "../../libs/url";
+import { photoUrl } from "../../security";
+import { getMemberByPage } from "../../libs/requests";
 interface Result {
   list: {
     person: string;
@@ -30,34 +29,10 @@ interface Result {
 interface MemberComponentProps {
   data: Array<any>;
 }
-const localUrl = "http://127.0.0.1:8000/";
-function getData(nextPage: number, limit: number): any {
-  return axios
-    .get(`${localUrl}members/`, {
-      params: {
-        page: nextPage,
-        page_size: limit,
-      },
-    })
-    .then((res) => {
-      const data = res.data;
-      console.log(data.next === null);
-
-      const next =
-        data.next !== null ? getQueryVariable(data.next, "page") : null;
-      console.log(next);
-
-      return {
-        list: data.results,
-        count: data.count,
-        next: next,
-      };
-    });
-}
 
 const Member: FC<MemberComponentProps> = (props) => {
-  const { data, loading, loadMore, loadingMore } = useRequest(
-    (next: Result) => getData(next?.next, next?.next > 1 ? 15 : 16),
+  const { data, loadMore } = useRequest(
+    (next: Result) => getMemberByPage(next?.next, next?.next > 1 ? 15 : 16),
     {
       loadMore: true,
       cacheKey: "loadmorepeople",

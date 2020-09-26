@@ -14,7 +14,6 @@ const navs = {
   zh: ["活动动态", "文章"],
 };
 const aboutDrop = [
-  { name: "关于戏言", url: "about" },
   { name: "戏言家庭", url: "member" },
   { name: "加入我们", url: "join" },
   { name: "支持戏言", url: "" },
@@ -58,6 +57,7 @@ const Header: React.FC<HeaderProps> = (props) => {
         <Menu.SubMenu
           title="关于戏言"
           className={`header-nav-item ${colorClass}`}
+          onTitleClick={()=>{handleClick('about')}}
         >
           {aboutDrop.map((item: any) => (
             <Menu.Item style={{textAlign:'center'}}>

@@ -1,22 +1,29 @@
-import React, { FC, useState } from "react";
+import React, { FC, useEffect, useState } from "react";
+import { useRequest } from "ahooks";
+import { useParams } from "react-router-dom";
 import Header from "../../components/Header/header";
 import InfoCard from "./infoCard";
 import PhotoBoard from "./photoBoard";
 import { Tabs } from "antd";
+import Arrow from "../../components/Arrow/arrow";
+import Footer from "../../components/Footer/footer";
+import DepartmentBoard from "./department";
+
 import { parsePlay } from "../../libs/playJob";
+import { getPlayInfo } from "../../libs/requests";
 
 import Ellipse from "../../assets/ellipse.svg";
 import EllipseM from "../../assets/ellipseM.svg";
 import { rose } from "../../text/playPageText";
-import DepartmentBoard from "./department";
-import Arrow from "../../components/Arrow/arrow";
-import Footer from "../../components/Footer/footer";
+
 const { TabPane } = Tabs;
 
 const PlayComponent: FC = (props) => {
+  const { name } = useParams();
+  const { data } = useRequest(getPlayInfo(name));
   const [boardPage, setBoardPage] = useState(0);
-  const boards = parsePlay(data);
-  const pageNum = Math.ceil(boards.length / 4);
+  const boards = data ? parsePlay(data) : [];
+  const pageNum = Math.ceil(boards?.length / 4);
   const changeBoard = (page: number) => {
     if (page >= pageNum) return;
     setBoardPage(page);
@@ -73,9 +80,15 @@ const PlayComponent: FC = (props) => {
           <div className="one-line" />
           <div>
             <div className="play-department-board-wrapper">
-              {boards.slice(boardPage * 4, boardPage * 4 + 4).map((item) => (
-                <DepartmentBoard list={item.members} title={item.department} />
-              ))}
+              {data &&
+                boards
+                  ?.slice(boardPage * 4, boardPage * 4 + 4)
+                  .map((item: any) => (
+                    <DepartmentBoard
+                      list={item.members}
+                      title={item.department}
+                    />
+                  ))}
               <Arrow
                 className="play-department-arrow"
                 onClick={() => {
@@ -84,7 +97,7 @@ const PlayComponent: FC = (props) => {
               />
             </div>
             <div className="play-ellipse-wrapper">
-              {boards &&
+              {data &&
                 Array(Math.ceil(boards.length / 4))
                   .fill(1)
                   .map((item: number, index: number) => (

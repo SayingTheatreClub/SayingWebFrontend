@@ -14,7 +14,7 @@ function App() {
       <Route path="/member" component={Member} />
       <Route path="/about" component={About} />
       <Route path="/test" component={Test} />
-      <Route path="/play" component={Play} />
+      <Route path="/play/:name" children={<Play/>} />
       <Route path="/join" component={Join} />
     </HashRouter>
   );
