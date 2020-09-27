@@ -1,19 +1,18 @@
 import React, { FC } from "react";
 import { Button } from "antd";
 import Language from "../../components/Language/language";
-import Header from "../../components/Header/header";
+import Header from "../../components/Header";
 import PlayCard from "../../components/Cards/playCard";
-import Carousel from "../../components/Carousel/carousel";
-import HeaderCarousel from "../../components/HeaderCarousel/headerCarousel";
+import Carousel from "../../components/Carousel";
+import HeaderCarousel from "../../components/HeaderCarousel";
+import MailBox from '../../components/Mailbox';
 import IntroInfoCard from "./introInfoCard";
-import PlayInfoCard from "./playInfoCard";
-import MailBox from "./mailBox";
 import HomeInfo from "../../components/Information/homeInfo";
-import Footer from "../../components/Footer/footer";
+import Footer from "../../components/Footer";
 import IMG from "../../assets/play.jpg";
 import Ran from "../../assets/ran.jpg";
 
-import { redNBlackRose, rhinInLove } from "../../text//hometext";
+import { redNBlackRose, rhinInLove } from "../../text/hometext";
 const Home: FC = (props) => {
   return (
     <Language>

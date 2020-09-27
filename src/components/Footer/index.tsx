@@ -20,7 +20,7 @@ interface InfoListProps {
 
 const InfoList: React.FC<InfoListProps> = (props) => {
   const { list, className, isMedia } = props;
-
+  // if it is the list of media
   if (isMedia)
     return (
       <div className={className}>

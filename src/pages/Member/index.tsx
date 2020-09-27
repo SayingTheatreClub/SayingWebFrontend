@@ -2,17 +2,17 @@ import React, { FC, useState } from "react";
 import { useRequest } from "ahooks";
 import QueueAnim from "rc-queue-anim";
 import { Select } from "antd";
-import Header from "../../components/Header/header";
+import Header from "../../components/Header";
 import PageInfo from "../../components/Information/pageInfo";
 import InfoComponent from "./infoComponent";
 import MemberCard from "../../components/Cards/memberCard";
-import Footer from "../../components/Footer/footer";
+import Footer from "../../components/Footer";
 import Language from "../../components/Language/language";
-import PopUp from "../../components/PopUp/popUp";
+import PopUp from "../../components/PopUp";
 import PosterImg from "../../assets/poster.png";
 import { intro } from "../../text/memberText";
 import { plays, departments } from "../../text/basicText";
-import { photoUrl } from "../../security";
+import { photoUrl } from "../../libs/security";
 import { getMemberByPage } from "../../libs/requests";
 interface Result {
   list: {

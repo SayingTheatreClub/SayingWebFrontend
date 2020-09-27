@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import { Button } from "antd";
-import { photoUrl } from "../../security";
+import { photoUrl } from "../../libs/security";
 
 interface PageInfoProps {
   title: string;

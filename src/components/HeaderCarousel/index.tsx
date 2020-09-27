@@ -1,7 +1,7 @@
 import { Carousel } from "antd";
 
 import React, { FC } from "react";
-import { photoUrl } from "../../security";
+import { photoUrl } from "../../libs/security";
 
 interface HeaderCarouselProps {
   imgList?: Array<string>;

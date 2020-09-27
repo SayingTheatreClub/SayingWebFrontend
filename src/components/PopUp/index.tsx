@@ -5,7 +5,7 @@ import { departType, jobType } from "../../text/joinText";
 import JobList from "./jobList";
 import PlayList from "./playList";
 import Cross from "../../assets/cross.svg";
-import { photoUrl, url } from "../../security";
+import { photoUrl, url } from "../../libs/security";
 
 type PopType = "person" | "depart";
 

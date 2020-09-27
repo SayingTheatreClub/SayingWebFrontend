@@ -1,4 +1,4 @@
-import { photoUrl } from "../security";
+import { photoUrl } from "../libs/security";
 export const funfacts = [
   {
     text: `戏言人常身兼多职，不想当制作人的舞美不是好行政，不想当演员的编剧也不是好舞台监督。`,

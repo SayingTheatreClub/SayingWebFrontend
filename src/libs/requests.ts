@@ -1,4 +1,4 @@
-import { url } from "../security";
+import { url } from "./security";
 import axios from "axios";
 import { getQueryVariable } from "./url";
 import {parsePlay} from './playJob';

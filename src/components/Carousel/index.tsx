@@ -1,7 +1,7 @@
 import React, { FC, useState } from "react";
 import PlayCard from "../Cards/playCard";
 import InterviewCard from "../Cards/interviewCard";
-import ArrowSvg from "../Arrow/arrow";
+import ArrowSvg from "../Arrow";
 import Mary from "../../assets/mary.jpg";
 import Donkey from "../../assets/donkey.png";
 import RedMark from "../../assets/redMark.svg";

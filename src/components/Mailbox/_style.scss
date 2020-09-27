@@ -1,0 +1,52 @@
+
+.mailbox-wrapper {
+  @media screen and(max-width:636px) {
+    display: none;
+  }
+  font-family: Noto Serif SC;
+  background: #f8f6f3;
+  border-radius: 0.1875rem;
+  width: 636px;
+  height: 12.3125rem;
+  position: absolute;
+  left: 50%;
+  transform: translate(-19.875rem, -6.1875rem);
+  .mailbox-content-wrapper {
+    width: 36.4375rem;
+    height: 10.3125rem;
+    margin-top: 1rem;
+    margin-left: 1.625rem;
+    background: white;
+    border: 0.0625rem solid $brand-red;
+    box-sizing: border-box;
+    border-radius: 0.1875rem;
+    .mailbox-content {
+      margin: 0 1.25rem;
+      margin-left: 5.25rem;
+      margin-top: 1.25rem;
+      .mailbox-title {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1rem;
+        line-height: 1.4375rem;
+        color: #181616;
+      }
+      .mailbox-desc {
+        font-style: normal;
+        font-weight: 300;
+        font-size: 1rem;
+        line-height: 1.4375rem;
+        color: #181616;
+      }
+      .mailbox-input {
+        width: 18.875rem;
+        height: 2.6875rem;
+      }
+      .mailbox-button {
+        width: 7.125rem;
+        height: 2.6875rem;
+        margin-left: 1.9375rem;
+      }
+    }
+  }
+}

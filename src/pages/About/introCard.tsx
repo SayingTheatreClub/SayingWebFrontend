@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 
-import Arrowsvg from "../../components/Arrow/arrow";
-import ArrowSvg from "../../components/Arrow/arrow";
+import Arrowsvg from "../../components/Arrow";
+import ArrowSvg from "../../components/Arrow";
 
 interface IntroCardProps {
   title: string;

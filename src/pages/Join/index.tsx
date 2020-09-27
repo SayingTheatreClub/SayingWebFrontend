@@ -3,13 +3,12 @@ import QueueAnim from "rc-queue-anim";
 import { useRequest } from "ahooks";
 import { Button,Spin } from "antd";
 
-import Header from "../../components/Header/header";
-import Footer from "../../components/Footer/footer";
-import PopUp from "../../components/PopUp/popUp";
-
+import Header from "../../components/Header";
+import Footer from "../../components/Footer";
+import PopUp from "../../components/PopUp";
+import MailBox from '../../components/Mailbox';
 import PageInfo from "./pageInfo";
 import DepartmentCard from "./departmentCard";
-import MailBox from "../Home/mailBox";
 
 import { getDeparts } from "../../libs/requests";
 
