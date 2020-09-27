@@ -1,6 +1,8 @@
 import { url } from "../security";
 import axios from "axios";
 import { getQueryVariable } from "./url";
+import {parsePlay} from './playJob';
+
 /**
  * get member
  * @param nextPage
@@ -38,11 +40,12 @@ export const getDeparts = () =>
     }))
   );
 //TODO:fix bug
-export const getPlayInfo = (play: string) =>
+export const getPlayInfo = (play: string) => (
   axios
     .get(`${url}instance/`, {
       params: {
-        play_name: play,
+        play__name: play,
       },
     })
-    .then((res) => res.data);
+    .then((res) => parsePlay(res.data))
+);

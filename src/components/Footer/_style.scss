@@ -31,3 +31,10 @@
     margin-right: 10px;
   }
 }
+
+.footer-link{
+  color: white;
+  &:hover{
+    color: $brand-red;
+  }
+}
