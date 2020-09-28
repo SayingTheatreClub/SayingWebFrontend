@@ -7,13 +7,13 @@ import PageInfo from "../../components/Information/pageInfo";
 import InfoComponent from "./infoComponent";
 import MemberCard from "../../components/Cards/memberCard";
 import Footer from "../../components/Footer";
-import Language from "../../components/Language/language";
 import PopUp from "../../components/PopUp";
 import PosterImg from "../../assets/poster.png";
 import { intro } from "../../text/memberText";
 import { plays, departments } from "../../text/basicText";
 import { photoUrl } from "../../libs/security";
 import { getMemberByPage } from "../../libs/requests";
+
 interface Result {
   list: {
     person: string;
@@ -52,7 +52,7 @@ const Member: FC<MemberComponentProps> = (props) => {
   };
 
   return (
-    <Language>
+    <>
       <Header />
       <PageInfo title={intro.title} desc={intro.text} />
       <div className="member-content">
@@ -153,7 +153,7 @@ const Member: FC<MemberComponentProps> = (props) => {
         imgUrl={clickName.url}
       />
       <Footer />
-    </Language>
+    </>
   );
 };
 
