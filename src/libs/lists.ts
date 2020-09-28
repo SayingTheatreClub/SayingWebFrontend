@@ -1,6 +1,7 @@
 import icon01 from "../assets/Icon.png";
 import icon02 from "../assets/Icon02.png";
 import icon03 from "../assets/Icon03.png";
+import icon04 from "../assets/Icon4.png";
 
 export interface ListItem {
   name: string;
@@ -23,7 +24,7 @@ export const aboutList: ListItem[] = [
   { name: "联系我们", url: "" },
 ];
 export const mediaList = ["微信公众号", "Youtube", "Bilibili", "微博"];
-export const mediaIconList = [icon02, icon01, icon01, icon03];
+export const mediaIconList = [icon02, icon01, icon04, icon03];
 export const eventList = [
   { name: "读本会", url: "" },
   { name: "演员的诞生", url: "" },
