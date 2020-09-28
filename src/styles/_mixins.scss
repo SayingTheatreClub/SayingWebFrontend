@@ -11,6 +11,12 @@
   align-items: $align-items;
   flex-wrap: $wrap;
 }
+@mixin shrink-content {
+  width: 1440px;
+  @media screen and(max-width:1440px) {
+    width: 100%;
+  }
+}
 @mixin page-content {
   width: 100%;
   height: 100%;

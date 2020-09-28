@@ -1,7 +1,13 @@
 import { url } from "./security";
 import axios from "axios";
 import { getQueryVariable } from "./url";
-import {parsePlay} from './playJob';
+import { parsePlay } from "./playJob";
+
+interface MemberDetail {
+  person: string;
+  desc: string;
+  has_photo: boolean;
+}
 
 /**
  * get member
@@ -20,14 +26,53 @@ export function getMemberByPage(nextPage: number, limit: number): any {
       const data = res.data;
       const next =
         data.next !== null ? getQueryVariable(data.next, "page") : null;
+      const MemberList = data.results.map((item: any) => ({
+        id: Math.floor(Math.random() * 70) + 1,
+        ...item,
+      }));
       return {
-        list: data.results,
+        list: MemberList,
         count: data.count,
         next: next,
       };
     });
 }
 
+export const getMemberByPlay = async (play: string) => {
+  const res = await axios.get(`${url}instance/`, {
+    params: {
+      play__name: play,
+    },
+  });
+  return res.data.map((item: MemberDetail) => ({
+    name: item.person,
+    description: item.desc,
+    has_photo: item.has_photo,
+    id: Math.floor(Math.random() * 70) + 1,
+  }));
+};
+
+export const getMemberByCollection = async (collection: string) => {
+  const res = await axios.get(`${url}instance/`, {
+    params: {
+      search: collection,
+    },
+  });
+  const flag = new Set();
+  const result:any[] = [];
+  res.data.forEach((item: any) => {
+    if (!flag.has(item.person)) {
+      flag.add(item.person);
+      result.push({
+        name: item.person,
+        description: item.desc,
+        has_photo: item.has_photo,
+        id: Math.floor(Math.random() * 70) + 1,
+      });
+    }
+  });
+  return result;
+};
 /**
  * get department infomation
  */
@@ -40,12 +85,11 @@ export const getDeparts = () =>
     }))
   );
 //TODO:fix bug
-export const getPlayInfo = (play: string) => (
+export const getPlayInfo = (play: string) =>
   axios
     .get(`${url}instance/`, {
       params: {
         play__name: play,
       },
     })
-    .then((res) => parsePlay(res.data))
-);
+    .then((res) => parsePlay(res.data));

@@ -2,7 +2,7 @@ import React, { useState, useContext } from "react";
 import { Menu } from "antd";
 import Logo from "../../assets/logo.png";
 import { Link, useHistory } from "react-router-dom";
-import {aboutList,playList} from '../../libs/lists';
+import { aboutList, playList } from "../../libs/lists";
 type headerType = "transparent" | "gray" | "white";
 
 export interface HeaderProps {
@@ -15,7 +15,7 @@ const navs = {
 };
 
 const Header: React.FC<HeaderProps> = (props) => {
-  const { type,className } = props;
+  const { type, className } = props;
   const colorClass = `header-${type}`;
   const history = useHistory();
   const handleClick = (url: string) => {
@@ -44,10 +44,12 @@ const Header: React.FC<HeaderProps> = (props) => {
         <Menu.SubMenu
           title="关于戏言"
           className={`header-nav-item ${colorClass}`}
-          onTitleClick={()=>{handleClick('about')}}
+          onTitleClick={() => {
+            handleClick("about");
+          }}
         >
           {aboutList.map((item: any) => (
-            <Menu.Item style={{textAlign:'center'}}>
+            <Menu.Item style={{ textAlign: "center" }}>
               <Link to={`/${item.url}`}>{item.name}</Link>
             </Menu.Item>
           ))}
@@ -66,8 +68,6 @@ const Header: React.FC<HeaderProps> = (props) => {
             {item}
           </Menu.Item>
         ))}
-
-        <i className="iconfont icon-search header-nav-item"></i>
       </Menu>
     </header>
   );

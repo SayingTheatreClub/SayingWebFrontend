@@ -1,7 +1,7 @@
 import axios from "axios";
-import React, { Component, FC, useEffect, useRef, useState } from "react";
+import React, { FC, useEffect, useState } from "react";
 import Popup from "reactjs-popup";
-import { departType, jobType } from "../../text/joinText";
+import { jobType } from "../../text/joinText";
 import JobList from "./jobList";
 import PlayList from "./playList";
 import Cross from "../../assets/cross.svg";
@@ -21,7 +21,7 @@ interface MemberProps {
   type: PopType;
   jobInfo?: jobType[];
   recruit?: string;
-  has_photo?:boolean;
+  id?: number;
 }
 
 const MemberPop: FC<MemberProps> = (props) => {
@@ -36,10 +36,15 @@ const MemberPop: FC<MemberProps> = (props) => {
     jobInfo,
     recruit,
     type,
+    id,
     onClose,
     ...restProps
   } = props;
   const [myData, setMyData] = useState([{ job: "", play: "" }]);
+  const personUrl =
+    id === -1
+      ? `${photoUrl}${name.toLowerCase()}.png`
+      : `${photoUrl}open-peeps (${id}).png`;
 
   useEffect(() => {
     const dataArray = new Array<any>();
@@ -74,7 +79,7 @@ const MemberPop: FC<MemberProps> = (props) => {
           />
           <div className="popup-name">{name}</div>
           <div className="popup-lower-content-wrapper">
-            <img src={imgUrl} alt={`${name}`} className="popup-img" />
+            <img src={personUrl} alt={`${name}`} className="popup-img" />
             <div className="popup-lower-content">
               <p className="popup-desc">{desc}</p>
               <div>{<PlayList list={myData} />}</div>

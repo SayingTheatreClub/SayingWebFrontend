@@ -1,26 +1,25 @@
-.funfact-left-wrapper {
-  width: 100%;
-  display: flex;
-  flex-direction: row-reverse;
+.funfact-wrapper {
+  @include flex(space-evenly, "", wrap);
+}
+.funfact-top {
+  @include flex(center, center);
+  .funfact-top-left {
+    @include text(Noto Sans SC, normal, 16px, 23px, $content-black);
+  }
+  .funfact-top-right {
+    width: 127px;
+    margin-left: 150px;
+    @include text(Noto Serif SC, normal, 36px, 52px, $content-black);
+  }
 }
 .about-subtitle {
-  font-family: Noto Sans SC;
-  font-style: normal;
-  font-weight: 500; 
-  font-size: 16px;
-  line-height: 23px;
+  @include text(Noto Sans SC, 500, 16px, 23px, $content-black);
   text-align: center;
   margin-top: 77px;
 }
 .about-text {
-  font-family: Noto Sans SC;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 16px;
-  line-height: 28px;
+  @include text(Noto Sans SC, 300, 16px, 28px, $content-black);
   text-align: right;
-  font-feature-settings: "liga" off;
-  color: $content-black;
 }
 .img {
   border: 1px solid #fff;
@@ -77,9 +76,10 @@
     0 2px 0 2px rgba(0, 0, 0, 0.05);
 }
 
-.vertical-timeline-element-icon svg {
+.vertical-timeline-element-icon {
   width: 30px;
   height: 30px;
+  left: 6px;
 }
 
 @media only screen and (min-width: 1170px) {
@@ -93,11 +93,11 @@
 }
 
 .vertical-timeline::before {
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 18px;
-	height: 100%;
-	width: 4px;
-	background: #F13C20
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 18px;
+  height: 100%;
+  width: 4px;
+  background: #f13c20;
 }

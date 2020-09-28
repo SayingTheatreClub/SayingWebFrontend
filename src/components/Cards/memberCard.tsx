@@ -4,7 +4,8 @@
  * @Last Modified by: Chengxu Bian
  * @Last Modified time: 2020-07-12 16:52:05
  */
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { photoUrl } from "../../libs/security";
 
 export interface CartInterface {
   name: string;
@@ -14,6 +15,8 @@ export interface CartInterface {
   description: string;
   isInterview?: boolean;
   className?: string;
+  hasPhoto?: boolean;
+  id?:number;
 }
 
 const MemberCard: React.FC<CartInterface> = (props) => {
@@ -24,11 +27,16 @@ const MemberCard: React.FC<CartInterface> = (props) => {
     title,
     description,
     isInterview,
+    hasPhoto,
+    id,
     ...restProps
   } = props;
+  
+  const url = hasPhoto?`${photoUrl}${name.toLowerCase()}.png`:`${photoUrl}open-peeps (${id}).png`
+
   return (
     <div className="member-card" {...restProps}>
-      <img src={imgUrl} alt={name} className="photo" />
+      <img src={url} alt={name} className="photo" />
       <div className="content">
         <p className="name">{name}</p>
         <p className="nickName">{nickName}</p>

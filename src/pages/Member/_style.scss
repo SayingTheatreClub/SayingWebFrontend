@@ -1,5 +1,6 @@
 .info-card-wrapper {
   float: left;
+  // display: inline-block;
   width: 492px;
   margin-right: 1.4rem;
   margin-left: 1.4rem;
@@ -10,7 +11,7 @@
 .member-top-content {
   @include flex(center, center, "");
   flex-direction: column;
-  max-width: 1440px;
+  @include shrink-content;
 }
 .member-display-wraper {
   overflow: hidden;
