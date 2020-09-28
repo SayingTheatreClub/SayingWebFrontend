@@ -5,19 +5,16 @@
   margin-left: 1.4rem;
 }
 .member-content {
-  @include page-content
+  @include page-content;
 }
 .member-top-content {
-  display: flex;
+  @include flex(center, center, "");
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   max-width: 1440px;
 }
 .member-display-wraper {
   overflow: hidden;
   width: calc(90.3% + 2.8rem);
-
 }
 .info-button {
   display: block;
@@ -34,18 +31,14 @@
   width: 60%;
 }
 
-
 .member-page-pre-display {
   margin: 0 auto;
-  display: flex;
   margin-top: 46px;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  @include flex(space-around, "", wrap);
 }
 
 .member-select {
   width: 192px;
-  // height: 45px;
 }
 
 .member-select-right {

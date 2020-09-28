@@ -5,6 +5,12 @@
   display: flex;
   justify-content: center;
 }
+@mixin flex($justify-content, $align-items:stretch,$wrap:nowrap) {
+  display: flex;
+  justify-content: $justify-content;
+  align-items: $align-items;
+  flex-wrap: $wrap;
+}
 @mixin page-content {
   width: 100%;
   height: 100%;
@@ -12,6 +18,13 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+@mixin text($font-family, $font-weight, $font-size, $line-height, $color) {
+  font-family: $font-family;
+  font-weight: $font-weight;
+  font-size: $font-size;
+  line-height: $line-height;
+  color: $color;
 }
 @mixin title-1 {
   //styleName: 标题1
@@ -49,7 +62,7 @@
   line-height: 23px;
   letter-spacing: 0em;
   text-align: left;
-  color: #181616;
+  color: $content-black;
 }
 @mixin label {
   font-family: Noto Sans SC;
@@ -72,22 +85,13 @@
 }
 @mixin little-short {
   //styleName: 小字_短;
-  font-family: Noto Sans SC;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 300;
-  line-height: 23px;
+  @include text(Noto Sans SC, 300, 1rem, 24px, '');
   letter-spacing: 0em;
   text-align: left;
 }
 @mixin primary-button {
-  font-family: "Noto Sans SC";
-  font-style: normal;
-  font-weight: 300;
-  font-size: 18px;
-  line-height: 36px;
+  @include text(Noto Sans SC, 300, 18px, 36px, $content-white);
   text-align: center;
-  color: #ffffff;
   border: 1px solid $brand-red;
   box-sizing: border-box;
   background: $brand-red !important;
@@ -103,11 +107,7 @@
   border: 1px solid $brand-red;
   box-sizing: border-box;
   border-radius: 3px;
-  font-family: Noto Sans SC;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 18px;
-  line-height: 36px;
   text-align: center;
-  color: $brand-red;
+  @include text(Noto Sans SC, 300, 18px, 36px, $brand-red);
+
 }

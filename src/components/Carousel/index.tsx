@@ -11,8 +11,6 @@ type carouselType = "left" | "right";
 interface CarouselProps {
   type?: carouselType;
 }
-const url =
-  "https://66.media.tumblr.com/34783978b046ee2f757851c40f1b1f98/tumblr_ntu0hj7aQe1rha2imo1_640.jpg";
 
 const Carousel: FC<CarouselProps> = (props) => {
   const { type } = props;

@@ -14,12 +14,12 @@ const InfoCard: FC<InfoCard> = (props) => {
         <p className="past-info-title">{title}</p>
         <div className="past-info-left-mid">
           <div>
-            <p>演出时间</p>
-            <p>{time}</p>
+            <p className="past-label">演出时间</p>
+            <p className="past-text">{time}</p>
           </div>
           <div>
-            <p>演出地点</p>
-            <p>{place}</p>
+            <p className="past-label">演出地点</p>
+            <p className="past-text">{place}</p>
           </div>
         </div>
         <Button className="past-button">{title}</Button>

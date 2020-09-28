@@ -18,7 +18,7 @@
     font-weight: 300;
     font-size: 18px;
     line-height: 36px;
-    color: #181616;
+    color: $content-black;
   }
   .photo {
     display: block;
@@ -39,7 +39,7 @@
     font-weight: 300;
     font-size: 12px;
     line-height: 18px;
-    color: #181616;
+    color: $content-black;
   }
   &:hover {
     box-shadow: 0 0 3rem rgba(0, 0, 0, 0.1);
@@ -63,13 +63,13 @@
     color: $content_darkGrey;
   }
   .playCard-title {
-    color: #181616;
+    color: $content-black;
     font-size: 36px;
     line-height: 52px;
   }
   .playCard-desc {
     font-family: Noto Sans SC;
-    color: #181616;
+    color: $content-black;
     font-style: normal;
     font-weight: 300;
     font-size: 1rem;
@@ -105,7 +105,7 @@
     font-weight: 300;
     font-size: 16px;
     line-height: 23px;
-    color: #181616;
+    color: $content-black;
   }
   &:hover {
     box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1);
@@ -145,7 +145,7 @@
     font-size: 16px;
     line-height: 23px;
     text-align: center;
-    color: #181616;
+    color: $content-black;
   }
   &:hover {
     box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1);

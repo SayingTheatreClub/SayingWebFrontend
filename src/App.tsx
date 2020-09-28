@@ -1,5 +1,5 @@
 import React from "react";
-import { HashRouter, Route,BrowserRouter } from "react-router-dom";
+import { Route, BrowserRouter } from "react-router-dom";
 
 import Home from "./pages/Home";
 import Member from "./pages/Member";
@@ -7,7 +7,7 @@ import About from "./pages/About";
 import Play from "./pages/Play";
 import Test from "./pages/Test/test";
 import Join from "./pages/Join";
-import Record from "./pages/Record";
+import Record from "./pages/Past";
 function App() {
   return (
     <BrowserRouter>

@@ -5,11 +5,11 @@ import InfoCard from "./infoCard";
 
 const play = {
   title: "驴得水",
-  place: "2019年4月",
-  time: "Mitchell Theatre",
+  time: "2019年4月",
+  place: "Mitchell Theatre",
 };
 
-const RecordPlay: FC = (props) => {
+const PastPlay: FC = (props) => {
   return (
     <>
       <div style={{background:"black"}}>
@@ -22,4 +22,4 @@ const RecordPlay: FC = (props) => {
   );
 };
 
-export default RecordPlay;
+export default PastPlay;

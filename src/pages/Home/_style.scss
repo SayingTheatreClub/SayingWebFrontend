@@ -15,7 +15,7 @@
     padding-top: 1.5rem;
   }
 }
-.home-header-trans{
+.home-header-trans {
   position: absolute;
   top: 0;
   z-index: 10;
@@ -31,22 +31,13 @@
   text-align: center;
   background: #fffbf7;
   .home-display-content {
-    display: flex;
     width: 1124px;
-    justify-content: space-between;
-    flex-wrap: wrap;
     margin: 0 auto;
-    align-items: center;
+    @include flex(space-between, center, wrap);
   }
   .home-plays-display-title {
-    font-family: "Noto Sans SC";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 23px;
-    color: #545454;
+    @include text(Noto Sans SC, 500, 16px, 52p23pxx, $content-darkGrey);
     margin-bottom: 37px;
-    // margin-top: 30px;
   }
 }
 .home-about-display {
@@ -56,8 +47,7 @@
 .home-about-card-container {
   width: 1124px;
   margin: 0 auto;
-  display: flex;
-  justify-content: space-evenly;
+  @include flex(space-evenly);
 }
 .home-content {
   font-family: Noto Serif SC;
@@ -103,7 +93,7 @@
       font-weight: 300;
       font-size: 16px;
       line-height: 28px;
-      color: #181616;
+      color: $content-black;
       margin-left: 59px;
       text-align: left;
     }
@@ -119,14 +109,14 @@
 }
 
 .home-play-info-card-wrapper {
-  // font-family: Noto Sans SC ;
-  // margin: 0 auto;
-  // width: 856px;
-  // height: 281px;
-  // margin-top: 257px;
-  // margin-bottom: 226px;
-  // display: flex;
-  // position: relative;
+  font-family: Noto Sans SC;
+  margin: 0 auto;
+  width: 856px;
+  height: 281px;
+  margin-top: 257px;
+  margin-bottom: 226px;
+  display: flex;
+  position: relative;
   display: none;
 }
 .home-play-info-card-left {
@@ -142,15 +132,10 @@
     font-weight: 500;
     font-size: 16px;
     line-height: 23px;
-    color: #545454;
+    color: $content-darkGrey;
   }
   .home-play-info-card-title {
-    font-family: Noto Serif SC;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 36px;
-    line-height: 52px;
-    color: #181616;
+    @include text(Noto Serif SC, 500, 36px, 52px, $content-black);
     margin-bottom: 22px;
     margin-top: 7px;
   }
@@ -159,7 +144,7 @@
     font-weight: 300;
     font-size: 16px;
     line-height: 28px;
-    color: #181616;
+    color: $content-black;
   }
   .home-play-info-button {
     position: absolute;

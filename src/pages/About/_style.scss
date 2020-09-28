@@ -20,7 +20,7 @@
   line-height: 28px;
   text-align: right;
   font-feature-settings: "liga" off;
-  color: #181616;
+  color: $content-black;
 }
 .img {
   border: 1px solid #fff;
@@ -54,7 +54,7 @@
       font-weight: normal;
       font-size: 36px;
       line-height: 52px;
-      color: #181616;
+      color: $content-black;
     }
     .about-intro-card-desc {
       font-family: Noto Sans SC;
@@ -62,7 +62,7 @@
       font-weight: 300;
       font-size: 18px;
       line-height: 36px;
-      color: #181616;
+      color: $content-black;
     }
   }
 }
