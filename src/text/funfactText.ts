@@ -1,4 +1,4 @@
-import { photoUrl } from "../libs/security";
+import { photoUrl } from "../security";
 export const funfacts = [
   {
     text: `戏言人常身兼多职，不想当制作人的舞美不是好行政，不想当演员的编剧也不是好舞台监督。`,
@@ -24,8 +24,8 @@ export const funfacts = [
     text: ` 戏言很穷，但是始终坚持免费公演；做出来的剧质感一个亿；大家梦想着给学校捐一个剧院。`,
     img: photoUrl + "fun facts6.svg",
   },
-  // {
-  //   text: `戏言的演员都是人来疯，公演时状态永远最佳。`,
-  //   img: photoUrl + "fun facts7.svg",
-  // },
+  {
+    text: `戏言的演员都是人来疯，公演时状态永远最佳。`,
+    img: photoUrl + "fun facts7.svg",
+  },
 ];

@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import Arrow from "../../components/Arrow";
+import Arrow from "../../components/Arrow/arrow";
 const PhotoBoard: FC = (props) => {
   return (
     <div className="photoboard-wrapper">

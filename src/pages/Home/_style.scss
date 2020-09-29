@@ -15,7 +15,7 @@
     padding-top: 1.5rem;
   }
 }
-.home-header-trans {
+.home-header-trans{
   position: absolute;
   top: 0;
   z-index: 10;
@@ -31,13 +31,22 @@
   text-align: center;
   background: #fffbf7;
   .home-display-content {
+    display: flex;
     width: 1124px;
+    justify-content: space-between;
+    flex-wrap: wrap;
     margin: 0 auto;
-    @include flex(space-between, center, wrap);
+    align-items: center;
   }
   .home-plays-display-title {
-    @include text(Noto Sans SC, 500, 16px, 52p23pxx, $content-darkGrey);
+    font-family: "Noto Sans SC";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 23px;
+    color: #545454;
     margin-bottom: 37px;
+    // margin-top: 30px;
   }
 }
 .home-about-display {
@@ -47,7 +56,8 @@
 .home-about-card-container {
   width: 1124px;
   margin: 0 auto;
-  @include flex(space-evenly);
+  display: flex;
+  justify-content: space-evenly;
 }
 .home-content {
   font-family: Noto Serif SC;
@@ -61,7 +71,7 @@
   flex-direction: row-reverse;
 }
 .introcard {
-  font-family: "Noto Serif SC";
+  
   position: absolute;
   background: rgba(248, 246, 243, 0.7);
   top: -200px;
@@ -80,8 +90,9 @@
     margin: 38px auto;
     text-align: center;
     .home-intro-title {
+      font-family: "Noto Serif SC";
       font-style: normal;
-      font-weight: normal;
+      font-weight: 400;
       font-size: 36px;
       line-height: 52px;
       color: $content_black;
@@ -89,11 +100,11 @@
       margin-bottom: 45px;
     }
     .home-intro-desc {
-      font-style: normal;
-      font-weight: 300;
+      font-family: "Noto Sans SC";
+      font-weight: 100;
       font-size: 16px;
       line-height: 28px;
-      color: $content-black;
+      color: #181616;
       margin-left: 59px;
       text-align: left;
     }
@@ -109,14 +120,14 @@
 }
 
 .home-play-info-card-wrapper {
-  font-family: Noto Sans SC;
-  margin: 0 auto;
-  width: 856px;
-  height: 281px;
-  margin-top: 257px;
-  margin-bottom: 226px;
-  display: flex;
-  position: relative;
+  // font-family: Noto Sans SC ;
+  // margin: 0 auto;
+  // width: 856px;
+  // height: 281px;
+  // margin-top: 257px;
+  // margin-bottom: 226px;
+  // display: flex;
+  // position: relative;
   display: none;
 }
 .home-play-info-card-left {
@@ -132,10 +143,15 @@
     font-weight: 500;
     font-size: 16px;
     line-height: 23px;
-    color: $content-darkGrey;
+    color: #545454;
   }
   .home-play-info-card-title {
-    @include text(Noto Serif SC, 500, 36px, 52px, $content-black);
+    font-family: Noto Serif SC;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 52px;
+    color: #181616;
     margin-bottom: 22px;
     margin-top: 7px;
   }
@@ -144,11 +160,69 @@
     font-weight: 300;
     font-size: 16px;
     line-height: 28px;
-    color: $content-black;
+    color: #181616;
   }
   .home-play-info-button {
     position: absolute;
     bottom: 0;
+  }
+}
+
+.mailbox-wrapper {
+  @media screen and(max-width:636px) {
+    display: none;
+  }
+  font-family: Noto Sans SC;
+  background: #f8f6f3;
+  border-radius: 0.1875rem;
+  width: 636px;
+  height: 12.3125rem;
+  position: absolute;
+  left: 50%;
+  transform: translate(-19.875rem, -6.1875rem);
+  .mailbox-content-wrapper {
+    width: 36.4375rem;
+    height: 10.3125rem;
+    margin-top: 1rem;
+    margin-left: 1.625rem;
+    background: white;
+    border: 0.0625rem solid $brand-red;
+    box-sizing: border-box;
+    border-radius: 0.1875rem;
+    .mailbox-content {
+      margin: 0 1.25rem;
+      margin-left: 5.25rem;
+      margin-top: 1.25rem;
+      .mailbox-title {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.4375rem;
+        color: #181616;
+      }
+      .mailbox-desc {
+        font-style: normal;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 1.4375rem;
+        color: #545454;
+      }
+      .mailbox-input {
+        width: 18.875rem;
+        height: 2.6875rem;
+        font-size: 18px;
+        color: #BDBDBD;
+      }
+      .mailbox-button {
+        width: 7.125rem;
+        height: 2.6875rem;
+        margin-left: 1.9375rem;
+        font-size: 18px;
+        font-weight: 100;
+        color: $brand-red;
+        border-color: $brand-red;
+      }
+    }
   }
 }
 

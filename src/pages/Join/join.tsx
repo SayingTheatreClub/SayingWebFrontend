@@ -1,19 +1,26 @@
 import React, { FC, useEffect, useState } from "react";
-import QueueAnim from "rc-queue-anim";
-import { useRequest } from "ahooks";
-import { Button,Spin } from "antd";
 
-import Header from "../../components/Header";
-import Footer from "../../components/Footer";
-import PopUp from "../../components/PopUp";
-import MailBox from '../../components/Mailbox';
+import { Button } from "antd";
+
+import Header from "../../components/Header/header";
+import Footer from "../../components/Footer/footer";
+import PopUp from "../../components/PopUp/popUp";
+import QueueAnim from "rc-queue-anim";
+
 import PageInfo from "./pageInfo";
 import DepartmentCard from "./departmentCard";
+import {
+  joinText,
+  departText,
+  jobType,
+  departType,
+  departItemType,
+} from "../../text/joinText";
+import axios from "axios";
 
-import { getDeparts } from "../../libs/requests";
-
-import { joinText, departText, departItemType } from "../../text/joinText";
 import Depart from "../../assets/depart.png";
+import MailBox from "../Home/mailBox";
+import { url } from "../../security";
 
 type departmentType = {
   title: string;
@@ -22,13 +29,22 @@ type departmentType = {
 };
 
 const Join: FC = (props) => {
+  const [departs, setDeparts] = useState<departmentType[]>([]);
   const [targetDepart, setTargetDepart] = useState<departItemType>({
     title: "",
     jobs: [{ title: "", desc: "" }],
   });
-  const { data, loading } = useRequest(getDeparts);
   const [open, setOpen] = useState(false);
-  useEffect(() => {}, []);
+  useEffect(() => {
+    axios.get(`${url}departments/`).then((res) => {
+      const data: departmentType[] = res.data.map((item: any) => ({
+        title: item.name,
+        text: item.description,
+        job: item.jobs,
+      }));
+      setDeparts(data);
+    });
+  }, []);
   return (
     <>
       <Header />
@@ -39,31 +55,28 @@ const Join: FC = (props) => {
       />
       <div className="join-content">
         <div>
-          {loading&&<Spin size="large"/>}
-          <QueueAnim delay={500} className="join-page-depart-wrapper">
-            {data?.map((item: departmentType) => (
+          <QueueAnim delay={500} className="join-page-depart-wrapper" >
+            {departs.map((item: departmentType) => (
               <div key={item.title}>
-                <DepartmentCard
-                  onClick={() => {
-                    const res = departText.find(
-                      (value: departItemType) => value.title === item.title
-                    );
-                    if (res) setTargetDepart(res);
-                    setOpen(!open);
-                  }}
-                  title={item.title}
-                  text={item.text}
-                  jobs={item.job}
-                />
+              <DepartmentCard
+                onClick={() => {
+                  const res = departText.find(
+                    (value: departItemType) => value.title === item.title
+                  );
+                  if (res) setTargetDepart(res);
+                  setOpen(!open);
+                }}
+                title={item.title}
+                text={item.text}
+                jobs={item.job}
+              />
               </div>
             ))}
           </QueueAnim>
         </div>
         <div className="join-page-lower">
           <p>赶快加入我们吧！</p>
-          <Button className="join-page-lower-button" danger type="primary">
-            报名链接
-          </Button>
+          <Button className="join-page-lower-button" danger type="primary">报名链接</Button>
         </div>
       </div>
       <PopUp
@@ -76,7 +89,7 @@ const Join: FC = (props) => {
         type="depart"
         jobInfo={targetDepart.jobs}
         recruit={
-          data?.find(
+          departs.find(
             (item: departmentType) => item.title === targetDepart.title
           )?.job
         }

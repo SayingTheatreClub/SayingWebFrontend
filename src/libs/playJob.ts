@@ -18,7 +18,7 @@ export const parsePlay = (data: Array<any>) => {
       department:index,
       members:item,
     })
-  })  
+  })
   return result;
 };
 

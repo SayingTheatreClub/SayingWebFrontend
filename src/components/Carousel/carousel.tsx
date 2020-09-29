@@ -1,7 +1,7 @@
 import React, { FC, useState } from "react";
 import PlayCard from "../Cards/playCard";
 import InterviewCard from "../Cards/interviewCard";
-import ArrowSvg from "../Arrow";
+import ArrowSvg from "../Arrow/arrow";
 import Mary from "../../assets/mary.jpg";
 import Donkey from "../../assets/donkey.png";
 import RedMark from "../../assets/redMark.svg";
@@ -11,6 +11,8 @@ type carouselType = "left" | "right";
 interface CarouselProps {
   type?: carouselType;
 }
+const url =
+  "https://66.media.tumblr.com/34783978b046ee2f757851c40f1b1f98/tumblr_ntu0hj7aQe1rha2imo1_640.jpg";
 
 const Carousel: FC<CarouselProps> = (props) => {
   const { type } = props;
@@ -69,7 +71,7 @@ const Carousel: FC<CarouselProps> = (props) => {
             {[1, 2, 3, 4, 5, 6, 7, 8].map(() => (
               <PlayCard
                 className="carousel-card"
-                name="[驴得水]"
+                name="「驴得水」"
                 year="2019"
                 type="img-text"
                 imgUrl={Donkey}
@@ -116,7 +118,7 @@ const Carousel: FC<CarouselProps> = (props) => {
             <div className="home-carousel-interview-card">
               <InterviewCard
                 imgUrl={Mary}
-                title="玛丽：戏剧就是造梦"
+                title="玛丽: 戏剧就是造梦"
                 collection="戏言人专访"
                 moveSpace={space}
               />

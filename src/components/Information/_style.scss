@@ -8,7 +8,7 @@
     font-weight: normal;
     font-size: 36px;
     line-height: 52px;
-    color: $content-black;
+    color: #181616;
     margin-top: 98px;
   }
   .home-info-body {
@@ -20,7 +20,7 @@
     font-weight: 300;
     font-size: 18px;
     line-height: 36px;
-    color: $content-black;
+    color: #181616;
   }
   .desc-right {
     margin-left: 10px;
@@ -32,7 +32,7 @@
     font-size: 36px;
     line-height: 48px;
     text-align: center;
-    color: $content-black;
+    color: #181616;
     margin-left: 10px;
   }
   .home-info-button {
@@ -41,9 +41,15 @@
     height: 37px;
   }
   .home-info-button-left {
-    background: #c62127 !important;
+    font-family: Noto Sans SC;
+    font-size: 18px;
+    background: $brand-red;
   }
   .home-info-button-right {
+    font-family: Noto Sans SC;
+    color: $brand-red;
+    border-color: $brand-red;
+    font-size: 18px;
     margin-left: 21px;
   }
 }

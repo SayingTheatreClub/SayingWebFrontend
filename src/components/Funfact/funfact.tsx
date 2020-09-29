@@ -1,4 +1,6 @@
-import React, { FC } from "react";
+import React, { FC, useState } from "react";
+import PlayCard from "../Cards/playCard";
+import InterviewCard from "../Cards/interviewCard";
 
 interface FunFactsProps {
   imgUrl: string;

@@ -1,10 +1,10 @@
 .member-card {
   font-family: Noto Serif SC;
   cursor: pointer;
-  margin: 0 1.4rem;
   height: 22.5rem;
   width: 14rem;
   border: 1px solid #fff7ed;
+  margin: 0 1.4rem;
   margin-bottom: 52px;
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
   text-align: left;
@@ -18,7 +18,7 @@
     font-weight: 300;
     font-size: 18px;
     line-height: 36px;
-    color: $content-black;
+    color: #181616;
   }
   .photo {
     display: block;
@@ -39,7 +39,7 @@
     font-weight: 300;
     font-size: 12px;
     line-height: 18px;
-    color: $content-black;
+    color: #181616;
   }
   &:hover {
     box-shadow: 0 0 3rem rgba(0, 0, 0, 0.1);
@@ -53,7 +53,7 @@
   @media screen and(max-width:872px) {
     margin-right: 0;
   }
-  font-family: Noto Serif SC;
+  font-family: Noto Sans SC;
   .playCard-belonging {
     font-family: Noto Sans SC;
     font-style: normal;
@@ -63,13 +63,13 @@
     color: $content_darkGrey;
   }
   .playCard-title {
-    color: $content-black;
+    color: #181616;
     font-size: 36px;
     line-height: 52px;
   }
   .playCard-desc {
     font-family: Noto Sans SC;
-    color: $content-black;
+    color: #181616;
     font-style: normal;
     font-weight: 300;
     font-size: 1rem;
@@ -80,7 +80,7 @@
 .img-card {
   cursor: pointer;
   transition: 1s ease;
-  font-family: Noto Serif SC;
+  font-family: Noto Sans SC;
   width: 303px;
   height: 254px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
@@ -94,10 +94,10 @@
   }
   .img-card-year {
     font-style: normal;
-    font-weight: 500;
+    font-weight: 700;
     font-size: 14px;
-    line-height: 24px;
-    color: #c62127;
+    line-height: 34px;
+    color: $brand-red;
     margin-top: 10px;
   }
   .img-card-name {
@@ -116,7 +116,7 @@
 .interview-container {
   cursor: pointer;
   transition: 1s ease;
-  font-family: "Noto Serif SC";
+  font-family: "Noto Sans SC";
   width: 221px;
   height: 239px;
   border-radius: 3px;
@@ -134,10 +134,10 @@
     margin-top: 15px;
 
     font-style: normal;
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 24px;
-    color: #c62127;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 10px;
+    color: $brand-red;
   }
   .interview-title {
     font-style: normal;

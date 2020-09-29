@@ -1,25 +1,26 @@
-.funfact-wrapper {
-  @include flex(space-evenly, "", wrap);
-}
-.funfact-top {
-  @include flex(center, center);
-  .funfact-top-left {
-    @include text(Noto Sans SC, normal, 16px, 23px, $content-black);
-  }
-  .funfact-top-right {
-    width: 127px;
-    margin-left: 150px;
-    @include text(Noto Serif SC, normal, 36px, 52px, $content-black);
-  }
+.funfact-left-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
 }
 .about-subtitle {
-  @include text(Noto Sans SC, 500, 16px, 23px, $content-black);
+  font-family: Noto Sans SC;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 23px;
   text-align: center;
   margin-top: 77px;
 }
 .about-text {
-  @include text(Noto Sans SC, 300, 16px, 28px, $content-black);
+  font-family: Noto Sans SC;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 28px;
   text-align: right;
+  font-feature-settings: "liga" off;
+  color: #181616;
 }
 .img {
   border: 1px solid #fff;
@@ -53,7 +54,7 @@
       font-weight: normal;
       font-size: 36px;
       line-height: 52px;
-      color: $content-black;
+      color: #181616;
     }
     .about-intro-card-desc {
       font-family: Noto Sans SC;
@@ -61,7 +62,7 @@
       font-weight: 300;
       font-size: 18px;
       line-height: 36px;
-      color: $content-black;
+      color: #181616;
     }
   }
 }
@@ -76,10 +77,9 @@
     0 2px 0 2px rgba(0, 0, 0, 0.05);
 }
 
-.vertical-timeline-element-icon {
+.vertical-timeline-element-icon svg {
   width: 30px;
   height: 30px;
-  left: 6px;
 }
 
 @media only screen and (min-width: 1170px) {
@@ -90,14 +90,4 @@
     margin-left: -15px;
     margin-top: 15px;
   }
-}
-
-.vertical-timeline::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 18px;
-  height: 100%;
-  width: 4px;
-  background: #f13c20;
 }

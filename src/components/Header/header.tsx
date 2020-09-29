@@ -2,7 +2,7 @@ import React, { useState, useContext } from "react";
 import { Menu } from "antd";
 import Logo from "../../assets/logo.png";
 import { Link, useHistory } from "react-router-dom";
-import { aboutList, playList } from "../../libs/lists";
+
 type headerType = "transparent" | "gray" | "white";
 
 export interface HeaderProps {
@@ -11,11 +11,25 @@ export interface HeaderProps {
 }
 const navs = {
   en: ["About", "Shows", "Events", "Articals", "中|EN"],
-  zh: ["活动动态", "文章"],
+  zh: ["活动动态", "戏言文集"],
 };
+const aboutDrop = [
+  { name: "关于戏言", url: "about" },
+  { name: "戏言家庭", url: "member" },
+  { name: "加入我们", url: "join" },
+  { name: "支持戏言", url: "" },
+  { name: "联系我们", url: "" },
+];
 
+const playsDrop = [
+  { name: "红玫瑰与白玫瑰", url: "play" },
+  { name: "驴得水", url: "" },
+  { name: "你好，疯子", url: "" },
+  { name: "旧事", url: "" },
+  { name: "暗恋桃花源", url: "" },
+];
 const Header: React.FC<HeaderProps> = (props) => {
-  const { type, className } = props;
+  const { type,className } = props;
   const colorClass = `header-${type}`;
   const history = useHistory();
   const handleClick = (url: string) => {
@@ -25,7 +39,7 @@ const Header: React.FC<HeaderProps> = (props) => {
   return (
     <header className={`${className} ${colorClass} header`}>
       <Link to="/">
-        <img src={Logo} className="header-logo" alt="img" />
+        <img src={Logo} className="header-logo" />
       </Link>
       <Menu
         mode="horizontal"
@@ -44,19 +58,16 @@ const Header: React.FC<HeaderProps> = (props) => {
         <Menu.SubMenu
           title="关于戏言"
           className={`header-nav-item ${colorClass}`}
-          onTitleClick={() => {
-            handleClick("about");
-          }}
         >
-          {aboutList.map((item: any) => (
-            <Menu.Item style={{ textAlign: "center" }}>
+          {aboutDrop.map((item: any) => (
+            <Menu.Item style={{textAlign:'center'}}>
               <Link to={`/${item.url}`}>{item.name}</Link>
             </Menu.Item>
           ))}
         </Menu.SubMenu>
 
-        <Menu.SubMenu title="演出" className={`header-nav-item ${colorClass}`}>
-          {playList.map((item: any) => (
+        <Menu.SubMenu title="话剧演出" className={`header-nav-item ${colorClass}`}>
+          {playsDrop.map((item: any) => (
             <Menu.Item>
               <Link to={`/${item.url}`}>{item.name}</Link>
             </Menu.Item>
@@ -68,6 +79,8 @@ const Header: React.FC<HeaderProps> = (props) => {
             {item}
           </Menu.Item>
         ))}
+
+        <i className="iconfont icon-search header-nav-item"></i>
       </Menu>
     </header>
   );
