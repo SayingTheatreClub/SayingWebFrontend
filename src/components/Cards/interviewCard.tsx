@@ -17,7 +17,7 @@ const InterviewCard: FC<InterviewCardProps> = (props) => {
       <img src={imgUrl} alt="image" className="interview-image" />
       <div className="interview-text">
         <p className="interview-type">{collection}</p>
-        <span className="interviw-title">{title}</span>
+        <span className="interview-title">{title}</span>
       </div>
     </div>
   );

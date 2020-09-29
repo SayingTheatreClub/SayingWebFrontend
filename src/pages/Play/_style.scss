@@ -6,12 +6,17 @@
   }
 }
 .play-text-box-lower {
-  @include flex(space-between);
+  @include flex(space-between,'',wrap);
   @include text(Noto Sans SC, lighter, 1rem, 28px, $content-black);
+  
 }
 .play-text-box {
-  margin-left: 70px;
+  margin: 0 auto;
   color: black;
+  max-width: 1078px;
+  @media screen and(max-width:1060px) {
+    width: 80%;
+  }
   .play-text-title {
     margin-top: 100px;
     font-weight: 1000;
@@ -21,9 +26,15 @@
 }
 .play-text-box-right {
   width: 524px;
+  @media screen and(max-width:1060px) {
+    width: 100%;
+  }
 }
 .play-text-box-left {
-  width: 554px;
+  width: 524px;
+  @media screen and(max-width:1060px) {
+    width: 100%;
+  }
 }
 
 .play-video-box {

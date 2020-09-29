@@ -1,11 +1,8 @@
-@font-face {
-  font-family: Noto Sans SC;
-  src: url("../assets/NotoSansSC-Regular.otf");
-}
-@font-face {
-  font-family: "Noto Serif SC";
-  src: url("../assets/NotoSerifSC-Regular.otf");
-}
+// @font-face {
+//   font-family: Noto Sans SC;
+//   src: url("../assets/NotoSansSC-Regular.otf");
+// }
+@import url("https://fonts.googleapis.com/css2?family=David+Libre&family=Noto+Sans+SC:wght@100;300;400;500;700;900&family=Noto+Serif+SC:wght@200;300;400;500;600;700&display=swap");
 
 $header-height: 80px !default;
 
