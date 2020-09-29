@@ -107,7 +107,7 @@
   @include text(Noto Sans SC, 500, 16px, 23px, $content-black);
 }
 .play-department-board-wrapper {
-  @include flex(space-between);
+  @include flex(space-between,'',wrap);
   margin-top: 40px;
 }
 .play-department-board {
@@ -153,6 +153,7 @@
 .one-line {
   background: #bdbdbd;
   height: 1px;
+  max-width: 1440px;
 }
 .be-center {
   margin: 0 auto;
@@ -173,4 +174,10 @@
 .play-ellipse-wrapper {
   width: fit-content;
   margin: 0 auto;
+}
+
+
+.player{
+  width: 857px;
+  height: 556px;
 }

@@ -14,7 +14,7 @@ const InterviewCard: FC<InterviewCardProps> = (props) => {
   };
   return (
     <div className="interview-container" style={cardStyle}>
-      <img src={imgUrl} alt="image" className="interview-image" />
+      <img src={imgUrl} alt="play" className="interview-image" />
       <div className="interview-text">
         <p className="interview-type">{collection}</p>
         <span className="interview-title">{title}</span>

@@ -70,9 +70,8 @@ const PlayComponent: FC = (props) => {
           <iframe
             src="////player.bilibili.com/player.html?aid=8472443&bvid=BV16x41117ZP&cid=13951927&page=1"
             scrolling="no"
-            width="856"
-            height="527"
-          ></iframe>
+            className="player"
+          />
         </div>
         <div className="be-center margin-left-70">
           <div className="play-department-board-section">Cast and Crew</div>
