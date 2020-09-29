@@ -28,7 +28,7 @@ jobs:
     
     - name: Pack website
       run: |
-        npm install && npm run build
+        yarn install && yarn build
   
     - name: Copy file to server
       uses: wlixcc/SFTP-Deploy-Action@v1.0
