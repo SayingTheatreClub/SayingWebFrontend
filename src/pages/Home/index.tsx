@@ -10,9 +10,8 @@ import IntroInfoCard from "./introInfoCard";
 import HomeInfo from "../../components/Information/homeInfo";
 import Footer from "../../components/Footer";
 import IMG from "../../assets/play.jpg";
-import Ran from "../../assets/ran.jpg";
 
-import { redNBlackRose, rhinInLove } from "../../text/hometext";
+import { redNBlackRose } from "../../text/hometext";
 const Home: FC = (props) => {
   return (
     <Language>

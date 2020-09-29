@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { Select, Button } from "antd";
+import { Button } from "antd";
 
 interface InfoComponentProps {
   imgUrl: string;
@@ -15,10 +15,7 @@ const InfoComponent: FC<InfoComponentProps> = (props) => {
         src={imgUrl}
         alt="poster"
       />
-      <Button
-        danger
-        className="info-button"
-      >
+      <Button danger className="info-button">
         加入我们
       </Button>
       <p style={{ width: "492px", marginTop: "40px" }}>{desc}</p>

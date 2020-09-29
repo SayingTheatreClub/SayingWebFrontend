@@ -4,7 +4,7 @@
  * @Last Modified by: Chengxu Bian
  * @Last Modified time: 2020-07-12 16:52:05
  */
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { photoUrl } from "../../libs/security";
 
 export interface CartInterface {

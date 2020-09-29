@@ -63,7 +63,7 @@ const MemberPop: FC<MemberProps> = (props) => {
       });
       setMyData(dataArray);
     });
-  }, [open]);
+  }, [open, type, name]);
 
   if (type === "person")
     return (

@@ -70,6 +70,7 @@ const PlayComponent: FC = (props) => {
           <iframe
             src="////player.bilibili.com/player.html?aid=8472443&bvid=BV16x41117ZP&cid=13951927&page=1"
             scrolling="no"
+            title="rose"
             className="player"
           />
         </div>

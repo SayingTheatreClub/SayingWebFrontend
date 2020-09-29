@@ -24,7 +24,6 @@ const PlayCard: React.FC<PlayCardProps> = (props) => {
     imgUrl,
     className,
     moveSpace,
-    ...restProps
   } = props;
   const st = "playCard";
   const classnames = Classname("img-card", className);

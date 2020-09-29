@@ -1,7 +1,7 @@
 
 export const parsePlay = (data: Array<any>) => {
   const parsed = new Map();
-  const result = new Array();
+  const result:any[] = [];
   data.forEach((item) => {
     const jobs = parseJob(item.job);
     jobs.forEach((job: string) => {

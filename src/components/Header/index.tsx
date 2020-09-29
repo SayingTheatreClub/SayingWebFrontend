@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React from "react";
 import { Menu } from "antd";
 import Logo from "../../assets/logo.png";
 import { Link, useHistory } from "react-router-dom";
