@@ -36,7 +36,7 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-yarn-
 
-    - name: Pack website
+    - name: Build package
       run: |
         yarn --frozen-lockfile --non-interactive && yarn build
       env:
