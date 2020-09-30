@@ -5,10 +5,10 @@
   max-height: 95vh;
   border-radius: 3px;
 }
-.popup-close{
+.popup-close {
   cursor: pointer;
   position: absolute;
-  top:55px;
+  top: 55px;
   right: 65px;
 }
 .popup-lower-content-wrapper {
@@ -19,7 +19,7 @@
   flex-direction: column;
   position: relative;
   margin: 0 auto;
-  border: 1px solid #c62127;
+  border: 1px solid $brand-red;
   box-sizing: border-box;
   background: white;
   border-radius: 3px;
@@ -34,12 +34,7 @@
   .popup-desc {
     width: 300px;
     word-wrap: break-word;
-    font-family: Noto Serif SC;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 16px;
-    line-height: 18px;
-    color: $content-black;
+    @include text(Noto Serif SC, bold, 16px, 18px, $content-black);
   }
 }
 
@@ -52,23 +47,13 @@
 
 .popup-name {
   text-align: right;
-  font-family: Noto Serif SC;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 36px;
-  line-height: 52px;
-  color: #000000;
+  @include text(Noto Serif SC, bold, 36px, 52px, $content-black);
   padding-top: 135px;
   margin-bottom: 81px;
   margin-right: 311px;
 }
 .popup-playlist {
-  font-family: Noto Sans SC;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 16px;
-  line-height: 23px;
-  color: #000000;
+  @include text(Noto Sans SC, 300, 16px, 23px, black);
 }
 .popup-play-jobs-wrapper {
   display: flex;
@@ -82,12 +67,7 @@
   margin-bottom: 22px;
 }
 .popup-playlist-title {
-  font-family: Noto Sans SC;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 24px;
-  color: #000000;
+  @include text(Noto Sans SC, 500, 14px, 24px, black);
 }
 
 .popup-overlay {
@@ -115,41 +95,41 @@
   animation: anvil 0.3s cubic-bezier(0.38, 0.1, 0.36, 0.9) forwards;
 }
 
-
-.popup-job-list-wrapper{
+.popup-job-list-wrapper {
   width: 340px;
   margin-bottom: 10px;
 }
-.popup-job-list-title{
+.popup-job-list-title {
   @include label;
   color: #000000;
 }
-.popup-job-list-text{
+.popup-job-list-text {
   @include little-short;
   color: #000000;
-  .popup-job-list-item{
+  .popup-job-list-item {
     margin-top: 1.7rem;
     display: flex;
     align-items: flex-start;
-    .popup-job-list-words{
+    .popup-job-list-words {
       //align to the top of word
       margin-top: -5px;
     }
   }
 }
 
-.popup-lower-content-depart{
-  justify-content: space-around;
-  flex-wrap: wrap;
-  align-items: flex-start;
+.popup-lower-content-depart {
+  // justify-content: space-around;
+  // flex-wrap: wrap;
+  // align-items: flex-start;
+  @include flex(space-around, flex-start, wrap);
   margin-top: 80px;
   margin-bottom: 30px;
 }
 
-.popup-depart-recruit{
+.popup-depart-recruit {
   @include little-short;
   font-weight: bolder;
-  margin:0 auto;
+  margin: 0 auto;
   margin-top: 34px;
   margin-left: 483px;
   color: #000000;

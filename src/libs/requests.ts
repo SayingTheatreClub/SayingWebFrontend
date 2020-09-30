@@ -52,14 +52,18 @@ export const getMemberByPlay = async (play: string) => {
   }));
 };
 
-export const getMemberByCollection = async (collection: string) => {
+export const getMemberByCollection = async (play: string, job: string) => {
+  //if all then all clear
+  play = play === "all" ? "" : play;
+  job = job === "all" ? "" : job;
   const res = await axios.get(`${url}instance/`, {
     params: {
-      search: collection,
+      search: job,
+      play__name: play,
     },
   });
   const flag = new Set();
-  const result:any[] = [];
+  const result: any[] = [];
   res.data.forEach((item: any) => {
     if (!flag.has(item.person)) {
       flag.add(item.person);

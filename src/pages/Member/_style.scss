@@ -39,15 +39,27 @@
   @include flex(space-around, "", wrap);
 }
 
-.member-select {
-  width: 192px;
-}
 
-.member-select-right {
-  margin-left: 30px;
-}
 
 .ant-back-top{
   bottom: 0;
   top:200px;
+}
+
+.member-content-wrapper{
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.member-select-wrapper{
+  margin-left: 70px;
+  margin-top: 78px;
+  margin-bottom: 74px;
+  .member-select {
+    width: 192px;
+  }
+  
+  .member-select-right {
+    margin-left: 30px;
+    @extend .member-select;
+  }
 }

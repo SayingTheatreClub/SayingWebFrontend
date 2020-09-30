@@ -1,5 +1,5 @@
 import React from "react";
-import {Link} from 'react-router-dom';
+import { Link } from "react-router-dom";
 import {
   titleList,
   playList,
@@ -9,8 +9,6 @@ import {
   eventList,
   ListItem,
 } from "../../libs/lists";
-
-
 
 interface InfoListProps {
   list: Array<ListItem>;
@@ -27,8 +25,12 @@ const InfoList: React.FC<InfoListProps> = (props) => {
         {[0, 1, 2, 3].map((item: number) => (
           <div>
             <Link to="" className="footer-link">
-            <img src={mediaIconList[item]} alt="logo" className="footer-icon" />
-            {mediaList[item]}
+              <img
+                src={mediaIconList[item]}
+                alt="logo"
+                className="footer-icon"
+              />
+              {mediaList[item]}
             </Link>
           </div>
         ))}
@@ -39,7 +41,7 @@ const InfoList: React.FC<InfoListProps> = (props) => {
     <div className={className}>
       {list.map((item: ListItem) => (
         <Link to={item.url} className="footer-link">
-        <div>{item.name}</div>
+          <div>{item.name}</div>
         </Link>
       ))}
     </div>

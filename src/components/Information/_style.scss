@@ -1,39 +1,25 @@
 .home-info-wrapper {
   height: 477px;
-  width: 356px;
+  // width: 356px;
   margin-left: 31px;
   .home-info-top {
-    font-family: Noto Serif SC;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 36px;
-    line-height: 52px;
-    color: $content-black;
+    @include text(Noto Serif SC, normal, 36px, 52px, $content-black);
     margin-top: 98px;
   }
   .home-info-body {
     display: flex;
+    align-items: baseline;
   }
   .home-info-desc {
-    font-family: Noto Sans SC;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 18px;
-    line-height: 36px;
-    color: $content-black;
+    @include text(Noto Sans SC, 300, 18px, 36px, $content-black);
   }
   .desc-right {
     margin-left: 10px;
   }
-  .home-info-special {
-    font-family: Noto Serif SC;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 36px;
-    line-height: 48px;
+  .home-info-number {
     text-align: center;
-    color: $content-black;
-    margin-left: 10px;
+    @include text(Noto Serif SC, normal, 36px, 19px, $content-black);
+    margin: 0 10px;
   }
   .home-info-button {
     border-radius: 3px !important;
@@ -41,14 +27,12 @@
     height: 37px;
   }
   .home-info-button-left {
-    background: #c62127 !important;
+    background: $brand-red !important;
   }
   .home-info-button-right {
     margin-left: 21px;
   }
 }
-
-
 
 .pageinfo-background {
   height: 296px;
@@ -56,14 +40,9 @@
   overflow: hidden;
 }
 .pageinfo-title {
-  font-family: 'Noto Serif SC';
-  font-style: normal;
-  font-weight: 600;
-  font-size: 55px;
-  line-height: 79px;
+  @include text(Noto Serif SC, 600, 55px, 79px, black);
   text-align: center;
   margin-top: 38px;
-  color: #000000;
 }
 .pageinfo-wrapper {
   width: 569px;
@@ -71,11 +50,6 @@
   margin: 0 auto;
 }
 .pageinfo-desc {
-  font-family: Noto Sans SC;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 16px;
-  line-height: 28px;
+  @include text(Noto Sans SC, 300, 16px, 28px, black);
   text-align: center;
-  color: #000000;
 }

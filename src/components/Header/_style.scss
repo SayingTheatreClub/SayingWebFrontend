@@ -29,11 +29,8 @@
   background: transparent;
 }
 .header-nav-item {
-  font-family: Noto Sans SC;
-  font-weight: 300;
-  font-size: 18px;
   text-align: center;
-  color: white;
+  @include text(Noto Sans SC, 300, 18px, "", $content-white);
 }
 
 .header-gray {

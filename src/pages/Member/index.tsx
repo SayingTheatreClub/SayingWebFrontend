@@ -1,7 +1,7 @@
 import React, { FC, useState } from "react";
-import { useRequest } from "ahooks";
+import { useBoolean, useRequest, useSetState, useUpdateEffect } from "ahooks";
 import QueueAnim from "rc-queue-anim";
-import { Select,BackTop } from "antd";
+import { Select, BackTop } from "antd";
 import Header from "../../components/Header";
 import PageInfo from "../../components/Information/pageInfo";
 import InfoComponent from "./infoComponent";
@@ -12,7 +12,7 @@ import PosterImg from "../../assets/poster.png";
 import { intro } from "../../text/memberText";
 import { plays, departments } from "../../text/basicText";
 import { getMemberByPage, getMemberByCollection } from "../../libs/requests";
-import Top from '../../assets/top.svg';
+import Top from "../../assets/top.svg";
 
 interface Member {
   person: string;
@@ -36,8 +36,6 @@ const Member: FC<MemberComponentProps> = (props) => {
   const [popOpen, setPopOpen] = useState(false);
   const [members, setMembers] = useState<Member[]>([]);
 
-  let interval = false;
-
   const defaultRequest = useRequest(
     (next: Result) => getMemberByPage(next?.next, next?.next > 1 ? 15 : 16),
     {
@@ -45,7 +43,6 @@ const Member: FC<MemberComponentProps> = (props) => {
       cacheKey: "loadmorepeople",
       onSuccess: (result) => {
         setMembers(members?.concat(result.list));
-        interval = false;
       },
     }
   );
@@ -54,35 +51,47 @@ const Member: FC<MemberComponentProps> = (props) => {
     manual: true,
     onSuccess: (result) => {
       setMembers(result);
-      interval = false;
     },
   });
+
+  //is default page -- all members
+  const [isDefault, { setFalse, setTrue }] = useBoolean(true);
 
   const [clickName, setClickName] = useState({
     name: "",
     desc: "",
     id: -1,
   });
-
-  const [menuValue, setMenu] = useState({
+  const [menuValue, setMenu] = useSetState({
     play: "all",
     depart: "all",
   });
+
+  //listen to menu change
+  useUpdateEffect(() => {
+    const { play, depart } = menuValue;
+
+    if (depart !== "all" || play !== "all") {
+      setFalse();
+      collectionRequest.run(play, depart);
+    } else {
+      setMembers([]);
+      setTrue();
+      defaultRequest.run(undefined);
+    }
+  }, [menuValue]);
 
   return (
     <>
       <Header />
       <PageInfo title={intro.title} desc={intro.text} />
-      <div className="member-content">
-        <div style={{ height: "197px" }}>
+      <div className="member-content-wrapper">
+        <div className="member-select-wrapper">
           <Select
-            value={menuValue.depart}
             className="member-select"
+            value={menuValue.depart}
             onSelect={(value: string) => {
-              interval = true;
-              setMenu({ play: "all", depart: value });
-
-              collectionRequest.run(value);
+              setMenu({ depart: value });
             }}
           >
             {departments.map((item) => (
@@ -90,13 +99,12 @@ const Member: FC<MemberComponentProps> = (props) => {
             ))}
             <Select.Option value="all">组别</Select.Option>
           </Select>
+
           <Select
+            className="member-select-right"
             value={menuValue.play}
-            className="member-select member-select-right"
             onSelect={(value: string) => {
-              interval = true;
-              setMenu({ play: value, depart: "all" });
-              collectionRequest.run(value);
+              setMenu({ play: value });
             }}
           >
             {plays.map((item) => (
@@ -106,21 +114,21 @@ const Member: FC<MemberComponentProps> = (props) => {
           </Select>
         </div>
 
-        <div className="member-top-content">
-          <div className="member-display-wraper">
-            <InfoComponent
-              imgUrl={PosterImg}
-              desc="介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些"
-            />
-            <QueueAnim
-              key="members"
-              type={["right", "left"]}
-              delay={[500, 0]}
-              interval={[50, 0]}
-              ease={["easeOutQuart", "easeInOutQuart"]}
-            >
-              {!interval &&
-                members.map((item: any, index: number) => (
+        <div className="member-content">
+          <div className="member-top-content">
+            <div className="member-display-wraper">
+              <InfoComponent
+                imgUrl={PosterImg}
+                desc="介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些"
+              />
+              <QueueAnim
+                key="members"
+                type={["right", "left"]}
+                delay={[500, 0]}
+                interval={[50, 0]}
+                ease={["easeOutQuart", "easeInOutQuart"]}
+              >
+                {members.map((item: any, index: number) => (
                   <div
                     key={index + item.name}
                     className="member-card-wrapper"
@@ -142,50 +150,53 @@ const Member: FC<MemberComponentProps> = (props) => {
                     />
                   </div>
                 ))}
-            </QueueAnim>
+              </QueueAnim>
+            </div>
           </div>
-        </div>
-        <div style={{ marginTop: "77px", textAlign: "center", clear: "both" }}>
-          {defaultRequest.data?.next !== null && !collectionRequest.data && (
-            <div
-              onClick={defaultRequest.loadMore}
-              style={{ color: "#C62127", cursor: "pointer" }}
-            >
-              查看更多
-            </div>
+          <div
+            style={{ marginTop: "77px", textAlign: "center", clear: "both" }}
+          >
+            {isDefault && defaultRequest.data?.next && (
+              <div
+                onClick={defaultRequest.loadMore}
+                style={{ color: "#C62127", cursor: "pointer" }}
+              >
+                查看更多
+              </div>
+            )}
+          </div>
+          {isDefault && (
+            <>
+              <div style={{ marginTop: "125px", textAlign: "center" }}>
+                <div>往届成员</div>
+              </div>
+              <div className="member-page-pre-display">
+                {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((item) => (
+                  <MemberCard
+                    name="门飞"
+                    title="导演"
+                    description="感情戏最难演，没有之一。我热爱话剧，也感谢戏言给我（在苦逼学术外）解放思想、重新做人的机会"
+                  />
+                ))}
+              </div>
+              <div
+                style={{
+                  marginTop: "77px",
+                  textAlign: "center",
+                  marginBottom: "176px",
+                }}
+              >
+                {defaultRequest.data?.next !== null && (
+                  <a href="load more" style={{ color: "#C62127" }}>
+                    查看更多
+                  </a>
+                )}
+              </div>
+            </>
           )}
+          <br />
+          <br />
         </div>
-        {!collectionRequest.data && (
-          <>
-            <div style={{ marginTop: "125px", textAlign: "center" }}>
-              <div>往届成员</div>
-            </div>
-            <div className="member-page-pre-display">
-              {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((item) => (
-                <MemberCard
-                  name="门飞"
-                  title="导演"
-                  description="感情戏最难演，没有之一。我热爱话剧，也感谢戏言给我（在苦逼学术外）解放思想、重新做人的机会"
-                />
-              ))}
-            </div>
-            <div
-              style={{
-                marginTop: "77px",
-                textAlign: "center",
-                marginBottom: "176px",
-              }}
-            >
-              {defaultRequest.data?.next !== null && (
-                <a href="load more" style={{ color: "#C62127" }}>
-                  查看更多
-                </a>
-              )}
-            </div>
-          </>
-        )}
-        <br />
-        <br />
       </div>
       <PopUp
         type="person"
@@ -200,7 +211,7 @@ const Member: FC<MemberComponentProps> = (props) => {
       />
       <Footer />
       <BackTop>
-        <img src={Top} alt=""/>
+        <img src={Top} alt="back to top" />
       </BackTop>
     </>
   );
