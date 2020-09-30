@@ -49,5 +49,5 @@ jobs:
         server: '${{ secrets.SERVER_IP }}'
         ssh_private_key: ${{ secrets.PRIVATE_KEY }}
         local_path: './build/*'
-        remote_path: '/home/sayingBuild'
+        remote_path: '/home/build'
         args: '-o ConnectTimeout=5'
