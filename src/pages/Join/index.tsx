@@ -1,19 +1,19 @@
-import React, { FC, useEffect, useState } from "react";
-import QueueAnim from "rc-queue-anim";
-import { useRequest } from "ahooks";
-import { Button,Spin } from "antd";
-
-import Header from "../../components/Header";
-import Footer from "../../components/Footer";
-import PopUp from "../../components/PopUp";
+import React, { FC, useEffect, useState } from 'react';
+import { useRequest } from 'ahooks';
+import { Button, Spin } from 'antd';
+import QueueAnim from 'rc-queue-anim';
+import Depart from '../../assets/depart.png';
+import Footer from '../../components/Footer';
+import Header from '../../components/Header';
 import MailBox from '../../components/Mailbox';
-import PageInfo from "./pageInfo";
-import DepartmentCard from "./departmentCard";
+import PopUp from '../../components/PopUp';
+import { getDeparts } from '../../libs/requests';
+import { departItemType, departText, joinText } from '../../text/joinText';
+import DepartmentCard from './departmentCard';
+import PageInfo from './pageInfo';
 
-import { getDeparts } from "../../libs/requests";
 
-import { joinText, departText, departItemType } from "../../text/joinText";
-import Depart from "../../assets/depart.png";
+
 
 type departmentType = {
   title: string;

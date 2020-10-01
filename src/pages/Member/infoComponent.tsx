@@ -1,5 +1,5 @@
-import React, { FC } from "react";
-import { Button } from "antd";
+import React, { FC } from 'react';
+import { Button } from 'antd';
 
 interface InfoComponentProps {
   imgUrl: string;

@@ -1,20 +1,20 @@
-import React, { FC, useState } from "react";
-import { useRequest } from "ahooks";
-import { useParams } from "react-router-dom";
-import Header from "../../components/Header";
-import InfoCard from "./infoCard";
-import PhotoBoard from "./photoBoard";
-import { BackTop, Tabs } from "antd";
-import Arrow from "../../components/Arrow";
-import Footer from "../../components/Footer";
-import DepartmentBoard from "./department";
+import React, { FC, useState } from 'react';
+import { useRequest } from 'ahooks';
+import { BackTop, Tabs } from 'antd';
+import { useParams } from 'react-router-dom';
+import Ellipse from '../../assets/ellipse.svg';
+import EllipseM from '../../assets/ellipseM.svg';
+import Top from '../../assets/top.svg';
+import Arrow from '../../components/Arrow';
+import Footer from '../../components/Footer';
+import Header from '../../components/Header';
+import { getPlayInfo } from '../../libs/requests';
+import { rose } from '../../text/playPageText';
+import DepartmentBoard from './department';
+import InfoCard from './infoCard';
+import PhotoBoard from './photoBoard';
 
-import { getPlayInfo } from "../../libs/requests";
 
-import Ellipse from "../../assets/ellipse.svg";
-import EllipseM from "../../assets/ellipseM.svg";
-import { rose } from "../../text/playPageText";
-import Top from "../../assets/top.svg";
 
 const { TabPane } = Tabs;
 

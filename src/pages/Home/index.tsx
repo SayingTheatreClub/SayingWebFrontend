@@ -1,17 +1,17 @@
-import React, { FC } from "react";
-import { Button } from "antd";
-import Language from "../../components/Language/language";
-import Header from "../../components/Header";
-import PlayCard from "../../components/Cards/playCard";
-import Carousel from "../../components/Carousel";
-import HeaderCarousel from "../../components/HeaderCarousel";
+import React, { FC } from 'react';
+import { Button } from 'antd';
+import IMG from '../../assets/play.jpg';
+import PlayCard from '../../components/Cards/playCard';
+import Carousel from '../../components/Carousel';
+import Footer from '../../components/Footer';
+import Header from '../../components/Header';
+import HeaderCarousel from '../../components/HeaderCarousel';
+import HomeInfo from '../../components/Information/homeInfo';
+import Language from '../../components/Language/language';
 import MailBox from '../../components/Mailbox';
-import IntroInfoCard from "./introInfoCard";
-import HomeInfo from "../../components/Information/homeInfo";
-import Footer from "../../components/Footer";
-import IMG from "../../assets/play.jpg";
+import { redNBlackRose } from '../../text/hometext';
+import IntroInfoCard from './introInfoCard';
 
-import { redNBlackRose } from "../../text/hometext";
 const Home: FC = (props) => {
   return (
     <Language>
@@ -30,7 +30,8 @@ const Home: FC = (props) => {
               description={redNBlackRose.text}
               belonging={redNBlackRose.belonging}
             />
-            <div>
+            {/* TODO adjust margin */}
+            <div> 
               <Button danger type="primary" className="home-button-left">
                 提前选座
               </Button>
