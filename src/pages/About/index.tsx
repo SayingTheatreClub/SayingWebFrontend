@@ -6,12 +6,14 @@ import PageInfo from "../../components/Information/pageInfo";
 import Footer from "../../components/Footer";
 import IMG from "../../assets/play.jpg";
 import Funfact from "../../components/Funfact";
+import InfoTabs from "./infoTabs";
 import { funfacts } from "../../text/funfactText";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
+import { Tab, Tabs } from "@material-ui/core";
 
 import RedMark from "../../assets/redMark.svg";
 
@@ -23,36 +25,30 @@ const AboutPage: FC = (props) => (
     <Header />
     <PageInfo title={intro.title} desc={intro.text} />
     <div className="home-content">
-      <div className="about-displaybox">
-        <div>
-          <PlayCard
-            name={`01 ${fifthAnni.title}`}
-            description={fifthAnni.text}
-            belonging=""
-          />
-        </div>
-        <img src={IMG} alt="" style={{ width: "413px", height: "262px" }} />
-      </div>
-      <div className="funfact-top">
-        <div className="funfact-top-left">
-          <img src={RedMark} alt="mark" />
-          Fun Facts
-        </div>
-        <div className="funfact-top-right">戏言的小故事</div>
-      </div>
-      <div className="funfact-wrapper">
-        {funfacts.map((item, index) => (
-          <div style={{ margin: "0 22px" }}>
-            <Funfact
-              imgUrl={item.img}
-              text={item.text}
-              title={`Fact  ${index + 1}`}
-            />
+      <div className="inner-content">
+        <InfoTabs />
+
+        <div className="funfact-top">
+          <div className="funfact-top-left">
+            <img src={RedMark} alt="mark" />
+            Fun Facts
           </div>
-        ))}
+          <div className="funfact-top-right">戏言的小故事</div>
+        </div>
+        <div className="funfact-wrapper">
+          {funfacts.map((item, index) => (
+            <div className="about-funfact-item">
+              <Funfact
+                imgUrl={item.img}
+                text={item.text}
+                title={`Fact  ${index + 1}`}
+              />
+            </div>
+          ))}
+        </div>
       </div>
       <div
-        style={{ marginTop: "77px", textAlign: "center", marginBottom: "20px" }}
+        style={{ marginTop: "196px", textAlign: "center", marginBottom: "20px" }}
       >
         <text className="about-subtitle">
           <img src={RedMark} alt="mark" />

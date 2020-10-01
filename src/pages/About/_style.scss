@@ -3,6 +3,7 @@
 }
 .funfact-top {
   @include flex(center, center);
+    margin-top:127px;
   .funfact-top-left {
     @include text(Noto Sans SC, normal, 16px, 23px, $content-black);
   }
@@ -11,6 +12,9 @@
     margin-left: 150px;
     @include text(Noto Serif SC, normal, 36px, 52px, $content-black);
   }
+}
+.about-funfact-item{
+  margin: 50px auto;
 }
 .about-subtitle {
   @include text(Noto Sans SC, 500, 16px, 23px, $content-black);
@@ -21,20 +25,19 @@
   @include text(Noto Sans SC, 300, 16px, 28px, $content-black);
   text-align: right;
 }
-.img {
-  border: 1px solid #fff;
-  border-radius: 4px;
-  padding: 5px;
-  width: 150px;
-}
+// .img {
+//   border: 1px solid #fff;
+//   border-radius: 4px;
+//   padding: 5px;
+//   width: 150px;
+// }
 .about-displaybox {
   display: flex;
   margin: 0 auto;
-  width: fit-content;
-  justify-content: center;
+  justify-content: space-between;
   flex-wrap: wrap;
   margin-top: 85px;
-  margin-bottom: 237px;
+  margin-bottom: 39px;
 }
 .about-intro-card-wrapper {
   display: flex;
@@ -100,4 +103,9 @@
   height: 100%;
   width: 4px;
   background: #f13c20;
+}
+
+
+.MuiTab-wrapper{
+  align-items: baseline;
 }

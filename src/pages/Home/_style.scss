@@ -52,8 +52,12 @@
 .home-content {
   font-family: Noto Serif SC;
   margin: 0 auto;
-  max-width: 1300px;
+  max-width: 1440px;
   position: relative;
+}
+.inner-content{
+  max-width: 1300px;
+  margin: 0 auto;
 }
 .carousel-left-wrapper {
   width: 100%;

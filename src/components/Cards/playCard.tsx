@@ -52,7 +52,9 @@ const PlayCard: React.FC<PlayCardProps> = (props) => {
         {belonging}
       </p>
       <p className={`${st}-title`}>{name}</p>
-      <p className={`${st}-desc`}>{description}</p>
+      {description?.split("/n").map((item: string) => (
+        <p className={`${st}-desc`}>{item}</p>
+      ))}
     </div>
   );
 };
