@@ -1,10 +1,8 @@
 import React, { FC } from "react";
 import Language from "../../components/Language/language";
 import Header from "../../components/Header";
-import PlayCard from "../../components/Cards/playCard";
 import PageInfo from "../../components/Information/pageInfo";
 import Footer from "../../components/Footer";
-import IMG from "../../assets/play.jpg";
 import Funfact from "../../components/Funfact";
 import InfoTabs from "./infoTabs";
 import { funfacts } from "../../text/funfactText";
@@ -13,11 +11,10 @@ import {
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
-import { Tab, Tabs } from "@material-ui/core";
 
 import RedMark from "../../assets/redMark.svg";
 
-import { intro, fifthAnni } from "../../text/aboutText";
+import { intro } from "../../text/aboutText";
 
 const imgUrl = "";
 const AboutPage: FC = (props) => (
@@ -48,7 +45,11 @@ const AboutPage: FC = (props) => (
         </div>
       </div>
       <div
-        style={{ marginTop: "196px", textAlign: "center", marginBottom: "20px" }}
+        style={{
+          marginTop: "196px",
+          textAlign: "center",
+          marginBottom: "20px",
+        }}
       >
         <text className="about-subtitle">
           <img src={RedMark} alt="mark" />

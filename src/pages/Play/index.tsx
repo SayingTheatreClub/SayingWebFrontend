@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import Header from "../../components/Header";
 import InfoCard from "./infoCard";
 import PhotoBoard from "./photoBoard";
-import { Tabs } from "antd";
+import { BackTop, Tabs } from "antd";
 import Arrow from "../../components/Arrow";
 import Footer from "../../components/Footer";
 import DepartmentBoard from "./department";
@@ -14,6 +14,7 @@ import { getPlayInfo } from "../../libs/requests";
 import Ellipse from "../../assets/ellipse.svg";
 import EllipseM from "../../assets/ellipseM.svg";
 import { rose } from "../../text/playPageText";
+import Top from "../../assets/top.svg";
 
 const { TabPane } = Tabs;
 
@@ -126,6 +127,9 @@ const PlayComponent: FC = (props) => {
         </div>
       </div>
       <Footer />
+      <BackTop>
+        <img src={Top} alt="back to top" />
+      </BackTop>
     </div>
   );
 };
