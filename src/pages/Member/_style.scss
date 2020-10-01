@@ -1,6 +1,5 @@
 .info-card-wrapper {
   float: left;
-  // display: inline-block;
   width: 492px;
   margin-right: 1.4rem;
   margin-left: 1.4rem;
@@ -15,8 +14,15 @@
 }
 .member-display-wraper {
   overflow: hidden;
+
   width: calc(90.3% + 2.8rem);
-  // width: fit-content;
+  @media screen and(max-width:1440px) {
+    width: auto;
+  }
+}
+.member-card-content {
+  display: flex;
+  flex-wrap: wrap;
 }
 .info-button {
   display: block;
@@ -39,25 +45,23 @@
   @include flex(space-around, "", wrap);
 }
 
-
-
-.ant-back-top{
+.ant-back-top {
   bottom: 0;
-  top:200px;
+  top: 200px;
 }
 
-.member-content-wrapper{
+.member-content-wrapper {
   max-width: 1440px;
   margin: 0 auto;
 }
-.member-select-wrapper{
+.member-select-wrapper {
   margin-left: 70px;
   margin-top: 78px;
   margin-bottom: 74px;
   .member-select {
     width: 192px;
   }
-  
+
   .member-select-right {
     margin-left: 30px;
     @extend .member-select;

@@ -116,42 +116,45 @@ const Member: FC<MemberComponentProps> = (props) => {
 
         <div className="member-content">
           <div className="member-top-content">
-            <div className="member-display-wraper">
-              <InfoComponent
-                imgUrl={PosterImg}
-                desc="介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些"
-              />
-              <QueueAnim
-                key="members"
-                type={["right", "left"]}
-                delay={[500, 0]}
-                interval={[50, 0]}
-                ease={["easeOutQuart", "easeInOutQuart"]}
-              >
-                {members.map((item: any, index: number) => (
-                  <div
-                    key={index + item.name}
-                    className="member-card-wrapper"
-                    onClick={() => {
-                      setClickName({
-                        name: item.name,
-                        desc: item.description,
-                        id: item.has_photo ? -1 : item.id,
-                      });
-                      setPopOpen(!popOpen);
-                    }}
-                  >
-                    <MemberCard
-                      name={item.name}
-                      title="导演"
-                      description={item.description}
-                      hasPhoto={item.has_photo}
-                      id={item.id}
-                    />
-                  </div>
-                ))}
-              </QueueAnim>
-            </div>
+            <QueueAnim
+              className="member-display-wraper"
+              component="div"
+              key="members"
+              type={["right", "left"]}
+              delay={[500, 0]}
+              interval={[50, 0]}
+              ease={["easeOutQuart", "easeInOutQuart"]}
+            >
+              <div key="info">
+                <InfoComponent
+                  imgUrl={PosterImg}
+                  desc="介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些"
+                />
+              </div>
+              {members.map((item: any, index: number) => (
+                <div
+                  key={index + item.name}
+                  className="member-card-wrapper"
+                  onClick={() => {
+                    setClickName({
+                      name: item.name,
+                      desc: item.description,
+                      id: item.has_photo ? -1 : item.id,
+                    });
+                    setPopOpen(!popOpen);
+                  }}
+                >
+                  <MemberCard
+                    name={item.name}
+                    title="导演"
+                    description={item.description}
+                    hasPhoto={item.has_photo}
+                    id={item.id}
+                  />
+                </div>
+              ))}
+              {/* <div style={{ clear: "both" }} /> */}
+            </QueueAnim>
           </div>
           <div
             style={{ marginTop: "77px", textAlign: "center", clear: "both" }}
