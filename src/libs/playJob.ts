@@ -1,4 +1,7 @@
-
+/**
+ * parse member popup
+ * @param data 
+ */
 export const parsePlay = (data: Array<any>) => {
   const parsed = new Map();
   const result:any[] = [];

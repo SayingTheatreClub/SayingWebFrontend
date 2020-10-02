@@ -1,3 +1,7 @@
+/**
+ * parse play list of play page
+ * @param data from backend
+ */
 export const parsePlayList: any = (data: any) => {
   return data.map((item: any) => {
     const result: any = {};

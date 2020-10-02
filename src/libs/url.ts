@@ -1,3 +1,8 @@
+/**
+ * retrieve variavles
+ * @param url url 
+ * @param variable get variables
+ */
 export function getQueryVariable(url: string, variable: string) {
   var query = url.split("?")[1];
   var vars = query.split("&");

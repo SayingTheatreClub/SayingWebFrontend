@@ -37,7 +37,10 @@ export function getMemberByPage(nextPage: number, limit: number): any {
       };
     });
 }
-
+/**
+ * get member by play
+ * @param play play
+ */
 export const getMemberByPlay = async (play: string) => {
   const res = await axios.get(`${url}instance/`, {
     params: {
@@ -52,6 +55,11 @@ export const getMemberByPlay = async (play: string) => {
   }));
 };
 
+/**
+ * get member by play or job
+ * @param play 
+ * @param job 
+ */
 export const getMemberByCollection = async (play: string, job: string) => {
   //if all then all clear
   play = play === "all" ? "" : play;
@@ -88,8 +96,8 @@ export const getDeparts = () =>
       job: item.jobs,
     }))
   );
-//TODO:fix bug
-export const getPlayInfo = (play: string) =>
+
+  export const getPlayInfo = (play: string) =>
   axios
     .get(`${url}instance/`, {
       params: {
