@@ -32,10 +32,10 @@ const Home: FC = (props) => {
             />
             {/* TODO adjust margin */}
             <div> 
-              <Button danger type="primary" className="home-button-left">
+              <Button danger type="primary" className="home-button-left home-button">
                 提前选座
               </Button>
-              <Button danger className="home-button-right">
+              <Button danger className="home-button-right home-button">
                 了解详情
               </Button>
             </div>

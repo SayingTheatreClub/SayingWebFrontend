@@ -57,8 +57,8 @@ export const getMemberByPlay = async (play: string) => {
 
 /**
  * get member by play or job
- * @param play 
- * @param job 
+ * @param play
+ * @param job
  */
 export const getMemberByCollection = async (play: string, job: string) => {
   //if all then all clear
@@ -96,8 +96,11 @@ export const getDeparts = () =>
       job: item.jobs,
     }))
   );
-
-  export const getPlayInfo = (play: string) =>
+/**
+ * get all information about a play
+ * @param play
+ */
+export const getPlayInfo = (play: string) =>
   axios
     .get(`${url}instance/`, {
       params: {

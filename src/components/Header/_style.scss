@@ -1,7 +1,9 @@
 .ant-menu-horizontal {
   border-bottom: 1px solid transparent;
 }
-
+.ant-menu-item:active{
+  background: transparent;
+}
 .ant-menu-horizontal > .ant-menu-item:hover,
 .ant-menu-horizontal > .ant-menu-submenu:hover,
 .ant-menu-horizontal > .ant-menu-item-active,

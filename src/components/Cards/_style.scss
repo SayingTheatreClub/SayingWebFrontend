@@ -53,27 +53,14 @@
   @media screen and(max-width:872px) {
     margin-right: 0;
   }
-  font-family: Noto Serif SC;
   .playCard-belonging {
-    font-family: Noto Sans SC;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 23px;
-    color: $content_darkGrey;
+    @include text(Noto Sans SC, 500, 16px, 23px, $content-darkGrey);
   }
   .playCard-title {
-    color: $content-black;
-    font-size: 36px;
-    line-height: 52px;
+    @include text(Noto Serif SC, normal, 36px, 52px, $content-black);
   }
   .playCard-desc {
-    font-family: Noto Sans SC;
-    color: $content-black;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 1rem;
-    line-height: 20px;
+    @include text(Noto Sans SC, 300, 16px, 28px, $content-black);
   }
 }
 
@@ -93,19 +80,11 @@
     height: 261px;
   }
   .img-card-year {
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 24px;
-    color:$brand-red;
     margin-top: 10px;
+    @include text(Noto Sans SC, 500, 14px, 24px, $brand-red);
   }
   .img-card-name {
-    font-style: normal;
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 23px;
-    color: $content-black;
+    @include text(Noto Sans SC, 300, 16px, 23px, $content-black);
   }
   &:hover {
     box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1);
@@ -116,7 +95,7 @@
 .interview-container {
   cursor: pointer;
   transition: 1s ease;
-  font-family: "Noto Serif SC";
+  font-family: Noto Serif SC;
   width: 221px;
   height: 239px;
   border-radius: 3px;
@@ -133,20 +112,12 @@
   .interview-type {
     margin-top: 15px;
 
-    font-style: normal;
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 24px;
-    color:$brand-red;
+    @include text(Noto Sans SC, 500, 14px, 24px, $brand-red);
   }
   .interview-title {
-    font-family: Noto Sans SC;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 23px;
-    text-align: center;
     color: $content-black;
+    @include text(Noto Sans SC, 300, 16px, 23px, $content-black);
+    margin-top: 7px;
   }
   &:hover {
     box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1);

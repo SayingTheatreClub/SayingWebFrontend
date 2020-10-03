@@ -1,16 +1,14 @@
 .footer {
-  height: 441px;
-  background: $content-black;
   display: flex;
   justify-content: space-around;
   align-items: left;
   font-family: Noto Sans SC;
-  .list-wrapper{
+  .list-wrapper {
     margin-top: 150px;
     color: white;
   }
-  .footer-list-title{ 
-    text-align: left;  
+  .footer-list-title {
+    text-align: left;
     font-style: bold;
     font-weight: 300;
     font-size: 16px;
@@ -18,23 +16,27 @@
     margin-bottom: 27px;
   }
   .footer-list-member {
-    color: white;
     text-align: left;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 24px;
-    font-family: Noto Sans SC;
+    @include text(Noto Sans SC, 500, 14px, 24px, white);
   }
-  .footer-icon{
+  .footer-icon {
     width: 1rem;
     height: 1rem;
     margin-right: 10px;
   }
 }
-
-.footer-link{
+.footer-wrapper {
+  height: 441px;
+  background: $content-black;
+}
+.footer-signature {
   color: white;
-  &:hover{
+  text-align: center;
+  margin-top: 85px;
+}
+.footer-link {
+  color: white;
+  &:hover {
     color: $brand-red;
   }
 }

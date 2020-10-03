@@ -49,19 +49,22 @@ const InfoList: React.FC<InfoListProps> = (props) => {
 };
 
 const Footer: React.FC = (props) => (
-  <div className="footer">
-    {[aboutList, playList, eventList, []].map(
-      (item: ListItem[], index: number) => (
-        <div className="list-wrapper">
-          <div className="footer-list-title">{titleList[index]}</div>
-          <InfoList
-            isMedia={index === 3}
-            list={item}
-            className="footer-list-member"
-          />
-        </div>
-      )
-    )}
+  <div className="footer-wrapper" >
+    <div className="footer">
+      {[aboutList, playList, eventList, []].map(
+        (item: ListItem[], index: number) => (
+          <div className="list-wrapper">
+            <div className="footer-list-title">{titleList[index]}</div>
+            <InfoList
+              isMedia={index === 3}
+              list={item}
+              className="footer-list-member"
+            />
+          </div>
+        )
+      )}
+    </div>
+    <div className="footer-signature" >© 2020 戏言剧社 版权所有</div>
   </div>
 );
 

@@ -1,5 +1,5 @@
 import React, { FC, useState } from "react";
-import { useRequest } from "ahooks";
+import { useBoolean, useRequest, useSetState } from "ahooks";
 import { BackTop, Tabs } from "antd";
 import { useParams } from "react-router-dom";
 import Ellipse from "../../assets/ellipse.svg";
@@ -8,8 +8,10 @@ import Top from "../../assets/top.svg";
 import Arrow from "../../components/Arrow";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
+import PopUp from "../../components/PopUp/index";
 import { getPlayInfo } from "../../libs/requests";
 import { rose } from "../../text/playPageText";
+import { photoUrl } from "../../libs/security";
 import DepartmentBoard from "./department";
 import InfoCard from "./infoCard";
 import PhotoBoard from "./photoBoard";
@@ -19,6 +21,10 @@ const { TabPane } = Tabs;
 const PlayComponent: FC = (props) => {
   const { name } = useParams();
   const { data } = useRequest(() => getPlayInfo(name));
+
+  const [open, { setFalse, toggle }] = useBoolean(false);
+  const [person, setPerson] = useSetState({ name: "", hasPhoto: false });
+
   const [boardPage, setBoardPage] = useState(0);
   const pageNum = data ? Math.ceil(data?.length / 4) : 0;
 
@@ -27,12 +33,17 @@ const PlayComponent: FC = (props) => {
     setBoardPage(page);
   };
 
+  const clickName = (name: string, hasPhoto: boolean) => {
+    if (name) setPerson({ name, hasPhoto });
+    toggle();
+  };
+
   return (
     <div>
       <div
         className="play-head-wrapper"
         style={{
-          background: "url(http://qglfsf1rq.bkt.gdipper.com/rose.png)",
+          background: `url(${photoUrl}rose.png)`,
           backgroundRepeat: "no-repeat",
           backgroundSize: "100% 100%",
         }}
@@ -84,6 +95,7 @@ const PlayComponent: FC = (props) => {
                   <DepartmentBoard
                     list={item.members}
                     title={item.department}
+                    handleClick={clickName}
                   />
                 ))}
               <Arrow
@@ -128,6 +140,13 @@ const PlayComponent: FC = (props) => {
       <BackTop>
         <img src={Top} alt="back to top" />
       </BackTop>
+      <PopUp
+        open={open}
+        name={person.name}
+        onClose={setFalse}
+        type="person"
+        id={person.hasPhoto ? -1 : Math.floor(Math.random() * 70) + 1}
+      />
     </div>
   );
 };

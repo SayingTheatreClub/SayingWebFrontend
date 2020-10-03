@@ -103,7 +103,9 @@
     }
   }
 }
-
+.home-button{
+  margin-top: 74px;
+}
 .home-button-left {
   @include primary-button;
   margin-right: 33px;
