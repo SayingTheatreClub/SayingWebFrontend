@@ -92,6 +92,7 @@
     left: 50%;
     margin-left: -15px;
     margin-top: 15px;
+    
   }
 }
 
@@ -107,6 +108,7 @@
 .timeline-element-wrapper{
   display: flex;
   justify-content: space-between;
+
 }
 .timeline-text-wrapper {
   text-align: right;
@@ -126,4 +128,8 @@
 
 .MuiTab-wrapper {
   align-items: baseline;
+}
+
+.timeline-wrapper{
+  background: $background-faint-orange;
 }

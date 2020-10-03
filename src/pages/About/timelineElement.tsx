@@ -12,7 +12,8 @@ const TimelineElement: FC<TimelineProps> = (props) => {
   const { time, title, desc, img } = props;
   return (
     <VerticalTimelineElement
-      contentStyle={{ boxShadow: "none" }}
+      contentStyle={{ boxShadow: "none", background: "#F8F6F3" }}
+      contentArrowStyle={{ border: "0" }}
       date=""
       iconClassName="about-timeline-icon"
     >

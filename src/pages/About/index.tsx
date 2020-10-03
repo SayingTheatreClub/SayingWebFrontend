@@ -52,6 +52,8 @@ const AboutPage: FC = (props) => (
           戏言历史
         </div>
       </div>
+    </div>
+    <div className="timeline-wrapper">
       <Timeline />
     </div>
     <Footer />
