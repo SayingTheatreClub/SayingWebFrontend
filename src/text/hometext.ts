@@ -4,6 +4,7 @@ export const homeHead = {
   戏是戏续春寒赋，闲赓午醉诗。 言是閒中存至乐，难与俗人言`,
 };
 
+
 export const redNBlackRose = {
   belonging: "2020 秋季大戏",
   title: "红玫瑰与白玫瑰",
@@ -23,7 +24,8 @@ export const rhinInLove = {
     擦身而过的时候，才知道你在哭。”`,
 };
 
-export const data = {
-  playNums: 4,
-  audience: 1000,
-};
+
+/**
+ * entry setting
+ */
+export const homeFirstBlock = redNBlackRose;

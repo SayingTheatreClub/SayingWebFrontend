@@ -19,6 +19,7 @@ const MailBox: FC<MailBoxProps> = (props) => {
           <p className="mailbox-desc">{desc}</p>
           <Input placeholder="邮箱" className="mailbox-input" />
           <Button
+            disabled
             danger
             className="mailbox-button"
             onClick={() => {

@@ -1,7 +1,9 @@
 import React, { FC } from "react";
 import { Button } from "antd";
 import { basicData } from "../../libs/statistics";
-const HomeInfo: FC = (props) => (
+import { Link } from "react-router-dom";
+
+const HomeInfo: FC = () => (
   <div className="home-info-wrapper">
     <div className="home-info-top">
       <span>戏言</span>
@@ -24,16 +26,20 @@ const HomeInfo: FC = (props) => (
         <p>人次观众看过我们的剧</p>
       </div>
     </div>
-    <Button
-      danger
-      type="primary"
-      className="home-info-button home-info-button-left"
-    >
-      了解戏言
-    </Button>
-    <Button danger className="home-info-button home-info-button-right">
-      成员
-    </Button>
+    <Link to="about">
+      <Button
+        danger
+        type="primary"
+        className="home-info-button home-info-button-left"
+      >
+        了解戏言
+      </Button>
+    </Link>
+    <Link to="member">
+      <Button danger className="home-info-button home-info-button-right">
+        成员
+      </Button>
+    </Link>
   </div>
 );
 

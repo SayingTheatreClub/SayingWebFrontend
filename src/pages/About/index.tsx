@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import Language from "../../components/Language/language";
+import Language from "../../components/Language";
 import Header from "../../components/Header";
 import PageInfo from "../../components/Information/pageInfo";
 import Footer from "../../components/Footer";

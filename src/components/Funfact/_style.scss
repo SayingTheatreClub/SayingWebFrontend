@@ -6,7 +6,10 @@
   perspective: 500;
   -webkit-perspective: 500;
 }
-
+.funfact-decorator{
+  background: $brand-red;
+  height: 8px;
+}
 .funfact-box img {
   max-width: 192px;
   max-height: 275px;

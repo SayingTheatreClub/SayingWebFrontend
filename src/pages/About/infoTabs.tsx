@@ -1,7 +1,7 @@
 import React, { ChangeEvent, FC, useState } from "react";
 import { Tab, Tabs } from "@material-ui/core";
 import { withStyles, Theme, createStyles } from "@material-ui/core/styles";
-import IMG from "../../assets/play.jpg";
+// import IMG from "../../assets/play.jpg";
 import PlayCard from "../../components/Cards/playCard";
 import { tabs } from "../../text/aboutText";
 
@@ -80,7 +80,25 @@ const TabPanel: FC<TabPanelProps> = (props) => {
         description={tabs[index].text}
         belonging="Featured"
       />
-      <img src={IMG} alt="" style={{ width: "635px", height: "395px" }} />
+      <iframe
+        title="你好疯子"
+        src="https://www.youtube.com/embed/aB9Gms746-M"
+        scrolling="no"
+        width={635}
+        seamless={true}
+        height={395}
+        frameBorder="no"
+        allowFullScreen={true}
+        allowTransparency={true}
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      />
+      {/* <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/aB9Gms746-M"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      ></iframe> */}
     </div>
   );
 };

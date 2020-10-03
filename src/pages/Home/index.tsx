@@ -1,16 +1,17 @@
-import React, { FC } from 'react';
-import { Button } from 'antd';
-import IMG from '../../assets/play.jpg';
-import PlayCard from '../../components/Cards/playCard';
-import Carousel from '../../components/Carousel';
-import Footer from '../../components/Footer';
-import Header from '../../components/Header';
-import HeaderCarousel from '../../components/HeaderCarousel';
-import HomeInfo from '../../components/Information/homeInfo';
-import Language from '../../components/Language/language';
-import MailBox from '../../components/Mailbox';
-import { redNBlackRose } from '../../text/hometext';
-import IntroInfoCard from './introInfoCard';
+import React, { FC } from "react";
+import { Button } from "antd";
+import IMG from "../../assets/play.jpg";
+import PlayCard from "../../components/Cards/playCard";
+import Carousel from "../../components/Carousel";
+import Footer from "../../components/Footer";
+import Header from "../../components/Header";
+import HeaderCarousel from "../../components/HeaderCarousel";
+import HomeInfo from "./homeInfo";
+import Language from "../../components/Language";
+import MailBox from "../../components/Mailbox";
+import { homeFirstBlock } from "../../text/hometext";
+import IntroInfoCard from "./introInfoCard";
+import { Link } from "react-router-dom";
 
 const Home: FC = (props) => {
   return (
@@ -26,18 +27,25 @@ const Home: FC = (props) => {
         <div className="home-displaybox">
           <div>
             <PlayCard
-              name={redNBlackRose.title}
-              description={redNBlackRose.text}
-              belonging={redNBlackRose.belonging}
+              name={homeFirstBlock.title}
+              description={homeFirstBlock.text}
+              belonging={homeFirstBlock.belonging}
             />
             {/* TODO adjust margin */}
-            <div> 
-              <Button danger type="primary" className="home-button-left home-button">
+            <div>
+              <Button
+                danger
+                type="primary"
+                disabled
+                className="home-button-left home-button"
+              >
                 提前选座
               </Button>
-              <Button danger className="home-button-right home-button">
-                了解详情
-              </Button>
+              <Link to={`/play/${homeFirstBlock.title}`}>
+                <Button danger className="home-button-right home-button">
+                  了解详情
+                </Button>
+              </Link>
             </div>
           </div>
           <img

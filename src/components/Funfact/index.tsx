@@ -13,6 +13,7 @@ const FunFact: FC<FunFactsProps> = (props) => {
         <img src={imgUrl} alt="" />
       </div>
       <div className="funfact-back">
+        <div className="funfact-decorator" />
         <p className="funfact-title">{title}</p>
         <p className="funfact-text">{text}</p>
       </div>
