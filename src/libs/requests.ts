@@ -1,53 +1,55 @@
-import { url } from "./security";
-import axios from "axios";
-import { getQueryVariable } from "./url";
+import axios, { AxiosResponse } from "axios";
 import { parsePlay } from "./playJob";
-
-interface MemberDetail {
-  person: string;
-  desc: string;
-  has_photo: boolean;
-}
+import { url } from "./security";
+import { getQueryVariable } from "./url";
+import {
+  DepartmentResultItemType,
+  MemberReusltType,
+  PlayInstanceItemType,
+} from "../types/apiType";
+import { getMemberByPageType, PlayMemberType } from "../types/requestType";
 
 /**
  * get member
  * @param nextPage
  * @param limit
  */
-export function getMemberByPage(nextPage: number, limit: number): any {
-  return axios
-    .get(`${url}members/`, {
-      params: {
-        page: nextPage,
-        page_size: limit,
-      },
-    })
-    .then((res) => {
-      const data = res.data;
-      const next =
-        data.next !== null ? getQueryVariable(data.next, "page") : null;
-      const MemberList = data.results.map((item: any) => ({
-        id: Math.floor(Math.random() * 70) + 1,
-        ...item,
-      }));
-      return {
-        list: MemberList,
-        count: data.count,
-        next: next,
-      };
-    });
+export async function getMemberByPage(
+  nextPage: number,
+  limit: number
+): Promise<getMemberByPageType> {
+  const res = await axios.get(`${url}members/`, {
+    params: {
+      page: nextPage,
+      page_size: limit,
+    },
+  });
+  const data: MemberReusltType = res.data;
+  const next = data.next !== null ? getQueryVariable(data.next, "page") : null;
+  const MemberList = data.results.map((item: any) => ({
+    id: Math.floor(Math.random() * 70) + 1,
+    ...item,
+  }));
+  return {
+    list: MemberList,
+    count: data.count,
+    next: next,
+  };
 }
 /**
  * get member by play
  * @param play play
  */
 export const getMemberByPlay = async (play: string) => {
-  const res = await axios.get(`${url}instance/`, {
-    params: {
-      play__name: play,
-    },
-  });
-  return res.data.map((item: MemberDetail) => ({
+  const res: AxiosResponse<Array<PlayInstanceItemType>> = await axios.get(
+    `${url}instance/`,
+    {
+      params: {
+        play__name: play,
+      },
+    }
+  );
+  return res.data.map((item: PlayInstanceItemType) => ({
     name: item.person,
     description: item.desc,
     has_photo: item.has_photo,
@@ -70,9 +72,11 @@ export const getMemberByCollection = async (play: string, job: string) => {
       play__name: play,
     },
   });
-  const flag = new Set();
-  const result: any[] = [];
-  res.data.forEach((item: any) => {
+  const data: Array<PlayInstanceItemType> = res.data;
+  //whether this person exist
+  const flag = new Set<string>();
+  const result: Array<PlayMemberType> = [];
+  data.forEach((item: any) => {
     if (!flag.has(item.person)) {
       flag.add(item.person);
       result.push({
@@ -90,7 +94,7 @@ export const getMemberByCollection = async (play: string, job: string) => {
  */
 export const getDeparts = () =>
   axios.get(`${url}departments/`).then((res) =>
-    res.data.map((item: any) => ({
+    res.data.map((item: DepartmentResultItemType) => ({
       title: item.name,
       text: item.description,
       job: item.jobs,
