@@ -20,8 +20,8 @@ const InfoCard: FC<InfoCardProps> = (props) => {
         </div>
 
         <div className="play-info-right">
-          <Button className="play-page-button play-page-button-1">招新</Button>
-          <Button className="play-page-button play-page-button-2">RSVP-我想看</Button>
+          <Button className="play-page-button play-page-button-1" disabled >招新</Button>
+          <Button className="play-page-button play-page-button-2">直播预约</Button>
           <Button className="play-page-button play-page-button-3">Program</Button>
         </div>
       </div>

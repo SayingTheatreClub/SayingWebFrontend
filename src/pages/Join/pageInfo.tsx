@@ -20,7 +20,7 @@ const PageInfo: FC<PageInfoProps> = (props) => {
             <p className="join-page-info-text">{item}</p>
           ))}
           </div>
-          <Button danger type="primary" className="join-page-info-button" >报名链接</Button>
+          <Button danger type="primary" disabled className="join-page-info-button" >报名链接</Button>
         </div>
         <img
           src={photoUrl + img}

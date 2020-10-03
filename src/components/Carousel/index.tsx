@@ -3,8 +3,10 @@ import PlayCard from "../Cards/playCard";
 import InterviewCard from "../Cards/interviewCard";
 import ArrowSvg from "../Arrow";
 import Mary from "../../assets/mary.jpg";
-import Donkey from "../../assets/donkey.png";
 import RedMark from "../../assets/redMark.svg";
+import { playText } from "../../text/carouselText";
+import { photoUrl } from "../../libs/security";
+import { Link } from "react-router-dom";
 
 type carouselType = "left" | "right";
 
@@ -66,15 +68,18 @@ const Carousel: FC<CarouselProps> = (props) => {
           </div>
           <div className="carousel-content carousel-content-right">
             <div className="carousel-content-shader" />
-            {[1, 2, 3, 4, 5, 6, 7, 8].map(() => (
-              <PlayCard
-                className="carousel-card"
-                name="[驴得水]"
-                year="2019"
-                type="img-text"
-                imgUrl={Donkey}
-                moveSpace={space}
-              />
+            {playText.reverse().map((item) => (
+              <Link to={item.name.includes("玫瑰") ? `play/${item.name}` : ""}>
+                <PlayCard
+                  key={item.name}
+                  className="carousel-card"
+                  name={`${item.name}`}
+                  year={item.year}
+                  type="img-text"
+                  imgUrl={`${photoUrl}${item.img}`}
+                  moveSpace={space}
+                />
+              </Link>
             ))}
           </div>
         </div>
