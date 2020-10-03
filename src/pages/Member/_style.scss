@@ -67,3 +67,12 @@
     @extend .member-select;
   }
 }
+
+.member-mark-text {
+  @include text(Noto Sans SC, 500, 16px, 23px, $content-black);
+}
+
+.load-more {
+  cursor: pointer;
+  @include text(Noto Sans SC, 300, 16px, 23px, $brand-red);
+}

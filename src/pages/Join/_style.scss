@@ -2,6 +2,12 @@
   max-width: 1440px;
   margin: 0 auto;
 }
+.join-page-info-left{
+  margin-left: 291px;
+  @media screen and(max-width:1441px) {
+    margin-left: 0;
+  }
+}
 .join-page-info-wrapper {
   background: #f8f6f3;
   @include flex-center;

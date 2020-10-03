@@ -21,12 +21,14 @@ import {
  */
 export async function getMemberByPage(
   nextPage: number,
-  limit: number
+  limit: number,
+  isCurrent:boolean
 ): Promise<getMemberByPageType> {
   const res = await axios.get(`${url}members/`, {
     params: {
       page: nextPage,
       page_size: limit,
+      status: isCurrent,
     },
   });
   const data: MemberReusltType = res.data;

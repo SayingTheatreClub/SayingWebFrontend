@@ -1,24 +1,20 @@
-import {
-  useBoolean,
-  useRequest,
-  useSetState,
-  useUpdateEffect
-  } from 'ahooks';
-import { BackTop, Select } from 'antd';
-import QueueAnim from 'rc-queue-anim';
-import React, { FC, useState } from 'react';
-import PosterImg from '../../assets/poster.png';
-import Top from '../../assets/top.svg';
-import MemberCard from '../../components/Cards/memberCard';
-import Footer from '../../components/Footer';
-import Header from '../../components/Header';
-import PageInfo from '../../components/Information/pageInfo';
-import PopUp from '../../components/PopUp';
-import { getMemberByCollection, getMemberByPage } from '../../libs/requests';
-import { departments, plays } from '../../text/basicText';
-import { intro } from '../../text/memberText';
-import { PlayMemberType } from '../../types/requestType';
-import InfoComponent from './infoComponent';
+import { useBoolean, useRequest, useSetState, useUpdateEffect } from "ahooks";
+import { BackTop, Select } from "antd";
+import QueueAnim from "rc-queue-anim";
+import React, { FC, useState } from "react";
+import PosterImg from "../../assets/poster.png";
+import Top from "../../assets/top.svg";
+import MemberCard from "../../components/Cards/memberCard";
+import Footer from "../../components/Footer";
+import Header from "../../components/Header";
+import PageInfo from "../../components/Information/pageInfo";
+import PopUp from "../../components/PopUp";
+import { getMemberByCollection, getMemberByPage } from "../../libs/requests";
+import { departments, plays } from "../../text/basicText";
+import { intro } from "../../text/memberText";
+import { PlayMemberType } from "../../types/requestType";
+import InfoComponent from "./infoComponent";
+import RedMark from "../../assets/redMark.svg";
 
 interface Result {
   list: PlayMemberType[];
@@ -32,15 +28,27 @@ interface MemberComponentProps {
 
 const Member: FC<MemberComponentProps> = (props) => {
   const [popOpen, setPopOpen] = useState(false);
-  const [members, setMembers] = useState<PlayMemberType[]>([]);
-
-  const defaultRequest = useRequest(
-    (next: Result) => getMemberByPage(next?.next, next?.next > 1 ? 15 : 16),
+  const [currentMembers, setCurrentMembers] = useState<PlayMemberType[]>([]);
+  const [pastMembers, setPastMembers] = useState<PlayMemberType[]>([]);
+  const currentRequest = useRequest(
+    (next: Result) =>
+      getMemberByPage(next?.next, next?.next > 1 ? 15 : 16, true),
     {
       loadMore: true,
       cacheKey: "loadmorepeople",
       onSuccess: (result) => {
-        setMembers(members?.concat(result.list));
+        setCurrentMembers(currentMembers?.concat(result.list));
+      },
+    }
+  );
+
+  const pastRequest = useRequest(
+    (next: Result) => getMemberByPage(next?.next, 10, false),
+    {
+      loadMore: true,
+      cacheKey: "loadmorepeople",
+      onSuccess: (result) => {
+        setPastMembers(pastMembers?.concat(result.list));
       },
     }
   );
@@ -48,7 +56,7 @@ const Member: FC<MemberComponentProps> = (props) => {
   const collectionRequest = useRequest(getMemberByCollection, {
     manual: true,
     onSuccess: (result) => {
-      setMembers(result);
+      setCurrentMembers(result);
     },
   });
 
@@ -73,9 +81,11 @@ const Member: FC<MemberComponentProps> = (props) => {
       setFalse();
       collectionRequest.run(play, depart);
     } else {
-      setMembers([]);
+      setCurrentMembers([]);
+      setPastMembers([]);
       setTrue();
-      defaultRequest.run(undefined);
+      currentRequest.run(undefined);
+      pastRequest.run(undefined);
     }
   }, [menuValue]);
 
@@ -129,7 +139,7 @@ const Member: FC<MemberComponentProps> = (props) => {
                   desc="介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些"
                 />
               </div>
-              {members.map((item: any, index: number) => (
+              {currentMembers.map((item: any, index: number) => (
                 <div
                   key={index + item.name}
                   className="member-card-wrapper"
@@ -151,17 +161,13 @@ const Member: FC<MemberComponentProps> = (props) => {
                   />
                 </div>
               ))}
-              {/* <div style={{ clear: "both" }} /> */}
             </QueueAnim>
           </div>
           <div
             style={{ marginTop: "77px", textAlign: "center", clear: "both" }}
           >
-            {isDefault && defaultRequest.data?.next && (
-              <div
-                onClick={defaultRequest.loadMore}
-                style={{ color: "#C62127", cursor: "pointer" }}
-              >
+            {isDefault && currentRequest.data?.next && (
+              <div onClick={currentRequest.loadMore} className="load-more">
                 查看更多
               </div>
             )}
@@ -169,17 +175,28 @@ const Member: FC<MemberComponentProps> = (props) => {
           {isDefault && (
             <>
               <div style={{ marginTop: "125px", textAlign: "center" }}>
-                <div>往届成员</div>
+                <img src={RedMark} alt="mark" style={{ marginRight: "5px" }} />
+                <span className="member-mark-text">往届成员</span>
               </div>
-              <div className="member-page-pre-display">
-                {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((item) => (
+              <QueueAnim
+                component="div"
+                className="member-page-pre-display"
+                key="members"
+                type={["right", "left"]}
+                delay={[500, 0]}
+                interval={[50, 0]}
+                ease={["easeOutQuart", "easeInOutQuart"]}
+              >
+                {pastMembers.map((item) => (
                   <MemberCard
-                    name="门飞"
+                    key={item.name}
+                    name={item.name}
                     title="导演"
-                    description="感情戏最难演，没有之一。我热爱话剧，也感谢戏言给我（在苦逼学术外）解放思想、重新做人的机会"
+                    description={item.description}
+                    id={item.id}
                   />
                 ))}
-              </div>
+              </QueueAnim>
               <div
                 style={{
                   marginTop: "77px",
@@ -187,10 +204,10 @@ const Member: FC<MemberComponentProps> = (props) => {
                   marginBottom: "176px",
                 }}
               >
-                {defaultRequest.data?.next !== null && (
-                  <a href="load more" style={{ color: "#C62127" }}>
+                {pastRequest.data?.next !== null && (
+                  <div className="load-more" onClick={pastRequest.loadMore}>
                     查看更多
-                  </a>
+                  </div>
                 )}
               </div>
             </>

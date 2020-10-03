@@ -13,7 +13,7 @@ const PageInfo: FC<PageInfoProps> = (props) => {
   return (
     <div className="join-page-info-wrapper">
       <div className="join-page-info-content">
-        <div>
+        <div className="join-page-info-left">
           <div className="join-page-info-title">{title}</div>
           <div className="join-page-text-content" >
           {text.split("/n").map((item: string) => (
