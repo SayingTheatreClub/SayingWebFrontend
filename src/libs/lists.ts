@@ -27,7 +27,17 @@ export const aboutList: ListItem[] = [
   { name: "支持戏言", url: "" },
   { name: "联系我们", url: "" },
 ];
-export const mediaList = ["微信公众号", "Youtube", "Bilibili", "微博"];
+export const mediaList = [
+  { name: "微信公众号", url: "" },
+  {
+    name: "Youtube",
+    url:
+      "https://www.youtube.com/channel/UCIR0psBBMT85b-NUiKhFjGA/featured?view_as=subscribe",
+  },
+  { name: "Bilibili", url: "https://space.bilibili.com/62206666" },
+  { name: "微博", url: "https://weibo.com/sayingtheatre" },
+];
+
 export const mediaIconList = [icon02, icon01, icon04, icon03];
 export const eventList = [
   { name: "读本会", url: "" },

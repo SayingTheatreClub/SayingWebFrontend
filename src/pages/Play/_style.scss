@@ -176,10 +176,11 @@
 .play-ellipse-wrapper {
   width: fit-content;
   margin: 0 auto;
+  margin-top: 63px;
+
 }
 .play-photo-ellipse-wrapper {
   @extend .play-ellipse-wrapper;
-  margin-top: 63px;
 }
 
 .player {

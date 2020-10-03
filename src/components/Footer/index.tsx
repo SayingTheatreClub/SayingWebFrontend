@@ -29,20 +29,25 @@ const InfoList: React.FC<InfoListProps> = (props) => {
           <Popover content={content}>
             <div>
               <img src={mediaIconList[0]} alt="logo" className="footer-icon" />
-              {mediaList[0]}
+              {mediaList[0].name}
             </div>
           </Popover>
         </div>
-        {[1, 2, 3].map((item: number) => (
+        {mediaList.slice(1, mediaIconList.length).map((item, index) => (
           <div>
-            <Link to="" className="footer-link">
+            <a
+              href={item.url}
+              className="footer-link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img
-                src={mediaIconList[item]}
+                src={mediaIconList[index]}
                 alt="logo"
                 className="footer-icon"
               />
-              {mediaList[item]}
-            </Link>
+              {item.name}
+            </a>
           </div>
         ))}
       </div>
