@@ -8,8 +8,12 @@ export interface ListItem {
   url: string;
 }
 
-
-export const titleList = [" 关于我们", " 演出", " 活动动态", " 关注我们"];
+export const titleList = [
+  { name: " 关于我们", url: "about" },
+  { name: " 演出", url: "play" },
+  { name: " 活动动态", url: "events" },
+  { name: " 关注我们", url: "us" },
+];
 export const playList: ListItem[] = [
   { name: "红玫瑰与白玫瑰", url: "play/红玫瑰与白玫瑰" },
   { name: "驴得水", url: "" },

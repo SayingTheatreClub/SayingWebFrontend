@@ -9,12 +9,15 @@ import {
   eventList,
   ListItem,
 } from "../../libs/lists";
-
+import { Popover } from "antd";
+import IMG from "../../assets/donkey.png";
 interface InfoListProps {
   list: Array<ListItem>;
   className: string;
   isMedia: boolean;
 }
+
+const content = <img src={IMG} alt="wechat" className="footer-wechat-img" />;
 
 const InfoList: React.FC<InfoListProps> = (props) => {
   const { list, className, isMedia } = props;
@@ -22,7 +25,15 @@ const InfoList: React.FC<InfoListProps> = (props) => {
   if (isMedia)
     return (
       <div className={className}>
-        {[0, 1, 2, 3].map((item: number) => (
+        <div>
+          <Popover content={content}>
+            <div>
+              <img src={mediaIconList[0]} alt="logo" className="footer-icon" />
+              {mediaList[0]}
+            </div>
+          </Popover>
+        </div>
+        {[1, 2, 3].map((item: number) => (
           <div>
             <Link to="" className="footer-link">
               <img
@@ -49,12 +60,14 @@ const InfoList: React.FC<InfoListProps> = (props) => {
 };
 
 const Footer: React.FC = (props) => (
-  <div className="footer-wrapper" >
+  <div className="footer-wrapper">
     <div className="footer">
       {[aboutList, playList, eventList, []].map(
         (item: ListItem[], index: number) => (
           <div className="list-wrapper">
-            <div className="footer-list-title">{titleList[index]}</div>
+            <Link to={titleList[index].url} className="footer-link">
+              <div className="footer-list-title">{titleList[index].name}</div>
+            </Link>
             <InfoList
               isMedia={index === 3}
               list={item}
@@ -64,7 +77,7 @@ const Footer: React.FC = (props) => (
         )
       )}
     </div>
-    <div className="footer-signature" >© 2020 戏言剧社 版权所有</div>
+    <div className="footer-signature">© 2020 戏言剧社 版权所有</div>
   </div>
 );
 
