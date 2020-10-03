@@ -1,19 +1,24 @@
-import { useBoolean, useRequest, useSetState, useUpdateEffect } from "ahooks";
-import { BackTop, Select } from "antd";
-import QueueAnim from "rc-queue-anim";
-import React, { FC, useState } from "react";
-import PosterImg from "../../assets/poster.png";
-import Top from "../../assets/top.svg";
-import MemberCard from "../../components/Cards/memberCard";
-import Footer from "../../components/Footer";
-import Header from "../../components/Header";
-import PageInfo from "../../components/Information/pageInfo";
-import PopUp from "../../components/PopUp";
-import { getMemberByCollection, getMemberByPage } from "../../libs/requests";
-import { departments, plays } from "../../text/basicText";
-import { intro } from "../../text/memberText";
-import InfoComponent from "./infoComponent";
-import { PlayMemberType } from "../../types/requestType";
+import {
+  useBoolean,
+  useRequest,
+  useSetState,
+  useUpdateEffect
+  } from 'ahooks';
+import { BackTop, Select } from 'antd';
+import QueueAnim from 'rc-queue-anim';
+import React, { FC, useState } from 'react';
+import PosterImg from '../../assets/poster.png';
+import Top from '../../assets/top.svg';
+import MemberCard from '../../components/Cards/memberCard';
+import Footer from '../../components/Footer';
+import Header from '../../components/Header';
+import PageInfo from '../../components/Information/pageInfo';
+import PopUp from '../../components/PopUp';
+import { getMemberByCollection, getMemberByPage } from '../../libs/requests';
+import { departments, plays } from '../../text/basicText';
+import { intro } from '../../text/memberText';
+import { PlayMemberType } from '../../types/requestType';
+import InfoComponent from './infoComponent';
 
 interface Result {
   list: PlayMemberType[];

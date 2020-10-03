@@ -1,13 +1,13 @@
-import axios, { AxiosResponse } from "axios";
-import { parsePlay } from "./playJob";
-import { url } from "./security";
-import { getQueryVariable } from "./url";
+import axios, { AxiosResponse } from 'axios';
+import { getMemberByPageType, PlayMemberType } from '../types/requestType';
+import { parsePlay } from './playJob';
+import { url } from './security';
+import { getQueryVariable } from './url';
 import {
   DepartmentResultItemType,
   MemberReusltType,
   PlayInstanceItemType,
 } from "../types/apiType";
-import { getMemberByPageType, PlayMemberType } from "../types/requestType";
 
 /**
  * get member
