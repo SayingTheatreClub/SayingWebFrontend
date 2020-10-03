@@ -1,17 +1,16 @@
-import React, { FC, useState } from "react";
 import { useBoolean, useRequest, useSetState } from "ahooks";
 import { BackTop, Tabs } from "antd";
+import React, { FC, useState } from "react";
 import { useParams } from "react-router-dom";
-import Ellipse from "../../assets/ellipse.svg";
-import EllipseM from "../../assets/ellipseM.svg";
 import Top from "../../assets/top.svg";
 import Arrow from "../../components/Arrow";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
+import MarkPagination from "../../components/MarkPagination";
 import PopUp from "../../components/PopUp/index";
 import { getPlayInfo } from "../../libs/requests";
-import { rose } from "../../text/playPageText";
 import { photoUrl } from "../../libs/security";
+import { rose } from "../../text/playPageText";
 import DepartmentBoard from "./department";
 import InfoCard from "./infoCard";
 import PhotoBoard from "./photoBoard";
@@ -106,32 +105,26 @@ const PlayComponent: FC = (props) => {
               />
             </div>
             <div className="play-ellipse-wrapper">
-              {data &&
-                Array(Math.ceil(data.length / 4))
-                  .fill(1)
-                  .map((item: number, index: number) => (
-                    <img
-                      className={"play-ellipse"}
-                      src={index === boardPage ? EllipseM : Ellipse}
-                      alt=""
-                      onClick={() => {
-                        setBoardPage(index);
-                      }}
-                    />
-                  ))}
+              {data && (
+                <MarkPagination
+                  list={data}
+                  page={boardPage}
+                  onClick={setBoardPage}
+                />
+              )}
             </div>
           </div>
         </div>
         <div className="margin-left-70 play-page-tab-wrapper">
           <Tabs>
             <TabPane tab="定妆照" key="1">
-              <PhotoBoard />
+              <PhotoBoard list={[]} />
             </TabPane>
             <TabPane tab="人物关系" key="2">
-              <PhotoBoard />
+              <PhotoBoard list={[]} />
             </TabPane>
             <TabPane tab="花絮" key="3">
-              <PhotoBoard />
+              <PhotoBoard list={[]} />
             </TabPane>
           </Tabs>
         </div>

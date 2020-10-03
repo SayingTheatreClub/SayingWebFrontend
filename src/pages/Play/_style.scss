@@ -135,19 +135,24 @@
 .play-page-tab-wrapper {
   margin-top: 101px;
 }
-
+.photoboard-content{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
 .photoboard-wrapper {
   overflow: hidden;
-  display: flex;
-  height: 224px;
+  width: 100%;
   margin-top: 65px;
   margin-bottom: 184px;
-  .photoboard-item {
-    margin-right: 31px;
-    background: black;
-    width: 303px;
-    height: 224px;
-  }
+
+}
+.photoboard-item {
+  margin-right: 31px;
+  background: black;
+  width: 303px;
+  height: 224px;
+  transition: 1s ease;
 }
 
 .one-line {
@@ -167,7 +172,6 @@
   height: 13px;
   color: $content-white;
   box-sizing: border-box;
-  margin-left: 26px;
   cursor: pointer;
 }
 
@@ -175,7 +179,10 @@
   width: fit-content;
   margin: 0 auto;
 }
-
+.play-photo-ellipse-wrapper{
+  @extend .play-ellipse-wrapper;
+  margin-top: 63px;
+}
 
 .player{
   width: 857px;
