@@ -1,27 +1,19 @@
-import React, { FC, useEffect, useState } from 'react';
-import { useRequest } from 'ahooks';
-import { Button, Spin } from 'antd';
-import QueueAnim from 'rc-queue-anim';
-import Depart from '../../assets/depart.png';
-import Footer from '../../components/Footer';
-import Header from '../../components/Header';
-import MailBox from '../../components/Mailbox';
-import PopUp from '../../components/PopUp';
-import { getDeparts } from '../../libs/requests';
-import { departItemType, departText, joinText } from '../../text/joinText';
-import DepartmentCard from './departmentCard';
-import PageInfo from './pageInfo';
+import React, { FC, useEffect, useState } from "react";
+import { useRequest } from "ahooks";
+import { Button, Spin } from "antd";
+import QueueAnim from "rc-queue-anim";
+import Depart from "../../assets/depart.png";
+import Footer from "../../components/Footer";
+import Header from "../../components/Header";
+import MailBox from "../../components/Mailbox";
+import PopUp from "../../components/PopUp";
+import { getDeparts } from "../../libs/requests";
+import { departItemType, departText, joinText } from "../../text/joinText";
+import DepartmentCard from "./departmentCard";
+import PageInfo from "./pageInfo";
+import { getDepartsItemType } from "../../types/requestType";
 
-
-
-
-type departmentType = {
-  title: string;
-  text: string;
-  job: string;
-};
-
-const Join: FC = (props) => {
+const Join: FC = () => {
   const [targetDepart, setTargetDepart] = useState<departItemType>({
     title: "",
     jobs: [{ title: "", desc: "" }],
@@ -39,9 +31,9 @@ const Join: FC = (props) => {
       />
       <div className="join-content">
         <div>
-          {loading&&<Spin size="large"/>}
+          {loading && <Spin size="large" />}
           <QueueAnim delay={500} className="join-page-depart-wrapper">
-            {data?.map((item: departmentType) => (
+            {data?.map((item: getDepartsItemType) => (
               <div key={item.title}>
                 <DepartmentCard
                   onClick={() => {
@@ -77,7 +69,7 @@ const Join: FC = (props) => {
         jobInfo={targetDepart.jobs}
         recruit={
           data?.find(
-            (item: departmentType) => item.title === targetDepart.title
+            (item: getDepartsItemType) => item.title === targetDepart.title
           )?.job
         }
       />

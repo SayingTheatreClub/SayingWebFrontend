@@ -11,3 +11,10 @@ export interface getMemberByPageType {
 }
 
 export type PlayMemberType = Omit<MemberItemType, "status">;
+
+
+export interface getDepartsItemType{
+  title:string;
+  text:string;
+  job:string;
+}

@@ -25,3 +25,12 @@ export interface DepartmentResultItemType {
   jobs: string;
 }
 export type DepartmentResultType = Array<DepartmentResultItemType>;
+
+
+
+export interface HistoryType{
+  name:string;
+  time:string;
+  description:string;
+  img:string;
+}

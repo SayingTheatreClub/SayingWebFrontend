@@ -1,12 +1,17 @@
-import axios, { AxiosResponse } from 'axios';
-import { getMemberByPageType, PlayMemberType } from '../types/requestType';
-import { parsePlay } from './playJob';
-import { url } from './security';
-import { getQueryVariable } from './url';
+import axios, { AxiosResponse } from "axios";
+import {
+  getDepartsItemType,
+  getMemberByPageType,
+  PlayMemberType,
+} from "../types/requestType";
+import { parsePlay } from "./playJob";
+import { url } from "./security";
+import { getQueryVariable } from "./url";
 import {
   DepartmentResultItemType,
   MemberReusltType,
   PlayInstanceItemType,
+  HistoryType,
 } from "../types/apiType";
 
 /**
@@ -92,14 +97,18 @@ export const getMemberByCollection = async (play: string, job: string) => {
 /**
  * get department infomation
  */
-export const getDeparts = () =>
-  axios.get(`${url}departments/`).then((res) =>
-    res.data.map((item: DepartmentResultItemType) => ({
-      title: item.name,
-      text: item.description,
-      job: item.jobs,
-    }))
-  );
+export const getDeparts = async () => {
+  const res: Array<getDepartsItemType> = await axios
+    .get(`${url}departments/`)
+    .then((res) =>
+      res.data.map((item: DepartmentResultItemType) => ({
+        title: item.name,
+        text: item.description,
+        job: item.jobs,
+      }))
+    );
+  return res;
+};
 /**
  * get all information about a play
  * @param play
@@ -112,3 +121,10 @@ export const getPlayInfo = (play: string) =>
       },
     })
     .then((res) => parsePlay(res.data));
+
+export const getHisotries = async () => {
+  const res: Array<HistoryType> = await axios
+    .get(`${url}history/?ordering=-time`)
+    .then((res) => res.data);
+  return res;
+};

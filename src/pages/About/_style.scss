@@ -3,7 +3,7 @@
 }
 .funfact-top {
   @include flex(center, center);
-    margin-top:127px;
+  margin-top: 127px;
   .funfact-top-left {
     @include text(Noto Sans SC, normal, 16px, 23px, $content-black);
   }
@@ -13,7 +13,7 @@
     @include text(Noto Serif SC, normal, 36px, 52px, $content-black);
   }
 }
-.about-funfact-item{
+.about-funfact-item {
   margin: 50px auto;
 }
 .about-subtitle {
@@ -104,8 +104,26 @@
   width: 4px;
   background: #f13c20;
 }
+.timeline-element-wrapper{
+  display: flex;
+  justify-content: space-between;
+}
+.timeline-text-wrapper {
+  text-align: right;
+  margin-left: 30px;
+}
+.timeline-time {
+  @include text(Noto Sans SC, 500, 16px, 23px, $content-darkGrey);
+}
+.timeline-title {
+  @include text(Noto Sans SC, 500, 22px, 32px, $content-black);
+  margin-top: 5px;
+}
+.timeline-desc {
+  @include text(Noto Sans SC, 300, 16px, 28px, $content-black);
+  margin-top: 10px;
+}
 
-
-.MuiTab-wrapper{
+.MuiTab-wrapper {
   align-items: baseline;
 }

@@ -10,7 +10,7 @@ const FunFact: FC<FunFactsProps> = (props) => {
   return (
     <div className="funfact-box">
       <div className="funfact-front">
-        <img src={imgUrl} alt="" />
+        <img src={imgUrl} alt="img" />
       </div>
       <div className="funfact-back">
         <div className="funfact-decorator" />
