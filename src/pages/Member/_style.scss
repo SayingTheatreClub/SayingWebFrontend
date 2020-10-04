@@ -76,7 +76,10 @@
   cursor: pointer;
   @include text(Noto Sans SC, 300, 16px, 23px, $brand-red);
 }
-.ant-select:not(.ant-select-disabled):hover .ant-select-selector{
+.ant-select:not(.ant-select-disabled):hover .ant-select-selector {
   border-color: $brand-red;
-  box-shadow:none;
+  box-shadow: none;
+}
+.member-info-desc {
+  @include text(Noto Sans SC, 300, 16px, 28px, $content-black);
 }

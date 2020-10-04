@@ -192,14 +192,27 @@ const Member: FC<MemberComponentProps> = (props) => {
                 interval={[50, 0]}
                 ease={["easeOutQuart", "easeInOutQuart"]}
               >
-                {pastMembers.map((item) => (
-                  <MemberCard
-                    key={item.name}
-                    name={item.name}
-                    title="导演"
-                    description={item.description}
-                    id={item.id}
-                  />
+                {pastMembers.map((item, index) => (
+                  <div
+                    key={index + item.name}
+                    className="member-card-wrapper"
+                    onClick={() => {
+                      setClickName({
+                        name: item.name,
+                        desc: item.description,
+                        id: item.has_photo ? -1 : item.id,
+                      });
+                      setPopOpen(!popOpen);
+                    }}
+                  >
+                    <MemberCard
+                      key={item.name}
+                      name={item.name}
+                      title="导演"
+                      description={item.description}
+                      id={item.id}
+                    />
+                  </div>
                 ))}
               </QueueAnim>
               <div
