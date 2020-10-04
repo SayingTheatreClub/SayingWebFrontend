@@ -76,3 +76,12 @@
   cursor: pointer;
   @include text(Noto Sans SC, 300, 16px, 23px, $brand-red);
 }
+.ant-select:not(.ant-select-disabled):hover .ant-select-selector{
+  border-color: $brand-red;
+}
+.ant-select:not(.ant-select-disabled):focus .ant-select-selector{
+  border-color: $brand-red;
+}
+.ant-select-open{
+  border-color: $brand-red;
+}
