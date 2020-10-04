@@ -45,7 +45,7 @@ const Header: React.FC<HeaderProps> = (props) => {
           title="关于戏言"
           className={`header-nav-item ${colorClass}`}
           onTitleClick={() => {
-            handleClick("about");
+            handleClick("/about");
           }}
         >
           {aboutList.map((item: any) => (

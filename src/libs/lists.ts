@@ -1,7 +1,7 @@
-import icon01 from "../assets/Icon.png";
-import icon02 from "../assets/Icon02.png";
-import icon03 from "../assets/Icon03.png";
-import icon04 from "../assets/Icon4.png";
+import Wechat from "../assets/wechat.png";
+import Bilibili from "../assets/bilibili.png";
+import Youtube from "../assets/youtube.png";
+import Weibo from "../assets/weibo.png";
 
 export interface ListItem {
   name: string;
@@ -9,8 +9,8 @@ export interface ListItem {
 }
 
 export const titleList = [
-  { name: " 关于我们", url: "about" },
-  { name: " 演出", url: "play" },
+  { name: " 关于我们", url: "/about" },
+  { name: " 演出", url: "/play" },
   { name: " 活动动态", url: "events" },
   { name: " 关注我们", url: "us" },
 ];
@@ -22,8 +22,8 @@ export const playList: ListItem[] = [
   { name: "暗恋桃花源", url: "" },
 ];
 export const aboutList: ListItem[] = [
-  { name: "戏言家庭", url: "member" },
-  { name: "加入我们", url: "join" },
+  { name: "戏言家庭", url: "/member" },
+  { name: "加入我们", url: "/join" },
   { name: "支持戏言", url: "" },
   { name: "联系我们", url: "" },
 ];
@@ -38,7 +38,7 @@ export const mediaList = [
   { name: "微博", url: "https://weibo.com/sayingtheatre" },
 ];
 
-export const mediaIconList = [icon02, icon01, icon04, icon03];
+export const mediaIconList = [Wechat, Youtube, Bilibili, Weibo];
 export const eventList = [
   { name: "读本会", url: "" },
   { name: "演员的诞生", url: "" },
