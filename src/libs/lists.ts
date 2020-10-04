@@ -15,7 +15,7 @@ export const titleList = [
   { name: " 关注我们", url: "us" },
 ];
 export const playList: ListItem[] = [
-  { name: "红玫瑰与白玫瑰", url: "play/红玫瑰与白玫瑰" },
+  { name: "红玫瑰与白玫瑰", url: "/play/红玫瑰与白玫瑰" },
   { name: "驴得水", url: "" },
   { name: "你好，疯子", url: "" },
   { name: "旧事", url: "" },

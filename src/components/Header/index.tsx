@@ -50,7 +50,7 @@ const Header: React.FC<HeaderProps> = (props) => {
         >
           {aboutList.map((item: any) => (
             <Menu.Item style={{ textAlign: "center" }}>
-              <Link to={`/${item.url}`}>{item.name}</Link>
+              <Link to={`${item.url}`}>{item.name}</Link>
             </Menu.Item>
           ))}
         </Menu.SubMenu>
@@ -58,7 +58,7 @@ const Header: React.FC<HeaderProps> = (props) => {
         <Menu.SubMenu title="演出" className={`header-nav-item ${colorClass}`}>
           {playList.map((item: any) => (
             <Menu.Item style={{ textAlign: "center" }}>
-              <Link to={`/${item.url}`}>{item.name}</Link>
+              <Link to={`${item.url}`}>{item.name}</Link>
             </Menu.Item>
           ))}
         </Menu.SubMenu>
