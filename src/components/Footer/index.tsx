@@ -42,7 +42,7 @@ const InfoList: React.FC<InfoListProps> = (props) => {
               rel="noopener noreferrer"
             >
               <img
-                src={mediaIconList[index]}
+                src={mediaIconList[index + 1]}
                 alt="logo"
                 className="footer-icon"
               />
