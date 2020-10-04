@@ -1,12 +1,27 @@
-import React, { FC } from "react";
+import React, { FC, useState } from "react";
 // import InfoTab from '../About/infoTabs';
-import {playText} from '../../text/carouselText'
+import { Document, Page, pdfjs } from "react-pdf";
+pdfjs.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
+const Test: FC = (props) => {
+  const [numPages, setNumPages] = useState(null);
+  const [pageNumber] = useState(1);
 
-const Test: FC = (props) => (
-  <div>
-    {playText.reverse().map((item)=>(
-      <div>{item.name}</div>
-    ))}
-  </div>
-);
+  function onDocumentLoadSuccess({ numPages }) {
+    setNumPages(numPages);
+  }
+  return (
+    <div>
+      <Document
+        file="http://localhost:3000/%E7%BA%A2%E7%99%BDprogram.pdf"
+        onLoadError={console.error}
+        onLoadSuccess={onDocumentLoadSuccess}
+      >
+        <Page pageNumber={pageNumber} />
+      </Document>
+      <p>
+        Page {pageNumber} of {numPages}
+      </p>
+    </div>
+  );
+};
 export default Test;
