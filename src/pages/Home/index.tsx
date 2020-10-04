@@ -71,7 +71,7 @@ const Home: FC = (props) => {
       </div>
       <div style={{ position: "relative" }}>
         <MailBox title="电子报" desc="订阅电子报获取戏言最新动态" />
-        <Footer />
+        <Footer withMailbox />
       </div>
     </Language>
   );

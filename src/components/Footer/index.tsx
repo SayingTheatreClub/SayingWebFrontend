@@ -16,7 +16,9 @@ interface InfoListProps {
   className: string;
   isMedia: boolean;
 }
-
+interface FooterProps{
+  withMailbox?:boolean;
+}
 const content = <img src={IMG} alt="wechat" className="footer-wechat-img" />;
 
 const InfoList: React.FC<InfoListProps> = (props) => {
@@ -64,12 +66,12 @@ const InfoList: React.FC<InfoListProps> = (props) => {
   );
 };
 
-const Footer: React.FC = (props) => (
+const Footer: React.FC<FooterProps>= (props) => (
   <div className="footer-wrapper">
     <div className="footer">
       {[aboutList, playList, eventList, []].map(
         (item: ListItem[], index: number) => (
-          <div className="list-wrapper">
+          <div className={`list-wrapper ${!props.withMailbox?'list-non-mail':""}`}>
             <Link to={titleList[index].url} className="footer-link">
               <div className="footer-list-title">{titleList[index].name}</div>
             </Link>

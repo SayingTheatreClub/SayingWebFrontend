@@ -78,7 +78,7 @@ const Join: FC = () => {
           title="电子报"
           desc="你心仪的岗位没有在招？订阅戏言电子报获得最新招新动态"
         />
-        <Footer />
+        <Footer withMailbox/>
       </div>
     </>
   );
