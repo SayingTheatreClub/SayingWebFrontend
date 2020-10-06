@@ -14,6 +14,9 @@ interface CarouselProps {
   type?: carouselType;
 }
 
+const interviewStep = 251;
+const playStep = 259;
+
 const Carousel: FC<CarouselProps> = (props) => {
   const { type } = props;
   const [space, setSpace] = useState(0);
@@ -21,19 +24,19 @@ const Carousel: FC<CarouselProps> = (props) => {
     //if it is interview card
     if (isInterview) {
       if (isLeft) {
-        setSpace(space + 251);
+        setSpace(space + interviewStep);
       } else {
         if (space <= 0) return;
-        setSpace(space - 251);
+        setSpace(space - interviewStep);
       }
       return;
     }
 
     if (isLeft) {
-      setSpace(space + 259);
+      setSpace(space + playStep);
     } else {
       if (space <= 0) return;
-      setSpace(space - 259);
+      setSpace(space - playStep);
     }
   };
   if (type === "right")
@@ -76,7 +79,7 @@ const Carousel: FC<CarouselProps> = (props) => {
                 name={`${item.name}`}
                 year={item.year}
                 type="img-text"
-                imgUrl={`${photoUrl}${item.img}`}
+                imgUrl={`${photoUrl}${item.name}.jpg`}
                 moveSpace={space}
               />
               // </Link>
