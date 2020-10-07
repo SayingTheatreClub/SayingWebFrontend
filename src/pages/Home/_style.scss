@@ -107,12 +107,9 @@
   margin-top: 74px;
 }
 .home-button-left {
-  @include primary-button;
   margin-right: 33px;
 }
-.home-button-right {
-  @include secondary-button;
-}
+
 
 .home-play-info-card-wrapper {
   font-family: Noto Sans SC;
@@ -187,17 +184,7 @@
     @include text(Noto Serif SC, normal, 36px, 19px, $content-black);
     margin: 0 10px;
   }
-  .home-info-button {
-    border-radius: 3px !important;
-    width: 114px;
-    height: 37px;
-    @include text(Noto Sans SC, 300, 18px, 18px, white);
-  }
-  .home-info-button-left {
-    background: $brand-red !important;
-  }
   .home-info-button-right {
-    color: $brand-red;
     margin-left: 21px;
   }
 }

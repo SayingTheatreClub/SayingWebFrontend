@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { Button } from "antd";
+import Button from "../../components/Button";
 interface InfoCardProps {
   title: string;
   time: string;
@@ -20,9 +20,20 @@ const InfoCard: FC<InfoCardProps> = (props) => {
         </div>
 
         <div className="play-info-right">
-          <Button className="play-page-button play-page-button-1" disabled >招新</Button>
-          <Button className="play-page-button play-page-button-2">直播预约</Button>
-          <Button className="play-page-button play-page-button-3">Program</Button>
+          {["招新", "直播预约", "Program"].map((item) => (
+            <Button
+              type={
+                item === "招新"
+                  ? "disabled"
+                  : item === "Program"
+                  ? "default"
+                  : "primary"
+              }
+              className="play-page-button"
+            >
+              {item}
+            </Button>
+          ))}
         </div>
       </div>
     </div>

@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { Button } from "antd";
+import  Button  from "../../components/Button";
 import { basicData } from "../../libs/statistics";
 import { Link } from "react-router-dom";
 
@@ -28,15 +28,13 @@ const HomeInfo: FC = () => (
     </div>
     <Link to="about">
       <Button
-        danger
         type="primary"
-        className="home-info-button home-info-button-left"
       >
         了解戏言
       </Button>
     </Link>
     <Link to="member">
-      <Button danger className="home-info-button home-info-button-right">
+      <Button type="default"  className="home-info-button-right">
         成员
       </Button>
     </Link>

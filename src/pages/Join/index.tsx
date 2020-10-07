@@ -1,6 +1,6 @@
 import React, { FC, useEffect, useState } from "react";
 import { useRequest } from "ahooks";
-import { Button, Spin } from "antd";
+import Button from "../../components/Button";
 import QueueAnim from "rc-queue-anim";
 import Depart from "../../assets/depart.png";
 import Footer from "../../components/Footer";
@@ -18,7 +18,7 @@ const Join: FC = () => {
     title: "",
     jobs: [{ title: "", desc: "" }],
   });
-  const { data, loading } = useRequest(getDeparts);
+  const { data } = useRequest(getDeparts);
   const [open, setOpen] = useState(false);
   useEffect(() => {}, []);
   return (
@@ -31,7 +31,6 @@ const Join: FC = () => {
       />
       <div className="join-content">
         <div>
-          {loading && <Spin size="large" />}
           <QueueAnim delay={500} className="join-page-depart-wrapper">
             {data?.map((item: getDepartsItemType) => (
               <div key={item.title}>
@@ -53,7 +52,7 @@ const Join: FC = () => {
         </div>
         <div className="join-page-lower">
           <p>赶快加入我们吧！</p>
-          <Button className="join-page-lower-button" danger type="primary">
+          <Button className="join-page-lower-button"  type="primary">
             报名链接
           </Button>
         </div>

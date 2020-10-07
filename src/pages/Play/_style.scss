@@ -66,30 +66,8 @@
     }
   }
   .play-page-button {
-    width: 114px;
-    height: 43px;
-    display: block;
     margin-top: 18px;
-  }
-  .play-page-button-1 {
-    background: $content-white;
-    border: 1px solid #8e8e8e;
-    box-sizing: border-box;
-    border-radius: 3px;
-  }
-  .play-page-button-2 {
-    background: $brand-red;
-    border-radius: 3px;
-    color: $content-white;
-    border: $brand-red;
-  }
-
-  .play-page-button-3 {
-    background: $content-white;
-    border: 1px solid $brand-red;
-    box-sizing: border-box;
-    border-radius: 3px;
-    color: $brand-red;
+    display: block;
   }
 }
 
