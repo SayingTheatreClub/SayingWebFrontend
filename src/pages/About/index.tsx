@@ -26,7 +26,7 @@ const AboutPage: FC = (props) => (
             <img src={RedMark} alt="mark" />
             Fun Facts
           </div>
-          <div className="funfact-top-right">戏言的小故事</div>
+          {/* <div className="funfact-top-right">戏言的小故事</div> */}
         </div>
         <div className="funfact-wrapper">
           {funfacts.map((item, index) => (
