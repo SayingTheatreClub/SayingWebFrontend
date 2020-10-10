@@ -10,9 +10,9 @@ export interface ListItem {
 
 export const titleList = [
   { name: " 关于我们", url: "about" },
-  { name: " 演出", url: "play" },
+  { name: " 话剧演出", url: "play" },
   { name: " 活动动态", url: "events" },
-  { name: " 关注我们", url: "us" },
+  { name: " 戏言文集", url: "us" },
 ];
 export const playList: ListItem[] = [
   { name: "红玫瑰与白玫瑰", url: "play/红玫瑰与白玫瑰" },
