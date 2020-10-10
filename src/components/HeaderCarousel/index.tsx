@@ -9,7 +9,7 @@ interface HeaderCarouselProps {
 const HeaderCarousel: FC<HeaderCarouselProps> = (props) => {
   return (
     <Carousel autoplay effect="fade">
-      {[1, 2, 3, 4, 5].map((item: number) => (
+      {[1, 2, 3, 4, 5, 6].map((item: number) => (
         <img
           src={`${photoUrl}slide${item}.jpg`}
           alt="slide"
