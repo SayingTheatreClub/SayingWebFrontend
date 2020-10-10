@@ -15,7 +15,7 @@ const InfoComponent: FC<InfoComponentProps> = (props) => {
         src={imgUrl}
         alt="poster"
       />
-      <Button danger className="info-button">
+      <Button danger className="info-button" href = "join">
         加入我们
       </Button>
       <p style={{ width: "492px", marginTop: "40px" }}>{desc}</p>
