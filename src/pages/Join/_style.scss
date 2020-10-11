@@ -35,8 +35,9 @@
   margin: 24px 0;
 }
 .join-page-info-button {
-  @include primary-button;
   margin-bottom: 64px;
+  color: whitesmoke;
+  background-color: whitesmoke;
 }
 .join-page-depart-wrapper {
   display: flex;
