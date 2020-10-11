@@ -2,12 +2,12 @@ import React, { FC, useEffect, useState } from "react";
 import { useRequest } from "ahooks";
 import Button from "../../components/Button";
 import QueueAnim from "rc-queue-anim";
-import Depart from "../../assets/depart.png";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import MailBox from "../../components/Mailbox";
 import PopUp from "../../components/PopUp";
 import { getDeparts } from "../../libs/requests";
+import { photoUrl } from "../../libs/security";
 import { departItemType, departText, joinText } from "../../text/joinText";
 import DepartmentCard from "./departmentCard";
 import PageInfo from "./pageInfo";
@@ -53,7 +53,7 @@ const Join: FC = () => {
         <div className="join-page-lower">
           <p>赶快加入我们吧！</p>
 
-          <Button className="join-page-lower-button"  type="primary">
+          <Button className="join-page-lower-button" type="disabled">
             报名链接
           </Button>
         </div>
@@ -63,7 +63,7 @@ const Join: FC = () => {
         onClose={() => {
           setOpen(false);
         }}
-        imgUrl={Depart}
+        imgUrl={`${photoUrl}${targetDepart.title}.jpg`}
         name={targetDepart.title}
         type="depart"
         jobInfo={targetDepart.jobs}
@@ -78,7 +78,7 @@ const Join: FC = () => {
           title="电子报"
           desc="你心仪的岗位没有在招？订阅戏言电子报获得最新招新动态"
         />
-        <Footer withMailbox/>
+        <Footer withMailbox />
       </div>
     </>
   );
