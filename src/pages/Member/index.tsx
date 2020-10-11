@@ -210,6 +210,7 @@ const Member: FC<MemberComponentProps> = (props) => {
                       name={item.name}
                       title="导演"
                       description={item.description}
+                      hasPhoto={item.has_photo}
                       id={item.id}
                     />
                   </div>

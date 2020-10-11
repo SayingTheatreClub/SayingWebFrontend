@@ -20,7 +20,7 @@ const Carousel: FC<CarouselProps> = (props) => {
   const { type } = props;
   const [space, setSpace] = useState(0);
   const handleClick = (isLeft: boolean, isInterview: boolean) => {
-    //if it is interview card
+    //if it is interview card\
     if (isInterview) {
       if (isLeft) {
         setSpace(space + interviewStep);
@@ -28,6 +28,11 @@ const Carousel: FC<CarouselProps> = (props) => {
         if (space <= 0) return;
         setSpace(space - interviewStep);
       }
+      return;
+    }
+    //让他回去
+    if (space / playStep + 1 > playText.length) {
+      setSpace(0);
       return;
     }
 

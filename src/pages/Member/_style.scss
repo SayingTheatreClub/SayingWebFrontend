@@ -20,6 +20,11 @@
     width: auto;
   }
 }
+.member-card .photo{
+  display: block;
+  height: 160px;
+  margin: 18px auto 0 auto;
+}
 .member-card-content {
   display: flex;
   flex-wrap: wrap;
