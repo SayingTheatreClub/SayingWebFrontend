@@ -35,6 +35,7 @@
   margin: 24px 0;
 }
 .join-page-info-button {
+  // @include primary-button;
   margin-bottom: 64px;
   color: whitesmoke;
   background-color: whitesmoke;
@@ -79,6 +80,6 @@
   text-align: center;
 }
 .join-page-lower-button{
-  @include primary-button;
+  // @include primary-button;
   margin-top: 17px;
 }
