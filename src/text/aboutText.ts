@@ -43,4 +43,5 @@ export const tabs = [
     img: `${photoUrl}Linda.jpg`,
     video: "",
   },
+  
 ];

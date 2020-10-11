@@ -27,6 +27,7 @@ export const aboutList: ListItem[] = [
   { name: "支持戏言", url: "" },
   { name: "联系我们", url: "" },
 ];
+
 export const mediaList = [
   { name: "微信公众号", url: "" },
   {

@@ -6,7 +6,6 @@ import Mary from "../../assets/mary.jpg";
 import RedMark from "../../assets/redMark.svg";
 import { playText } from "../../text/carouselText";
 import { photoUrl } from "../../libs/security";
-// import { Link } from "react-router-dom";
 
 type carouselType = "left" | "right";
 
