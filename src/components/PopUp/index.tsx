@@ -52,7 +52,6 @@ const MemberPop: FC<MemberProps> = (props) => {
       ? `${photoUrl}${name.toLowerCase()}.png`
       : `${photoUrl}open-peeps (${id}).png`;
 
-
   useEffect(() => {
     setInfo({ id: Math.floor(Math.random() * 70) + 1 });
     const dataArray = new Array<any>();
@@ -96,17 +95,7 @@ const MemberPop: FC<MemberProps> = (props) => {
           />
           <div className="popup-name">{name}</div>
           <div className="popup-lower-content-wrapper">
-            <img
-              src={
-                // info.hasPhoto
-                //   ? `${photoUrl}${name.toLowerCase()}.png`
-                //   : personUrl
-                personUrl
-                // getPhoto()
-              }
-              alt={`${name}`}
-              className="popup-img"
-            />
+            <img src={personUrl} alt={`${name}`} className="popup-img" />
             <div className="popup-lower-content">
               <p className="popup-desc">{info.desc}</p>
               <div>{<PlayList list={myData} />}</div>

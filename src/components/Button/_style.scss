@@ -1,0 +1,10 @@
+.button-primary {
+  @include primary-button;
+}
+
+.button-default {
+  @include secondary-button;
+}
+.button-disabled {
+  @extend .button-default;
+}

@@ -1,6 +1,6 @@
 import React, { FC } from "react";
-import { Input, Button, message } from "antd";
-
+import { Input, message } from "antd";
+import Button from "../Button";
 interface MailBoxProps {
   title: string;
   desc: string;
@@ -19,12 +19,11 @@ const MailBox: FC<MailBoxProps> = (props) => {
           <p className="mailbox-desc">{desc}</p>
           <Input placeholder="邮箱" className="mailbox-input" />
           <Button
-            disabled
-            danger
             className="mailbox-button"
             onClick={() => {
               message.success("添加订阅成功");
             }}
+            type="disabled"
           >
             订阅
           </Button>

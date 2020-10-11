@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { Button } from "antd";
+import Button from "../../components/Button";
 interface DepartmentCardProps {
   title: string;
   text: string;
@@ -12,7 +12,7 @@ const DepartmentCard: FC<DepartmentCardProps> = (props) => {
   return (
     <div className="join-depart-wrapper">
       <div className="join-depart-title">{title}</div>
-      <Button danger className="join-depart-button" onClick={onClick}>
+      <Button type="default" className="join-depart-button" onClick={onClick}>
         了解详情
       </Button>
       <div className="join-depart-jobs">在招: {jobs}</div>

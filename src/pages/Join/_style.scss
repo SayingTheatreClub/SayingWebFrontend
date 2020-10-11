@@ -35,7 +35,6 @@
   margin: 24px 0;
 }
 .join-page-info-button {
-  // @include primary-button;
   margin-bottom: 64px;
   color: whitesmoke;
   background-color: whitesmoke;
@@ -60,7 +59,6 @@
   margin-top: 20px;
 }
 .join-depart-button {
-  @include secondary-button;
   margin: 22px 0;
 }
 .join-depart-jobs {
@@ -80,6 +78,5 @@
   text-align: center;
 }
 .join-page-lower-button{
-  // @include primary-button;
   margin-top: 17px;
 }

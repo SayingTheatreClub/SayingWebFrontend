@@ -10,14 +10,16 @@ import Join from "./pages/Join";
 import Record from "./pages/Past";
 function App() {
   return (
-    <BrowserRouter>
-      <Route path="/" exact component={Home} />
-      <Route path="/member" component={Member} />
-      <Route path="/about" component={About} />
-      <Route path="/test" component={Test} />
-      <Route path="/play/:name" component={Play} />
-      <Route path="/join" component={Join} />
-      <Route path="/past" component={Record} />
+    <BrowserRouter
+    forceRefresh={true}
+    >
+        <Route path="/" exact component={Home} />
+        <Route path="/member" component={Member} />
+        <Route path="/about" component={About} />
+        <Route path="/test" component={Test} />
+        <Route path="/play/:name" component={Play} />
+        <Route path="/join" component={Join} />
+        <Route path="/past" component={Record} />
     </BrowserRouter>
   );
 }

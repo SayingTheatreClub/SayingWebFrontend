@@ -15,7 +15,7 @@ import { intro } from "../../text/memberText";
 import { PlayMemberType } from "../../types/requestType";
 import InfoComponent from "./infoComponent";
 import RedMark from "../../assets/redMark.svg";
-
+import Next from "../../assets/next.svg";
 interface Result {
   list: PlayMemberType[];
   count: number;
@@ -25,6 +25,8 @@ interface Result {
 interface MemberComponentProps {
   data: Array<any>;
 }
+
+const arrow = <img src={Next} alt="" />;
 
 const Member: FC<MemberComponentProps> = (props) => {
   const [popOpen, setPopOpen] = useState(false);
@@ -96,6 +98,7 @@ const Member: FC<MemberComponentProps> = (props) => {
       <div className="member-content-wrapper">
         <div className="member-select-wrapper">
           <Select
+            suffixIcon={arrow}
             className="member-select"
             value={menuValue.depart}
             onSelect={(value: string) => {
@@ -109,6 +112,7 @@ const Member: FC<MemberComponentProps> = (props) => {
           </Select>
 
           <Select
+            suffixIcon={arrow}
             className="member-select-right"
             value={menuValue.play}
             onSelect={(value: string) => {
@@ -136,7 +140,8 @@ const Member: FC<MemberComponentProps> = (props) => {
               <div key="info">
                 <InfoComponent
                   imgUrl={PosterImg}
-                  desc="介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些介绍很多的介绍介绍呀介绍一些"
+                  desc="在这个时代，在这个世界上，你做什么与不做什么，或许结果并不会有什么不同。
+                  但是你做了，正如同你活着，终究留下一些痕迹。"
                 />
               </div>
               {currentMembers.map((item: any, index: number) => (
@@ -187,14 +192,27 @@ const Member: FC<MemberComponentProps> = (props) => {
                 interval={[50, 0]}
                 ease={["easeOutQuart", "easeInOutQuart"]}
               >
-                {pastMembers.map((item) => (
-                  <MemberCard
-                    key={item.name}
-                    name={item.name}
-                    title="导演"
-                    description={item.description}
-                    id={item.id}
-                  />
+                {pastMembers.map((item, index) => (
+                  <div
+                    key={index + item.name}
+                    className="member-card-wrapper"
+                    onClick={() => {
+                      setClickName({
+                        name: item.name,
+                        desc: item.description,
+                        id: item.has_photo ? -1 : item.id,
+                      });
+                      setPopOpen(!popOpen);
+                    }}
+                  >
+                    <MemberCard
+                      key={item.name}
+                      name={item.name}
+                      title="导演"
+                      description={item.description}
+                      id={item.id}
+                    />
+                  </div>
                 ))}
               </QueueAnim>
               <div

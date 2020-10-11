@@ -1,5 +1,6 @@
-import React, { FC } from 'react';
-import { Button } from 'antd';
+import React, { FC } from "react";
+import { Button } from "antd";
+import { Link } from "react-router-dom";
 
 interface InfoComponentProps {
   imgUrl: string;
@@ -15,10 +16,12 @@ const InfoComponent: FC<InfoComponentProps> = (props) => {
         src={imgUrl}
         alt="poster"
       />
-      <Button danger className="info-button" href = "join">
-        加入我们
-      </Button>
-      <p style={{ width: "492px", marginTop: "40px" }}>{desc}</p>
+      <Link to="/join">
+        <Button danger className="info-button">
+          加入我们
+        </Button>
+      </Link>
+      <p className="member-info-desc" style={{ width: "492px", marginTop: "40px" }}>{desc}</p>
     </div>
   );
 };

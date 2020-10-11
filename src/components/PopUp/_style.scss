@@ -4,11 +4,13 @@
   overflow: auto;
   max-height: 95vh;
   border-radius: 3px;
+  z-index: 1;
 }
 .popup-close {
   cursor: pointer;
   position: absolute;
   top: 55px;
+  z-index: 10;
   right: 65px;
 }
 .popup-lower-content-wrapper {

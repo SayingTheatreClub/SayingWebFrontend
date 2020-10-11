@@ -6,13 +6,16 @@ import Mary from "../../assets/mary.jpg";
 import RedMark from "../../assets/redMark.svg";
 import { playText } from "../../text/carouselText";
 import { photoUrl } from "../../libs/security";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 type carouselType = "left" | "right";
 
 interface CarouselProps {
   type?: carouselType;
 }
+
+const interviewStep = 251;
+const playStep = 259;
 
 const Carousel: FC<CarouselProps> = (props) => {
   const { type } = props;
@@ -21,19 +24,19 @@ const Carousel: FC<CarouselProps> = (props) => {
     //if it is interview card
     if (isInterview) {
       if (isLeft) {
-        setSpace(space + 251);
+        setSpace(space + interviewStep);
       } else {
         if (space <= 0) return;
-        setSpace(space - 251);
+        setSpace(space - interviewStep);
       }
       return;
     }
 
     if (isLeft) {
-      setSpace(space + 259);
+      setSpace(space + playStep);
     } else {
       if (space <= 0) return;
-      setSpace(space - 259);
+      setSpace(space - playStep);
     }
   };
   if (type === "right")
@@ -68,18 +71,18 @@ const Carousel: FC<CarouselProps> = (props) => {
           </div>
           <div className="carousel-content carousel-content-right">
             <div className="carousel-content-shader" />
-            {playText.reverse().map((item) => (
-              <Link to={item.name.includes("玫瑰") ? `play/${item.name}` : ""}>
-                <PlayCard
-                  key={item.name}
-                  className="carousel-card"
-                  name={`${item.name}`}
-                  year={item.year}
-                  type="img-text"
-                  imgUrl={`${photoUrl}${item.img}`}
-                  moveSpace={space}
-                />
-              </Link>
+            {playText.map((item) => (
+              // <Link to={item.name.includes("玫瑰") ? `/play/${item.name}` : ""}>
+              <PlayCard
+                key={item.name}
+                className="carousel-card"
+                name={`${item.name}`}
+                year={item.year}
+                type="img-text"
+                imgUrl={`${photoUrl}${item.name}.jpg`}
+                moveSpace={space}
+              />
+              // </Link>
             ))}
           </div>
         </div>
