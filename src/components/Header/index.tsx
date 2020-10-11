@@ -50,15 +50,26 @@ const Header: React.FC<HeaderProps> = (props) => {
         >
           {aboutList.map((item: any) => (
             <Menu.Item style={{ textAlign: "center" }}>
-              <Link to={`${item.url}`}>{item.name}</Link>
+              {!(item.name.includes("支持") || item.name.includes("联系")) ? (
+                <Link to={`${item.url}`}>{item.name}</Link>
+              ) : (
+                <div style={{ cursor: "not-allowed" }}>{item.name}</div>
+              )}
             </Menu.Item>
           ))}
         </Menu.SubMenu>
 
-        <Menu.SubMenu title="话剧演出" className={`header-nav-item ${colorClass}`}>
+        <Menu.SubMenu
+          title="话剧演出"
+          className={`header-nav-item ${colorClass}`}
+        >
           {playList.map((item: any) => (
             <Menu.Item style={{ textAlign: "center" }}>
-              <Link to={`${item.url}`}>{item.name}</Link>
+              {item.name.includes("玫瑰") ? (
+                <Link to={`${item.url}`}>{item.name}</Link>
+              ) : (
+                <div style={{ cursor: "not-allowed" }}>{item.name}</div>
+              )}
             </Menu.Item>
           ))}
         </Menu.SubMenu>

@@ -1,6 +1,5 @@
 import React, { FC } from "react";
 import Button from "../../components/Button";
-import IMG from "../../assets/play.jpg";
 import PlayCard from "../../components/Cards/playCard";
 import Carousel from "../../components/Carousel";
 import Footer from "../../components/Footer";
@@ -41,12 +40,15 @@ const Home: FC = () => (
             </Link>
           </div>
         </div>
-        <img
-          src={IMG}
-          alt=""
-          style={{ width: "25.8125rem", height: "16.375rem" }}
-          className="home-display-box-img"
-        />
+        <iframe
+          title="rose"
+          width="413"
+          height="262"
+          src="https://www.youtube.com/embed/CHqfhw4Xqd0"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        ></iframe>
       </div>
       <div className="carousel-left-wrapper">
         <Carousel type="right" />

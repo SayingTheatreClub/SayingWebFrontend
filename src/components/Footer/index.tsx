@@ -16,8 +16,8 @@ interface InfoListProps {
   className: string;
   isMedia: boolean;
 }
-interface FooterProps{
-  withMailbox?:boolean;
+interface FooterProps {
+  withMailbox?: boolean;
 }
 const content = <img src={IMG} alt="wechat" className="footer-wechat-img" />;
 
@@ -30,11 +30,13 @@ const InfoList: React.FC<InfoListProps> = (props) => {
         <div>
           <Popover content={content}>
             <div>
+              {/* icon list */}
               <img src={mediaIconList[0]} alt="logo" className="footer-icon" />
               {mediaList[0].name}
             </div>
           </Popover>
         </div>
+        {/* media links */}
         {mediaList.slice(1, mediaIconList.length).map((item, index) => (
           <div>
             <a
@@ -57,21 +59,41 @@ const InfoList: React.FC<InfoListProps> = (props) => {
 
   return (
     <div className={className}>
-      {list.map((item: ListItem) => (
-        <Link to={item.url} className="footer-link">
-          <div>{item.name}</div>
-        </Link>
-      ))}
+      {list.map((item: ListItem) =>
+        item.url.length !== 0 ? (
+          <Link to={item.url} className="footer-link">
+            <div
+              style={{
+                cursor: item.url.length === 0 ? "not-allowed" : "pointer",
+              }}
+            >
+              {item.name}
+            </div>
+          </Link>
+        ) : (
+          <div
+            style={{
+              cursor: item.url.length === 0 ? "not-allowed" : "pointer",
+            }}
+          >
+            {item.name}
+          </div>
+        )
+      )}
     </div>
   );
 };
 
-const Footer: React.FC<FooterProps>= (props) => (
+const Footer: React.FC<FooterProps> = (props) => (
   <div className="footer-wrapper">
     <div className="footer">
       {[aboutList, playList, eventList, []].map(
         (item: ListItem[], index: number) => (
-          <div className={`list-wrapper ${!props.withMailbox?'list-non-mail':""}`}>
+          <div
+            className={`list-wrapper ${
+              !props.withMailbox ? "list-non-mail" : ""
+            }`}
+          >
             <Link to={titleList[index].url} className="footer-link">
               <div className="footer-list-title">{titleList[index].name}</div>
             </Link>
