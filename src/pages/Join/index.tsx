@@ -52,6 +52,7 @@ const Join: FC = () => {
         </div>
         <div className="join-page-lower">
           <p>赶快加入我们吧！</p>
+
           <Button className="join-page-lower-button"  type="primary">
             报名链接
           </Button>

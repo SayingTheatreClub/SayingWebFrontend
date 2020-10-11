@@ -2,9 +2,10 @@
   @include flex(space-evenly, "", wrap);
 }
 .funfact-top {
-  @include flex(center, center);
+  @include flex(left, left);
   margin-top: 127px;
   .funfact-top-left {
+    text-align: left;
     @include text(Noto Sans SC, normal, 16px, 23px, $content-black);
   }
   .funfact-top-right {

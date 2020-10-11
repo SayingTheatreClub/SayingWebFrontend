@@ -77,7 +77,7 @@ const PlayComponent: FC = (props) => {
         <div className="play-video-box">
           <p className="play-video-title">预告片</p>
           <iframe
-            src="////player.bilibili.com/player.html?aid=8472443&bvid=BV16x41117ZP&cid=13951927&page=1"
+            src="https://www.youtube.com/embed/CHqfhw4Xqd0"
             scrolling="no"
             title="rose"
             className="player"

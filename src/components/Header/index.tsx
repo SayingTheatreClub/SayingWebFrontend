@@ -11,7 +11,7 @@ export interface HeaderProps {
 }
 const navs = {
   en: ["About", "Shows", "Events", "Articals", "中|EN"],
-  zh: ["活动动态", "文章"],
+  zh: ["活动动态", "戏言文集"],
 };
 
 const Header: React.FC<HeaderProps> = (props) => {
@@ -55,7 +55,7 @@ const Header: React.FC<HeaderProps> = (props) => {
           ))}
         </Menu.SubMenu>
 
-        <Menu.SubMenu title="演出" className={`header-nav-item ${colorClass}`}>
+        <Menu.SubMenu title="话剧演出" className={`header-nav-item ${colorClass}`}>
           {playList.map((item: any) => (
             <Menu.Item style={{ textAlign: "center" }}>
               <Link to={`${item.url}`}>{item.name}</Link>
