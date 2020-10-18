@@ -88,6 +88,15 @@ const PlayComponent: FC = (props) => {
           <div className="one-line" />
           <div>
             <div className="play-department-board-wrapper">
+              {boardPage !== 0 && (
+                <Arrow
+                  isLeft
+                  className="play-department-arrow"
+                  onClick={() => {
+                    changeBoard(boardPage + 1);
+                  }}
+                />
+              )}
               {data
                 ?.slice(boardPage * 4, boardPage * 4 + 4)
                 .map((item: any) => (

@@ -108,7 +108,7 @@ const Member: FC<MemberComponentProps> = (props) => {
             {departments.map((item) => (
               <Select.Option value={item}>{item}</Select.Option>
             ))}
-            <Select.Option value="all">组别</Select.Option>
+            <Select.Option value="all">所有组别</Select.Option>
           </Select>
 
           <Select
@@ -122,7 +122,7 @@ const Member: FC<MemberComponentProps> = (props) => {
             {plays.map((item) => (
               <Select.Option value={item}>{item}</Select.Option>
             ))}
-            <Select.Option value="all">剧组</Select.Option>
+            <Select.Option value="all">所有剧组</Select.Option>
           </Select>
         </div>
 
