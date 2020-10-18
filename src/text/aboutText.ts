@@ -44,4 +44,34 @@ export const tabs = [
     img: `${photoUrl}Linda.jpg`,
     video: "",
   },
+  {
+    title: "04 戏言人专访：Linda",
+    text: `坐在Valentia咖啡厅窗前的位子上，等着一位戏言人，她是《你好，疯子！》的制作人Linda。在咖啡馆里的热气中，Linda走了进来，点了一杯Ice Black Tea，温柔地与我们打招呼。一瞬间感觉咖啡厅又安静了一些，坐在对面的她，有着让人心神向往的大气。`,
+    img: `${photoUrl}Linda.jpg`,
+    video: "",
+  },
+  {
+    title: "04 戏言人专访：Linda",
+    text: `坐在Valentia咖啡厅窗前的位子上，等着一位戏言人，她是《你好，疯子！》的制作人Linda。在咖啡馆里的热气中，Linda走了进来，点了一杯Ice Black Tea，温柔地与我们打招呼。一瞬间感觉咖啡厅又安静了一些，坐在对面的她，有着让人心神向往的大气。`,
+    img: `${photoUrl}Linda.jpg`,
+    video: "",
+  },
+  {
+    title: "04 戏言人专访：Linda",
+    text: `坐在Valentia咖啡厅窗前的位子上，等着一位戏言人，她是《你好，疯子！》的制作人Linda。在咖啡馆里的热气中，Linda走了进来，点了一杯Ice Black Tea，温柔地与我们打招呼。一瞬间感觉咖啡厅又安静了一些，坐在对面的她，有着让人心神向往的大气。`,
+    img: `${photoUrl}Linda.jpg`,
+    video: "",
+  },
+  {
+    title: "04 戏言人专访：Linda",
+    text: `坐在Valentia咖啡厅窗前的位子上，等着一位戏言人，她是《你好，疯子！》的制作人Linda。在咖啡馆里的热气中，Linda走了进来，点了一杯Ice Black Tea，温柔地与我们打招呼。一瞬间感觉咖啡厅又安静了一些，坐在对面的她，有着让人心神向往的大气。`,
+    img: `${photoUrl}Linda.jpg`,
+    video: "",
+  },
+  {
+    title: "04 戏言人专访：Linda",
+    text: `坐在Valentia咖啡厅窗前的位子上，等着一位戏言人，她是《你好，疯子！》的制作人Linda。在咖啡馆里的热气中，Linda走了进来，点了一杯Ice Black Tea，温柔地与我们打招呼。一瞬间感觉咖啡厅又安静了一些，坐在对面的她，有着让人心神向往的大气。`,
+    img: `${photoUrl}Linda.jpg`,
+    video: "",
+  },
 ];
