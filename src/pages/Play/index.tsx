@@ -93,7 +93,7 @@ const PlayComponent: FC = (props) => {
                   isLeft
                   className="play-department-arrow"
                   onClick={() => {
-                    changeBoard(boardPage + 1);
+                    changeBoard(boardPage - 1);
                   }}
                 />
               )}

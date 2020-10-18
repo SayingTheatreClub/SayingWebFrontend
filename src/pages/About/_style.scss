@@ -93,7 +93,6 @@
     left: 50%;
     margin-left: -15px;
     margin-top: 15px;
-    
   }
 }
 
@@ -106,15 +105,22 @@
   width: 4px;
   background: #f13c20;
 }
-.timeline-element-wrapper{
+.timeline-element-wrapper {
   display: flex;
   justify-content: space-between;
-  flex-direction: row-reverse;
-
+  flex-direction: row;
+  align-items: center;
 }
-.timeline-text-wrapper {
+.timeline-text-left {
   text-align: right;
   margin-left: 30px;
+}
+.timeline-text-right {
+  text-align: left;
+  margin-right: 30px;
+}
+.timeline-element-right {
+  flex-direction: row-reverse;
 }
 .timeline-time {
   @include text(Noto Sans SC, 500, 16px, 23px, $content-darkGrey);
@@ -132,6 +138,6 @@
   align-items: baseline;
 }
 
-.timeline-wrapper{
+.timeline-wrapper {
   background: $background-faint-orange;
 }

@@ -5,7 +5,7 @@ export const funfacts = [
     img: photoUrl + "fun fact1.svg",
   },
   {
-    text: `戏言成员不只有中国人，还有美国人和日本人。`,
+    text: `戏言的演员都是人来疯，公演时状态永远最佳`,
     img: photoUrl + "fun fact2.svg",
   },
   {

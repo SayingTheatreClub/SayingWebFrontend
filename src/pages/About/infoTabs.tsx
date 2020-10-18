@@ -17,7 +17,7 @@ const InfoTab: FC = (props) => {
       {tabs.map((item, index) => (
         <TabPanel value={content} index={index} />
       ))}
-      <MyTabs value={content} onChange={handleChange} variant="fullWidth" scrollButtons="auto">
+      <MyTabs value={content} onChange={handleChange} variant="scrollable" scrollButtons="on">
         {tabs.map((item) => (
           <MyTab label={item.title} />
         ))}
