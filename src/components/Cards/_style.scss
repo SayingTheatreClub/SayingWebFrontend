@@ -84,6 +84,7 @@
     @include text(Noto Sans SC, 500, 14px, 24px, $brand-red);
   }
   .img-card-name {
+    margin-top: 10px;
     @include text(Noto Sans SC, 300, 16px, 23px, $content-black);
   }
   &:hover {
@@ -110,14 +111,14 @@
     margin-left: 10px;
   }
   .interview-type {
-    margin-top: 15px;
+    margin-top: 10px;
 
     @include text(Noto Sans SC, 500, 14px, 24px, $brand-red);
   }
   .interview-title {
     color: $content-black;
     @include text(Noto Sans SC, 300, 16px, 23px, $content-black);
-    margin-top: 7px;
+    margin-top: 10px;
   }
   &:hover {
     box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1);

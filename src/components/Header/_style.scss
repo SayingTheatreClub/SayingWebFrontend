@@ -36,7 +36,7 @@
 }
 .header-nav-item {
   text-align: center;
-  @include text(Noto Sans SC, 300, 18px, "", $content-white);
+  @include text(Noto Sans SC, 400, 18px, "", $content-white);
 }
 
 .header-gray {
@@ -65,7 +65,7 @@
   }
 }
 .header-logo {
-  display: block;
+  display: inline-block;
   height: 64px;
   width: 55px;
   margin-left: 70px;

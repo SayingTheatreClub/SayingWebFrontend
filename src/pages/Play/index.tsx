@@ -14,6 +14,7 @@ import { rose } from "../../text/playPageText";
 import DepartmentBoard from "./department";
 import InfoCard from "./infoCard";
 import PhotoBoard from "./photoBoard";
+import RedMark from "../../assets/redMark.svg";
 
 const { TabPane } = Tabs;
 
@@ -59,7 +60,10 @@ const PlayComponent: FC = (props) => {
       </div>
       <div className="home-content">
         <div className="play-text-box">
-          <p className="play-text-title">导言</p>
+          <p className="play-text-title">
+            <img src={RedMark} alt="mark" style={{ marginRight: "5px" }} />
+            导言
+          </p>
           <div className="play-text-box-lower">
             <div className="play-text-box-left">
               {rose.p1.split("/n").map((item) => (
@@ -75,7 +79,10 @@ const PlayComponent: FC = (props) => {
         </div>
 
         <div className="play-video-box">
-          <p className="play-video-title">预告片</p>
+          <p className="play-video-title">
+            <img src={RedMark} alt="mark" style={{ marginRight: "5px" }} />
+            预告片
+          </p>
           <iframe
             src="https://www.youtube.com/embed/CHqfhw4Xqd0"
             scrolling="no"

@@ -20,7 +20,7 @@
   }
   .footer-list-member {
     text-align: left;
-    @include text(Noto Sans SC, 500, 14px, 24px, white);
+    @include text(Noto Sans SC, 500, 14px, 24px, #DADADA);
   }
   .footer-icon {
     width: 1rem;
@@ -29,20 +29,22 @@
   }
 }
 .footer-wechat-img{
-  width: 150px;
-  height: 150px;
+  width: 240px;
+  height: 240px;
 }
 .footer-wrapper {
   height: 441px;
   background: $content-black;
 }
 .footer-signature {
-  color: white;
+  color: $lightest-gray;
+  font-weight: 300;
+  font-size: 14px;
   text-align: center;
   margin-top: 85px;
 }
 .footer-link {
-  color: white;
+  color: #DADADA;
   &:hover {
     color: $brand-red;
   }

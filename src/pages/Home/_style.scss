@@ -69,6 +69,7 @@
   position: absolute;
   background: rgba(248, 246, 243, 0.7);
   top: -200px;
+  left: 100px;
   width: 32.75rem;
   height: 25.25rem;
   @media screen and(max-width:530px) {
@@ -85,7 +86,7 @@
     text-align: center;
     .home-intro-title {
       font-style: normal;
-      font-weight: normal;
+      font-weight: 400;
       font-size: 36px;
       line-height: 52px;
       color: $content_black;
@@ -93,6 +94,7 @@
       margin-bottom: 45px;
     }
     .home-intro-desc {
+      font-family: "Noto Sans SC";
       font-style: normal;
       font-weight: 300;
       font-size: 16px;

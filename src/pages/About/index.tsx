@@ -23,7 +23,7 @@ const AboutPage: FC = (props) => (
 
         <div className="funfact-top">
           <div className="funfact-top-left">
-            <img src={RedMark} alt="mark" />
+            <img src={RedMark} alt="mark" style={{ marginRight: "5px" }} />
             Fun Facts
           </div>
           {/* <div className="funfact-top-right">戏言的小故事</div> */}

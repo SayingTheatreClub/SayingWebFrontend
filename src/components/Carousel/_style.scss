@@ -11,6 +11,7 @@
   justify-content: center;
   .carousel-content-wrapper {
     background: #ffffff;
+    border: 1px solid $brand-red;
     overflow: hidden;
     white-space: nowrap;
     display: flex;
@@ -60,7 +61,7 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 23px;
-  color: #000000;
+  color: $content-darkGrey;
 }
 .carousel-arrow-right {
   margin-left: 66px;

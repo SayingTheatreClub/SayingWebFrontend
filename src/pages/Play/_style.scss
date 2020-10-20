@@ -1,13 +1,13 @@
 .play-head-wrapper {
   height: 670px;
   .play-infocard-wrapper {
-    max-width: 1440px;
+    max-width: 1300px;
     margin: 0 auto;
   }
 }
 .play-text-box-lower {
   @include flex(space-between, "", wrap);
-  @include text(Noto Sans SC, lighter, 1rem, 28px, $content-black);
+  @include text(Noto Sans SC, 300, 1rem, 28px, $content-black);
 }
 .play-text-box {
   margin: 0 auto;
@@ -18,9 +18,7 @@
   }
   .play-text-title {
     margin-top: 100px;
-    font-weight: 1000;
-    line-height: 23px;
-    font-size: 1rem;
+    @include text(Noto Sans SC, 500, 1rem, 23px, $content-darkGrey)
   }
 }
 .play-text-box-right {
@@ -41,7 +39,7 @@
   margin: 138px auto;
   .play-video-title {
     margin-bottom: 32px;
-    @include text(Noto Sans SC, 500, 1rem, 23px, $content-black);
+    @include text(Noto Sans SC, 500, 1rem, 23px, $content-darkGrey);
   }
 }
 
@@ -89,18 +87,19 @@
 }
 .play-department-board {
   .play-department-board-title {
-    @include text(Noto Sans SC, 500, 20px, 29px, $content-darkGrey);
+    @include text(Noto Sans SC, 500, 1rem, 60px, $content-darkGrey);
   }
   .play-department-board-item-wrapper {
     width: 260px;
     @include flex(space-between, "", wrap);
   }
   .play-department-board-name {
-    @include text(Noto Sans SC, lighter, 1rem, 23px, $call-out-orange);
+    @include text(Noto Sans SC, 300, 1rem, 28px, $brand-red);
     text-decoration-line: underline;
     cursor: pointer;
   }
   .play-department-board-job {
+    @include text(Noto Sans SC, 300, 1rem, 28px, $content-black);
     width: 150px;
     text-align: left;
   }
@@ -134,7 +133,7 @@
 .one-line {
   background: #bdbdbd;
   height: 1px;
-  max-width: 1440px;
+  max-width: 1300px;
 }
 .be-center {
   margin: 0 auto;

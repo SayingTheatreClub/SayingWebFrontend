@@ -10,7 +10,7 @@ import {
   ListItem,
 } from "../../libs/lists";
 import { Popover } from "antd";
-import IMG from "../../assets/donkey.png";
+import { photoUrl } from "../../libs/security";
 interface InfoListProps {
   list: Array<ListItem>;
   className: string;
@@ -19,7 +19,13 @@ interface InfoListProps {
 interface FooterProps {
   withMailbox?: boolean;
 }
-const content = <img src={IMG} alt="wechat" className="footer-wechat-img" />;
+const content = (
+  <img
+    src={`${photoUrl + "wechat.jpg"}`}
+    alt="wechat"
+    className="footer-wechat-img"
+  />
+);
 
 const InfoList: React.FC<InfoListProps> = (props) => {
   const { list, className, isMedia } = props;

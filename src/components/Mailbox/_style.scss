@@ -3,7 +3,7 @@
   @media screen and(max-width:636px) {
     display: none;
   }
-  font-family: Noto Serif SC;
+  font-family: Noto Sans SC;
   background: #f8f6f3;
   border-radius: 0.1875rem;
   width: 636px;
@@ -27,18 +27,20 @@
       .mailbox-title {
         font-style: normal;
         font-weight: 500;
-        font-size: 1rem;
+        font-size: 16px;
         line-height: 1.4375rem;
         color: $content-black;
       }
       .mailbox-desc {
         font-style: normal;
         font-weight: 300;
-        font-size: 1rem;
+        font-size: 16px;
         line-height: 1.4375rem;
         color: $content-black;
       }
       .mailbox-input {
+        font-weight: 300;
+        font-size: 18px;
         width: 18.875rem;
         height: 2.6875rem;
       }

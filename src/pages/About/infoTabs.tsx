@@ -37,7 +37,7 @@ const MyTab = withStyles((theme: Theme) =>
     root: {
       textTransform: "none",
       minWidth: 100,
-      marginRight: theme.spacing(4),
+      marginRight: theme.spacing(8),
       fontFamily: "Noto Sans SC",
       fontSize: 22,
       fontWeight: 500,

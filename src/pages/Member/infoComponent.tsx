@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { Button } from "antd";
+import Button from "../../components/Button";
 import { Link } from "react-router-dom";
 
 interface InfoComponentProps {
@@ -17,7 +17,7 @@ const InfoComponent: FC<InfoComponentProps> = (props) => {
         alt="poster"
       />
       <Link to="/join">
-        <Button danger className="info-button">
+        <Button type="default" className="info-button">
           加入我们
         </Button>
       </Link>

@@ -6,7 +6,7 @@
   margin-top: 127px;
   .funfact-top-left {
     text-align: left;
-    @include text(Noto Sans SC, normal, 16px, 23px, $content-black);
+    @include text(Noto Sans SC, 500, 16px, 23px, $content-darkGrey);
   }
   .funfact-top-right {
     width: 127px;
@@ -18,7 +18,7 @@
   margin: 50px auto;
 }
 .about-subtitle {
-  @include text(Noto Sans SC, 500, 16px, 23px, $content-black);
+  @include text(Noto Sans SC, 500, 16px, 23px, $content-darkGrey);
   text-align: center;
   margin-top: 77px;
 }
