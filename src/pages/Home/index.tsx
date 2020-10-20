@@ -1,16 +1,17 @@
-import React, { FC } from "react";
-import Button from "../../components/Button";
-import PlayCard from "../../components/Cards/playCard";
-import Carousel from "../../components/Carousel";
-import Footer from "../../components/Footer";
-import Header from "../../components/Header";
-import HeaderCarousel from "../../components/HeaderCarousel";
-import HomeInfo from "./homeInfo";
-import Language from "../../components/Language";
-import MailBox from "../../components/Mailbox";
-import { homeFirstBlock } from "../../text/hometext";
-import IntroInfoCard from "./introInfoCard";
-import { Link } from "react-router-dom";
+import React, { FC } from 'react';
+import { Link } from 'react-router-dom';
+import Button from '../../components/Button';
+import { PlayCard } from '../../components/Cards/index';
+import { LeftCarousel, RightCarousel } from '../../components/Carousel/index';
+import Footer from '../../components/Footer';
+import Header from '../../components/Header';
+import HeaderCarousel from '../../components/HeaderCarousel';
+import Language from '../../components/Language';
+import MailBox from '../../components/Mailbox';
+import { playText } from '../../text/carouselText';
+import { homeFirstBlock } from '../../text/hometext';
+import HomeInfo from './homeInfo';
+import IntroInfoCard from './introInfoCard';
 
 const Home: FC = () => (
   <Language>
@@ -49,10 +50,9 @@ const Home: FC = () => (
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
         ></iframe>
-
       </div>
       <div className="carousel-left-wrapper">
-        <Carousel type="right" />
+        <RightCarousel content={playText} />
       </div>
       {/* <PlayInfoCard
           imgUrl={Ran}
@@ -61,7 +61,7 @@ const Home: FC = () => (
           desc={rhinInLove.text}
         /> */}
       <div className="home-intro-board-wrapper">
-        <Carousel type="left" />
+        <LeftCarousel content={playText} />
         <HomeInfo />
       </div>
     </div>
