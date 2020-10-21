@@ -120,10 +120,8 @@
 }
 
 .popup-lower-content-depart {
-  // justify-content: space-around;
-  // flex-wrap: wrap;
-  // align-items: flex-start;
-  @include flex(space-around, flex-start, wrap);
+  @include flex(space-between, flex-start, wrap);
+  margin: 0 15px;
   margin-top: 80px;
   margin-bottom: 30px;
 }

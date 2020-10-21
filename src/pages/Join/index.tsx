@@ -5,7 +5,7 @@ import QueueAnim from "rc-queue-anim";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import MailBox from "../../components/Mailbox";
-import PopUp from "../../components/PopUp";
+import {DepartPop} from "../../components/PopUp";
 import { getDeparts } from "../../libs/requests";
 import { photoUrl } from "../../libs/security";
 import { departItemType, departText, joinText } from "../../text/joinText";
@@ -57,20 +57,13 @@ const Join: FC = () => {
           </Button>
         </div>
       </div>
-      <PopUp
+      <DepartPop
         open={open}
         onClose={() => {
           setOpen(false);
         }}
         imgUrl={`${photoUrl}${targetDepart.title}.jpg`}
         name={targetDepart.title}
-        type="depart"
-        jobInfo={targetDepart.jobs}
-        recruit={
-          data?.find(
-            (item: getDepartsItemType) => item.title === targetDepart.title
-          )?.job
-        }
       />
       <div>
         <MailBox

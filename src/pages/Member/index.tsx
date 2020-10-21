@@ -8,7 +8,7 @@ import MemberCard from "../../components/Cards/memberCard";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import PageInfo from "../../components/Information/pageInfo";
-import PopUp from "../../components/PopUp";
+import { MemberPop } from "../../components/PopUp";
 import { getMemberByCollection, getMemberByPage } from "../../libs/requests";
 import { departments, plays } from "../../text/basicText";
 import { intro } from "../../text/memberText";
@@ -235,8 +235,7 @@ const Member: FC<MemberComponentProps> = (props) => {
           <br />
         </div>
       </div>
-      <PopUp
-        type="person"
+      <MemberPop
         desc={clickName.desc}
         name={clickName.name}
         id={clickName.id}

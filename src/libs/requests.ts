@@ -3,6 +3,7 @@ import {
   getDepartsItemType,
   getMemberByPageType,
   PlayMemberType,
+  JobType,
 } from "../types/requestType";
 import { parsePlay } from "./playJob";
 import { url } from "./security";
@@ -22,7 +23,7 @@ import {
 export async function getMemberByPage(
   nextPage: number,
   limit: number,
-  isCurrent:boolean
+  isCurrent: boolean
 ): Promise<getMemberByPageType> {
   const res = await axios.get(`${url}members/`, {
     params: {
@@ -127,6 +128,13 @@ export const getPlayInfo = (play: string) =>
 export const getHisotries = async () => {
   const res: Array<HistoryType> = await axios
     .get(`${url}history/?ordering=-time`)
+    .then((res) => res.data);
+  return res;
+};
+
+export const getJobs = async (department: string) => {
+  const res: Array<JobType> = await axios
+    .get(`${url}jobs/?department__name=${department}`)
     .then((res) => res.data);
   return res;
 };

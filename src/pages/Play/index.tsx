@@ -7,7 +7,7 @@ import Arrow from "../../components/Arrow";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import MarkPagination from "../../components/MarkPagination";
-import PopUp from "../../components/PopUp/index";
+import { MemberPop } from "../../components/PopUp/index";
 import { getPlayInfo } from "../../libs/requests";
 import { photoUrl } from "../../libs/security";
 import { rose } from "../../text/playPageText";
@@ -149,11 +149,10 @@ const PlayComponent: FC = (props) => {
       <BackTop>
         <img src={Top} alt="back to top" />
       </BackTop>
-      <PopUp
+      <MemberPop
         open={open}
         name={person.name}
         onClose={setFalse}
-        type="person"
         id={person.hasPhoto ? -1 : Math.floor(Math.random() * 70) + 1}
       />
     </div>
