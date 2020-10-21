@@ -17,7 +17,12 @@ const InfoTab: FC = (props) => {
       {tabs.map((item, index) => (
         <TabPanel value={content} index={index} />
       ))}
-      <MyTabs value={content} onChange={handleChange} variant="scrollable" scrollButtons="on">
+      <MyTabs
+        value={content}
+        onChange={handleChange}
+        variant="scrollable"
+        scrollButtons="on"
+      >
         {tabs.map((item) => (
           <MyTab label={item.title} />
         ))}
@@ -80,25 +85,27 @@ const TabPanel: FC<TabPanelProps> = (props) => {
         description={tabs[index].text}
         belonging="Featured"
       />
-      <iframe
-        title="你好疯子"
-        src="https://www.youtube.com/embed/aB9Gms746-M"
-        scrolling="no"
-        width={635}
-        seamless={true}
-        height={395}
-        frameBorder="no"
-        allowFullScreen={true}
-        allowTransparency={true}
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      />
-      {/* <iframe
-        width="560"
-        height="315"
-        src="https://www.youtube.com/embed/aB9Gms746-M"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      ></iframe> */}
+      {tabs[index].video && (
+        <iframe
+          title={tabs[index].title}
+          src={tabs[index].video}
+          scrolling="no"
+          width={635}
+          seamless={true}
+          height={395}
+          frameBorder="no"
+          allowFullScreen={true}
+          allowTransparency={true}
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        />
+      )}
+      {tabs[index].img && (
+        <img
+          src={tabs[index].img}
+          alt={tabs[index].title}
+          style={{ width: "635px", height: "395px" }}
+        />
+      )}
     </div>
   );
 };
