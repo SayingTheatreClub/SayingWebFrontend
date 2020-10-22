@@ -1,6 +1,7 @@
 import React, { FC } from "react";
 import Classes from "classnames";
 import { VerticalTimelineElement } from "react-vertical-timeline-component";
+import { photoUrl } from "../../libs/security";
 
 type timelineType = "left" | "right";
 
@@ -37,7 +38,7 @@ const TimelineElement: FC<TimelineProps> = (props) => {
               <div className="timeline-desc">{item}</div>
             ))}
           </div>
-          {img.length !== 0 && !img.includes("none") && (
+          {img.length > photoUrl.length&&!img.includes("none") && (
             <img
               width="222px"
               height="140px"
