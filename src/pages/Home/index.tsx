@@ -8,6 +8,7 @@ import Header from '../../components/Header';
 import HeaderCarousel from '../../components/HeaderCarousel';
 import Language from '../../components/Language';
 import MailBox from '../../components/Mailbox';
+import { tabs } from '../../text/aboutText';
 import { playText } from '../../text/carouselText';
 import { homeFirstBlock } from '../../text/hometext';
 import HomeInfo from './homeInfo';
@@ -61,7 +62,7 @@ const Home: FC = () => (
           desc={rhinInLove.text}
         /> */}
       <div className="home-intro-board-wrapper">
-        <LeftCarousel content={playText} />
+        <LeftCarousel content={tabs} />
         <HomeInfo />
       </div>
     </div>

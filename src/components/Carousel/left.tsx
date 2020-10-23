@@ -4,7 +4,7 @@ import RedMark from "../../assets/redMark.svg";
 import InterviewCard from "../Cards/interviewCard";
 
 interface LeftCarouselProps {
-  content: { name: string; year: string }[];
+  content: any[];
 }
 
 const interviewStep = 251;
@@ -55,16 +55,20 @@ const LeftCarousel: FC<LeftCarouselProps> = (props) => {
         </div>
         <div className="carousel-content carousel-content-left">
           <div className="carousel-content-shader carousel-content-shader-left " />
-          {content.map(() => (
-            <div className="home-carousel-interview-card">
-              <InterviewCard
-                imgUrl={""}
-                title="玛丽：戏剧就是造梦"
-                collection="戏言人专访"
-                moveSpace={space}
-              />
-            </div>
-          ))}
+          {content.map((item) => {
+            if (item.img.length > 0)
+              return (
+                <div className="home-carousel-interview-card">
+                  <InterviewCard
+                    imgUrl={`${item.img}`}
+                    title="玛丽：戏剧就是造梦"
+                    collection="戏言人专访"
+                    moveSpace={space}
+                  />
+                </div>
+              );
+            return <div></div>
+          })}
         </div>
       </div>
     </div>
