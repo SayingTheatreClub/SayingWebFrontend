@@ -12,17 +12,19 @@ const interviewStep = 251;
 const LeftCarousel: FC<LeftCarouselProps> = (props) => {
   const { content } = props;
   const [space, setSpace] = useState(0);
-  const handleClick = (isLeft: boolean, isInterview: boolean) => {
-    //if it is interview card\
-    if (isInterview) {
-      if (isLeft) {
-        setSpace(space + interviewStep);
-      } else {
-        if (space <= 0) return;
-        setSpace(space - interviewStep);
-      }
+  const handleClick = (isLeft: boolean) => {
+    if (space / interviewStep + 4 > content.length) {
+      setSpace(0);
       return;
     }
+    if (isLeft) {
+      if (space <= 0) return;
+      setSpace(space - interviewStep);
+    } else {
+      setSpace(space + interviewStep);
+    }
+    console.log(space);
+    return;
   };
   return (
     <div className="carousel-wrapper carousel-wrapper-left">
@@ -41,14 +43,14 @@ const LeftCarousel: FC<LeftCarouselProps> = (props) => {
               isLeft={true}
               className="carousel-arrow carousel-arrow-left"
               onClick={() => {
-                handleClick(false, true);
+                handleClick(false);
               }}
             />
             <ArrowSvg
               isLeft={false}
               className="carousel-arrow carousel-arrow-right"
               onClick={() => {
-                handleClick(true, true);
+                handleClick(true);
               }}
             />
           </div>
@@ -61,13 +63,13 @@ const LeftCarousel: FC<LeftCarouselProps> = (props) => {
                 <div className="home-carousel-interview-card">
                   <InterviewCard
                     imgUrl={`${item.img}`}
-                    title="玛丽：戏剧就是造梦"
+                    title={item.title.slice(3)}
                     collection="戏言人专访"
                     moveSpace={space}
                   />
                 </div>
               );
-            return <div></div>
+            return <div></div>;
           })}
         </div>
       </div>

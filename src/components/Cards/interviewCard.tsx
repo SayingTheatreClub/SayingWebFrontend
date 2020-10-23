@@ -10,7 +10,7 @@ interface InterviewCardProps {
 const InterviewCard: FC<InterviewCardProps> = (props) => {
   const { imgUrl, title, collection,moveSpace } = props;
   const cardStyle = {
-    transform: `translate(-${moveSpace}px)`,
+    transform: `translate(${moveSpace}px)`,
   };
   return (
     <div className="interview-container" style={cardStyle}>

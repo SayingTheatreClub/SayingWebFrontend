@@ -31,7 +31,6 @@ const PhotoBoard: FC<PhotoBoardProp> = (props) => {
             src={`${photoUrl}${item}-thumb.jpg`}
             alt={item}
             className="photoboard-item"
-            
           />
         ))}
         <Arrow
