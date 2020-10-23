@@ -7,7 +7,7 @@ import Arrow from "../../components/Arrow";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import MarkPagination from "../../components/MarkPagination";
-import { MemberPop } from "../../components/PopUp/index";
+import { MemberPop, PhotoPop } from "../../components/PopUp/index";
 import { getPlayInfo } from "../../libs/requests";
 import { photoUrl } from "../../libs/security";
 import { rose } from "../../text/playText";
@@ -22,7 +22,7 @@ const PlayComponent: FC = (props) => {
   const { name } = useParams();
   const { data } = useRequest(() => getPlayInfo(name));
 
-  const [open, { setFalse, toggle }] = useBoolean(false);
+  const [memberOpen, memberAction] = useBoolean(false);
   const [person, setPerson] = useSetState({ name: "", hasPhoto: false });
 
   const [boardPage, setBoardPage] = useState(0);
@@ -35,9 +35,15 @@ const PlayComponent: FC = (props) => {
 
   const clickName = (name: string, hasPhoto: boolean) => {
     if (name) setPerson({ name, hasPhoto });
-    toggle();
+    memberAction.toggle();
   };
 
+  const [photoOpen, photoAction] = useBoolean(false);
+  const [clickedPhoto, setClickedPhoto] = useState("");
+  const clickPhoto = (name: string) => {
+    setClickedPhoto(name);
+    photoAction.toggle();
+  };
   return (
     <div>
       <div
@@ -134,13 +140,13 @@ const PlayComponent: FC = (props) => {
         <div className="margin-left-70 play-page-tab-wrapper">
           <Tabs>
             <TabPane tab="定妆照" key="1">
-              <PhotoBoard list={rose.makeUp} />
+              <PhotoBoard onClick={clickPhoto} list={rose.makeUp} />
             </TabPane>
             <TabPane tab="人物关系" key="2">
-              <PhotoBoard list={rose.relation} />
+              <PhotoBoard onClick={clickPhoto} list={rose.relation} />
             </TabPane>
             <TabPane tab="花絮" key="3">
-              <PhotoBoard list={rose.slices} />
+              <PhotoBoard onClick={clickPhoto} list={rose.slices} />
             </TabPane>
           </Tabs>
         </div>
@@ -150,10 +156,15 @@ const PlayComponent: FC = (props) => {
         <img src={Top} alt="back to top" />
       </BackTop>
       <MemberPop
-        open={open}
+        open={memberOpen}
         name={person.name}
-        onClose={setFalse}
+        onClose={memberAction.setFalse}
         id={person.hasPhoto ? -1 : Math.floor(Math.random() * 70) + 1}
+      />
+      <PhotoPop
+        open={photoOpen}
+        img={clickedPhoto}
+        onClose={photoAction.setFalse}
       />
     </div>
   );

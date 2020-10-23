@@ -5,10 +5,11 @@ import { photoUrl } from "../../libs/security";
 
 interface PhotoBoardProp {
   list: Array<string>;
+  onClick: (arg0: string) => void;
 }
 
 const PhotoBoard: FC<PhotoBoardProp> = (props) => {
-  const { list } = props;
+  const { list, onClick } = props;
   const [boardPage, setBoardPage] = useState(0);
   const handleClick = () => {
     // if reach the end
@@ -24,6 +25,9 @@ const PhotoBoard: FC<PhotoBoardProp> = (props) => {
       <div className="photoboard-content">
         {list.slice(boardPage * 4, boardPage * 4 + 4).map((item) => (
           <img
+            onClick={() => {
+              onClick(item);
+            }}
             src={`${photoUrl}${item}-thumb.jpg`}
             alt={item}
             className="photoboard-item"

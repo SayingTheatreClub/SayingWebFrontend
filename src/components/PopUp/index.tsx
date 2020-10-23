@@ -1,4 +1,4 @@
 import DepartPop from "./depart";
 import MemberPop from "./member";
-
-export { DepartPop, MemberPop };
+import PhotoPop from "./photo";
+export { DepartPop, MemberPop, PhotoPop };
