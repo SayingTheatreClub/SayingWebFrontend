@@ -1,15 +1,21 @@
 import React, { FC, useState } from "react";
 import Arrow from "../../components/Arrow";
 import MarkPagination from "../../components/MarkPagination";
+import { photoUrl } from "../../libs/security";
 
 interface PhotoBoardProp {
   list: Array<string>;
 }
 
 const PhotoBoard: FC<PhotoBoardProp> = (props) => {
-  const list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 1, 1, 1, 1, 1];
+  const { list } = props;
   const [boardPage, setBoardPage] = useState(0);
-  const handleClick = (isLeft: boolean) => {
+  const handleClick = () => {
+    // if reach the end
+    if (boardPage >= Math.floor(list.length / 4)) {
+      setBoardPage(0);
+      return;
+    }
     setBoardPage(boardPage + 1);
   };
 
@@ -17,12 +23,16 @@ const PhotoBoard: FC<PhotoBoardProp> = (props) => {
     <div className="photoboard-wrapper">
       <div className="photoboard-content">
         {list.slice(boardPage * 4, boardPage * 4 + 4).map((item) => (
-          <div className="photoboard-item" />
+          <img
+            src={`${photoUrl}${item}-thumb.jpg`}
+            alt={item}
+            className="photoboard-item"
+          />
         ))}
         <Arrow
           className="play-department-arrow"
           onClick={() => {
-            handleClick(true);
+            handleClick();
           }}
         />
       </div>
