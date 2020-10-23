@@ -17,16 +17,7 @@ export const rose = {
   而对不得的觊觎也可以让“蚊子血”变成“朱砂痣”。唯有珍惜眼下，爱我所有，
   才能从无穷尽的辗转与纠结中解脱，获得真正的幸福。/n愿您享受戏言奉上的这部诚意之作，
   愿它在您心中播种快乐和幸福。`,
+  relation: [`relation1`, `relation2`, `relation3`],
+  makeUp: [`孟烟鹂甲乙`, `佟振保甲乙`, `王娇蕊甲乙`, `王士洪`, `小裁缝`],
+  slices: [`宣传`, `训练`, `定妆2`],
 };
-
-export const relation = [`relation1`, `relation2`, `relation3`];
-
-export const makeUp = [
-  `孟烟鹂甲乙`,
-  `佟振保甲乙`,
-  `王娇蕊甲乙`,
-  `王士洪`,
-  `小裁缝`,
-];
-
-export const slices = [`宣传`,`训练`,`定妆2`]

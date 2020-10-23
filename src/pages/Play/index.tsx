@@ -10,7 +10,7 @@ import MarkPagination from "../../components/MarkPagination";
 import { MemberPop } from "../../components/PopUp/index";
 import { getPlayInfo } from "../../libs/requests";
 import { photoUrl } from "../../libs/security";
-import { makeUp, relation, rose, slices } from "../../text/playText";
+import { rose } from "../../text/playText";
 import DepartmentBoard from "./department";
 import InfoCard from "./infoCard";
 import PhotoBoard from "./photoBoard";
@@ -134,13 +134,13 @@ const PlayComponent: FC = (props) => {
         <div className="margin-left-70 play-page-tab-wrapper">
           <Tabs>
             <TabPane tab="定妆照" key="1">
-              <PhotoBoard list={makeUp} />
+              <PhotoBoard list={rose.makeUp} />
             </TabPane>
             <TabPane tab="人物关系" key="2">
-              <PhotoBoard list={relation} />
+              <PhotoBoard list={rose.relation} />
             </TabPane>
             <TabPane tab="花絮" key="3">
-              <PhotoBoard list={slices} />
+              <PhotoBoard list={rose.slices} />
             </TabPane>
           </Tabs>
         </div>
