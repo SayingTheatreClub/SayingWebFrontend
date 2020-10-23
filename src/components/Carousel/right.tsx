@@ -1,5 +1,5 @@
 import React, { FC, useState } from "react";
-import ArrowSvg from "../Arrow";
+import { ArrowPair } from "../Arrow";
 import RedMark from "../../assets/redMark.svg";
 import { playText } from "../../text/carouselText";
 import { photoUrl } from "../../libs/security";
@@ -14,7 +14,7 @@ const playStep = 259;
 const RightCarousel: FC<RightCarouselProps> = (props) => {
   const { content } = props;
   const [space, setSpace] = useState(0);
-  const handleClick = (isLeft: boolean, isInterview: boolean) => {
+  const handleClick = (isLeft: boolean) => {
     //让他回去
     if (space / playStep + 1 > playText.length) {
       setSpace(0);
@@ -41,19 +41,19 @@ const RightCarousel: FC<RightCarouselProps> = (props) => {
             过往大戏
           </div>
           <div className="carousel-controller">
-            <ArrowSvg
-              isLeft={true}
-              className="carousel-arrow carousel-arrow-left"
-              onClick={() => {
-                handleClick(false, false);
-              }}
-            />
-            <ArrowSvg
-              isLeft={false}
-              className="carousel-arrow carousel-arrow-right"
-              onClick={() => {
-                handleClick(true, false);
-              }}
+            <ArrowPair
+              styles={[
+                "carousel-arrow carousel-arrow-left",
+                "carousel-arrow carousel-arrow-right",
+              ]}
+              clickFuncs={[
+                () => {
+                  handleClick(false);
+                },
+                () => {
+                  handleClick(true);
+                },
+              ]}
             />
           </div>
         </div>

@@ -1,7 +1,6 @@
 import React, { FC } from "react";
 
-import Arrowsvg from "../../components/Arrow";
-import ArrowSvg from "../../components/Arrow";
+import {ArrowSvg} from "../../components/Arrow";
 
 interface IntroCardProps {
   title: string;
@@ -18,7 +17,7 @@ const IntroCard: FC<IntroCardProps> = (props) => {
         <p className="about-intro-card-desc">{desc}</p>
         <div>
           <ArrowSvg isLeft={true} />
-          <Arrowsvg isLeft={false} />
+          <ArrowSvg isLeft={false} />
         </div>
       </div>
       <img src={imgUrl} alt="" className="about-intro-card-right"/>

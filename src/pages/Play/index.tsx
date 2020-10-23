@@ -3,7 +3,7 @@ import { BackTop, Tabs } from "antd";
 import React, { FC, useState } from "react";
 import { useParams } from "react-router-dom";
 import Top from "../../assets/top.svg";
-import Arrow from "../../components/Arrow";
+import {ArrowSvg} from "../../components/Arrow";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import MarkPagination from "../../components/MarkPagination";
@@ -102,7 +102,7 @@ const PlayComponent: FC = (props) => {
           <div>
             <div className="play-department-board-wrapper">
               {boardPage !== 0 && (
-                <Arrow
+                <ArrowSvg
                   isLeft
                   className="play-department-arrow"
                   onClick={() => {
@@ -119,7 +119,7 @@ const PlayComponent: FC = (props) => {
                     handleClick={clickName}
                   />
                 ))}
-              <Arrow
+              <ArrowSvg
                 className="play-department-arrow"
                 onClick={() => {
                   changeBoard(boardPage + 1);

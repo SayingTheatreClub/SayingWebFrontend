@@ -1,5 +1,5 @@
 import React, { FC, useState } from "react";
-import ArrowSvg from "../Arrow";
+import { ArrowPair } from "../Arrow";
 import RedMark from "../../assets/redMark.svg";
 import InterviewCard from "../Cards/interviewCard";
 
@@ -39,7 +39,7 @@ const LeftCarousel: FC<LeftCarouselProps> = (props) => {
             关于戏言
           </div>
           <div className="carousel-controller">
-            <ArrowSvg
+            {/* <ArrowSvg
               isLeft={true}
               className="carousel-arrow carousel-arrow-left"
               onClick={() => {
@@ -52,6 +52,20 @@ const LeftCarousel: FC<LeftCarouselProps> = (props) => {
               onClick={() => {
                 handleClick(true);
               }}
+            /> */}
+            <ArrowPair
+              styles={[
+                "carousel-arrow carousel-arrow-left",
+                "carousel-arrow carousel-arrow-right",
+              ]}
+              clickFuncs={[
+                () => {
+                  handleClick(false);
+                },
+                () => {
+                  handleClick(true);
+                },
+              ]}
             />
           </div>
         </div>

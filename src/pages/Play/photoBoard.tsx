@@ -1,5 +1,5 @@
 import React, { FC, useState } from "react";
-import Arrow from "../../components/Arrow";
+import {ArrowSvg} from "../../components/Arrow";
 import MarkPagination from "../../components/MarkPagination";
 import { photoUrl } from "../../libs/security";
 
@@ -33,7 +33,7 @@ const PhotoBoard: FC<PhotoBoardProp> = (props) => {
             className="photoboard-item"
           />
         ))}
-        <Arrow
+        <ArrowSvg
           className="play-department-arrow"
           onClick={() => {
             handleClick();
