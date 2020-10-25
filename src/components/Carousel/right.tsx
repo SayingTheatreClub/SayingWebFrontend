@@ -4,6 +4,7 @@ import RedMark from "../../assets/redMark.svg";
 import { playText } from "../../text/carouselText";
 import { photoUrl } from "../../libs/security";
 import PlayCard from "../Cards/playCard";
+import { useHistory } from "react-router";
 
 interface RightCarouselProps {
   content: { name: string; year: string }[];
@@ -12,11 +13,12 @@ interface RightCarouselProps {
 const playStep = 259;
 
 const RightCarousel: FC<RightCarouselProps> = (props) => {
+  const history = useHistory();
   const { content } = props;
   const [space, setSpace] = useState(0);
   const handleClick = (isLeft: boolean) => {
     //让他回去
-    if (space / playStep + 1 > playText.length) {
+    if (space / playStep + 3 > playText.length) {
       setSpace(0);
       return;
     }
@@ -62,6 +64,10 @@ const RightCarousel: FC<RightCarouselProps> = (props) => {
           {content.map((item) => (
             <PlayCard
               key={item.name}
+              onClick={() => {
+                if (item.name.includes("玫瑰"))
+                  history.push("/play/红玫瑰与白玫瑰");
+              }}
               className="carousel-card"
               name={`${item.name}`}
               year={item.year}

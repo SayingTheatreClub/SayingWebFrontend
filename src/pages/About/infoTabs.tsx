@@ -1,7 +1,6 @@
 import React, { ChangeEvent, FC, useState } from "react";
 import { Tab, Tabs } from "@material-ui/core";
 import { withStyles, Theme, createStyles } from "@material-ui/core/styles";
-// import IMG from "../../assets/play.jpg";
 import PlayCard from "../../components/Cards/playCard";
 import { tabs } from "../../text/aboutText";
 
@@ -80,11 +79,22 @@ const TabPanel: FC<TabPanelProps> = (props) => {
   const { index, value } = props;
   return (
     <div className="about-displaybox" hidden={value !== index}>
-      <PlayCard
-        name={`${tabs[index].title}`}
-        description={tabs[index].text}
-        belonging="Featured"
-      />
+      {tabs[index].link.length > 0 && (
+        <a href={tabs[index].link} target="_blank" rel="noopener noreferrer">
+          <PlayCard
+            name={`${tabs[index].title}`}
+            description={tabs[index].text}
+            belonging="Featured"
+          />
+        </a>
+      )}
+      {tabs[index].link.length === 0 && (
+        <PlayCard
+          name={`${tabs[index].title}`}
+          description={tabs[index].text}
+          belonging="Featured"
+        />
+      )}
       {tabs[index].video && (
         <iframe
           title={tabs[index].title}
@@ -103,7 +113,7 @@ const TabPanel: FC<TabPanelProps> = (props) => {
         <img
           src={tabs[index].img}
           alt={tabs[index].title}
-          style={{ width: "635px", height: "395px" }}
+          style={{ width: "auto", height: "395px" }}
         />
       )}
     </div>

@@ -12,6 +12,7 @@ export interface PlayCardProps {
   imgUrl?: string;
   className?: string;
   moveSpace?: number;
+  onClick?:()=>void;
 }
 
 const PlayCard: React.FC<PlayCardProps> = (props) => {
@@ -24,6 +25,7 @@ const PlayCard: React.FC<PlayCardProps> = (props) => {
     imgUrl,
     className,
     moveSpace,
+    onClick,
   } = props;
   const st = "playCard";
   const classnames = Classname("img-card", className);
@@ -32,7 +34,7 @@ const PlayCard: React.FC<PlayCardProps> = (props) => {
   };
   if (type === "img-text") {
     return (
-      <div className={classnames} style={cardStyle}>
+      <div className={classnames} style={cardStyle} onClick={onClick} >
         <div className="img-card-content">
           <img src={imgUrl} alt="" className="img-card-img" />
           <div className="img-card-year">{year}</div>
@@ -42,7 +44,7 @@ const PlayCard: React.FC<PlayCardProps> = (props) => {
     );
   }
   return (
-    <div className={`${st}`}>
+    <div className={`${st}`} onClick={onClick}>
       <p className={`${st}-belonging`}>
         <img
           src={RedMark}

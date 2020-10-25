@@ -55,12 +55,6 @@ const Home: FC = () => (
       <div className="carousel-left-wrapper">
         <RightCarousel content={playText} />
       </div>
-      {/* <PlayInfoCard
-          imgUrl={Ran}
-          title={rhinInLove.title}
-          belonging={rhinInLove.belonging}
-          desc={rhinInLove.text}
-        /> */}
       <div className="home-intro-board-wrapper">
         <LeftCarousel content={tabs} />
         <HomeInfo />

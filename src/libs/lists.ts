@@ -10,7 +10,7 @@ export interface ListItem {
 
 export const titleList = [
   { name: " 关于我们", url: "/about" },
-  { name: " 演出", url: "/play" },
+  { name: " 话剧演出", url: "/play" },
   { name: " 活动动态", url: "events" },
   { name: " 关注我们", url: "us" },
 ];
