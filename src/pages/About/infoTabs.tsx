@@ -3,6 +3,7 @@ import { Tab, Tabs } from "@material-ui/core";
 import { withStyles, Theme, createStyles } from "@material-ui/core/styles";
 import PlayCard from "../../components/Cards/playCard";
 import { tabs } from "../../text/aboutText";
+import { generateLink } from "../../libs/funcs";
 
 const InfoTab: FC = (props) => {
   const [content, setContent] = useState(0);
@@ -62,9 +63,6 @@ const MyTab = withStyles((theme: Theme) =>
         color: "#C62127",
       },
     },
-    wrapper: {
-      // alignItems: "baseline",
-    },
   })
 )((props: StyledTabProps) => <Tab {...props} />);
 
@@ -79,21 +77,14 @@ const TabPanel: FC<TabPanelProps> = (props) => {
   const { index, value } = props;
   return (
     <div className="about-displaybox" hidden={value !== index}>
-      {tabs[index].link.length > 0 && (
-        <a href={tabs[index].link} target="_blank" rel="noopener noreferrer">
-          <PlayCard
-            name={`${tabs[index].title}`}
-            description={tabs[index].text}
-            belonging="Featured"
-          />
-        </a>
-      )}
-      {tabs[index].link.length === 0 && (
+      {generateLink(
         <PlayCard
           name={`${tabs[index].title}`}
           description={tabs[index].text}
           belonging="Featured"
-        />
+        />,
+        tabs[index].link,
+        true
       )}
       {tabs[index].video && (
         <iframe

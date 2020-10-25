@@ -2,7 +2,7 @@ import React from "react";
 import { Menu } from "antd";
 import Logo from "../../assets/logo.png";
 import { Link, useHistory } from "react-router-dom";
-import { aboutList, playList } from "../../libs/lists";
+import { aboutList, playList } from "../../libs/footer";
 type headerType = "transparent" | "gray" | "white";
 
 export interface HeaderProps {

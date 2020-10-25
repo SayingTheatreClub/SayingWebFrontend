@@ -8,7 +8,7 @@ import {
   mediaIconList,
   eventList,
   ListItem,
-} from "../../libs/lists";
+} from "../../libs/footer";
 import { Popover } from "antd";
 import { photoUrl } from "../../libs/security";
 interface InfoListProps {

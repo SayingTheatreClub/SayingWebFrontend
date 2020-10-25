@@ -1,5 +1,7 @@
 import React, { FC } from "react";
 import Button from "../../components/Button";
+import { generateLink } from "../../libs/funcs";
+
 interface InfoCardProps {
   title: string;
   time: string;
@@ -20,20 +22,24 @@ const InfoCard: FC<InfoCardProps> = (props) => {
         </div>
 
         <div className="play-info-right">
-          {["招新", "直播预约", "Program"].map((item) => (
-            <Button
-              type={
-                item === "招新"
-                  ? "disabled"
-                  : item === "Program"
-                  ? "default"
-                  : "primary"
-              }
-              className="play-page-button"
-            >
-              {item}
-            </Button>
-          ))}
+          {["招新", "直播预约", "Program"].map((item) =>
+            generateLink(
+              <Button
+                type={
+                  item === "招新"
+                    ? "disabled"
+                    : item === "Program"
+                    ? "default"
+                    : "primary"
+                }
+                className="play-page-button"
+              >
+                {item}
+              </Button>,
+              item === "直播预约" ? "https://www.wjx.cn/jq/92930884.aspx" : "",
+              true
+            )
+          )}
         </div>
       </div>
     </div>

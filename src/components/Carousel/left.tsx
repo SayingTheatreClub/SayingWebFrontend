@@ -2,6 +2,7 @@ import React, { FC, useState } from "react";
 import { ArrowPair } from "../Arrow";
 import RedMark from "../../assets/redMark.svg";
 import InterviewCard from "../Cards/interviewCard";
+import { generateLink } from "../../libs/funcs";
 
 interface LeftCarouselProps {
   content: any[];
@@ -75,12 +76,16 @@ const LeftCarousel: FC<LeftCarouselProps> = (props) => {
             if (item.img.length > 0)
               return (
                 <div className="home-carousel-interview-card">
-                  <InterviewCard
-                    imgUrl={`${item.img}`}
-                    title={item.title.slice(3)}
-                    collection="戏言人专访"
-                    moveSpace={space}
-                  />
+                  {generateLink(
+                    <InterviewCard
+                      imgUrl={`${item.img}`}
+                      title={item.title.slice(3)}
+                      collection="戏言人专访"
+                      moveSpace={space}
+                    />,
+                    item.link,
+                    true
+                  )}
                 </div>
               );
             return <div></div>;
