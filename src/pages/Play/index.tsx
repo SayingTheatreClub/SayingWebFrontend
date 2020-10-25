@@ -1,4 +1,5 @@
 import { useBoolean, useRequest, useSetState } from "ahooks";
+import { Link } from 'react-router-dom';
 import { BackTop, Tabs } from "antd";
 import React, { FC, useState } from "react";
 import { useParams } from "react-router-dom";
@@ -94,11 +95,16 @@ const PlayComponent: FC = (props) => {
             预告片
           </p>
           <iframe
-            src="https://youtu.be/embed/49zzi2oOQ_Q"
+            src="https://www.youtube.com/embed/49zzi2oOQ_Q"
             scrolling="no"
             title="rose"
             className="player"
           />
+          <div>
+              <Link to={""} className="bilibili-link">
+                <u>去Bilibili观看本视频点这里</u>
+              </Link>
+          </div>
         </div>
         <div className="be-center margin-left-70">
           <div className="play-department-board-section">Cast and Crew</div>

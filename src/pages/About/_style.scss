@@ -141,3 +141,17 @@
 .timeline-wrapper {
   background: $background-faint-orange;
 }
+.bilibili-link {
+  justify-content: space-around;
+  align-items: left;
+  font-family: Noto Sans SC;
+  font-weight: 400;
+  font-size: 16px;
+  margin-top: 10px;
+  line-height: 28px;
+  font-feature-settings: 'liga' off;
+  color: #000000;
+  &:hover {
+    color: $brand-red;
+  }
+}

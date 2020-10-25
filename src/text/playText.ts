@@ -31,7 +31,8 @@ export const rose = {
   ],
   slices: [
     { name: `宣传`, url: "https://youtu.be/YUXLRLpZ7H4" },
-    { name: `定妆`, url: "https://youtu.be/_oIs69urYHk " },
+    { name: `定妆1`, url: "https://youtu.be/_oIs69urYHk " },
+    { name: `定妆2`, url: "https://youtu.be/3BNfJEZhdeU" },
     { name: `训练`, url: "https://youtu.be/xvr4UO8Jr04" },
   ],
 };

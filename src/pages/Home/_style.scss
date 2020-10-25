@@ -15,6 +15,20 @@
     padding-top: 1.5rem;
   }
 }
+.bilibili-link {
+  justify-content: space-around;
+  align-items: left;
+  font-family: Noto Sans SC;
+  font-weight: 400;
+  font-size: 16px;
+  margin-top: 10px;
+  line-height: 28px;
+  font-feature-settings: 'liga' off;
+  color: #000000;
+  &:hover {
+    color: $brand-red;
+  }
+}
 .home-header-trans {
   position: absolute;
   top: 0;
@@ -189,4 +203,5 @@
   .home-info-button-right {
     margin-left: 21px;
   }
+  
 }

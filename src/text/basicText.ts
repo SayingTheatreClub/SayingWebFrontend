@@ -9,6 +9,7 @@ export const plays = [
 
 export const departments = [
   "导演组",
+  "导播组",
   "行政组",
   "编剧组",
   "舞美组",

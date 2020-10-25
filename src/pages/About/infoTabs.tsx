@@ -4,6 +4,7 @@ import { withStyles, Theme, createStyles } from "@material-ui/core/styles";
 import PlayCard from "../../components/Cards/playCard";
 import { tabs } from "../../text/aboutText";
 import { generateLink } from "../../libs/funcs";
+import { Link } from 'react-router-dom';
 
 const InfoTab: FC = (props) => {
   const [content, setContent] = useState(0);
@@ -87,18 +88,25 @@ const TabPanel: FC<TabPanelProps> = (props) => {
         true
       )}
       {tabs[index].video && (
-        <iframe
-          title={tabs[index].title}
-          src={tabs[index].video}
-          scrolling="no"
-          width={635}
-          seamless={true}
-          height={395}
-          frameBorder="no"
-          allowFullScreen={true}
-          allowTransparency={true}
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        />
+        <div>
+          <iframe
+            title={tabs[index].title}
+            src={tabs[index].video}
+            scrolling="no"
+            width={635}
+            seamless={true}
+            height={395}
+            frameBorder="no"
+            allowFullScreen={true}
+            allowTransparency={true}
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          />
+          <div>
+            <Link to={tabs[index].link} className="bilibili-link">
+              去Bilibili观看本视频点这里
+            </Link>
+          </div>
+        </div>
       )}
       {tabs[index].img && (
         <img

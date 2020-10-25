@@ -50,15 +50,15 @@ const Home: FC = () => (
             title="rose"
             width="413"
             height="262"
-            src="https://youtu.be/embed/49zzi2oOQ_Q"
+            src="https://www.youtube.com/embed/49zzi2oOQ_Q"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
           ></iframe>
-          <div margin-top = "10px">
-            <Link to={""} color="brand-red">
-                  去Bilibili观看本视频点这里
-            </Link>
+          <div>
+              <Link to={""} className="bilibili-link">
+                <u>去Bilibili观看本视频点这里</u>
+              </Link>
           </div>
         </div>
       </div>
