@@ -3,14 +3,14 @@ import { BackTop, Tabs } from "antd";
 import React, { FC, useState } from "react";
 import { useParams } from "react-router-dom";
 import Top from "../../assets/top.svg";
-import {ArrowSvg} from "../../components/Arrow";
+import { ArrowSvg } from "../../components/Arrow";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import MarkPagination from "../../components/MarkPagination";
 import { MemberPop, PhotoPop } from "../../components/PopUp/index";
 import { getPlayInfo } from "../../libs/requests";
 import { photoUrl } from "../../libs/security";
-import { rose } from "../../text/playText";
+import { rose, PlayPhotoType } from "../../text/playText";
 import DepartmentBoard from "./department";
 import InfoCard from "./infoCard";
 import PhotoBoard from "./photoBoard";
@@ -20,6 +20,7 @@ const { TabPane } = Tabs;
 
 const PlayComponent: FC = (props) => {
   const { name } = useParams();
+
   const { data } = useRequest(() => getPlayInfo(name));
 
   const [memberOpen, memberAction] = useBoolean(false);
@@ -40,9 +41,12 @@ const PlayComponent: FC = (props) => {
 
   const [photoOpen, photoAction] = useBoolean(false);
   const [clickedPhoto, setClickedPhoto] = useState("");
-  const clickPhoto = (name: string) => {
-    setClickedPhoto(name);
+  const clickPhoto = (item: PlayPhotoType) => {
+    setClickedPhoto(item.name);
     photoAction.toggle();
+  };
+  const clickLink = (item: PlayPhotoType) => {
+    window.open(item.url);
   };
   return (
     <div>
@@ -90,7 +94,7 @@ const PlayComponent: FC = (props) => {
             预告片
           </p>
           <iframe
-            src="https://www.youtube.com/embed/CHqfhw4Xqd0"
+            src="https://youtu.be/embed/49zzi2oOQ_Q"
             scrolling="no"
             title="rose"
             className="player"
@@ -146,7 +150,7 @@ const PlayComponent: FC = (props) => {
               <PhotoBoard onClick={clickPhoto} list={rose.relation} />
             </TabPane>
             <TabPane tab="花絮" key="3">
-              <PhotoBoard onClick={clickPhoto} list={rose.slices} />
+              <PhotoBoard onClick={clickLink} list={rose.slices} />
             </TabPane>
           </Tabs>
         </div>

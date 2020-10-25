@@ -1,11 +1,11 @@
 import React, { FC, useState } from "react";
-import {ArrowSvg} from "../../components/Arrow";
+import { ArrowSvg } from "../../components/Arrow";
 import MarkPagination from "../../components/MarkPagination";
 import { photoUrl } from "../../libs/security";
-
+import { PlayPhotoType } from "../../text/playText";
 interface PhotoBoardProp {
-  list: Array<string>;
-  onClick: (arg0: string) => void;
+  list: Array<PlayPhotoType>;
+  onClick: (arg0: PlayPhotoType) => void;
 }
 
 const PhotoBoard: FC<PhotoBoardProp> = (props) => {
@@ -28,8 +28,8 @@ const PhotoBoard: FC<PhotoBoardProp> = (props) => {
             onClick={() => {
               onClick(item);
             }}
-            src={`${photoUrl}${item}-thumb.jpg`}
-            alt={item}
+            src={`${photoUrl}${item.name}-thumb.jpg`}
+            alt={item.name}
             className="photoboard-item"
           />
         ))}

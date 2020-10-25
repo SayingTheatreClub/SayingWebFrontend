@@ -17,7 +17,23 @@ export const rose = {
   而对不得的觊觎也可以让“蚊子血”变成“朱砂痣”。唯有珍惜眼下，爱我所有，
   才能从无穷尽的辗转与纠结中解脱，获得真正的幸福。/n愿您享受戏言奉上的这部诚意之作，
   愿它在您心中播种快乐和幸福。`,
-  relation: [`relation1`, `relation2`, `relation3`],
-  makeUp: [`孟烟鹂甲乙`, `佟振保甲乙`, `王娇蕊甲乙`, `王士洪`, `小裁缝`],
-  slices: [`宣传`, `训练`, `定妆2`],
+  relation: [
+    { name: `relation1`, url: "" },
+    { name: `relation2`, url: "" },
+    { name: `relation3`, url: "" },
+  ],
+  makeUp: [
+    { name: `孟烟鹂甲乙`, url: "" },
+    { name: `佟振保甲乙`, url: "" },
+    { name: `王娇蕊甲乙`, url: "" },
+    { name: `王士洪`, url: "" },
+    { name: `小裁缝`, url: "" },
+  ],
+  slices: [
+    { name: `宣传`, url: "https://youtu.be/YUXLRLpZ7H4" },
+    { name: `定妆`, url: "https://youtu.be/_oIs69urYHk " },
+    { name: `训练`, url: "https://youtu.be/xvr4UO8Jr04" },
+  ],
 };
+
+export type PlayPhotoType = { name: string; url: string };

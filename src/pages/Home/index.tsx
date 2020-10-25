@@ -32,25 +32,35 @@ const Home: FC = () => (
             belonging={homeFirstBlock.belonging}
           />
           <div>
-            <Button type="disabled" className="home-button-left home-button">
-              提前选座
-            </Button>
-            <Link to={`/play/${homeFirstBlock.title}`}>
-              <Button type="default" className="home-button">
-                了解详情
+            <div>
+              <Button type="disabled" className="home-button-left home-button">
+                提前选座
               </Button>
+              <Link to={`/play/${homeFirstBlock.title}`}>
+                <Button type="default" className="home-button">
+                  了解详情
+                </Button>
+              </Link>
+              
+            </div>
+          </div>
+        </div>
+        <div>
+          <iframe
+            title="rose"
+            width="413"
+            height="262"
+            src="https://youtu.be/embed/49zzi2oOQ_Q"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
+          <div margin-top = "10px">
+            <Link to={""} color="brand-red">
+                  去Bilibili观看本视频点这里
             </Link>
           </div>
         </div>
-        <iframe
-          title="rose"
-          width="413"
-          height="262"
-          src="https://www.youtube.com/embed/CHqfhw4Xqd0"
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-        ></iframe>
       </div>
       <div className="carousel-left-wrapper">
         <RightCarousel content={playText} />
