@@ -10,6 +10,7 @@ export interface MemberResultItemType {
   name: string;
   description: string;
   has_photo: boolean;
+  duration:string;
   status: boolean;
 }
 export interface MemberReusltType {

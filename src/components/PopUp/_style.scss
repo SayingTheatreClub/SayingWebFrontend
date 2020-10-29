@@ -48,11 +48,15 @@
 }
 
 .popup-name {
-  text-align: right;
   @include text(Noto Serif SC, bold, 36px, 52px, $content-black);
   padding-top: 135px;
-  margin-bottom: 81px;
-  margin-right: 311px;
+  margin-bottom: 20px;
+  margin-left: 496px;
+}
+.popup-duration {
+  @include text(Noto Sans SC, 500, 20px, 29px, $content-black);
+  margin-left: 496px;
+  margin-bottom: 34px;
 }
 .popup-playlist {
   @include text(Noto Sans SC, 300, 16px, 23px, black);

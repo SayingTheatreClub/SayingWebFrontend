@@ -9,8 +9,7 @@ import { useSetState } from "ahooks";
 interface MemberProps {
   imgUrl?: string;
   desc?: string;
-  beginYear?: number;
-  endYear?: number;
+  duration:string;
   name: string;
   open: boolean;
   data?: any;
@@ -22,8 +21,7 @@ const MemberPop: FC<MemberProps> = (props) => {
   const {
     imgUrl,
     desc,
-    beginYear,
-    endYear,
+    duration,
     name,
     open,
     data,
@@ -82,6 +80,7 @@ const MemberPop: FC<MemberProps> = (props) => {
           }}
         />
         <div className="popup-name">{name}</div>
+        <div className="popup-duration">{duration}</div>
         <div className="popup-lower-content-wrapper">
           <img src={personUrl} alt={`${name}`} className="popup-img" />
           <div className="popup-lower-content">

@@ -68,6 +68,7 @@ const Member: FC<MemberComponentProps> = (props) => {
   const [clickName, setClickName] = useState({
     name: "",
     desc: "",
+    duration: "",
     id: -1,
   });
   const [menuValue, setMenu] = useSetState({
@@ -153,6 +154,7 @@ const Member: FC<MemberComponentProps> = (props) => {
                       name: item.name,
                       desc: item.description,
                       id: item.has_photo ? -1 : item.id,
+                      duration: item.duration,
                     });
                     setPopOpen(!popOpen);
                   }}
@@ -201,6 +203,7 @@ const Member: FC<MemberComponentProps> = (props) => {
                         name: item.name,
                         desc: item.description,
                         id: item.has_photo ? -1 : item.id,
+                        duration: item.duration,
                       });
                       setPopOpen(!popOpen);
                     }}
@@ -239,10 +242,11 @@ const Member: FC<MemberComponentProps> = (props) => {
         desc={clickName.desc}
         name={clickName.name}
         id={clickName.id}
+        duration={clickName.duration}
         open={popOpen}
         onClose={() => {
           setPopOpen(false);
-          setClickName({ name: "", desc: "", id: -1 });
+          setClickName({ name: "", desc: "", id: -1, duration: "" });
         }}
       />
       <Footer />

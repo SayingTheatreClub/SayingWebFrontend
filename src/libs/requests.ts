@@ -92,6 +92,7 @@ export const getMemberByCollection = async (play: string, job: string) => {
         description: item.desc,
         has_photo: item.has_photo,
         id: Math.floor(Math.random() * 70) + 1,
+        duration:item.duration,
       });
     }
   });

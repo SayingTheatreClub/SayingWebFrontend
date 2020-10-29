@@ -1,5 +1,5 @@
 import { useBoolean, useRequest, useSetState } from "ahooks";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import { BackTop, Tabs } from "antd";
 import React, { FC, useState } from "react";
 import { useParams } from "react-router-dom";
@@ -101,9 +101,9 @@ const PlayComponent: FC = (props) => {
             className="player"
           />
           <div>
-              <Link to={""} className="bilibili-link">
-                <u>去Bilibili观看本视频点这里</u>
-              </Link>
+            <Link to={""} className="bilibili-link">
+              <u>去Bilibili观看本视频点这里</u>
+            </Link>
           </div>
         </div>
         <div className="be-center margin-left-70">
@@ -166,6 +166,7 @@ const PlayComponent: FC = (props) => {
         <img src={Top} alt="back to top" />
       </BackTop>
       <MemberPop
+        duration={""}
         open={memberOpen}
         name={person.name}
         onClose={memberAction.setFalse}
