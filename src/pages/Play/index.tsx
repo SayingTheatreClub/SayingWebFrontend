@@ -63,8 +63,8 @@ const PlayComponent: FC = (props) => {
         <div className="play-infocard-wrapper">
           <InfoCard
             title={name}
-            day="2020年11月21日"
-            time="7 pm - 9 pm CT"
+            day="2020年12月"
+            time="敬请期待"
             place="Bilibili网络直播"
           />
         </div>
@@ -107,7 +107,7 @@ const PlayComponent: FC = (props) => {
           </div>
         </div>
         <div className="be-center margin-left-70">
-          <div className="play-department-board-section">Cast and Crew</div>
+          <div className="play-department-board-section">演职员表</div>
           <div className="one-line" />
           <div>
             <div className="play-department-board-wrapper">

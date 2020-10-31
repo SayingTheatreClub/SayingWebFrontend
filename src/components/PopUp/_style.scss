@@ -27,11 +27,12 @@
   border-radius: 3px;
   margin-bottom: 75px;
   .popup-img {
-    width: 380px;
+    width: auto;
     height: 300px;
     position: absolute;
     top: -179px;
     left: 32px;
+    margin: 0 auto;
   }
   .popup-desc {
     width: 300px;

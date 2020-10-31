@@ -12,12 +12,12 @@ export const playText = [
     year: "2017",
   },
   {
-    name: "暗恋桃花源",
+    name: "旧事",
     year: "2016",
   },
   {
-    name: "旧事",
-    year: "2016",
+    name: "暗恋桃花源",
+    year: "2015",
   },
 ];
 

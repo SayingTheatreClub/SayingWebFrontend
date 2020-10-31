@@ -141,6 +141,7 @@
 .timeline-wrapper {
   background: $background-faint-orange;
 }
+
 .bilibili-link {
   justify-content: space-around;
   align-items: left;
@@ -149,9 +150,11 @@
   font-size: 16px;
   margin-top: 10px;
   line-height: 28px;
-  font-feature-settings: 'liga' off;
+  font-feature-settings: "liga" off;
   color: #000000;
+  text-decoration: underline;
   &:hover {
     color: $brand-red;
+    text-decoration: underline;
   }
 }

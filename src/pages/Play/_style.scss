@@ -78,7 +78,7 @@
 }
 
 .play-department-board-section {
-  margin-bottom: 30px;
+  margin-bottom: 12px;
   @include text(Noto Sans SC, 500, 16px, 23px, $content-black);
 }
 .play-department-board-wrapper {
@@ -140,8 +140,10 @@
   line-height: 28px;
   font-feature-settings: 'liga' off;
   color: #000000;
+  text-decoration: underline;
   &:hover {
     color: $brand-red;
+    text-decoration: underline;
   }
 }
 

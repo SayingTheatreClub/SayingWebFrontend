@@ -25,10 +25,13 @@
   line-height: 28px;
   font-feature-settings: 'liga' off;
   color: #000000;
+  text-decoration: underline;
   &:hover {
     color: $brand-red;
+    text-decoration: underline;
   }
 }
+
 .home-header-trans {
   position: absolute;
   top: 0;

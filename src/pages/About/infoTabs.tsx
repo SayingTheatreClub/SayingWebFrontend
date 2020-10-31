@@ -4,7 +4,6 @@ import { withStyles, Theme, createStyles } from "@material-ui/core/styles";
 import PlayCard from "../../components/Cards/playCard";
 import { tabs } from "../../text/aboutText";
 import { generateLink } from "../../libs/funcs";
-import { Link } from 'react-router-dom';
 
 const InfoTab: FC = (props) => {
   const [content, setContent] = useState(0);
@@ -102,9 +101,12 @@ const TabPanel: FC<TabPanelProps> = (props) => {
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           />
           <div>
-            <Link to={tabs[index].link} className="bilibili-link">
-              去Bilibili观看本视频点这里
-            </Link>
+            <a
+              href="https://www.bilibili.com/video/BV1Jy4y1r7nA/"
+              className="bilibili-link"
+            >
+              去Bilibili观看本视频点这里{" "}
+            </a>
           </div>
         </div>
       )}

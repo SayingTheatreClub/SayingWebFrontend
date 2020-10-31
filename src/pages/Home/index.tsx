@@ -1,18 +1,18 @@
-import React, { FC } from 'react';
-import { Link } from 'react-router-dom';
-import Button from '../../components/Button';
-import { PlayCard } from '../../components/Cards/index';
-import { LeftCarousel, RightCarousel } from '../../components/Carousel/index';
-import Footer from '../../components/Footer';
-import Header from '../../components/Header';
-import HeaderCarousel from '../../components/HeaderCarousel';
-import Language from '../../components/Language';
-import MailBox from '../../components/Mailbox';
-import { tabs } from '../../text/aboutText';
-import { playText } from '../../text/carouselText';
-import { homeFirstBlock } from '../../text/hometext';
-import HomeInfo from './homeInfo';
-import IntroInfoCard from './introInfoCard';
+import React, { FC } from "react";
+import { Link } from "react-router-dom";
+import Button from "../../components/Button";
+import { PlayCard } from "../../components/Cards/index";
+import { LeftCarousel, RightCarousel } from "../../components/Carousel/index";
+import Footer from "../../components/Footer";
+import Header from "../../components/Header";
+import HeaderCarousel from "../../components/HeaderCarousel";
+import Language from "../../components/Language";
+import MailBox from "../../components/Mailbox";
+import { tabs } from "../../text/aboutText";
+import { playText } from "../../text/carouselText";
+import { homeFirstBlock } from "../../text/hometext";
+import HomeInfo from "./homeInfo";
+import IntroInfoCard from "./introInfoCard";
 
 const Home: FC = () => (
   <Language>
@@ -41,7 +41,6 @@ const Home: FC = () => (
                   了解详情
                 </Button>
               </Link>
-              
             </div>
           </div>
         </div>
@@ -56,9 +55,12 @@ const Home: FC = () => (
             allowFullScreen
           ></iframe>
           <div>
-              <Link to={""} className="bilibili-link">
-                <u>去Bilibili观看本视频点这里</u>
-              </Link>
+            <a
+              href="https://www.bilibili.com/video/BV1GV411y7gb/"
+              className="bilibili-link"
+            >
+              去Bilibili观看本视频点这里{" "}
+            </a>
           </div>
         </div>
       </div>

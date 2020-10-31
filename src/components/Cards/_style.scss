@@ -1,5 +1,5 @@
 .member-card {
-  font-family: Noto Serif SC;
+  
   cursor: pointer;
   margin: 0 1.4rem;
   height: 22.5rem;
@@ -28,6 +28,7 @@
     margin-top: 18px;
   }
   .title {
+    font-family: Noto Sans SC;
     font-size: 0.8rem;
     font-weight: 500;
   }
@@ -35,6 +36,7 @@
     color: #d46201;
   }
   .desc {
+    font-family: Noto Serif SC;
     font-style: normal;
     font-weight: 300;
     font-size: 12px;

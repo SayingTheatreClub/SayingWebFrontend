@@ -101,7 +101,13 @@ const Footer: React.FC<FooterProps> = (props) => (
             }`}
           >
             <Link to={titleList[index].url} className="footer-link">
-              <div className="footer-list-title">{titleList[index].name}</div>
+              <div className="footer-list-title"
+                style={{
+                cursor: titleList[index].url.length === 0 ? "not-allowed" : "pointer",
+              }}
+              >{titleList[index].name}
+              
+              </div>
             </Link>
             <InfoList
               isMedia={index === 3}
