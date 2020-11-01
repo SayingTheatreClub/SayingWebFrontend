@@ -38,7 +38,7 @@ const Pdf: FC<PdfProps> = (props) => {
     >
       <ArrowSvg isLeft onClick={handleClickLeft} className="pdf-arrow-left" />
       <Document
-        file={`${url}${file}`}
+        file={`https://sayingtheatre.com/${file}`}
         onLoadSuccess={onDocumentLoadSuccess}
         options={{
           cMapUrl: "cmaps/",
