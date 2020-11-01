@@ -1,5 +1,4 @@
 import { useBoolean, useRequest, useSetState } from "ahooks";
-import { Link } from "react-router-dom";
 import { BackTop, Tabs } from "antd";
 import React, { FC, useState } from "react";
 import { useParams } from "react-router-dom";
@@ -8,7 +7,7 @@ import { ArrowSvg } from "../../components/Arrow";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import MarkPagination from "../../components/MarkPagination";
-import { MemberPop, PhotoPop } from "../../components/PopUp/index";
+import { MemberPop, PhotoPop, PdfPop } from "../../components/PopUp/index";
 import { getPlayInfo } from "../../libs/requests";
 import { photoUrl } from "../../libs/security";
 import { rose, PlayPhotoType } from "../../text/playText";
@@ -23,7 +22,7 @@ const PlayComponent: FC = (props) => {
   const { name } = useParams();
 
   const { data } = useRequest(() => getPlayInfo(name));
-
+  const [pdfOpen, pdfOpenAction] = useBoolean(false);
   const [memberOpen, memberAction] = useBoolean(false);
   const [person, setPerson] = useSetState({ name: "", hasPhoto: false });
 
@@ -42,6 +41,9 @@ const PlayComponent: FC = (props) => {
 
   const [photoOpen, photoAction] = useBoolean(false);
   const [clickedPhoto, setClickedPhoto] = useState("");
+  const clickPdf = () => {
+    pdfOpenAction.toggle();
+  };
   const clickPhoto = (item: PlayPhotoType) => {
     setClickedPhoto(item.name);
     photoAction.toggle();
@@ -62,6 +64,7 @@ const PlayComponent: FC = (props) => {
         <Header type="transparent" />
         <div className="play-infocard-wrapper">
           <InfoCard
+            clickFuncs={[() => {}, () => {}, clickPdf]}
             title={name}
             day="2020年12月"
             time="敬请期待"
@@ -101,9 +104,12 @@ const PlayComponent: FC = (props) => {
             className="player"
           />
           <div>
-            <Link to={""} className="bilibili-link">
-              <u>去Bilibili观看本视频点这里</u>
-            </Link>
+            <a
+              href="https://www.bilibili.com/video/BV1GV411y7gb/"
+              className="bilibili-link"
+            >
+              去Bilibili观看本视频点这里{" "}
+            </a>
           </div>
         </div>
         <div className="be-center margin-left-70">
@@ -176,6 +182,11 @@ const PlayComponent: FC = (props) => {
         open={photoOpen}
         img={clickedPhoto}
         onClose={photoAction.setFalse}
+      />
+      <PdfPop
+        open={pdfOpen}
+        file="红白program.pdf"
+        onClose={pdfOpenAction.setFalse}
       />
     </div>
   );

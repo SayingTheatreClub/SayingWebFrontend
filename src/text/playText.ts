@@ -18,23 +18,23 @@ export const rose = {
   才能从无穷尽的辗转与纠结中解脱，获得真正的幸福。/n愿您享受戏言奉上的这部诚意之作，
   愿它在您心中播种快乐和幸福。`,
   relation: [
-    { name: `relation1`, url: "" },
-    { name: `relation2`, url: "" },
-    { name: `relation3`, url: "" },
+    { name: `relation1`, url: "", b_link:"" },
+    { name: `relation2`, url: "", b_link:"" },
+    { name: `relation3`, url: "", b_link:"" },
   ],
   makeUp: [
-    { name: `孟烟鹂甲乙`, url: "" },
-    { name: `佟振保甲乙`, url: "" },
-    { name: `王娇蕊甲乙`, url: "" },
-    { name: `王士洪`, url: "" },
-    { name: `小裁缝`, url: "" },
+    { name: `孟烟鹂甲乙`, url: "", b_link:"" },
+    { name: `佟振保甲乙`, url: "", b_link:"" },
+    { name: `王娇蕊甲乙`, url: "", b_link:"" },
+    { name: `王士洪`, url: "", b_link:"" },
+    { name: `小裁缝`, url: "", b_link:"" },
   ],
   slices: [
-    { name: `宣传`, url: "https://youtu.be/YUXLRLpZ7H4" },
-    { name: `定妆1`, url: "https://youtu.be/_oIs69urYHk " },
-    { name: `定妆2`, url: "https://youtu.be/3BNfJEZhdeU" },
-    { name: `训练`, url: "https://youtu.be/xvr4UO8Jr04" },
+    { name: `宣传`, url: "https://youtu.be/YUXLRLpZ7H4", b_link:"https://www.bilibili.com/video/BV1Jy4y1r7nA/" },
+    { name: `定妆1`, url: "https://youtu.be/_oIs69urYHk ", b_link:"https://www.bilibili.com/video/BV1KV411y7W7/"},
+    { name: `定妆2`, url: "https://youtu.be/3BNfJEZhdeU", b_link:"https://www.bilibili.com/video/BV1pa4y1s7dr/"},
+    { name: `训练`, url: "https://youtu.be/xvr4UO8Jr04", b_link:"https://www.bilibili.com/video/BV1Lr4y1w7DA/"},
   ],
 };
 
-export type PlayPhotoType = { name: string; url: string };
+export type PlayPhotoType = { name: string; url: string; b_link:string};

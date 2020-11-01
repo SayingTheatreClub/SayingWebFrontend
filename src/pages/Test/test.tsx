@@ -1,9 +1,9 @@
-import React, { FC, } from "react";
-import {PhotoPop} from '../../components/PopUp'
-const Test: FC = (props) => {
+import React from "react";
+import {PdfPop} from '../../components/PopUp';
+function Test() {
+  return(
+    <PdfPop open={true} file="红白program.pdf"/>
+  )
+}
 
-  return (
-    <PhotoPop open={true} onClose={()=>{}} img="relation1" />
-  );
-};
 export default Test;

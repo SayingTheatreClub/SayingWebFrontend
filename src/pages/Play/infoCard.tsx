@@ -7,10 +7,11 @@ interface InfoCardProps {
   time: string;
   place: string;
   day: string;
+  clickFuncs:Array<()=>void>;
 }
 
 const InfoCard: FC<InfoCardProps> = (props) => {
-  const { title, time, place, day } = props;
+  const { title, time, place, day,clickFuncs } = props;
   return (
     <div className="play-info-card">
       <p className="play-info-title">{title}</p>
@@ -22,7 +23,7 @@ const InfoCard: FC<InfoCardProps> = (props) => {
         </div>
 
         <div className="play-info-right">
-          {["招新", "直播预约", "Program"].map((item) =>
+          {["招新", "直播预约", "Program"].map((item,index) =>
             generateLink(
               <Button
                 type={
@@ -33,6 +34,7 @@ const InfoCard: FC<InfoCardProps> = (props) => {
                     : "primary"
                 }
                 className="play-page-button"
+                onClick={clickFuncs[index]}
               >
                 {item}
               </Button>,

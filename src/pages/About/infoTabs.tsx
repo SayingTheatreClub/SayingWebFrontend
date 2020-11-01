@@ -102,7 +102,7 @@ const TabPanel: FC<TabPanelProps> = (props) => {
           />
           <div>
             <a
-              href="https://www.bilibili.com/video/BV1Jy4y1r7nA/"
+              href="https://www.bilibili.com/video/BV1LK4y1v7nq/"
               className="bilibili-link"
             >
               去Bilibili观看本视频点这里{" "}

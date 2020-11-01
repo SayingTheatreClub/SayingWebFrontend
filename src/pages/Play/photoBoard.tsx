@@ -24,14 +24,24 @@ const PhotoBoard: FC<PhotoBoardProp> = (props) => {
     <div className="photoboard-wrapper">
       <div className="photoboard-content">
         {list.slice(boardPage * 4, boardPage * 4 + 4).map((item) => (
-          <img
-            onClick={() => {
-              onClick(item);
-            }}
-            src={`${photoUrl}${item.name}-thumb.jpg`}
-            alt={item.name}
-            className="photoboard-item"
-          />
+          <div>
+            <img
+              onClick={() => {
+                onClick(item);
+              }}
+              src={`${photoUrl}${item.name}-thumb.jpg`}
+              alt={item.name}
+              className="photoboard-item"
+            />
+            {item.b_link.length > 0 && (
+              <a
+                href = {item.b_link}
+                className="bilibili-link"
+              >
+                b站链接{" "}
+              </a>
+            )}
+          </div>
         ))}
         <ArrowSvg
           className="play-department-arrow"
