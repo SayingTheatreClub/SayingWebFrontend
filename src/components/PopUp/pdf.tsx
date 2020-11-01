@@ -2,7 +2,6 @@ import React, { FC, useState } from "react";
 import { Document, Page, pdfjs } from "react-pdf";
 import Popup from "reactjs-popup";
 import { ArrowSvg } from "../Arrow";
-import {url} from '../../libs/security'
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
 interface PdfProps {
