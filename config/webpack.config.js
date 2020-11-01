@@ -1,6 +1,5 @@
 'use strict';
 
-import CopyWebpackPlugin from 'copy-webpack-plugin';
 const fs = require('fs');
 const path = require('path');
 const webpack = require('webpack');
@@ -310,12 +309,6 @@ module.exports = function(webpackEnv) {
         // please link the files into your node_modules/ and let module-resolution kick in.
         // Make sure your source files are compiled, as they will not be processed in any way.
         new ModuleScopePlugin(paths.appSrc, [paths.appPackageJson]),
-        new CopyWebpackPlugin([
-          {
-            from: 'node_modules/pdfjs-dist/cmaps/',
-            to: 'cmaps/'
-          },
-        ]),
       ],
     },
     resolveLoader: {
