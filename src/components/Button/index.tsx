@@ -6,7 +6,7 @@ type buttonType = "primary" | "default" | "disabled";
 interface ButtonProps {
   type: buttonType;
   className?: string;
-  onClick?: () => void;
+  onClick?: React.MouseEventHandler<HTMLElement>;
 }
 
 const Button: FC<ButtonProps> = (props) => {
