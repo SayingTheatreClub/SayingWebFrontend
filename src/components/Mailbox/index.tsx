@@ -1,6 +1,8 @@
 import React, { FC, useState } from "react";
 import { Input, message } from "antd";
 import Button from "../Button";
+import Axios from "axios";
+import { url } from "../../libs/security";
 interface MailBoxProps {
   title: string;
   desc: string;
@@ -16,8 +18,20 @@ const MailBox: FC<MailBoxProps> = (props) => {
     setInputMessage(event.target.value);
   };
   const handleClick = (event: React.MouseEvent) => {
-    message.success("Success!");
-    console.log(inputMessage);
+    if (!emailTest(inputMessage)) {
+      message.error("invalid email");
+      return;
+    }
+    const data = {
+      email: inputMessage,
+    };
+    Axios.post(`${url}emails/`, data).then((res) => {
+      message.success("success!");
+    });
+  };
+  const emailTest = (email: string) => {
+    var myReg = /^[a-zA-Z0-9_-]+@([a-zA-Z0-9]+\.)+(com|cn|net|org)$/;
+    return myReg.test(email);
   };
   return (
     <div className="mailbox-wrapper">
