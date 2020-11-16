@@ -98,7 +98,7 @@ const PlayComponent: FC = (props) => {
             预告片
           </p>
           <iframe
-            src="https://www.youtube.com/embed/49zzi2oOQ_Q"
+            src="https://www.youtube.com/embed/hhGodhDvVCk"
             scrolling="no"
             title="rose"
             className="player"
