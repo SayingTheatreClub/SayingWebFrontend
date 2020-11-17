@@ -66,7 +66,7 @@ const PlayComponent: FC = (props) => {
           <InfoCard
             clickFuncs={[() => {}, () => {}, clickPdf]}
             title={name}
-            day="2020年12月"
+            day="2020震撼来袭"
             time="敬请期待"
             place="Bilibili网络直播"
           />
