@@ -66,8 +66,8 @@ const PlayComponent: FC = (props) => {
           <InfoCard
             clickFuncs={[() => {}, () => {}, clickPdf]}
             title={name}
-            day="美中时间 2020年12月5日 8-10PM"
-            time="北京时间 2020年12月6日 10AM-12PM"
+            day="美中时间 12月5日 8-10PM"
+            time="北京时间 12月6日 10AM-12PM"
             place="Bilibili网络直播"
           />
         </div>
