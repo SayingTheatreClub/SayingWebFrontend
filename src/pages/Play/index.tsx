@@ -66,8 +66,8 @@ const PlayComponent: FC = (props) => {
           <InfoCard
             clickFuncs={[() => {}, () => {}, clickPdf]}
             title={name}
-            day="2020年12月"
-            time="敬请期待"
+            day="美中时间 12月5日 8-10PM"
+            time="北京时间 12月6日 10AM-12PM"
             place="Bilibili网络直播"
           />
         </div>
@@ -98,7 +98,7 @@ const PlayComponent: FC = (props) => {
             预告片
           </p>
           <iframe
-            src="https://www.youtube.com/embed/49zzi2oOQ_Q"
+            src="https://www.youtube.com/embed/hhGodhDvVCk"
             scrolling="no"
             title="rose"
             className="player"
