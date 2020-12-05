@@ -1,7 +1,12 @@
 @import "../../styles/mixins";
 .past-info-wrapper {
+  margin-right: 179px;
   color: $content-white;
-  @include flex('');
+  @include flex(space-between);
+}
+.past-info-img{
+  width: 637px;
+  height: 424px;
 }
 .past-info-title {
   @include text(Noto Serif SC, 600, 55px, 79px, $content-white);
@@ -19,4 +24,16 @@
 }
 .past-button {
   @include primary-button;
+}
+
+.video-displayer-wrapper{
+  display: flex;
+}
+.video-displayer-right{
+  display: flex;
+  flex-direction: column;
+}
+.video-displayer-main{
+  width: 887px;
+  height: 519px;
 }

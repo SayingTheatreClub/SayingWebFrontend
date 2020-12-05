@@ -24,7 +24,11 @@ const InfoCard: FC<InfoCard> = (props) => {
         </div>
         <Button className="past-button">{title}</Button>
       </div>
-      <img src="" alt="play" />
+      <img
+        className="past-info-img"
+        src="https://i.pinimg.com/736x/dd/fe/bd/ddfebda6c4cc570fe4953b90a713f7c3.jpg"
+        alt="play"
+      />
     </div>
   );
 };

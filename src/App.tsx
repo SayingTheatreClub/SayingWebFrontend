@@ -19,7 +19,7 @@ function App() {
         <Route path="/test" component={Test} />
         <Route path="/play/:name" component={Play} />
         <Route path="/join" component={Join} />
-        <Route path="/past" component={Record} />
+        <Route path="/past/:name" component={Record} />
     </BrowserRouter>
   );
 }

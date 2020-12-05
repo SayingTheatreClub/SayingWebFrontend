@@ -2,7 +2,6 @@
   height: 800px;
   .play-infocard-wrapper {
     max-width: 1300px;
-    margin: 0 auto;
   }
 }
 .play-text-box-lower {
@@ -10,8 +9,7 @@
   @include text(Noto Sans SC, 300, 1rem, 28px, $content-black);
 }
 .play-text-box {
-  margin: 0 auto;
-  color: black;
+  // margin: 0 auto;
   max-width: 1078px;
   @media screen and(max-width:1060px) {
     width: 80%;
@@ -44,7 +42,6 @@
 }
 
 .play-info-card {
-  margin-left: 111px;
   margin-top: 132px;
   .play-page-content-wrapper {
     display: flex;

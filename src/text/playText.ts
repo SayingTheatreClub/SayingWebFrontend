@@ -1,4 +1,11 @@
-export const rose = {
+export type PlayText = {
+  p1:string;
+  p2:string;
+  relation:PlayPhotoType[];
+  makeUp:PlayPhotoType[];
+  slices:PlayPhotoType[];
+}
+export const rose:PlayText = {
   p1: `话剧《红玫瑰与白玫瑰》首演于2008年，由中国国家话剧院出品，
   田沁鑫执导，罗大军编剧。该剧改编自张爱玲同名小说，讲述了留洋归国的有为青年佟振保，
   爱上了老同学王士洪的妻子——活泼美艳的王娇蕊，
