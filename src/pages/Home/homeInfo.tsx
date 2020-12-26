@@ -13,7 +13,7 @@ const HomeInfo: FC = () => (
       <div className="home-info-desc">
         <p>成立于</p>
         <p>演过</p>
-        <p>有</p>
+        <p>超过</p>
       </div>
       <div className="home-info-number">
         <p>2015</p>
