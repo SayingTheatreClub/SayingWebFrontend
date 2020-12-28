@@ -35,7 +35,7 @@ export const tabs = [
   },
   {
     title: "03 戏言人专访：梁国龙",
-    text: `在梁国龙身上贴了第N个标签，发现这位戏言大佬无法按类归档， 他神奇的将所有疏离又矛盾的特点毫不违和的融合在一起。他举止温和、绅士，但笑声很魔性；他谈吐冷静、睿智，但灵魂会出窍；他天马行空、特立独行，但你偏偏觉得，这个人很稳很靠谱`,
+    text: `在梁国龙身上贴了第N个标签，发现这位戏言大佬无法按类归档， 他神奇的将所有疏离又矛盾的特点毫不违和的融合在一起。他举止温和、绅士，但笑声很魔性；他谈吐冷静、睿智，但灵魂会出窍；他天马行空、特立独行，但你偏偏觉得，这个人很稳很靠谱。`,
     img: `${photoUrl}梁国龙-interview.jpg`,
     video: "",
     link:"https://mp.weixin.qq.com/s?__biz=MzIxODc4NjExOQ==&mid=2247484054&idx=1&sn=aa9f9b8d443de83619c35db8e17cf9b5&chksm=97e472bea093fba8b741bf714d522790ac619b25b5a36af4c34de76e04d5b5d51723c3d4107f&mpshare=1&scene=21&srcid=&sharer_sharetime=1574363882204&sharer_shareid=04e380a795736a7e2fb07b863b8aca05#wechat_redirect"
