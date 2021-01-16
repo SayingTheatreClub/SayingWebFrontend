@@ -7685,6 +7685,11 @@ merge-descriptors@1.0.1:
   resolved "https://registry.npm.taobao.org/merge-descriptors/download/merge-descriptors-1.0.1.tgz#b00aaa556dd8b44568150ec9d1b953f3f90cbb61"
   integrity sha1-sAqqVW3YtEVoFQ7J0blT8/kMu2E=
 
+merge-refs@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/merge-refs/-/merge-refs-1.0.0.tgz#388348bce22e623782c6df9d3c4fc55888276120"
+  integrity sha512-WZ4S5wqD9FCR9hxkLgvcHJCBxzXzy3VVE6p8W2OzxRzB+hLRlcadGE2bW9xp2KSzk10rvp4y+pwwKO6JQVguMg==
+
 merge-stream@^2.0.0:
   version "2.0.0"
   resolved "https://registry.npm.taobao.org/merge-stream/download/merge-stream-2.0.0.tgz#52823629a14dd00c9770fb6ad47dc6310f2c1f60"
@@ -8718,10 +8723,10 @@ pbkdf2@^3.0.3:
     safe-buffer "^5.0.1"
     sha.js "^2.4.8"
 
-pdfjs-dist@2.4.456:
-  version "2.4.456"
-  resolved "https://registry.npm.taobao.org/pdfjs-dist/download/pdfjs-dist-2.4.456.tgz#0eaad2906cda866bbb393e79a0e5b4e68bd75520"
-  integrity sha1-DqrSkGzahmu7OT55oOW05ovXVSA=
+pdfjs-dist@2.5.207:
+  version "2.5.207"
+  resolved "https://registry.yarnpkg.com/pdfjs-dist/-/pdfjs-dist-2.5.207.tgz#b5e8c19627be64269cd3fb6df3eaaf45ddffe7b6"
+  integrity sha512-xGDUhnCYPfHy+unMXCLCJtlpZaaZ17Ew3WIL0tnSgKFUZXHAPD49GO9xScyszSsQMoutNDgRb+rfBXIaX/lJbw==
 
 performance-now@^2.1.0:
   version "2.1.0"
@@ -10192,16 +10197,17 @@ react-lifecycles-compat@^3.0.4:
   resolved "https://registry.npm.taobao.org/react-lifecycles-compat/download/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
   integrity sha1-TxonOv38jzSIqMUWv9p4+HI1I2I=
 
-react-pdf@^5.0.0:
-  version "5.0.0"
-  resolved "https://registry.npm.taobao.org/react-pdf/download/react-pdf-5.0.0.tgz#baddeecd5c5ef92ae57aed1ee141203ad14d4b5d"
-  integrity sha1-ut3uzVxe+Srleu0e4UEgOtFNS10=
+react-pdf@^5.1.0:
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/react-pdf/-/react-pdf-5.1.0.tgz#ca3b8379376fd71a7a134f623e705534e2eaf0e6"
+  integrity sha512-8lht8UT/+M57jQ0yGRgnRweJt3iq99CsdLCE/epZAf3PTw942BW1/wLCGrhK/881j6G3GmFn4iR+aQFHHBVjUw==
   dependencies:
     "@babel/runtime" "^7.0.0"
     make-cancellable-promise "^1.0.0"
     make-event-props "^1.1.0"
     merge-class-names "^1.1.1"
-    pdfjs-dist "2.4.456"
+    merge-refs "^1.0.0"
+    pdfjs-dist "2.5.207"
     prop-types "^15.6.2"
     worker-loader "^3.0.0"
 

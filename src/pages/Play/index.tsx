@@ -7,7 +7,7 @@ import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import { PhotoPop, PdfPop } from "../../components/PopUp/index";
 import { photoUrl } from "../../libs/security";
-import { rose, PlayPhotoType } from "../../text/playText";
+import { rose, PlayPhotoType } from "../../text/playTexts/rose";
 import InfoCard from "./infoCard";
 import PhotoBoard from "./photoBoard";
 import RedMark from "../../assets/redMark.svg";
