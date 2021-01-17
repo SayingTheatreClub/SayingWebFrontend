@@ -7540,6 +7540,11 @@ lru-cache@^6.0.0:
   dependencies:
     yallist "^4.0.0"
 
+macy@^2.5.1:
+  version "2.5.1"
+  resolved "https://registry.yarnpkg.com/macy/-/macy-2.5.1.tgz#0dcd4643944809585ccc8f5ff07fb8705d98d7db"
+  integrity sha512-+y4WYyh3rl4G8UczZP30pXxhLQRZ941QcaDmWoGefzUBXdwNW8TOhjjN1g5i/VG3SmiSsHgpjVXhlnZ84P2QMw==
+
 make-cancellable-promise@^1.0.0:
   version "1.0.0"
   resolved "https://registry.npm.taobao.org/make-cancellable-promise/download/make-cancellable-promise-1.0.0.tgz#826214115b0827ca7a45ba204df7c31546243870"
@@ -10181,6 +10186,11 @@ react-error-overlay@^6.0.7:
   version "6.0.7"
   resolved "https://registry.npm.taobao.org/react-error-overlay/download/react-error-overlay-6.0.7.tgz#1dcfb459ab671d53f660a991513cb2f0a0553108"
   integrity sha1-Hc+0WatnHVP2YKmRUTyy8KBVMQg=
+
+react-image-layout@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/react-image-layout/-/react-image-layout-1.0.0.tgz#57169c0f71b04db25c2ec8a1693b67a552b5b7af"
+  integrity sha1-VxacD3GwTbJcLsihaTtnpVK1t68=
 
 react-intersection-observer@^8.26.2:
   version "8.29.0"

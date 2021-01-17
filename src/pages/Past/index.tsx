@@ -13,6 +13,8 @@ import PhotoBoard from "./photoBoard";
 import RedMark from "../../assets/redMark.svg";
 import { IntroWords } from "./introWords";
 import { CrewBoard } from "./crewBoard";
+// import Macy from 'macy'
+import TestImage from "../../assets/poster.png";
 
 const { TabPane } = Tabs;
 
@@ -37,7 +39,7 @@ const PastComponent: FC = (props) => {
       <div
         className="past-head-wrapper"
         style={{
-          background: `url(${photoUrl}rose.png)`,
+          background: `url(${photoUrl}驴得水网页背景.png)`,
           backgroundRepeat: "no-repeat",
           backgroundSize: "100% 100%",
         }}
@@ -99,6 +101,7 @@ const PastComponent: FC = (props) => {
               </TabPane>
             </Tabs>
           </div>
+          
         </div>
       </div>
       <Footer />
