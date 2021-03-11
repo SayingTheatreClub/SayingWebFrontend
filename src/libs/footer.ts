@@ -3,16 +3,18 @@ import Bilibili from "../assets/bilibili.png";
 import Youtube from "../assets/youtube.png";
 import Weibo from "../assets/weibo.png";
 
+//"external" property added for units redirect to external links
+
 export interface ListItem {
   name: string;
   url: string;
 }
 
 export const titleList = [
-  { name: " 关于我们", url: "/about" },
-  { name: " 话剧演出", url: "" },
-  { name: " 活动动态", url: "" },
-  { name: " 关注我们", url: "" },
+  { name: " 关于我们", url: "/about", external: false },
+  { name: " 话剧演出", url: "https://sayingtheatre.webflow.io/show", external: true},
+  { name: " 活动动态", url: "", external: false },
+  { name: " 关注我们", url: "", external: false },
 ];
 export const playList: ListItem[] = [
   { name: "红玫瑰与白玫瑰", url: "/play/红玫瑰与白玫瑰" },

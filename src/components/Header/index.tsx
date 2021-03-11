@@ -10,7 +10,7 @@ export interface HeaderProps {
   type?: headerType;
 }
 const navs = {
-  en: ["About", "Shows", "Events", "Articals", "中|EN"],
+  en: ["About", "Shows", "Events", "Articles", "中|EN"],
   zh: ["活动动态", "戏言文集"],
 };
 
@@ -21,6 +21,11 @@ const Header: React.FC<HeaderProps> = (props) => {
   const handleClick = (url: string) => {
     if (url.length === 0) return;
     history.push(url);
+  };
+  //helper method added for temperory webflow webpage redirection
+  const handleOutsideClick = (url: string) => {
+    if (url.length === 0) return;
+    window.location.assign(url);
   };
   return (
     <header className={`${className} ${colorClass} header`}>
@@ -62,6 +67,10 @@ const Header: React.FC<HeaderProps> = (props) => {
         <Menu.SubMenu
           title="话剧演出"
           className={`header-nav-item ${colorClass}`}
+          /* Line 65 to 68 added */
+          onTitleClick={() => {
+            handleOutsideClick("https://sayingtheatre.webflow.io/show");
+          }}
         >
           {playList.map((item: any) => (
             <Menu.Item style={{ textAlign: "center" }}>
@@ -73,9 +82,17 @@ const Header: React.FC<HeaderProps> = (props) => {
             </Menu.Item>
           ))}
         </Menu.SubMenu>
-
+        
+        {/* For now both “活动动态” and “戏言文集” redirect to one url, 
+        will change once webflow pages get updated */}
         {navs.zh.map((item: string, index: number) => (
-          <Menu.Item key={index} className={`header-nav-item ${colorClass}`}>
+          <Menu.Item 
+            key={index} 
+            className={`header-nav-item ${colorClass}`}           
+            onClick={() => {
+              handleOutsideClick("https://sayingtheatre.webflow.io/");
+            }}
+          >
             {item}
           </Menu.Item>
         ))}

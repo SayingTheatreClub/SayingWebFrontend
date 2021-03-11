@@ -13,6 +13,9 @@ import DepartmentCard from "./departmentCard";
 import PageInfo from "./pageInfo";
 import { getDepartsItemType } from "../../types/requestType";
 
+//added for "报名链接" link
+import { generateLink } from "../../libs/funcs";
+
 const Join: FC = () => {
   const [targetDepart, setTargetDepart] = useState<departItemType>({
     title: "",
@@ -52,9 +55,17 @@ const Join: FC = () => {
         </div>
         <div className="join-page-lower">
           <p>赶快加入我们吧！</p>
-          <Button className="join-page-lower-button" type="disabled">
-            报名链接
-          </Button>
+          {/* <Button className="join-page-lower-button" type="disabled">
+                报名链接
+              </Button> */}
+          {/* Line 60 to 66 added */}
+          {generateLink(
+              <Button type="primary" className="join-page-info-button">
+                报名链接
+              </Button>,
+              "https://forms.gle/thfWfa2CMECEhtDv9",
+              true
+          )}
         </div>
       </div>
       <DepartPop
