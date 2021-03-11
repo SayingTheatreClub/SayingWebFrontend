@@ -29,12 +29,14 @@ const DepartmentCard: FC<DepartmentCardProps> = (props) => {
   //not a good way to do that, but sufficient for now
   const parseRecruiting =() => {
     let list : string[] = [];
-    {data?.map((item: JobType) => {
+    //use {jobs} for github merge warning
+    console.log(jobs);
+    data?.map((item: JobType) => {
         if (item.recruit) {
           list.push(item.name);
         }
-    })}
-    return list.length == 0 ? "暂无" : list.join(', ');;
+    })
+    return list.length === 0 ? "暂无" : list.join(', ');;
   }
 
   useEffect(() => {

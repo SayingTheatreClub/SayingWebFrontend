@@ -27,12 +27,12 @@ const DeartPop: FC<MemberProps> = (props) => {
   //not a good way to do that, but sufficient for now
   const parseRecruiting =() => {
     let list : string[] = [];
-    {data?.map((item: JobType) => {
+    data?.map((item: JobType) => {
         if (!item.recruit) {
           list.push(item.name);
         }
-    })}
-    return list.length == 0 ? "暂无" : list.join(', ');;
+    })
+    return list.length === 0 ? "暂无" : list.join(', ');;
   }
 
   useEffect(() => {
