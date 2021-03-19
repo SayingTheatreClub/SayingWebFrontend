@@ -11,6 +11,10 @@ import {
 } from "../../libs/footer";
 import { Popover } from "antd";
 import { photoUrl } from "../../libs/security";
+
+//added for rederict to external links
+import { generateExternalLink } from "../../libs/funcs";
+
 interface InfoListProps {
   list: Array<ListItem>;
   className: string;
@@ -100,7 +104,20 @@ const Footer: React.FC<FooterProps> = (props) => (
               !props.withMailbox ? "list-non-mail" : ""
             }`}
           >
-            <Link to={titleList[index].url} className="footer-link">
+            {generateExternalLink(
+                <Link to={titleList[index].url} className="footer-link">
+                <div className="footer-list-title"
+                  style={{
+                  cursor: titleList[index].url.length === 0 ? "not-allowed" : "pointer",
+                }}
+                >{titleList[index].name}
+                
+                </div>
+                </Link>,
+                titleList[index].external
+            )}
+            {/* Removed */}
+            {/* <Link to={titleList[index].url} className="footer-link">
               <div className="footer-list-title"
                 style={{
                 cursor: titleList[index].url.length === 0 ? "not-allowed" : "pointer",
@@ -108,7 +125,8 @@ const Footer: React.FC<FooterProps> = (props) => (
               >{titleList[index].name}
               
               </div>
-            </Link>
+
+            </Link> */}
             <InfoList
               isMedia={index === 3}
               list={item}
@@ -118,7 +136,7 @@ const Footer: React.FC<FooterProps> = (props) => (
         )
       )}
     </div>
-    <div className="footer-signature">© 2020 戏言剧社 版权所有</div>
+    <div className="footer-signature">© 2021 戏言剧社 版权所有</div>
   </div>
 );
 

@@ -23,6 +23,18 @@ const DeartPop: FC<MemberProps> = (props) => {
     }
   );
 
+  //show recruiting jobs and parse them in correct format
+  //not a good way to do that, but sufficient for now
+  const parseRecruiting =() => {
+    let list : string[] = [];
+    data?.map((item: JobType) => {
+        if (!item.recruit) {
+          list.push(item.name);
+        }
+    })
+    return list.length === 0 ? "暂无" : list.join(', ');;
+  }
+
   useEffect(() => {
     run();
   }, [open, run]);
@@ -41,7 +53,7 @@ const DeartPop: FC<MemberProps> = (props) => {
         <div className="popup-name">{name}</div>
         <div className="popup-lower-content-wrapper">
           <img src={imgUrl} alt={`${name}`} className="popup-img" />
-          <div className="popup-depart-recruit">在招：暂无</div>
+          <div className="popup-depart-recruit">在招：{parseRecruiting()}</div>
           <div className="popup-lower-content popup-lower-content-depart">
             {data &&
               data?.map((item: JobType) => (

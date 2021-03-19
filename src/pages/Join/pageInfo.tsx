@@ -2,6 +2,9 @@ import React, { FC } from "react";
 import Button from "../../components/Button";
 import { photoUrl } from "../../libs/security";
 
+//added for "报名链接" link
+import { generateLink } from "../../libs/funcs";
+
 interface PageInfoProps {
   title: string;
   text: string;
@@ -20,9 +23,17 @@ const PageInfo: FC<PageInfoProps> = (props) => {
               <p className="join-page-info-text">{item}</p>
             ))}
           </div>
-          <Button type="disabled" className="join-page-info-button">
+          {/* <Button type="disabled" className="join-page-info-button">
             报名链接
-          </Button>
+          </Button> */}
+          {/* Line 30 to 36 added */}
+          {generateLink(
+              <Button type="primary" className="join-page-info-button">
+                报名链接
+              </Button>,
+              "https://forms.gle/thfWfa2CMECEhtDv9",
+              true
+          )}
         </div>
         <img
           src={photoUrl + img}
