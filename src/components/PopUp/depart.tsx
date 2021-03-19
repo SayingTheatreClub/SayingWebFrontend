@@ -28,7 +28,7 @@ const DeartPop: FC<MemberProps> = (props) => {
   const parseRecruiting =() => {
     let list : string[] = [];
     data?.map((item: JobType) => {
-        if (!item.recruit) {
+        if (item.recruit) {
           list.push(item.name);
         }
     })
