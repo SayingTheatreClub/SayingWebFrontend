@@ -18,16 +18,16 @@ export const titleList = [
 ];
 export const playList: ListItem[] = [
   { name: "红玫瑰与白玫瑰", url: "/play/红玫瑰与白玫瑰" },
-  { name: "驴得水", url: "" },
-  { name: "你好，疯子", url: "" },
-  { name: "旧事", url: "" },
-  { name: "暗恋桃花源", url: "" },
+  { name: "驴得水", url: "https://sayingtheatre.webflow.io/show/lu-de-shui" },
+  { name: "你好，疯子", url: "https://sayingtheatre.webflow.io/show/ni-hao-feng-zi" },
+  { name: "旧事", url: "https://sayingtheatre.webflow.io/show/jiu-shi" },
+  { name: "暗恋桃花源", url: "https://sayingtheatre.webflow.io/show/an-lian" },
 ];
 export const aboutList: ListItem[] = [
   { name: "戏言家庭", url: "/member" },
   { name: "加入我们", url: "/join" },
   { name: "支持戏言", url: "" },
-  { name: "联系我们", url: "" },
+  { name: "联系我们", url: "https://sayingtheatre.webflow.io/contact-us" },
 ];
 
 export const mediaList = [

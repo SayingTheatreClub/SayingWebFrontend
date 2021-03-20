@@ -57,6 +57,8 @@ const Header: React.FC<HeaderProps> = (props) => {
             <Menu.Item style={{ textAlign: "center" }}>
               {!(item.name.includes("支持") || item.name.includes("联系")) ? (
                 <Link to={`${item.url}`}>{item.name}</Link>
+              ) : item.name.includes("联系") ? (
+                <a href={`${item.url}`}>{item.name}</a>
               ) : (
                 <div style={{ cursor: "not-allowed" }}>{item.name}</div>
               )}
@@ -76,8 +78,10 @@ const Header: React.FC<HeaderProps> = (props) => {
             <Menu.Item style={{ textAlign: "center" }}>
               {item.name.includes("玫瑰") ? (
                 <Link to={`${item.url}`}>{item.name}</Link>
+                // added webflow connections here, may need to change later
+                //<a href="https://sayingtheatre.webflow.io/show/hong-bai-mei-gui">{item.name}</a>
               ) : (
-                <div style={{ cursor: "not-allowed" }}>{item.name}</div>
+                <a href={`${item.url}`}>{item.name}</a>
               )}
             </Menu.Item>
           ))}
