@@ -70,7 +70,7 @@ const InfoList: React.FC<InfoListProps> = (props) => {
   return (
     <div className={className}>
       {list.map((item: ListItem) =>
-        item.url.length !== 0 ? (
+        generateExternalLink(
           <Link to={item.url} className="footer-link">
             <div
               style={{
@@ -79,16 +79,9 @@ const InfoList: React.FC<InfoListProps> = (props) => {
             >
               {item.name}
             </div>
-          </Link>
-        ) : (
-          <div
-            style={{
-              cursor: item.url.length === 0 ? "not-allowed" : "pointer",
-            }}
-          >
-            {item.name}
-          </div>
-        )
+          </Link>,
+          item.url.includes("http") ? true : false
+      )
       )}
     </div>
   );
