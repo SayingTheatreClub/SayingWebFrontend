@@ -70,7 +70,7 @@ const InfoList: React.FC<InfoListProps> = (props) => {
   return (
     <div className={className}>
       {list.map((item: ListItem) =>
-        {generateExternalLink(
+        generateExternalLink(
           <Link to={item.url} className="footer-link">
             <div
               style={{
@@ -81,7 +81,7 @@ const InfoList: React.FC<InfoListProps> = (props) => {
             </div>
           </Link>,
           item.url.includes("http") ? true : false
-      )}
+      )
       )}
     </div>
   );
