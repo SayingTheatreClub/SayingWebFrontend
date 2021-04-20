@@ -35,7 +35,7 @@ export const mediaList = [
   {
     name: "Youtube",
     url:
-      "https://www.youtube.com/channel/UCIR0psBBMT85b-NUiKhFjGA/featured?view_as=subscribe",
+      "https://www.youtube.com/channel/UCIR0psBBMT85b-NUiKhFjGA",
   },
   { name: "Bilibili", url: "https://space.bilibili.com/62206666" },
   { name: "微博", url: "https://weibo.com/sayingtheatre" },
