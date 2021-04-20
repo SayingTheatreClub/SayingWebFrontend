@@ -50,13 +50,3 @@ jobs:
         local_path: './build/*'
         remote_path: '/home/ubuntu/build'
         args: '-o ConnectTimeout=5'
-
-    - name: Copy file to mobile server
-      uses: wlixcc/SFTP-Deploy-Action@v1.0
-      with:
-        username: 'ubuntu'
-        server: '${{ secrets.SERVER_IP }}'
-        ssh_private_key: ${{ secrets.PRIVATE_KEY }}
-        local_path: './build/*'
-        remote_path: '/home/ubuntu/mobile'
-        args: '-o ConnectTimeout=5'
