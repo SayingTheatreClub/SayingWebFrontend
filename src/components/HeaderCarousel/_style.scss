@@ -1,3 +1,8 @@
 .home-slide-img {
-  height: 90vh;
+  max-width: 2200px;
+}
+
+.slick-slide.slick-active.slick-current > div{
+  text-align: center;
+  background-color: black;
 }

@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import Button from "../../components/Button";
 import { PlayCard } from "../../components/Cards/index";
 import { LeftCarousel, RightCarousel } from "../../components/Carousel/index";
@@ -33,14 +33,18 @@ const Home: FC = () => (
           />
           <div>
             <div>
-              <Button type="disabled" className="home-button-left home-button">
-                提前选座
+              <Button type="default" className="home-button-left home-button">
+                <a href="https://sayingtheatre.webflow.io/show/hong-bai-mei-gui#video">
+                演出录像
+                </a>
               </Button>
-              <Link to={`/play/${homeFirstBlock.title}`}>
+              
                 <Button type="default" className="home-button">
+                <a href="https://sayingtheatre.webflow.io/show/hong-bai-mei-gui">
                   了解详情
+                  </a>
                 </Button>
-              </Link>
+              
             </div>
           </div>
         </div>

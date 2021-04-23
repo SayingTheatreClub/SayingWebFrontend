@@ -1,3 +1,5 @@
+@import "~rfs/scss";
+
 .home-displaybox {
   font-family: Noto Serif SC;
   display: flex;
@@ -20,7 +22,7 @@
   align-items: left;
   font-family: Noto Sans SC;
   font-weight: 400;
-  font-size: 16px;
+  @include font-size(1rem);
   margin-top: 10px;
   line-height: 28px;
   font-feature-settings: 'liga' off;
@@ -104,7 +106,7 @@
     .home-intro-title {
       font-style: normal;
       font-weight: 400;
-      font-size: 36px;
+      @include font-size(2.25rem);
       line-height: 52px;
       color: $content_black;
       margin-top: 52px;
@@ -114,7 +116,7 @@
       font-family: "Noto Sans SC";
       font-style: normal;
       font-weight: 300;
-      font-size: 16px;
+      @include font-size(1rem);
       line-height: 28px;
       color: $content-black;
       margin-left: 59px;
@@ -152,7 +154,7 @@
   .home-play-info-card-belong {
     font-style: normal;
     font-weight: 500;
-    font-size: 16px;
+    @include font-size(1rem);
     line-height: 23px;
     color: $content-darkGrey;
   }
