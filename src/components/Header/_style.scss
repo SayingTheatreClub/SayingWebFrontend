@@ -57,12 +57,12 @@
   display: flex;
   justify-content: space-evenly;
   width: 60%;
-  @media screen and(max-width:800px) {
-    display: none;
-  }
-  .header-nav-item {
-    cursor: pointer;
-  }
+  // @media screen and(max-width:800px) {
+  //   display: none;
+  // }
+  // .header-nav-item {
+  //   cursor: pointer;
+  // }
 }
 .header-logo {
   display: inline-block;

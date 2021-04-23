@@ -1,3 +1,4 @@
+@import "~rfs/scss";
 .member-card {
   
   cursor: pointer;
@@ -29,7 +30,7 @@
   }
   .title {
     font-family: Noto Sans SC;
-    font-size: 0.8rem;
+    @include font-size (0.8rem);
     font-weight: 500;
   }
   .nickName {
@@ -39,7 +40,7 @@
     font-family: Noto Serif SC;
     font-style: normal;
     font-weight: 300;
-    font-size: 12px;
+    @include font-size (0.75rem);
     line-height: 18px;
     color: $content-black;
   }
@@ -56,10 +57,17 @@
     margin-right: 0;
   }
   .playCard-belonging {
-    @include text(Noto Sans SC, 500, 16px, 23px, $content-darkGrey);
+    font-family: Noto Sans SC;
+    font-weight: 500;
+    color: $content-darkGrey;
+    line-height: 23px;
+    @include font-size(1rem);
   }
   .playCard-title {
-    @include text(Noto Serif SC, normal, 36px, 52px, $content-black);
+    font-family: Noto Serif SC;
+    color: $content-black;
+    line-height: 52px;
+    @include font-size(2.25rem);
   }
   .playCard-desc {
     @include text(Noto Sans SC, 300, 16px, 28px, $content-black);
