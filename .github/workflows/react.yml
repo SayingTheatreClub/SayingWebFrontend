@@ -57,6 +57,6 @@ jobs:
         username: 'ubuntu'
         server: '${{ secrets.SERVER_IP }}'
         ssh_private_key: ${{ secrets.PRIVATE_KEY }}
-        local_path: './*'
+        local_path: './build/*'
         remote_path: '/home/ubuntu/mobile'
         args: '-o ConnectTimeout=5'
