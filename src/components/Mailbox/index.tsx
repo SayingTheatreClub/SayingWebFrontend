@@ -30,7 +30,7 @@ const MailBox: FC<MailBoxProps> = (props) => {
     });
   };
   const emailTest = (email: string) => {
-    var myReg = /^[a-zA-Z0-9_-]+@([a-zA-Z0-9]+\.)+(com|cn|net|org)$/;
+    var myReg = /^[a-zA-Z0-9_-]+@([a-zA-Z0-9]+\.)+(com|cn|net|org|edu)$/;
     return myReg.test(email);
   };
   return (
