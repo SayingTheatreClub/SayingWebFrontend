@@ -14,7 +14,6 @@ interface RightCarouselProps {
 const playStep = 259;
 
 const RightCarousel: FC<RightCarouselProps> = (props) => {
-  const history = useHistory();
   const { content } = props;
   const [space, setSpace] = useState(0);
   const handleClick = (isLeft: boolean) => {
@@ -66,7 +65,7 @@ const RightCarousel: FC<RightCarouselProps> = (props) => {
             <PlayCard
               key={item.name}
               onClick={() => {
-                let link = playList.find(x => x.name == item.name)?.url;
+                let link = playList.find(x => x.name === item.name)?.url;
                 window.location.href = (link !== undefined) ? link : "https://sayingtheatre.com/";
               }}
               className="carousel-card"
