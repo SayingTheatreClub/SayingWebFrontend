@@ -4,7 +4,6 @@ import RedMark from "../../assets/redMark.svg";
 import { playText } from "../../text/carouselText";
 import { photoUrl } from "../../libs/security";
 import PlayCard from "../Cards/playCard";
-import { useHistory } from "react-router";
 import { playList } from "../../libs/footer";
 
 interface RightCarouselProps {
