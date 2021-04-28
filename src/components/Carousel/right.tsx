@@ -4,7 +4,7 @@ import RedMark from "../../assets/redMark.svg";
 import { playText } from "../../text/carouselText";
 import { photoUrl } from "../../libs/security";
 import PlayCard from "../Cards/playCard";
-import { useHistory } from "react-router";
+import { playList } from "../../libs/footer";
 
 interface RightCarouselProps {
   content: { name: string; year: string }[];
@@ -13,7 +13,6 @@ interface RightCarouselProps {
 const playStep = 259;
 
 const RightCarousel: FC<RightCarouselProps> = (props) => {
-  const history = useHistory();
   const { content } = props;
   const [space, setSpace] = useState(0);
   const handleClick = (isLeft: boolean) => {
@@ -65,8 +64,8 @@ const RightCarousel: FC<RightCarouselProps> = (props) => {
             <PlayCard
               key={item.name}
               onClick={() => {
-                if (item.name.includes("玫瑰"))
-                  history.push("/play/红玫瑰与白玫瑰");
+                let link = playList.find(x => x.name === item.name)?.url;
+                window.location.href = (link !== undefined) ? link : "https://sayingtheatre.com/";
               }}
               className="carousel-card"
               name={`${item.name}`}
