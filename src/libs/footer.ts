@@ -17,6 +17,7 @@ export const titleList = [
   { name: " 关注我们", url: "", external: false },
 ];
 export const playList: ListItem[] = [
+  { name: "恋爱的犀牛", url: "https://sayingtheatre.webflow.io/show/rhinoceros-in-love" },
   { name: "红玫瑰与白玫瑰", url: "https://sayingtheatre.webflow.io/show/hong-bai-mei-gui" },
   { name: "驴得水", url: "https://sayingtheatre.webflow.io/show/lu-de-shui" },
   { name: "你好，疯子", url: "https://sayingtheatre.webflow.io/show/ni-hao-feng-zi" },
