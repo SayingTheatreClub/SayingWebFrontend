@@ -64,12 +64,12 @@ const Home: FC = () => (
           ></iframe> */}
           <img src="https://cdn.jsdelivr.net/gh/SayingTheatreClub/SayingPhotos@master/%E7%8A%80%E7%89%9B%E5%B0%81%E9%9D%A2%E5%9B%BE.jpg" alt="Poster"/>
           <div>
-            <a
-              // href="https://www.bilibili.com/video/BV1GV411y7gb/"
+            <p
+              // href=""
               className="bilibili-link"
             >
               去Bilibili观看公演点这里（明日公布）{" "}
-            </a>
+            </p>
           </div>
         </div>
       </div>
