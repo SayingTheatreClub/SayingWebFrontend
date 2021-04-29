@@ -16,7 +16,7 @@ const RightCarousel: FC<RightCarouselProps> = (props) => {
   const { content } = props;
   const [space, setSpace] = useState(0);
   const handleClick = (isLeft: boolean) => {
-    //让他回去
+    //Back to the intial state
     if (space / playStep + 3 > playText.length) {
       setSpace(0);
       return;

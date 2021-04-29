@@ -38,6 +38,11 @@
   @media screen and (max-width:840px){
     margin-top: 100px;
   }
+  //Will replace after the play
+  img{
+    max-width: 400px;
+    height: auto;
+  }
 }
 
 .home-header-trans {
@@ -131,7 +136,9 @@
   }
 }
 .home-button {
-  margin-top: 74px;
+  margin-top: 20px;
+  //Change back after the play
+  //margin-top: 74px;
 }
 .home-button-left {
   margin-right: 33px;

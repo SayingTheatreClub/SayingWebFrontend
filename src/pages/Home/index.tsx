@@ -33,14 +33,18 @@ const Home: FC = () => (
           />
           <div>
             <div>
-              <Button type="default" className="home-button-left home-button">
+              <Button type="disabled" className="home-button-left home-button">
                 <a href="https://sayingtheatre.webflow.io/show/hong-bai-mei-gui#video">
-                演出录像
+                公演链接
                 </a>
               </Button>
-              
+              <Button type="disabled" className="home-button-left home-button">
+                <a href="http://uwmadison.zoom.us/j/97094516016">
+                主创访谈
+                </a>
+              </Button>
                 <Button type="default" className="home-button">
-                <a href="https://sayingtheatre.webflow.io/show/hong-bai-mei-gui">
+                <a href="https://sayingtheatre.webflow.io/show/rhinoceros-in-love">
                   了解详情
                   </a>
                 </Button>
@@ -49,7 +53,7 @@ const Home: FC = () => (
           </div>
         </div>
         <div id="home-rose-video">
-          <iframe
+          {/* <iframe
             title="rose"
             width="413"
             height="262"
@@ -57,13 +61,14 @@ const Home: FC = () => (
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
-          ></iframe>
+          ></iframe> */}
+          <img src="https://cdn.jsdelivr.net/gh/SayingTheatreClub/SayingPhotos@master/%E7%8A%80%E7%89%9B%E5%B0%81%E9%9D%A2%E5%9B%BE.jpg" alt="Poster"/>
           <div>
             <a
-              href="https://www.bilibili.com/video/BV1GV411y7gb/"
+              // href="https://www.bilibili.com/video/BV1GV411y7gb/"
               className="bilibili-link"
             >
-              去Bilibili观看本视频点这里{" "}
+              去Bilibili观看公演点这里（明日公布）{" "}
             </a>
           </div>
         </div>

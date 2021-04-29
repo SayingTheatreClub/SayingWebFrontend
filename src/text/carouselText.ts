@@ -1,5 +1,9 @@
 export const playText = [
   {
+    name: "恋爱的犀牛",
+    year: "2021",
+  },
+  {
     name: "红玫瑰与白玫瑰",
     year: "2020",
   },
