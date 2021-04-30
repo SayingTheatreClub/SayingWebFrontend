@@ -65,10 +65,10 @@ const Home: FC = () => (
           <img src="https://cdn.jsdelivr.net/gh/SayingTheatreClub/SayingPhotos@master/%E7%8A%80%E7%89%9B%E5%B0%81%E9%9D%A2%E5%9B%BE.jpg" alt="Poster"/>
           <div>
             <p
-              // href=""
+              href="https://live.bilibili.com/11499625"
               className="bilibili-link"
             >
-              去Bilibili观看公演点这里{"https://live.bilibili.com/11499625"}
+              去Bilibili观看公演点这里{""}
             </p>
           </div>
         </div>
