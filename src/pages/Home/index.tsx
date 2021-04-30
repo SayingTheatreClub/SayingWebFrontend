@@ -63,13 +63,13 @@ const Home: FC = () => (
             allowFullScreen
           ></iframe> */}
           <img src="https://cdn.jsdelivr.net/gh/SayingTheatreClub/SayingPhotos@master/%E7%8A%80%E7%89%9B%E5%B0%81%E9%9D%A2%E5%9B%BE.jpg" alt="Poster"/>
-          <div>
+          <div>{/*
             <p
-              href="https://live.bilibili.com/11499625"
+              // href="https://live.bilibili.com/11499625"
               className="bilibili-link"
             >
               去Bilibili观看公演点这里{""}
-            </p>
+            </p>*/}
           </div>
         </div>
       </div>
