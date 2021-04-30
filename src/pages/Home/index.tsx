@@ -33,12 +33,12 @@ const Home: FC = () => (
           />
           <div>
             <div>
-              <Button type="disabled" className="home-button-left home-button">
-                <a href="https://sayingtheatre.webflow.io/show/hong-bai-mei-gui#video">
+              <Button type="default" className="home-button-left home-button">
+                <a href="https://live.bilibili.com/11499625">
                 公演链接
                 </a>
               </Button>
-              <Button type="disabled" className="home-button-left home-button">
+              <Button type="default" className="home-button-left home-button">
                 <a href="http://uwmadison.zoom.us/j/97094516016">
                 主创访谈
                 </a>
@@ -68,7 +68,7 @@ const Home: FC = () => (
               // href=""
               className="bilibili-link"
             >
-              去Bilibili观看公演点这里（明日公布）{" "}
+              去Bilibili观看公演点这里{"https://live.bilibili.com/11499625"}
             </p>
           </div>
         </div>
