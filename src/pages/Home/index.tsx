@@ -33,11 +33,22 @@ const Home: FC = () => (
           />
           <div>
             <div>
-               <Button type="default" className="home-button">
+              <Button type="default" className="home-button-left home-button">
+                <a href="https://live.bilibili.com/11499625">
+                公演链接
+                </a>
+              </Button>
+              <Button type="default" className="home-button-left home-button">
+                <a href="http://uwmadison.zoom.us/j/97094516016">
+                主创访谈
+                </a>
+              </Button>
+                <Button type="default" className="home-button">
                 <a href="https://sayingtheatre.webflow.io/show/rhinoceros-in-love">
                   了解详情
                   </a>
-               </Button>
+                </Button>
+              
             </div>
           </div>
         </div>
@@ -51,13 +62,13 @@ const Home: FC = () => (
              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
              allowfullscreen
              ></iframe>}
-          <div>{
+          <div>{/*
             <p
               href="https://www.bilibili.com/video/BV1Dq4y1E7pG"
               className="bilibili-link"
             >
               去Bilibili观看本视频点这里{""}
-            </p>}
+            </p>*/}
           </div>
         </div>
       </div>
