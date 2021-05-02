@@ -1,4 +1,4 @@
 export const basicData = {
-  totalPlays: 5,
-  audience: 1500,
+  totalPlays: 6,
+  audience: 3000,
 };
