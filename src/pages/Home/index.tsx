@@ -33,10 +33,6 @@ const Home: FC = () => (
           />
           <div>
             <div>
-              <Button type="default" className="home-button-left home-button">
-                <a href="http://uwmadison.zoom.us/j/97094516016">
-                公演链接
-                </a>
               </Button>
                <Button type="default" className="home-button">
                 <a href="https://sayingtheatre.webflow.io/show/rhinoceros-in-love">
