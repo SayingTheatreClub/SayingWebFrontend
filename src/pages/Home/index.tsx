@@ -33,17 +33,16 @@ const Home: FC = () => (
           />
           <div>
             <div>
-              <Button type="disable" className="home-button-left home-button">
+              <Button type="default" className="home-button-left home-button">
                 <a href="http://uwmadison.zoom.us/j/97094516016">
-                主创访谈
+                公演链接
                 </a>
               </Button>
-                <Button type="default" className="home-button">
+               <Button type="default" className="home-button">
                 <a href="https://sayingtheatre.webflow.io/show/rhinoceros-in-love">
                   了解详情
                   </a>
-                </Button>
-              
+               </Button>
             </div>
           </div>
         </div>
