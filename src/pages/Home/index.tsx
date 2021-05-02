@@ -31,18 +31,14 @@ const Home: FC = () => (
             description={homeFirstBlock.text}
             belonging={homeFirstBlock.belonging}
           />
-          <div>
+        <div>
             <div>
               <Button type="default" className="home-button-left home-button">
-                <a href="https://live.bilibili.com/11499625">
-                公演链接
+                <a href="https://sayingtheatre.webflow.io/show/rhinoceros-in-love#video">
+                演出录像
                 </a>
               </Button>
-              <Button type="default" className="home-button-left home-button">
-                <a href="http://uwmadison.zoom.us/j/97094516016">
-                主创访谈
-                </a>
-              </Button>
+              
                 <Button type="default" className="home-button">
                 <a href="https://sayingtheatre.webflow.io/show/rhinoceros-in-love">
                   了解详情
@@ -52,24 +48,23 @@ const Home: FC = () => (
             </div>
           </div>
         </div>
-        <div id="home-rhinoceros-video">
-          {<iframe 
-             width="560" 
-             height="315" 
-             src="https://www.youtube.com/embed/JSwKosGOIFc" 
-             title="rhinoceros" 
-             frameborder="0" 
-             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-             allowfullscreen
-             ></iframe>}
-          <img src="https://github.com/SayingTheatreClub/SayingPhotos/blob/master/%E7%8A%80%E7%89%9B%E5%B0%81%E9%9D%A2%E5%9B%BE.JPEG" alt="Poster"/>
-          <div>{/*
-            <p
+        <div id="home-rose-video">
+          <iframe
+            title="rose"
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/JSwKosGOIFc"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
+          <div>
+            <a
               href="https://www.bilibili.com/video/BV1Dq4y1E7pG"
               className="bilibili-link"
             >
-              去Bilibili观看本视频点这里{""}
-            </p>*/}
+              去Bilibili观看本视频点这里{" "}
+            </a>
           </div>
         </div>
       </div>
