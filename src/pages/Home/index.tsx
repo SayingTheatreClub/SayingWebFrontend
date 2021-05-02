@@ -33,12 +33,7 @@ const Home: FC = () => (
           />
           <div>
             <div>
-              <Button type="default" className="home-button-left home-button">
-                <a href="https://live.bilibili.com/11499625">
-                公演链接
-                </a>
-              </Button>
-              <Button type="default" className="home-button-left home-button">
+              <Button type="disable" className="home-button-left home-button">
                 <a href="http://uwmadison.zoom.us/j/97094516016">
                 主创访谈
                 </a>
@@ -52,24 +47,23 @@ const Home: FC = () => (
             </div>
           </div>
         </div>
-        <div id="home-rose-video">
-          {/* <iframe
-            title="rose"
-            width="413"
-            height="262"
-            src="https://www.youtube.com/embed/hhGodhDvVCk"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          ></iframe> */}
-          <img src="https://cdn.jsdelivr.net/gh/SayingTheatreClub/SayingPhotos@master/%E7%8A%80%E7%89%9B%E5%B0%81%E9%9D%A2%E5%9B%BE.jpg" alt="Poster"/>
-          <div>{/*
+        <div id="home-rhinoceros-video">
+          {<iframe 
+             width="560" 
+             height="315" 
+             src="https://www.youtube.com/embed/JSwKosGOIFc" 
+             title="rhinoceros" 
+             frameborder="0" 
+             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+             allowfullscreen
+             ></iframe>}
+          <div>{
             <p
-              // href="https://live.bilibili.com/11499625"
+              href="https://www.bilibili.com/video/BV1Dq4y1E7pG"
               className="bilibili-link"
             >
-              去Bilibili观看公演点这里{""}
-            </p>*/}
+              去Bilibili观看本视频点这里{""}
+            </p>}
           </div>
         </div>
       </div>
