@@ -62,6 +62,7 @@ const Home: FC = () => (
              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
              allowfullscreen
              ></iframe>}
+          <img src="https://github.com/SayingTheatreClub/SayingPhotos/blob/master/%E7%8A%80%E7%89%9B%E5%B0%81%E9%9D%A2%E5%9B%BE.JPEG" alt="Poster"/>
           <div>{/*
             <p
               href="https://www.bilibili.com/video/BV1Dq4y1E7pG"
