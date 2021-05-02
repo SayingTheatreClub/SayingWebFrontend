@@ -52,8 +52,8 @@ const Home: FC = () => (
             </div>
           </div>
         </div>
-        <div id="home-rose-video">
-          {<iframe 
+        <div id="home-rhinoceros-video">
+          {/*<iframe 
              width="560" 
              height="315" 
              src="https://www.youtube.com/embed/JSwKosGOIFc" 
@@ -61,7 +61,8 @@ const Home: FC = () => (
              frameborder="0" 
              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
              allowfullscreen
-             ></iframe>}
+             ></iframe>*/}
+          <img src="https://cdn.jsdelivr.net/gh/SayingTheatreClub/SayingPhotos@master/%E7%8A%80%E7%89%9B%E5%B0%81%E9%9D%A2%E5%9B%BE.jpg" alt="Poster"/>
           <div>{/*
             <p
               href="https://www.bilibili.com/video/BV1Dq4y1E7pG"
