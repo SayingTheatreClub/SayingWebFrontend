@@ -33,7 +33,6 @@ const Home: FC = () => (
           />
           <div>
             <div>
-              </Button>
                <Button type="default" className="home-button">
                 <a href="https://sayingtheatre.webflow.io/show/rhinoceros-in-love">
                   了解详情
