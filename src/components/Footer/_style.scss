@@ -4,7 +4,7 @@
   align-items: left;
   font-family: Noto Sans SC;
   .list-wrapper {
-    margin-top: 150px;
+    margin-top: 9rem;
     color: white;
   }
   .list-non-mail{
@@ -33,7 +33,7 @@
   height: 240px;
 }
 .footer-wrapper {
-  height: 441px;
+  height: 100%;
   background: $content-black;
 }
 .footer-signature {
@@ -47,5 +47,15 @@
   color: #DADADA;
   &:hover {
     color: $brand-red;
+  }
+}
+
+@media screen and (max-width:576px) {
+  .footer{
+    display: block;
+    padding-top: 20px;
+  }
+  .footer > .list-wrapper {
+    margin: 30px;
   }
 }

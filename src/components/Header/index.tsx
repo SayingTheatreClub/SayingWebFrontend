@@ -11,7 +11,7 @@ export interface HeaderProps {
 }
 const navs = {
   en: ["About", "Shows", "Events", "Articles", "中|EN"],
-  zh: ["活动动态", "戏言文集"],
+  zh: ["关于戏言","话剧演出","活动动态", "戏言文集"],
 };
 
 const Header: React.FC<HeaderProps> = (props) => {
@@ -47,7 +47,7 @@ const Header: React.FC<HeaderProps> = (props) => {
         }}
       >
         <Menu.SubMenu
-          title="关于戏言"
+          title={navs.zh[0]}
           className={`header-nav-item ${colorClass}`}
           onTitleClick={() => {
             handleClick("/about");
@@ -67,7 +67,7 @@ const Header: React.FC<HeaderProps> = (props) => {
         </Menu.SubMenu>
 
         <Menu.SubMenu
-          title="话剧演出"
+          title={navs.zh[1]}
           className={`header-nav-item ${colorClass}`}
           /* Line 65 to 68 added */
           onTitleClick={() => {
@@ -82,7 +82,7 @@ const Header: React.FC<HeaderProps> = (props) => {
         </Menu.SubMenu>
 
         <Menu.SubMenu
-          title="活动动态"
+          title={navs.zh[2]}
           className={`header-nav-item ${colorClass}`}
           onTitleClick={() => {
             handleOutsideClick("https://sayingtheatre.webflow.io/events");
@@ -91,7 +91,7 @@ const Header: React.FC<HeaderProps> = (props) => {
         </Menu.SubMenu>
 
         <Menu.SubMenu
-          title="戏言文集"
+          title={navs.zh[3]}
           className={`header-nav-item ${colorClass}`}
           onTitleClick={() => {
             handleOutsideClick("https://sayingtheatre.webflow.io/articles");
