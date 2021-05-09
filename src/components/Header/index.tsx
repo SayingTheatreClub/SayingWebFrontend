@@ -80,20 +80,25 @@ const Header: React.FC<HeaderProps> = (props) => {
             </Menu.Item>
           ))}
         </Menu.SubMenu>
+
+        <Menu.SubMenu
+          title="活动动态"
+          className={`header-nav-item ${colorClass}`}
+          onTitleClick={() => {
+            handleOutsideClick("https://sayingtheatre.webflow.io/events");
+          }}
+        >
+        </Menu.SubMenu>
+
+        <Menu.SubMenu
+          title="戏言文集"
+          className={`header-nav-item ${colorClass}`}
+          onTitleClick={() => {
+            handleOutsideClick("https://sayingtheatre.webflow.io/articles");
+          }}
+        >
+        </Menu.SubMenu>
         
-        {/* For now both “活动动态” and “戏言文集” redirect to one url, 
-        will change once webflow pages get updated */}
-        {navs.zh.map((item: string, index: number) => (
-          <Menu.Item 
-            key={index} 
-            className={`header-nav-item ${colorClass}`}           
-            onClick={() => {
-              handleOutsideClick("https://sayingtheatre.webflow.io/");
-            }}
-          >
-            {item}
-          </Menu.Item>
-        ))}
       </Menu>
     </header>
   );
