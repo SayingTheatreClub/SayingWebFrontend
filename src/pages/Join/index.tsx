@@ -63,7 +63,7 @@ const Join: FC = () => {
               <Button type="primary" className="join-page-info-button">
                 报名链接
               </Button>,
-              "https://forms.gle/thfWfa2CMECEhtDv9",
+              "https://forms.gle/PPrLtEWW7tET3kuX9",
               true
           )}
         </div>
