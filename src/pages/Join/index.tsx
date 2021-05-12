@@ -79,7 +79,7 @@ const Join: FC = () => {
       <div>
         <MailBox
           title="电子报"
-          desc="你心仪的岗位没有在招？订阅戏言电子报获得最新招新动态"
+          desc="你心仪的岗位目前不招人？订阅戏言电子报获得招新的最新动态"
         />
         <Footer withMailbox />
       </div>
