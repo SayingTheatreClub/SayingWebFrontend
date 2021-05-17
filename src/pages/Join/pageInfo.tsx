@@ -31,7 +31,7 @@ const PageInfo: FC<PageInfoProps> = (props) => {
               <Button type="primary" className="join-page-info-button">
                 报名链接
               </Button>,
-              "https://forms.gle/PPrLtEWW7tET3kuX9",
+              "https://forms.gle/hcnk7JhbUozEJbJf9",
               true
           )}
         </div>
