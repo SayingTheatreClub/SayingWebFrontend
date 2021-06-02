@@ -5,6 +5,7 @@ export const plays = [
   "驴得水",
   "红玫瑰与白玫瑰",
   "恋爱的犀牛",
+  "如月疑云",
 ];
 
 export const departments = [
